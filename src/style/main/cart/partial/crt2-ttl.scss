@@ -1,8 +1,10 @@
+$crt2-ttl-2-margin-bottom: 20px;
+
 .crt2-ttl {
 	&.ttl {
 		&--2 {
 			display: block;
-			margin-bottom: 20px;
+			margin-bottom: $crt2-ttl-2-margin-bottom;
 			font-size: 20px;
 		}
 	}

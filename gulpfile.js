@@ -7,15 +7,22 @@ var sass = require('gulp-sass');
 var notify = require('gulp-notify');
 var groupCssMediaQueries = require('gulp-group-css-media-queries');
 var browserSync = require('browser-sync').create();
+var remember = require('gulp-remember');
+var cached = require('gulp-cached');
 
 gulp.task('sass:main', function() {
-	return gulp.src('src/style/main/file/*.scss')
+	return gulp.src(['src/style/main/**/*.scss', '!src/style/main/**/partial/*.scss'], {
+		since: gulp.lastRun('sass:main')
+	})
+		.pipe(remember('sassMainMemory'))
 		.pipe(sass().on('error', notify.onError(function(err) {
 			return {
 				title: 'sass',
 				message: err.message
 			}
 		})))
+		.pipe(cached('sassMainCache'))
+		.pipe(rename({dirname: ""}))
 		.pipe(autoprefixer({
 			browsers: ['last 2 versions', 'ie >= 9'],
 			cascade: false
@@ -26,7 +33,6 @@ gulp.task('sass:main', function() {
 				message: err.message
 			}
 		})))
-		.pipe(rename({dirname: ""}))
 		.pipe(gulp.dest('build/css/'));
 });
 
@@ -121,7 +127,11 @@ gulp.task('serve', function() {
 });
 
 gulp.task('watch', function() {
-	gulp.watch('src/style/main/partial/**/*.scss', gulp.series('sass:main'));
+	gulp.watch('src/style/main/**/*.scss', gulp.series('sass:main'))
+		.on('unlink', function(path) {
+			remember.forget('sassMainMemory', path.resolve(filepath));
+			delete cached.caches.sassMainCache[path.resolve(filepath)];
+		});
 	gulp.watch('src/style/vendor/*.css', gulp.series('css:vendor'));
 	gulp.watch('src/js/main/**/*.js', gulp.series('js:main'));
 	gulp.watch('src/js/vendor/**/*.js', gulp.series('js:vendor'));
