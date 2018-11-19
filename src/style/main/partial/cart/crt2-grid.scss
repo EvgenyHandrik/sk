@@ -1,0 +1,16 @@
+.crt2-row {
+	&--default {
+		&:after {
+			content: '';
+			display: block;
+			clear: both;
+			font-size: 1px;
+		}
+
+		.crt2-col {
+			&--main {
+				margin-right: 1080px - 800px - 20px;
+			}
+		}
+	}	
+}

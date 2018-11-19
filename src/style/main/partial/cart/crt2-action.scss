@@ -7,6 +7,11 @@
 				clear: both;
 				font-size: 1px;
 			}
+
+			& > p {
+				line-height: 1.5;
+				font-size: 17px;
+			}
 			
 			.crt2-action__image {
 				&--main {

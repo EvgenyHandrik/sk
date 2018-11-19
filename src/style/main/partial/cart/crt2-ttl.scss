@@ -1,0 +1,41 @@
+.crt2-ttl {
+	&.ttl {
+		&--2 {
+			display: block;
+			margin-bottom: 20px;
+			font-size: 20px;
+		}
+	}
+
+	/* -- */
+
+	&__icon {
+		display: inline-block;
+		vertical-align: middle;
+		background-position: center;
+		background-repeat: no-repeat;
+
+		&--megaphone {
+			width: 28px;
+			height: 28px;
+			background-size: 28px 28px;
+			background-image: url(../images/ico-ttl-megaphone-black-30x30.svg);
+
+			/* -- */
+
+			@at-root {
+				.crt2-ttl--special {
+					.crt2-ttl__icon--megaphone {
+						background-image: url(../images/ico-ttl-megaphone-red-30x30.svg);
+					}
+				}
+			}
+		}
+	}
+
+	/* -- */
+
+	&--special {
+		color: #BA131A;
+	}
+}
