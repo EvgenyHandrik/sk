@@ -91,7 +91,7 @@
 	<link href="./html-source/base-page-files/fonts.css" type="text/css" data-template-style="true" rel="stylesheet">
 	<link href="./html-source/base-page-files/app.min.css" type="text/css" data-template-style="true" rel="stylesheet">
 
-	//= ../partial/styles.html
+	//= ../partial/cart/styles.html
 
 	<title>
 		Ресторан «Своя компания» Екатеринбург - уютный семейный ресторан-кафе в центре
@@ -242,13 +242,15 @@ ga('require', 'ecommerce');
 	<div class="body__container">
 
 		<!-- Стандартная шапка -->
-		//= ../partial/header.html
+		//= ../partial/layout/header.html
 
 		<section class="content">
 			<div class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
 				<span itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem"><a itemprop="item" href="http://svoya-kompaniya.ru/" title="Своя компания"><span itemprop="name">Своя компания</span><meta itemprop="position" content="1"></a></span>
 				<span itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem"><span itemprop="item"><span itemprop="name">Корзина</span><meta itemprop="position" content="3"></span></span>
 			</div>
+
+			//= ../partial/cart/content.html
 					
 		</section>
 
@@ -314,7 +316,7 @@ ga('require', 'ecommerce');
 		</div> -->
 
 
-		//= ../partial/footer.html
+		//= ../partial/layout/footer.html
 
 	</div>
 
@@ -551,7 +553,7 @@ ga('require', 'ecommerce');
 		})();
 	</script>
 
-	//= ../partial/scripts.html
+	//= ../partial/cart/scripts.html
 
 	<script>
 		! function (f, b, e, v, n, t, s) {
