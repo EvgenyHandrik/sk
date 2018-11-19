@@ -1,0 +1,73 @@
+.f-soc {
+	$icon-size: 18px;
+
+	display: flex;
+	flex: none;
+	justify-content: flex-end;
+
+	&__button {
+		position: relative;
+		flex: none;
+		width: $icon-size;
+		height: $icon-size;
+		border-bottom: 0;
+		border-radius: 5px;
+		background-color: #3c5a99;
+		overflow: hidden;
+		opacity: 1;
+		transition-property: opacity;
+		transition-duration: 300ms;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			display: block;
+			width: $icon-size;
+			height: $icon-size;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: $icon-size $icon-size;
+			transform: translate(-50%, -50%);
+		}
+
+		&:hover {
+			opacity: 0.5;
+		}
+
+		/* -- */
+
+		&--i {
+			&:before {
+				background-image: url(../images/soc-18x18-i-white-circle.svg);
+			}
+		}
+
+		&--f {
+			&:before {
+				background-image: url(../images/soc-20x20-f-white.svg);
+			}
+		}
+
+		&--v {
+			&:before {
+				width: 15px;
+				height: 15px;
+				background-size: 15px 15px;
+				background-image: url(../images/soc-20x20-v-white.svg);
+			}
+		}
+	}
+
+	&__button + &__button {
+		margin-left: 10px;
+	}
+
+	/* -- */
+
+	@media (max-width: 600px) {
+		justify-content: center;
+		margin-top: 15px;
+	}
+}

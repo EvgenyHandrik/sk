@@ -1,0 +1,1 @@
+uLogin.setWidget('131fada2','',{"display":"small","fields":"first_name,last_name,email","theme":"flat","providers":"vkontakte,odnoklassniki,twitter,facebook,instagram","redirect_uri":""});

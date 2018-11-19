@@ -1,0 +1,13 @@
+.footer {
+	&__contact {
+		@media (max-width: 600px) {
+			display: block;
+		}
+	}
+
+	&__social {
+		@media (max-width: 600px) {
+			margin-left: 0;
+		}
+	}
+}
