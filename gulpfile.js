@@ -9,7 +9,7 @@ var groupCssMediaQueries = require('gulp-group-css-media-queries');
 var browserSync = require('browser-sync').create();
 
 gulp.task('sass:main', function() {
-	return gulp.src('src/style/main/**/*.scss', {since: gulp.lastRun('sass:main')})
+	return gulp.src('src/style/main/file/*.scss')
 		.pipe(sass().on('error', notify.onError(function(err) {
 			return {
 				title: 'sass',
@@ -121,7 +121,7 @@ gulp.task('serve', function() {
 });
 
 gulp.task('watch', function() {
-	gulp.watch('src/style/main/*.scss', gulp.series('sass:main'));
+	gulp.watch('src/style/main/partial/**/*.scss', gulp.series('sass:main'));
 	gulp.watch('src/style/vendor/*.css', gulp.series('css:vendor'));
 	gulp.watch('src/js/main/**/*.js', gulp.series('js:main'));
 	gulp.watch('src/js/vendor/**/*.js', gulp.series('js:vendor'));
