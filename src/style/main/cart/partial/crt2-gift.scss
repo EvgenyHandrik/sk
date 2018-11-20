@@ -1,4 +1,6 @@
 .crt2-gift {
+	margin: 0 0 35px 0;
+
 	&__list {
 		display: block;
 		max-width: 390px;
@@ -16,11 +18,17 @@
 .crt2-gift-one {
 	position: relative;
 
-	&__image {
-		display: block;
-		width: 62px;
-		border-radius: 5px;
+	&:hover {
+		.crt2-gift-one__image-box {
+			opacity: 1;
+		}
+
+		.crt2-gift-one__content-box {
+			opacity: 1;
+		}
 	}
+
+	/* -- */
 
 	&__hidden-control {
 		position: absolute;
@@ -44,8 +52,34 @@
 						}
 					}
 				}
+
+				.crt2-gift-one__image-box {
+					opacity: 1;
+				}
+
+				.crt2-gift-one__content-box {
+					opacity: 1;
+				}
 			}
 		}
+	}
+
+	&__image-box {
+		opacity: 0.5;
+		transition-duration: 200ms;
+		transition-property: opacity;
+	}
+	
+	&__image {
+		display: block;
+		width: 62px;
+		border-radius: 5px;
+	}
+
+	&__content-box {
+		opacity: 0.5;
+		transition-duration: 200ms;
+		transition-property: opacity;
 	}
 
 	/* -- */

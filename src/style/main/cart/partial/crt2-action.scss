@@ -1,5 +1,5 @@
 .crt2-action {
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 
 	&__content {
 		&--default {
@@ -9,11 +9,6 @@
 				clear: both;
 				font-size: 1px;
 			}
-
-			& > p {
-				line-height: 1.5;
-				font-size: 17px;
-			}
 			
 			.crt2-action__image {
 				&--main {
@@ -22,6 +17,15 @@
 					width: 120px;
 					margin: 0 15px 15px 0;
 					border-radius: 5px;
+				}
+			}
+
+			.crt2-action__text {
+				margin: 0 0 15px 0;
+
+				& > p {
+					line-height: 1.5;
+					font-size: 17px;
 				}
 			}
 		}

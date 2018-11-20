@@ -13,6 +13,7 @@ $crt2-ttl-2-margin-bottom: 20px;
 
 	&__icon {
 		display: inline-block;
+		margin: 0 10px 0 0;
 		vertical-align: middle;
 		background-position: center;
 		background-repeat: no-repeat;
@@ -32,6 +33,30 @@ $crt2-ttl-2-margin-bottom: 20px;
 					}
 				}
 			}
+		}
+
+		&--present {
+			width: 28px;
+			height: 28px;
+			background-size: 28px 28px;
+			background-image: url(../images/ico-ttl-present-black-30x30.svg);
+		
+			/* -- */
+
+			@at-root {
+				.crt2-ttl--special {
+					.crt2-ttl__icon--present {
+						background-image: url(../images/ico-ttl-present-red-30x30.svg);
+					}
+				}
+			}
+		}
+
+		&--crown {
+			width: 28px;
+			height: 28px;
+			background-size: 28px 28px;
+			background-image: url(../images/ico-ttl-crown-black-30x30.svg);
 		}
 	}
 

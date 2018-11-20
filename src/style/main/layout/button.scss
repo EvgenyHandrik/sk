@@ -1,0 +1,21 @@
+.button {
+	&--default {
+		&.button--m {
+			height: 42px;
+			line-height: 42px;
+			padding: 0 15px 0 15px;
+
+			.button__text {
+				font-size: 15px;
+			}
+		}
+
+		&.button--border-radius-m {
+			border-radius: 5px;
+
+			&:before {
+				border-radius: 5px;
+			}
+		}
+	}
+}

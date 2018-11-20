@@ -1,0 +1,22 @@
+.crt2-pcode {
+
+}
+
+.crt2-pcode-fgroup {
+	&--main {
+		max-width: 390px;
+
+		.crt2-pcode-fgroup__row {
+			display: table;
+			width: 100%;
+		}
+	
+		.crt2-pcode-fgroup__col {
+			display: table-cell;
+
+			&--submit {
+				padding: 0 0 0 10px;
+			}
+		}
+	}
+}
