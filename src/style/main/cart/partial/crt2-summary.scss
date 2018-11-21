@@ -1,5 +1,16 @@
 .crt2-summary {
+	margin-top: 25px;
+	
 	&__notify {
 		margin-bottom: 15px;
+	}
+
+	&__button-order {
+		/* -- */
+
+		@media (max-width: 400px) {
+			display: block;
+			width: 100%;
+		}
 	}
 }

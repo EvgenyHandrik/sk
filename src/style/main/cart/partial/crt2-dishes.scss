@@ -1,15 +1,47 @@
 .crt2-dishes {
 	margin: 0 0 10px 0;
+
+	/* -- */
+
+	@media (max-width: 640px) {
+		margin-bottom: 35px;
+	}
 }
 
 .crt2-dishes-list {
 	display: table;
 	width: 100%;
+
+	@media (max-width: 640px) {
+		display: block;
+	}
 }
 
 .crt2-dish {
 	display: table-row;
 	font-family: Roboto, Arimo, sans-serif;
+
+	@media (max-width: 640px) {
+		position: relative;
+		display: block;
+		padding: 15px 0;
+		border-bottom: 1px solid #F6F6F6;
+
+		&:after {
+			content: '';
+			display: block;
+			clear: both;
+			font-size: 1px;
+		}
+
+		&:first-child {
+			padding-top: 0;
+
+			.crt2-dish__button-box {
+				margin-top: -(15px/2);
+			}
+		}
+	}
 
 	&__image-box,
 	&__name-box,
@@ -19,9 +51,23 @@
 		display: table-cell;
 		vertical-align: middle;
 		padding-bottom: 25px;
+
+		@media (max-width: 640px) {
+			display: inline-block;
+			padding-bottom: 0;
+		}
 	}
 
 	/* -- */
+
+	&__image-box {
+		
+		/* -- */
+
+		@media (max-width: 640px) {
+			display: none;
+		}
+	}
 
 	&__image-wrapper {
 		display: block;
@@ -49,6 +95,15 @@
 	&__name-box {
 		width: 100%;
 		padding-left: 15px;
+
+		/* -- */
+
+		@media (max-width: 640px) {
+			width: 100%;
+			padding-right: 36px;
+			padding-bottom: 15px;
+			padding-left: 0;
+		}
 	}
 
 	&__name {
@@ -63,6 +118,12 @@
 				color: #ba131a;
 			}
 		}
+
+		/* -- */
+
+		@media (max-width: 640px) {
+			font-size: 17px;
+		}
 	}
 
 	&__info {
@@ -76,6 +137,13 @@
 	&__count-box {
 		min-width: 130px;
 		padding-left: 15px;
+
+		/* -- */
+		
+		@media (max-width: 640px) {
+			min-width: 110px;
+			padding-left: 0;
+		}
 	}
 
 	/* -- */
@@ -98,6 +166,17 @@
 
 	&__button-box {
 		padding-left: 15px;
+
+		/* -- */
+
+		@media (max-width: 640px) {
+			position: absolute;
+			top: 50%;
+			right: 10px;
+			padding-bottom: 0;
+			padding-left: 0;
+			transform: translateY(-50%);
+		}
 	}
 
 	&__x {
@@ -157,5 +236,4 @@
 			background-image: url(../images/ico-x-bold-red-30x30.svg);
 		}
 	}
-
 }

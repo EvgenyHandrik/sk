@@ -2,20 +2,21 @@
 	&--default {
 		&.crt2-notify--info {
 			position: relative;
-			padding: 5px 0 0 (30px + 15px);
+			padding: 3px 0 0 (30px + 15px);
 			min-height: 30px;
 			font-size: 16px;
 			
 			&:before {
 				content: '';
 				position: absolute;
-				top: 0;
+				top: 50%;
 				left: 0;
 				width: 30px;
 				height: 30px;
 				background-size: 30px 30px;
 				background-image: url(../images/ico-chat-info-black-30x30.svg);
 				opacity: 0.35;
+				transform: translateY(-50%);
 			}
 
 			p {
