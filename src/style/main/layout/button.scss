@@ -6,7 +6,20 @@
 			padding: 0 15px 0 15px;
 
 			.button__text {
-				font-size: 15px;
+				display: inline;
+				font-size: 14px;
+				vertical-align: baseline;
+			}
+		}
+
+		&.button--order {
+			height: 47px;
+			line-height: 47px;
+			padding: 0 25px;
+
+			.button__text {
+				display: inline;
+				vertical-align: baseline;
 			}
 		}
 
@@ -15,6 +28,23 @@
 
 			&:before {
 				border-radius: 5px;
+			}
+		}
+
+		/* -- */
+
+		&:disabled {
+			opacity: 0.5;
+			cursor: not-allowed;
+
+			&:hover {
+				&:before {
+					display: none;
+				}
+			}
+
+			.button__text {
+				opacity: 0.5;
 			}
 		}
 	}

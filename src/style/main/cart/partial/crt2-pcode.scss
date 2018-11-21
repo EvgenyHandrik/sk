@@ -1,18 +1,26 @@
 .crt2-pcode {
+	margin: 0 0 35px 0;
 
+	/* -- */
+
+	&__submit {
+		display: block;
+	}
 }
 
-.crt2-pcode-fgroup {
-	&--main {
+.crt2-pcode-form {
+	&--default {
+		display: table;
+		width: 100%;
 		max-width: 390px;
 
-		.crt2-pcode-fgroup__row {
-			display: table;
-			width: 100%;
+		.crt2-pcode-form__row {
+			display: table-row;
 		}
 	
-		.crt2-pcode-fgroup__col {
+		.crt2-pcode-form__col {
 			display: table-cell;
+			vertical-align: middle;
 
 			&--submit {
 				padding: 0 0 0 10px;

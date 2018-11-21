@@ -1,0 +1,31 @@
+.crt2-cutlery {
+	margin: 0 0 20px 0;
+}
+
+.crt2-cutlery-form {
+	font-family: Roboto, Arimo, sans-serif;
+
+	&--default {
+		display: table;
+		max-width: 280px;
+
+		.crt2-cutlery-form__row {
+			display: table-row;
+		}
+
+		.crt2-cutlery-form__col {
+			display: table-cell;
+			padding-bottom: 15px;
+			vertical-align: top;
+
+			&--label {
+				width: 100%;
+				padding-top: 5px;
+			}
+
+			&--count {
+				padding-left: 15px;
+			}
+		}
+	}
+}

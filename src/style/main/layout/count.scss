@@ -1,0 +1,155 @@
+.count {
+	&--default {
+		display: inline-block;
+
+		&:after {
+			content: '';
+			display: block;
+			clear: both;
+			font-size: 1px;
+		}
+
+		.count__minus,
+		.count__plus {
+			float: left;
+			display: block;
+			height: 25px;
+			padding: 0 10px;
+			font-size: 15px;
+			background-color: #eee;
+		}
+
+		.count__field {
+			float: left;
+			display: block;
+			height: 25px;
+			width: 30px;
+			border: 1px solid #eee;
+		}
+
+		/* -- */
+
+		&.count--lite {
+			$count-lite-color-button-text: #ccc;
+			$count-lite-color-border: #f1f1f1;
+
+			.count__minus,
+			.count__plus {
+				position: relative;
+				width: 26px;
+				height: 30px;
+				color: transparent;
+				background-color: transparent;
+				cursor: pointer;
+
+				-moz-user-select: none;
+				-ms-user-select: none;
+				-khtml-user-select: none;
+				-webkit-user-select: none;
+				-webkit-touch-callout: none;
+
+				&:hover {
+					&:before,
+					&:after {
+						background-color: #ba131a;
+						transition-property: background-color;
+						transition-duration: 200ms;
+					}
+				}
+			}
+			
+			.count__minus {
+				&:before {
+					content: '';
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					display: block;
+					width: 10px;
+					height: 2px;
+					background-color: $count-lite-color-button-text;
+					transform: translate(-50%, -50%);
+				}
+			}
+
+			.count__plus {
+				&:before {
+					content: '';
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					display: block;
+					width: 10px;
+					height: 2px;
+					background-color: $count-lite-color-button-text;
+					transform: translate(-50%, -50%);
+				}
+
+				&:after {
+					content: '';
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					display: block;
+					width: 2px;
+					height: 10px;
+					background-color: $count-lite-color-button-text;
+					transform: translate(-50%, -50%);
+				}
+			}
+
+			.count__field {
+				width: 46px;
+				font-size: 19px;
+			}
+
+			/* -- */
+
+			&.count--separate {
+				width: 98px;
+
+				.count__minus,
+				.count__plus {
+					border: 1px solid $count-lite-color-border;
+					border-radius: 5px;
+				}
+
+				.count__field {
+					height: 30px;
+					border: 0;
+				}
+			}
+
+			&.count--joint {
+				width: 98px;
+				border: 1px solid $count-lite-color-border;
+				border-radius: 5px;
+
+				.count__minus,
+				.count__plus {
+					width: 26px;
+					height: 28px;
+					border: 0;
+				}
+
+				.count__field {
+					border: 0;
+					height: 28px;
+					width: 44px;
+				}
+			}
+		}
+	}
+
+	/* -- */
+
+	&--block {
+		display: block;
+	}
+
+	&--inherit-font {
+		.count__field {
+			font-family: inherit;
+		}
+	}
+}
