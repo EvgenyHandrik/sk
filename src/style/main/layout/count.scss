@@ -48,12 +48,16 @@
 				-webkit-user-select: none;
 				-webkit-touch-callout: none;
 
+				&:before,
+				&:after {
+					transition-property: background-color;
+					transition-duration: 200ms;
+				}
+
 				&:hover {
 					&:before,
 					&:after {
 						background-color: #ba131a;
-						transition-property: background-color;
-						transition-duration: 200ms;
 					}
 				}
 			}
