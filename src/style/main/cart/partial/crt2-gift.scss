@@ -18,16 +18,6 @@
 .crt2-gift-one {
 	position: relative;
 
-	&:hover {
-		.crt2-gift-one__image-box {
-			opacity: 1;
-		}
-
-		.crt2-gift-one__content-box {
-			opacity: 1;
-		}
-	}
-
 	/* -- */
 
 	&__hidden-control {
@@ -52,20 +42,11 @@
 						}
 					}
 				}
-
-				.crt2-gift-one__image-box {
-					opacity: 1;
-				}
-
-				.crt2-gift-one__content-box {
-					opacity: 1;
-				}
 			}
 		}
 	}
 
 	&__image-box {
-		opacity: 0.5;
 		transition-duration: 200ms;
 		transition-property: opacity;
 	}
@@ -77,7 +58,6 @@
 	}
 
 	&__content-box {
-		opacity: 0.5;
 		transition-duration: 200ms;
 		transition-property: opacity;
 	}
@@ -112,6 +92,20 @@
 	}
 
 	&--style-gift {
+		&:hover {
+			.crt2-gift-one__label {
+				background-color: #fff;
+				box-shadow: 0 0 3px rgba(#000, 0.25);
+			}
+		}
+
+		/* -- */
+
+		.crt2-gift-one__image-box {
+			transition-property: opacity;
+			transition-duration: 200ms;
+		}
+
 		.crt2-gift-one__label {
 			font-family: Roboto, Arimo, sans-serif;
 			font-size: 15px;
