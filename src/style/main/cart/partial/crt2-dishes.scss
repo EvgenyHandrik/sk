@@ -3,6 +3,18 @@
 
 	/* -- */
 
+	&--additional {
+		.crt2-dish__price-box {
+			min-width: 130px + 31px;
+		}
+
+		.crt2-dish__button-box {
+			display: none;
+		}
+	}
+
+	/* -- */
+
 	@media (max-width: 640px) {
 		margin-bottom: 40px;
 	}
@@ -72,6 +84,7 @@
 	&__image-wrapper {
 		display: block;
 		width: 62px;
+		min-height: 44.5px;
 		border: 0;
 		border-radius: 5px;
 		overflow: hidden;
@@ -100,7 +113,7 @@
 
 		@media (max-width: 640px) {
 			width: 100%;
-			padding-right: 36px;
+			padding-right: 46px;
 			padding-bottom: 15px;
 			padding-left: 0;
 		}
@@ -165,23 +178,25 @@
 	/* -- */
 
 	&__button-box {
-		padding-left: 15px;
+		min-width: 31px;
+		line-height: 1px;
+		text-align: right;
+		font-size: 1px;
 
 		/* -- */
 
 		@media (max-width: 640px) {
 			position: absolute;
-			top: 50%;
+			top: 15px;
 			right: 10px;
 			padding-bottom: 0;
 			padding-left: 0;
-			transform: translateY(-50%);
 		}
 	}
 
 	&__x {
 		position: relative;
-		display: block;
+		display: inline-block;
 		width: 16px;
 		height: 16px;
 		line-height: 16px;
