@@ -84,7 +84,6 @@
 	&__image-wrapper {
 		display: block;
 		width: 62px;
-		min-height: 44.5px;
 		border: 0;
 		border-radius: 5px;
 		overflow: hidden;
@@ -100,7 +99,8 @@
 
 	&__image {
 		display: block;
-		max-width: 100%;
+		width: 62px;
+		height: 45px;
 	}
 
 	/* -- */
