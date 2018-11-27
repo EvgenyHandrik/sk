@@ -14,15 +14,15 @@
 
 			/* -- */
 
-			&#{$b}-group--margin-bottom {
+			&.form-group--margin-bottom {
 				margin-bottom: $form-group-margin-bottom;
 			}
 
-			&#{$b}-group--width-m {
+			&.form-group--width-m {
 				max-width: 350px;
 			}
 
-			&#{$b}-group--margin-top-x1-8 {
+			&.form-group--margin-top-x1-8 {
 				margin-top: $form-group-margin-bottom * 1.8;
 			}
 		}
@@ -178,6 +178,16 @@
 						color: #bb1018;
 					}
 				}
+			}
+		}
+	}
+
+	/* -- */
+
+	&--lite {
+		.form-label {
+			&--default {
+				color: #787878;
 			}
 		}
 	}

@@ -1,0 +1,24 @@
+.cht2-steps {
+	position: relative;
+	padding-right: 260px;
+
+	@media (max-width: 640px) {
+		padding-right: 0;
+	}
+
+	/* -- */
+
+	&__steps {
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		/* -- */
+
+		@media (max-width: 640px) {
+			&.order-steps--default {
+				display: none;
+			}			
+		}
+	}
+}

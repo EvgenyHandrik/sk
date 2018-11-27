@@ -1,0 +1,23 @@
+$cht2-ttl-1-margin-bottom: 25px;
+$cht2-ttl-2-margin-bottom: 20px;
+
+.cht2-ttl {
+	&.ttl {
+		&--1 {
+			display: block;
+			margin-bottom: $cht2-ttl-1-margin-bottom;
+		}
+		
+		&--2 {
+			display: block;
+			margin-bottom: $cht2-ttl-2-margin-bottom;
+			font-size: 19px;
+		}
+	}
+
+	/* -- */
+
+	&--special {
+		color: #BA131A;
+	}
+}

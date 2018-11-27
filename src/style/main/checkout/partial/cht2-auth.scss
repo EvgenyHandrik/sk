@@ -1,0 +1,44 @@
+.cht2-auth {
+	
+	/* -- */
+
+	.cht2-section__content {
+		padding-bottom: 30px;
+	}
+}
+
+.cht2-auth-subttl {
+	$title-margin-bottom: 20px;
+
+	margin-top: -$title-margin-bottom / 2;
+	margin-bottom: $title-margin-bottom + 10px;
+	line-height: 1.4;
+	font-size: 13px;
+}
+
+.cht2-auth-form {
+	$input-width: 280px;
+	$input-space-h: 25px;
+
+	&__row {
+		&:after {
+			content: '';
+			display: block;
+			clear: both;
+			font-size: 1px;
+		}
+	}
+
+	&__col {
+		float: left;
+		width: $input-width + $input-space-h / 2;
+
+		&:nth-child(odd) {
+			padding-right: $input-space-h / 2;
+		}
+
+		&:nth-child(even) {
+			padding-left: $input-space-h / 2;
+		}
+	}
+}
