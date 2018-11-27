@@ -1,0 +1,74 @@
+$phone-sms-width: 95px;
+
+.phone-sms {
+	position: relative;
+}
+
+.phone-sms-button {
+	position: absolute;
+	z-index: 2;
+	top: 4px;
+	right: 4px;
+	display: block;
+	width: $phone-sms-width;
+	height: 34px;
+	padding: 0;
+	font-size: 13px;
+	border-radius: 5px;
+	color: #fff;
+	background-color: #bb1018;
+	cursor: pointer;
+	transition-duration: 200ms;
+	transition-property: background-color;
+
+	&:hover {
+		background-color: #d00711;
+	}
+
+	&:disabled {
+		background-color: #4C4C4C;
+		cursor: default;
+
+		/* -- */
+
+		.phone-sms-button__text {
+			&--counter {
+				display: inline;
+			}
+
+			&--normal {
+				display: none;
+			}
+		}
+	}
+
+	/* -- */
+
+	&__text {
+		&--counter {
+			display: none;
+		}
+	}
+}
+
+.phone-sms-input {
+	&.form-control--default.form-control--text {
+		padding-right: $phone-sms-width + 5px + 4px;
+	}
+}
+
+.phone-sms-counter {
+	&__icon {
+		$icon-size: 15px;
+
+		display: inline-block;
+		width: $icon-size;
+		height: $icon-size;
+		margin: 0 5px 0 0;
+		vertical-align: middle;
+		background-size: $icon-size $icon-size;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-image: url(../images/ico-check-m-white-1-30x30.svg);
+	}
+}
