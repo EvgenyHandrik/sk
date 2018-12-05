@@ -3,7 +3,7 @@
 	/* -- */
 
 	.cht2-section__content {
-		padding-bottom: 30px;
+		margin-bottom: 45px;
 	}
 }
 
@@ -17,28 +17,53 @@
 }
 
 .cht2-auth-form {
-	$input-width: 280px;
-	$input-space-h: 25px;
+
+}
+
+.cht2-auth-group {
+	max-width: 600px;
+	margin-bottom: 30px;
+
+	@media (max-width: 700px) {
+		max-width: 300px + 49px;
+		margin-bottom: 0px;
+	}
+
+	/* -- */
 
 	&__row {
-		&:after {
-			content: '';
+		display: table;
+		width: 100%;
+
+		@media (max-width: 700px) {
 			display: block;
-			clear: both;
-			font-size: 1px;
 		}
 	}
 
 	&__col {
-		float: left;
-		width: $input-width + $input-space-h / 2;
+		display: table-cell;
+		width: 50%;
 
-		&:nth-child(odd) {
-			padding-right: $input-space-h / 2;
+		@media (max-width: 700px) {
+			display: block;
+			width: auto;
+			margin-bottom: 20px;
 		}
 
-		&:nth-child(even) {
-			padding-left: $input-space-h / 2;
+		&:first-child {
+			padding-right: 5px;
+
+			@media (max-width: 700px) {
+				padding-right: 0;
+			}
+		}
+
+		&:last-child {
+			padding-left: 5px;
+
+			@media (max-width: 700px) {
+				padding-left: 0;
+			}
 		}
 	}
 }

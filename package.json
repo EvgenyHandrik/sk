@@ -21,5 +21,7 @@
     "gulp-rigger": "^0.5.8",
     "gulp-sass": "^4.0.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "air-datepicker": "^2.2.3"
+  }
 }

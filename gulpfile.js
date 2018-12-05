@@ -11,7 +11,11 @@ var remember = require('gulp-remember');
 var cached = require('gulp-cached');
 
 gulp.task('sass:main', function() {
-	return gulp.src(['src/style/main/**/*.scss', '!src/style/main/**/partial/*.scss'], {
+	return gulp.src([
+		'src/style/main/**/*.scss',
+		'!src/style/main/**/helpers/**/*.scss',
+		'!src/style/main/**/partial/*.scss'
+	], {
 		since: gulp.lastRun('sass:main')
 	})
 		.pipe(remember('sassMainMemory'))
@@ -91,7 +95,7 @@ gulp.task('html:partials', function() {
 });
 
 gulp.task('image', function() {
-	return gulp.src('src/images/**/*.*')
+	return gulp.src('src/images/**/*.*', {since: gulp.lastRun('image')})
 		.pipe(gulp.dest('build/images/'))
 });
 
@@ -127,7 +131,10 @@ gulp.task('serve', function() {
 });
 
 gulp.task('watch', function() {
-	gulp.watch('src/style/main/**/*.scss', gulp.series('sass:main'))
+	gulp.watch([
+		'src/style/helpers/**/*.scss',
+		'src/style/main/**/*.scss'
+	], gulp.series('sass:main'))
 		.on('unlink', function(path) {
 			remember.forget('sassMainMemory', path.resolve(filepath));
 			delete cached.caches.sassMainCache[path.resolve(filepath)];

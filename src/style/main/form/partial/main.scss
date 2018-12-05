@@ -71,6 +71,14 @@
 					background-position: center;
 					background-repeat: no-repeat;
 				}
+
+				/* -- */
+
+				.form-control {
+					&--default {
+						padding-right: $input-height;
+					}
+				}
 			}
 
 			&#{$b}-control-group--success {
@@ -89,6 +97,17 @@
 
 			/* -- */
 
+			&#{$b}-control-group--ico-s {
+				&:before {
+					width: 25px;
+					background-size: 10px 10px;
+				}
+
+				.form-control--default {
+					padding-right: 25px
+				}
+			}
+
 			&#{$b}-control-group--width-m {
 				max-width: 350px;
 			}
@@ -103,7 +122,7 @@
 				display: block;
 				width: 100%;
 				height: $input-height;
-				padding: 0 $input-height 0 15px;
+				padding: 0 15px 0 15px;
 				border: 1px solid #e0e1e3;
 				border-radius: 5px;
 				background-color: transparent;
@@ -120,6 +139,12 @@
 					background-color: #f5f6f7;
 					cursor: not-allowed;
 				}
+			}
+
+			&#{$b}-control--textarea {
+				min-height: 80px;
+				padding-top: 10px;
+				padding-bottom: 10px;
 			}
 		}
 	}

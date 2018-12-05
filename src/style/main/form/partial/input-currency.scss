@@ -1,0 +1,23 @@
+.input-currency {
+	$currency-width: 30px;
+
+	&__text {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: $currency-width;
+		height: $form-input-m-height;
+		line-height: $form-input-m-height;
+		font-size: 18px;
+		text-align: center;
+		color: #B2B2B2;
+	}
+
+	&__control {
+		&.form-control--default {
+			&.form-control--text {
+				padding-right: $currency-width;
+			}
+		}
+	}
+}

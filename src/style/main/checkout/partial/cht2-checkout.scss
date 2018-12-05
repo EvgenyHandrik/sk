@@ -1,0 +1,17 @@
+@import '../layout/sktab/helpers/helpers';
+
+.cht2-checkout {
+	margin: 50px 0 0 0;
+
+	/* -- */
+
+	&__submit {
+		margin-bottom: 30px;
+	}
+}
+
+.cht2-checkout-sktab {
+	@media (max-width: 700px) {
+		@include sktab-mobile();
+	}
+}

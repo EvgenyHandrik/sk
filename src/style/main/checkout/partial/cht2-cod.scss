@@ -7,9 +7,52 @@
 }
 
 .cht2-cod-types {
+	margin: 0 0 30px 0;
 
+	&__select-box {
+		max-width: 220px;
+
+		/* -- */
+
+		.jq-selectbox {
+			&.select {
+				width: 100%;
+			}
+		}
+	}
 }
 
 .cht2-cod-cash {
-	
+	width: 220px;	
+
+	&__row {
+		display: table;
+		width: 100%;
+	}
+
+	&__col {
+		display: table-cell;
+
+		/* -- */
+
+		&--label {
+			white-space: nowrap;
+		}
+
+		&--control {
+			width: 100%;
+			padding-left: 15px;
+		}
+	}
+
+	/* -- */
+
+	&__input-rub {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 1;
+		display: block;
+		// width: 
+	}
 }

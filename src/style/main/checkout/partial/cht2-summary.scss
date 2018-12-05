@@ -1,9 +1,25 @@
-.cht2-summary {}
+.cht2-summary {
+	margin: 50px 0 30px 0;
+}
 
-.cht2-summary-total {}
+.cht2-summary-total {
+	margin: 0 0 15px 0;
+	font-weight: bold;
+	font-size: 24px;
+}
 
 .cht2-summary-bonus {
+	font-size: 13px;
+
 	&__number {
-		
+		display: inline-block;
+		line-height: 1;
+		padding: 5px 10px;
+		margin: 0 0 0 5px;
+		font-weight: bold;
+		vertical-align: middle;
+		border-radius: 50px;
+		color: #fff;
+		background-color: $color-red-active;
 	}
 }

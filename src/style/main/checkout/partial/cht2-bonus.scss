@@ -1,5 +1,86 @@
 .cht2-bonus {}
 
-.cht2-bonus-info {}
+.cht2-bonus-info {
+	$icon-size: 30px;
 
-.cht2-bonus-stat {}
+	max-width: 400px;
+	padding: 0 0 0 ($icon-size + 20px);
+	margin: 0 0 30px 0;
+	background-position: top left;
+	background-repeat: no-repeat;
+	background-size: 35px 35px;
+	background-image: url(../images/ico-coin-stack-flat-red-30x30.svg);
+
+	/* -- */
+
+	&__title {
+		display: block;
+		margin: 0 0 5px 0;
+		font-weight: bold;
+	}
+
+	& > p {
+		font-size: 13px;
+	}
+}
+
+.cht2-bonus-stat {
+	
+}
+
+.cht2-bonus-total {
+	margin: 0 0 30px 0;
+	font-size: 16px;
+
+	/* -- */
+
+	&__row {
+		display: table;
+		max-width: 600px;
+	}
+
+	&__col {
+		display: table-cell;
+		padding-left: 40px;
+
+		&:first-child {
+			padding-left: 0;
+		}
+	}
+
+	/* -- */
+	
+	&__name {
+
+		@media (max-width: 700px) {
+			display: block;
+		}
+	}
+	
+	&__value {
+		font-weight: bold;
+	}
+
+	&__info-rate {
+		margin: 0 0 0 10px;
+		font-size: 12px;
+		color: #929292;
+
+		@media (max-width: 700px) {
+			margin-left: 5px;
+		}
+	}
+}
+
+.cht2-bonus-form {
+
+}
+
+.cht2-bonus-use {
+	margin: 0 0 30px 0;
+	max-width: 600px;
+
+	&__control {
+		max-width: 156px;
+	}
+}

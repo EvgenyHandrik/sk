@@ -1,0 +1,36 @@
+.cht2-pickup {
+
+}
+
+.cht2-pickup-form {
+
+}
+
+.cht2-pickup-address-list {
+	max-width: 344px;
+
+	@media (max-width: 700px) {
+		max-width: 300px + 49px;
+	}
+
+	/* -- */
+
+	&__select-box {
+		position: relative;
+		z-index: 1;
+
+		.select {
+			&.jq-selectbox {
+				width: 100%;
+			}
+
+			.jq-selectbox {
+				&__dropdown {
+					li {
+						max-width: 100%;
+					}
+				}
+			}
+		}
+	}
+}

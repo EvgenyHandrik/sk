@@ -1,3 +1,6 @@
+@import "../../helpers/helpers";
+
+@import "./partial/cht2-rub";
 @import "./partial/cht2-content-wrapper";
 @import "./partial/cht2-steps";
 @import "./partial/cht2-ttl";
@@ -5,8 +8,13 @@
 @import "./partial/cht2-auth";
 @import "./partial/cht2-shipping";
 @import "./partial/cht2-delivery";
+@import "./partial/cht2-pickup";
 @import "./partial/cht2-payment";
 @import "./partial/cht2-bonus";
 @import "./partial/cht2-summary";
 @import "./partial/cht2-cod";
 @import "./partial/cht2-card";
+@import "./partial/cht2-checkout";
+@import "./partial/cht2-rules";
+
+@import "./partial/cht2-success";

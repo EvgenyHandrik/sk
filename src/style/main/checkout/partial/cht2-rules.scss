@@ -1,0 +1,23 @@
+.cht2-rules {
+	max-width: 600px;
+	color: #b2b2b2;
+}
+
+.cht2-rules-group {
+	margin-bottom: 10px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.cht2-rules-link {
+	color: #b2b2b2;
+	border-bottom: 1px solid #b2b2b2;
+}
+
+.cht2-rules-label-check {
+	&__text {
+		margin-left: 10px;
+	}
+}
