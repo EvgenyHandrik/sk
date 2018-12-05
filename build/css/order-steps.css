@@ -1,0 +1,43 @@
+.order-steps--default {
+  display: inline-block;
+  line-height: 1;
+  padding: 10px;
+  margin: 0;
+  font-size: 1px;
+  border: 1px solid #E0E1E3;
+  border-radius: 5px;
+  /* -- */
+}
+
+.order-steps--default .order-steps__item {
+  display: inline-block;
+  padding: 0;
+  margin: 0 10px 0 0;
+  font-size: 13px;
+  color: #B3B3B3;
+  /* -- */
+}
+
+.order-steps--default .order-steps__item:after {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin: -3px 0 0 10px;
+  vertical-align: middle;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../images/ico-arr-r-md-black-30x30.svg);
+}
+
+.order-steps--default .order-steps__item:last-child {
+  margin-right: 0;
+}
+
+.order-steps--default .order-steps__item:last-child:after {
+  display: none;
+}
+
+.order-steps--default .order-steps__item--active {
+  color: #000;
+}

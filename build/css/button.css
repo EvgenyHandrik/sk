@@ -1,0 +1,47 @@
+.button--default {
+  /* -- */
+}
+
+.button--default.button--m {
+  height: 42px;
+  line-height: 42px;
+  padding: 0 15px 0 15px;
+}
+
+.button--default.button--m .button__text {
+  display: inline;
+  font-size: 14px;
+  vertical-align: baseline;
+}
+
+.button--default.button--order {
+  height: 47px;
+  line-height: 47px;
+  padding: 0 25px;
+}
+
+.button--default.button--order .button__text {
+  display: inline;
+  vertical-align: baseline;
+}
+
+.button--default.button--border-radius-m {
+  border-radius: 5px;
+}
+
+.button--default.button--border-radius-m:before {
+  border-radius: 5px;
+}
+
+.button--default:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button--default:disabled:hover:before {
+  display: none;
+}
+
+.button--default:disabled .button__text {
+  opacity: 0.5;
+}

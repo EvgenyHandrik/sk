@@ -1,0 +1,4 @@
+.page--no-background,
+.page--no-background body {
+  background: none transparent;
+}

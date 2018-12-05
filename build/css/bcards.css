@@ -1,0 +1,382 @@
+.bcards {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+.bcard {
+  position: relative;
+  display: block;
+  max-width: 300px;
+  padding: 0;
+  margin: 0;
+  /* -- */
+}
+
+.bcard__hidden-control {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  /* -- */
+}
+
+.bcard__hidden-control:checked + .bcard__label:after {
+  opacity: 1;
+}
+
+.bcard__hidden-control:checked + .bcard__label:hover {
+  cursor: default;
+}
+
+.bcard__hidden-control:checked + .bcard__label:hover:before {
+  opacity: 0;
+}
+
+.bcard__label {
+  display: block;
+  padding: 10px 40px 10px 50px;
+  margin: 0;
+  border-bottom: 1px solid #f1f1f1;
+  cursor: pointer;
+}
+
+.bcard__label:hover:before {
+  opacity: 1;
+}
+
+.bcard__label:before,
+.bcard__label:after {
+  content: '';
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.bcard__label:before {
+  right: 11px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #bb1018;
+  border-radius: 50%;
+  background-size: 18px 18px;
+  opacity: 0;
+}
+
+.bcard__label:after {
+  background-image: url(../images/ico-check-circle-flat-red-20x20.svg);
+  opacity: 0;
+}
+
+.bcard__icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.bcard__name {
+  display: block;
+  margin: 0 0 3px 0;
+  font-size: 18px;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+}
+
+.bcard__num {
+  display: block;
+  font-size: 14px;
+  color: #bebebe;
+}
+
+.bcard__num:before {
+  content: '';
+  display: inline-block;
+  width: 21px;
+  height: 3px;
+  margin: 0 5px 0 0;
+  vertical-align: middle;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../images/ico-4dots-grey-21x3.svg);
+}
+
+.bcard--mastercard .bcard__icon {
+  background-image: url(../images/ico-bcard-mastercard-60x60.png);
+}
+
+.bcard--visa .bcard__icon {
+  background-image: url(../images/ico-bcard-visa-60x60.jpg);
+}
+
+/* -- */
+
+.bcard-add {
+  position: relative;
+  z-index: 1;
+  width: 588px;
+  height: 263px;
+  /* -- */
+}
+
+.bcard-add:before {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 403px;
+  height: 231px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  /* -- */
+}
+
+.bcard-add:after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 32px;
+  right: 0;
+  display: block;
+  width: 403px;
+  height: 231px;
+  border-radius: 10px;
+  background-color: #efefef;
+  background-position: 0 38px;
+  background-repeat: repeat-x;
+  background-size: 1px 42px;
+  background-image: url("data:image/svg+xml,%3Csvg width='1' height='1' viewBox='0 0 1 1' fill='none' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='1' height='1' fill='black' fill-opacity='0.1'/%3E%3C/svg%3E%0A");
+  /* -- */
+}
+
+.bcard-add__title {
+  display: block;
+  font-size: 18px;
+  /* -- */
+}
+
+.bcard-add-form {
+  position: absolute;
+  z-index: 3;
+  top: 20px;
+  left: 25px;
+  width: 353px;
+  height: 191px;
+  /* -- */
+}
+
+.bcard-add-num {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  /* -- */
+  /* -- */
+}
+
+.bcard-add-num .bcard-add-num__label {
+  display: none;
+  /* -- */
+}
+
+.bcard-add-vc {
+  position: absolute;
+  top: 107px;
+  right: 0;
+  width: 177px;
+  /* -- */
+  /* -- */
+}
+
+.bcard-add-vc__row {
+  /* -- */
+}
+
+.bcard-add-vc__col {
+  /* -- */
+  /* -- */
+}
+
+.bcard-add-vc__col--code {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 145px;
+  margin-left: 40px;
+  /* -- */
+}
+
+.bcard-add-validity .bcard-add-validity__label {
+  display: none;
+  /* -- */
+}
+
+.bcard-add-validity__control {
+  text-align: center;
+  /* -- */
+}
+
+.bcard-add-code__control.form-control--default.form-control--text {
+  text-align: center;
+  background-color: #fff;
+  /* -- */
+}
+
+.bcard-add-code__label {
+  position: absolute;
+  top: 52px;
+  display: block;
+  /* -- */
+  /* -- */
+}
+
+.bcard-add-code__label-text {
+  display: block;
+}
+
+.bcard-add-code__label-text--1 {
+  display: none;
+  /* -- */
+}
+
+.bcard-add-code__label-text--2 {
+  font-size: 13px;
+  line-height: 1.2;
+  color: #000;
+  /* -- */
+}
+
+.bcard-add-remember {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /* -- */
+  /* -- */
+}
+
+.bcard-add-remember__text {
+  margin-left: 5px;
+  font-size: 13px;
+}
+
+@media (max-width: 700px) {
+  .bcard-add {
+    position: static;
+    width: auto;
+    height: auto;
+  }
+
+  .bcard-add:before {
+    display: none;
+  }
+
+  .bcard-add:after {
+    display: none;
+  }
+
+  .bcard-add__title {
+    display: none;
+  }
+
+  .bcard-add-form {
+    position: static;
+    width: auto;
+    max-width: 349px;
+    height: auto;
+  }
+
+  .bcard-add-num {
+    position: static;
+    width: auto;
+    margin: 0 0 20px 0;
+  }
+
+  .bcard-add-num .bcard-add-num__label {
+    display: block;
+  }
+
+  .bcard-add-vc {
+    position: static;
+    width: auto;
+    margin: 0 0 25px 0;
+  }
+
+  .bcard-add-vc__row {
+    display: table;
+    width: 100%;
+  }
+
+  .bcard-add-vc__col {
+    display: table-cell;
+    vertical-align: bottom;
+  }
+
+  .bcard-add-vc__col:first-child {
+    padding-right: 5px;
+  }
+
+  .bcard-add-vc__col:last-child {
+    padding-left: 5px;
+  }
+
+  .bcard-add-vc__col--code {
+    position: static;
+    width: auto;
+    margin-left: 0;
+  }
+
+  .bcard-add-validity .bcard-add-validity__label {
+    display: block;
+  }
+
+  .bcard-add-validity__control {
+    text-align: left;
+  }
+
+  .bcard-add-code__control.form-control--default.form-control--text {
+    text-align: left;
+  }
+
+  .bcard-add-code__label {
+    position: static;
+  }
+
+  .bcard-add-code__label-text--1 {
+    display: block;
+  }
+
+  .bcard-add-code__label-text--2 {
+    display: none;
+  }
+
+  .bcard-add-remember {
+    position: static;
+  }
+}

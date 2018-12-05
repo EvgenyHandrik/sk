@@ -1,0 +1,65 @@
+.sktab-nav-wrapper {
+  display: inline-block;
+  font-size: 1px;
+  border-radius: 100px;
+  background-color: #f5f5f5;
+}
+
+.sktab-nav {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+.sktab-nav__item {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  /* -- */
+}
+
+.sktab-nav__item--active .sktab-nav__button {
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+  color: #bb1018;
+  background-color: #fff;
+  cursor: default;
+}
+
+.sktab-nav__item--active .sktab-nav__button:hover {
+  color: #bb1018;
+}
+
+.sktab-nav__button {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 15px;
+  font-size: 18px;
+  border: 0;
+  border-radius: 100px;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0);
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+  -webkit-transition-property: background-color, color, -webkit-box-shadow;
+  transition-property: background-color, color, -webkit-box-shadow;
+  transition-property: background-color, box-shadow, color;
+  transition-property: background-color, box-shadow, color, -webkit-box-shadow;
+}
+
+.sktab-nav__button:hover {
+  color: black;
+}
+
+.sktab-content__item {
+  display: none;
+  /* -- */
+}
+
+.sktab-content__item--active {
+  display: block;
+}

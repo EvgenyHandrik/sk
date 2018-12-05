@@ -1,0 +1,79 @@
+.f-soc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  /* -- */
+}
+
+.f-soc__button {
+  position: relative;
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
+  width: 18px;
+  height: 18px;
+  border-bottom: 0;
+  border-radius: 5px;
+  background-color: #3c5a99;
+  overflow: hidden;
+  opacity: 1;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
+  /* -- */
+}
+
+.f-soc__button:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px 18px;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.f-soc__button:hover {
+  opacity: 0.5;
+}
+
+.f-soc__button--i:before {
+  background-image: url(../images/soc-18x18-i-white-circle.svg);
+}
+
+.f-soc__button--f:before {
+  background-image: url(../images/soc-20x20-f-white.svg);
+}
+
+.f-soc__button--v:before {
+  width: 15px;
+  height: 15px;
+  background-size: 15px 15px;
+  background-image: url(../images/soc-20x20-v-white.svg);
+}
+
+.f-soc__button + .f-soc__button {
+  margin-left: 10px;
+}
+
+@media (max-width: 600px) {
+  .f-soc {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 15px;
+  }
+}

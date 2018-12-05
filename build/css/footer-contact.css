@@ -1,0 +1,9 @@
+@media (max-width: 600px) {
+  .footer__contact {
+    display: block;
+  }
+
+  .footer__social {
+    margin-left: 0;
+  }
+}

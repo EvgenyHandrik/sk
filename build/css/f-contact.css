@@ -1,0 +1,117 @@
+.f-contact {
+  /* -- */
+  /* -- */
+}
+
+.f-contact-phone {
+  margin: 0 0 15px 0;
+}
+
+.f-contact-phone:last-child {
+  margin-bottom: 0;
+}
+
+.f-contact-phone__title {
+  display: block;
+  margin: 0 0 10px 0;
+  font-size: 15px;
+  color: #b2b2b7;
+}
+
+.f-contact-phone__title:before {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin: 0 7px 0 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
+  background-image: url(../images/ico-20x20-phone-grey.svg);
+  vertical-align: middle;
+}
+
+.f-contact-phone__num {
+  font-size: 20px;
+  color: #ba131a;
+}
+
+.f-contact-time {
+  display: block;
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+
+.f-contact-time:last-child {
+  margin-bottom: 0;
+}
+
+.f-contact-time__item {
+  display: block;
+  padding: 0;
+  margin: 0 0 10px 0;
+  font-size: 15px;
+  color: #b2b2b7;
+  /* -- */
+}
+
+.f-contact-time__item:last-child {
+  margin-bottom: 0;
+}
+
+.f-contact-soc .f-soc {
+  display: block;
+}
+
+.f-contact-soc .f-soc:after {
+  content: '';
+  display: block;
+  clear: both;
+  font-size: 1px;
+}
+
+.f-contact-soc .f-soc__button {
+  float: left;
+}
+
+@media (max-width: 800px) {
+  .f-contact-phone__title {
+    display: inline;
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+
+  .f-contact-time__item {
+    display: inline;
+  }
+
+  .f-contact-time__item:last-child {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .f-contact-phone {
+    margin-bottom: 5px;
+  }
+
+  .f-contact-phone__title {
+    font-size: 12px;
+  }
+
+  .f-contact-time__item {
+    font-size: 12px;
+  }
+
+  .f-contact-soc {
+    text-align: center;
+  }
+
+  .f-contact-soc .f-soc {
+    display: inline-block;
+  }
+
+  .f-contact {
+    text-align: center;
+  }
+}
