@@ -1,0 +1,30 @@
+.acc-navbar {
+
+}
+
+.acc-navbar-user {
+	font-size: 1px;
+
+	&__icon {
+		$icon-size: 38px;
+
+		display: inline-block;
+		width: $icon-size;
+		height: $icon-size;
+		vertical-align: middle;
+		border-radius: $icon-size;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: $icon-size $icon-size;
+		background-image: url(../images/ico-user-white-24x24.svg);
+		background-color: #f0f0f0;
+	}
+
+	&__name {
+		display: inline-block;
+		margin: 0 0 0 10px;
+		font-weight: bold;
+		font-size: 18px;
+		vertical-align: middle;
+	}
+}

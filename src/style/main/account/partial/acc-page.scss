@@ -1,0 +1,25 @@
+.acc-page {
+	margin: 35px 0 0 0;
+
+	&__row {
+		&--main {
+			display: table;
+			width: 100%;
+
+			.acc-page {
+				&__col {
+					display: table-cell;
+
+					&--nav {
+						width: 305px;
+					}
+
+				}
+			}
+		}
+	}
+
+	&__col {
+		
+	}
+}

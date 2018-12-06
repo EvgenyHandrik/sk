@@ -1,0 +1,173 @@
+.acc-page {
+  margin: 35px 0 0 0;
+}
+
+.acc-page__row--main {
+  display: table;
+  width: 100%;
+}
+
+.acc-page__row--main .acc-page__col {
+  display: table-cell;
+}
+
+.acc-page__row--main .acc-page__col--nav {
+  width: 305px;
+}
+
+.acc-navbar-user {
+  font-size: 1px;
+}
+
+.acc-navbar-user__icon {
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  vertical-align: middle;
+  border-radius: 38px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 38px 38px;
+  background-image: url(../images/ico-user-white-24x24.svg);
+  background-color: #f0f0f0;
+}
+
+.acc-navbar-user__name {
+  display: inline-block;
+  margin: 0 0 0 10px;
+  font-weight: bold;
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+.acc-nav {
+  display: block;
+  padding: 0 0 0 48px;
+  margin: 20px 0 0 0;
+}
+
+.acc-nav__item {
+  display: block;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.acc-nav__item--active .acc-nav__button {
+  color: #000;
+}
+
+.acc-nav__button {
+  border: 0;
+  color: #b2b2b2;
+}
+
+.acc-nav__button:hover {
+  color: #000;
+}
+
+.acc-bonusbar {
+  max-width: 420px;
+  padding: 0 0 20px 0;
+  margin: 0 0 30px 0;
+  border-bottom: 2px solid #f6f6f6;
+}
+
+.acc-bonusbar__row {
+  display: table;
+  width: 100%;
+}
+
+.acc-bonusbar__col {
+  display: table-cell;
+  width: 50%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.acc-bonusbar__col:first-child {
+  padding-left: 0;
+}
+
+.acc-bonusbar__col:last-child {
+  padding-right: 0;
+}
+
+.acc-bonusbar-item__main {
+  position: relative;
+}
+
+.acc-bonusbar-item__main:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.acc-bonusbar-item__name {
+  font-size: 16px;
+}
+
+.acc-bonusbar-item__value {
+  font-size: 16px;
+}
+
+.acc-bonusbar-item__info {
+  display: block;
+  margin: 5px 0 0 0;
+  font-size: 14px;
+  color: #b2b2b2;
+}
+
+.acc-bonusbar-item--total .acc-bonusbar-item__main {
+  padding-left: 29px;
+}
+
+.acc-bonusbar-item--total .acc-bonusbar-item__main:before {
+  width: 22px;
+  height: 22px;
+  background-size: 22px 22px;
+  background-image: url(../images/ico-coin-stack-flat-red-30x30.svg);
+}
+
+.acc-bonusbar-item--card .acc-bonusbar-item__main {
+  padding-left: 37px;
+}
+
+.acc-bonusbar-item--card .acc-bonusbar-item__main:before {
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+  background-image: url(../images/ico-bonus-card-flat-red-30x30.svg);
+}
+
+.acc-user-form .form-group {
+  max-width: 280px;
+}
+
+.acc-user-rules {
+  margin: 30px 0 40px 0;
+}
+
+.acc-user-rules-labelcheck__text {
+  margin-left: 10px;
+  color: #000;
+}
+
+.acc-user-buttons {
+  display: table;
+}
+
+.acc-user-button {
+  display: table-cell;
+  padding-left: 30px;
+}
+
+.acc-user-button:first-child {
+  padding-left: 0;
+}

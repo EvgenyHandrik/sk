@@ -1,0 +1,28 @@
+.acc-nav {
+	display: block;
+	padding: 0 0 0 (38px + 10px);
+	margin: 20px 0 0 0;
+
+	&__item {
+		display: block;
+		padding: 0;
+		margin: 0 0 20px 0;
+
+		&--active {
+			.acc-nav  {
+				&__button {
+					color: #000;
+				}
+			}
+		}
+	}
+
+	&__button {
+		border: 0;
+		color: $account-color-grey-light;
+
+		&:hover {
+			color: #000;
+		}
+	}
+}

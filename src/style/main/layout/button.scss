@@ -1,5 +1,56 @@
+@import '../../helpers/helpers';
+
 .button {
 	&--default {
+		
+		.button__icon {
+			position: relative;
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			margin: 0 3px 0 0;
+			vertical-align: middle;
+
+			&:before,
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: block;
+				width: 10px;
+				height: 10px;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: 10px 10px;
+				transition-property: opacity;
+				transition-duration: 200ms;
+			}
+
+			&:before {
+				z-index: 1;
+				opacity: 1;
+			}
+
+			&:after {
+				z-index: 2;
+				opacity: 0;
+			}
+
+			/* -- */
+
+			&--x-bold-dark-grey {
+				&:before {
+					background-image: url(../images/ico-x-bold-black-30x30.svg);
+					opacity: 0.7;
+				}
+
+				&:after {
+					background-image: url(../images/ico-x-bold-red-30x30.svg);
+				}
+			}
+		}
+		
 		&.button--m {
 			height: 42px;
 			line-height: 42px;
@@ -20,6 +71,35 @@
 			.button__text {
 				display: inline;
 				vertical-align: baseline;
+			}
+		}
+
+		&.button--text {
+			display: inline;
+			height: auto;
+			line-height: 1;
+			padding: 0;
+			color: #4d4d4d;
+			background: none;
+			transition-property: color;
+			transition-duration: 200ms;
+
+			&:before {
+				display: none;
+			}
+
+			&:hover {
+				color: $color-red;
+
+				.button__icon {
+					&:before {
+						opacity: 0;
+					}
+
+					&:after {
+						opacity: 1;
+					}
+				}
 			}
 		}
 

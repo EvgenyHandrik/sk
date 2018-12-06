@@ -1,0 +1,36 @@
+.acc-user {
+	
+}
+
+.acc-user-form {
+	.form-group {
+		max-width: 280px;
+	}
+}
+
+.acc-user-rules {
+	margin: 30px 0 40px 0;
+
+	&__group {}
+}
+
+.acc-user-rules-labelcheck {
+	&__text {
+		margin-left: 10px;
+		color: #000;
+	}
+}
+
+
+.acc-user-buttons {
+	display: table;
+}
+
+.acc-user-button {
+	display: table-cell;
+	padding-left: 30px;
+
+	&:first-child {
+		padding-left: 0;
+	}
+}

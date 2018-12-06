@@ -131,6 +131,7 @@
 
 .form-message--default.form-message--control {
   display: block;
+  line-height: 1.3;
   margin: 0 0 10px 0;
   font-size: 14px;
   color: #666;
@@ -175,7 +176,11 @@
 }
 
 .form--lite .form-label--default {
-  color: #787878;
+  color: #4d4d4d;
+}
+
+.form--lite .form-message--default {
+  color: #000;
 }
 
 .pretty-control--gift .pretty-control__item {

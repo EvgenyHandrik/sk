@@ -2,6 +2,53 @@
   /* -- */
 }
 
+.button--default .button__icon {
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 3px 0 0;
+  vertical-align: middle;
+  /* -- */
+}
+
+.button--default .button__icon:before,
+.button--default .button__icon:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 10px 10px;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+}
+
+.button--default .button__icon:before {
+  z-index: 1;
+  opacity: 1;
+}
+
+.button--default .button__icon:after {
+  z-index: 2;
+  opacity: 0;
+}
+
+.button--default .button__icon--x-bold-dark-grey:before {
+  background-image: url(../images/ico-x-bold-black-30x30.svg);
+  opacity: 0.7;
+}
+
+.button--default .button__icon--x-bold-dark-grey:after {
+  background-image: url(../images/ico-x-bold-red-30x30.svg);
+}
+
 .button--default.button--m {
   height: 42px;
   line-height: 42px;
@@ -23,6 +70,35 @@
 .button--default.button--order .button__text {
   display: inline;
   vertical-align: baseline;
+}
+
+.button--default.button--text {
+  display: inline;
+  height: auto;
+  line-height: 1;
+  padding: 0;
+  color: #4d4d4d;
+  background: none;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+}
+
+.button--default.button--text:before {
+  display: none;
+}
+
+.button--default.button--text:hover {
+  color: #bb1018;
+}
+
+.button--default.button--text:hover .button__icon:before {
+  opacity: 0;
+}
+
+.button--default.button--text:hover .button__icon:after {
+  opacity: 1;
 }
 
 .button--default.button--border-radius-m {
