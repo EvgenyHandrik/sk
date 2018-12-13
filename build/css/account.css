@@ -25,10 +25,6 @@
   z-index: 2;
 }
 
-.acc-navbar--open .acc-navbar-user {
-  opacity: 0;
-}
-
 .acc-navbar-user {
   position: relative;
   line-height: 1.2;
@@ -290,6 +286,10 @@
     display: block;
   }
 
+  .acc-navbar--open .acc-navbar-user {
+    opacity: 0;
+  }
+
   .acc-navbar-user__name {
     position: relative;
     padding-right: 22px;
@@ -344,40 +344,76 @@
     border-bottom: 0;
   }
 
-  .acc-nav__item--active .acc-nav__button > span {
-    display: inline-block;
-    padding: 3px 10px;
-    margin: 0 -10px;
-    border-radius: 30px;
-    background-color: #f0f0f0;
+  .acc-nav__item--active .acc-nav__button {
+    color: #bb1018;
+  }
+
+  .acc-nav__item--active .acc-nav__button:before {
+    display: none;
+  }
+
+  .acc-nav__item--active .acc-nav__button:after {
+    display: block;
   }
 
   .acc-nav__item--profile .acc-nav__button:before {
-    width: 13px;
-    height: 16px;
     background-size: 13px 16px;
     background-image: url(../images/ico-hacc-user-grey-13x16.svg);
   }
 
+  .acc-nav__item--profile .acc-nav__button:after {
+    background-size: 13px 16px;
+    background-image: url(../images/ico-hacc-user-red-13x16.svg);
+  }
+
   .acc-nav__item--card .acc-nav__button:before {
-    width: 18px;
-    height: 19px;
     background-size: 18px 19px;
     background-image: url(../images/ico-hacc-card-grey-18x19.svg);
   }
 
+  .acc-nav__item--card .acc-nav__button:after {
+    background-size: 18px 19px;
+    background-image: url(../images/ico-hacc-card-red-18x19.svg);
+  }
+
   .acc-nav__item--bonuses .acc-nav__button:before {
-    width: 18px;
-    height: 16px;
     background-size: 18px 16px;
     background-image: url(../images/ico-hacc-money-grey-18x16.svg);
   }
 
+  .acc-nav__item--bonuses .acc-nav__button:after {
+    background-size: 18px 16px;
+    background-image: url(../images/ico-hacc-money-red-18x16.svg);
+  }
+
   .acc-nav__item--history .acc-nav__button:before {
-    width: 18px;
-    height: 17px;
     background-size: 18px 17px;
     background-image: url(../images/ico-hacc-history-grey-18x17.svg);
+  }
+
+  .acc-nav__item--history .acc-nav__button:after {
+    background-size: 18px 17px;
+    background-image: url(../images/ico-hacc-history-red-18x17.svg);
+  }
+
+  .acc-nav__item--addresses .acc-nav__button:before {
+    background-size: 18px 18px;
+    background-image: url(../images/ico-hacc-placemark-grey-30x30.svg);
+  }
+
+  .acc-nav__item--addresses .acc-nav__button:after {
+    background-size: 18px 18px;
+    background-image: url(../images/ico-hacc-placemark-red-30x30.svg);
+  }
+
+  .acc-nav__item--notifications .acc-nav__button:before {
+    background-size: 17px 17px;
+    background-image: url(../images/ico-hacc-bell-grey-30x30.svg);
+  }
+
+  .acc-nav__item--notifications .acc-nav__button:after {
+    background-size: 17px 17px;
+    background-image: url(../images/ico-hacc-bell-red-30x30.svg);
   }
 
   .acc-nav__button {
@@ -387,7 +423,8 @@
     color: #000;
   }
 
-  .acc-nav__button:before {
+  .acc-nav__button:before,
+  .acc-nav__button:after {
     content: '';
     position: absolute;
     top: 50%;
@@ -401,6 +438,10 @@
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+  }
+
+  .acc-nav__button:after {
+    display: none;
   }
 
   .acc-nav-user {

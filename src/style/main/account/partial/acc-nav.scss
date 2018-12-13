@@ -47,13 +47,14 @@
 					color: #000;
 				
 					@media (max-width: $account-bp-mobile) {
-					
-						& > span {
-							display: inline-block;
-							padding: 3px 10px;
-							margin: 0 -10px;
-							border-radius: 30px;
-							background-color: #f0f0f0;
+						color: $color-red;
+
+						&:before {
+							display: none;
+						}
+
+						&:after {
+							display: block;
 						}
 					}
 				}
@@ -64,14 +65,17 @@
 			@media (max-width: $account-bp-mobile) {
 				.acc-nav {
 					&__button {
+						$icon-width: 13px;
+						$icon-height: 16px;
+						
 						&:before {
-							$icon-width: 13px;
-							$icon-height: 16px;
-
-							width: $icon-width;
-							height: $icon-height;
 							background-size: $icon-width $icon-height;
 							background-image: url(../images/ico-hacc-user-grey-13x16.svg);
+						}
+
+						&:after {
+							background-size: $icon-width $icon-height;
+							background-image: url(../images/ico-hacc-user-red-13x16.svg);
 						}
 					}
 				}
@@ -82,14 +86,17 @@
 			@media (max-width: $account-bp-mobile) {
 				.acc-nav {
 					&__button {
-						&:before {
-							$icon-width: 18px;
-							$icon-height: 19px;
+						$icon-width: 18px;
+						$icon-height: 19px;
 
-							width: $icon-width;
-							height: $icon-height;
+						&:before {
 							background-size: $icon-width $icon-height;
 							background-image: url(../images/ico-hacc-card-grey-18x19.svg);
+						}
+
+						&:after {
+							background-size: $icon-width $icon-height;
+							background-image: url(../images/ico-hacc-card-red-18x19.svg);
 						}
 					}
 				}
@@ -100,14 +107,17 @@
 			@media (max-width: $account-bp-mobile) {
 				.acc-nav {
 					&__button {
-						&:before {
-							$icon-width: 18px;
-							$icon-height: 16px;
+						$icon-width: 18px;
+						$icon-height: 16px;
 
-							width: $icon-width;
-							height: $icon-height;
+						&:before {
 							background-size: $icon-width $icon-height;
 							background-image: url(../images/ico-hacc-money-grey-18x16.svg);
+						}
+
+						&:after {
+							background-size: $icon-width $icon-height;
+							background-image: url(../images/ico-hacc-money-red-18x16.svg);
 						}
 					}
 				}
@@ -118,14 +128,59 @@
 			@media (max-width: $account-bp-mobile) {
 				.acc-nav {
 					&__button {
+						$icon-width: 18px;
+						$icon-height: 17px;
+						
 						&:before {
-							$icon-width: 18px;
-							$icon-height: 17px;
-
-							width: $icon-width;
-							height: $icon-height;
 							background-size: $icon-width $icon-height;
 							background-image: url(../images/ico-hacc-history-grey-18x17.svg);
+						}
+
+						&:after {
+							background-size: $icon-width $icon-height;
+							background-image: url(../images/ico-hacc-history-red-18x17.svg);
+						}
+					}
+				}
+			}
+		}
+
+		&--addresses {
+			@media (max-width: $account-bp-mobile) {
+				.acc-nav {
+					&__button {
+						$icon-width: 18px;
+						$icon-height: 18px;
+
+						&:before {
+							background-size: $icon-width $icon-height;
+							background-image: url(../images/ico-hacc-placemark-grey-30x30.svg);
+						}
+
+						&:after {
+							background-size: $icon-width $icon-height;
+							background-image: url(../images/ico-hacc-placemark-red-30x30.svg);
+						}
+					}
+				}
+			}
+		}
+
+		&--notifications {
+			@media (max-width: $account-bp-mobile) {
+				.acc-nav {
+					&__button {
+						$icon-width: 17px;
+						$icon-height: 17px;
+						
+						&:before {
+							background-size: $icon-width $icon-height;
+							background-image: url(../images/ico-hacc-bell-grey-30x30.svg);
+						}
+
+						&:after {
+							background-size: $icon-width $icon-height;
+							background-image: url(../images/ico-hacc-bell-red-30x30.svg);
 						}
 					}
 				}
@@ -145,7 +200,8 @@
 			padding: 8px $padding-h;
 			color: #000;
 
-			&:before {
+			&:before,
+			&:after {
 				$icon-size: 20px;
 				$left: $account-user-icon-size - $icon-size;
 
@@ -160,6 +216,10 @@
 				background-repeat: no-repeat;
 				background-size: 20px 20px;
 				transform: translateY(-50%);
+			}
+
+			&:after {
+				display: none;
 			}
 		}
 
