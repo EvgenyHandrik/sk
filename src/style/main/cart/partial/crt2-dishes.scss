@@ -143,6 +143,23 @@
 		display: block;
 		font-size: 13px;
 		color: #999;
+
+		&--ingredients {
+			&:before {
+				$icon-size: 15px;
+	
+				content: '';
+				display: inline-block;
+				width: $icon-size;
+				height: $icon-size;
+				margin: 0 3px 0 0;
+				vertical-align: middle;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: $icon-size $icon-size;
+				background-image: url(../images/ico-fire-red-active-30x30.svg);
+			}
+		}
 	}
 
 	/* -- */

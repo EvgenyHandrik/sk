@@ -360,6 +360,19 @@ a.crt2-dish__name:hover {
   color: #999;
 }
 
+.crt2-dish__info--ingredients:before {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0 3px 0 0;
+  vertical-align: middle;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-image: url(../images/ico-fire-red-active-30x30.svg);
+}
+
 .crt2-dish__count-box {
   min-width: 130px;
   padding-left: 15px;
