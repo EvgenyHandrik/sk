@@ -1,0 +1,12 @@
+.bx-ie9 {
+	.acc-navbar-user {
+		&__name {
+			$corner-size: 12px;
+			@media (max-width: $account-bp-mobile) {
+				&:after {
+					background-image: url(../images/ico-arr-r-md-black-30x30.png);
+				}
+			}
+		}
+	}
+}

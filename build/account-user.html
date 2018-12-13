@@ -540,31 +540,38 @@ ga('require', 'ecommerce');
 				<div class="acc-page__row">
 					<div class="acc-page__row acc-page__row--main">
 						<div class="acc-page__col acc-page__col--nav">
-							<div class="acc-navbar">
+							<div class="acc-navbar js-acc-navbar">
 								<div class="acc-navbar-user">
 									<span class="acc-navbar-user__icon"></span>
 									<span class="acc-navbar-user__name">Иван Иванович</span>
+									<button class="acc-navbar-toggle">▼</button>
 								</div>
-								<ul class="acc-nav">
-									<li class="acc-nav__item acc-nav__item--active">
-										<a href="" class="acc-nav__button">Личные данные</a>
-									</li>
-									<li class="acc-nav__item">
-										<a href="" class="acc-nav__button">Банковские карты</a>
-									</li>
-									<li class="acc-nav__item">
-										<a href="" class="acc-nav__button">Бонусы</a>
-									</li>
-									<li class="acc-nav__item">
-										<a href="" class="acc-nav__button">История заказов</a>
-									</li>
-									<li class="acc-nav__item">
-										<a href="" class="acc-nav__button">Адреса</a>
-									</li>
-									<li class="acc-nav__item">
-										<a href="" class="acc-nav__button">Уведомления</a>
-									</li>
-								</ul>
+								<div class="acc-nav">
+									<div class="acc-nav-user">
+										<span class="acc-nav-user__name">Иван Иванович</span>
+										<button class="acc-nav-toggle">▲</button>
+									</div>
+									<ul class="acc-nav__list">
+										<li class="acc-nav__item acc-nav__item--profile acc-nav__item--active">
+											<a href="" class="acc-nav__button">Личные данные</a>
+										</li>
+										<li class="acc-nav__item acc-nav__item--card">
+											<a href="" class="acc-nav__button">Банковские карты</a>
+										</li>
+										<li class="acc-nav__item acc-nav__item--bonuses">
+											<a href="" class="acc-nav__button">Бонусы</a>
+										</li>
+										<li class="acc-nav__item acc-nav__item--history">
+											<a href="" class="acc-nav__button">История заказов</a>
+										</li>
+										<li class="acc-nav__item">
+											<a href="" class="acc-nav__button">Адреса</a>
+										</li>
+										<li class="acc-nav__item">
+											<a href="" class="acc-nav__button">Уведомления</a>
+										</li>
+									</ul>
+								</div>
 							</div>
 						</div>
 			
@@ -1046,7 +1053,7 @@ ga('require', 'ecommerce');
 	<script type="text/javascript" src="js/h-acc.js"></script>
 	
 	<!-- Account Scripts [new_content] -->
-	
+	<script type="text/javascript" src="js/page-account.js"></script>
 	<!-- end Account Scripts -->
 
 	<script>

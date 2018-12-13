@@ -5,6 +5,10 @@
 .acc-user-form {
 	.form-group {
 		max-width: 280px;
+
+		@media (max-width: $account-bp-mobile-full-width) {
+			max-width: 100%;
+		}
 	}
 }
 

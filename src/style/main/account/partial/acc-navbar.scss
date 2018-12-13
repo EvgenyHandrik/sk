@@ -1,30 +1,99 @@
 .acc-navbar {
 
+	@media (max-width: $account-bp-mobile) {
+		display: inline-block;
+		padding-right: $account-user-icon-size + $account-user-icon-space;
+		margin-bottom: 20px;
+	}
+
+	@media (max-width: $account-bp-mobile-full-width) {
+		display: block;
+		padding-right: 0;
+	}
+
+	&--open {
+		position: relative;
+		z-index: 2;
+
+		.acc-nav {
+			@media (max-width: $account-bp-mobile) {
+				display: block;
+			}
+		}
+
+		.acc-navbar-user {
+			opacity: 0;
+		}
+	}
 }
 
 .acc-navbar-user {
-	font-size: 1px;
+	$acc-navbar-padding-v: ($account-user-icon-size - $account-user-font-size * $account-user-line-height) / 2;
+
+	position: relative;
+	line-height: $account-user-line-height;
+	padding: $acc-navbar-padding-v 0 $acc-navbar-padding-v ($account-user-icon-size + $account-user-icon-space);
+	font-size: $account-user-font-size;
 
 	&__icon {
-		$icon-size: 38px;
-
-		display: inline-block;
-		width: $icon-size;
-		height: $icon-size;
-		vertical-align: middle;
-		border-radius: $icon-size;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		display: block;
+		width: $account-user-icon-size;
+		height: $account-user-icon-size;
+		border-radius: $account-user-icon-size;
 		background-position: center;
 		background-repeat: no-repeat;
-		background-size: $icon-size $icon-size;
+		background-size: $account-user-icon-size $account-user-icon-size;
 		background-image: url(../images/ico-user-white-24x24.svg);
 		background-color: #f0f0f0;
+		transform: translateY(-50%);
 	}
 
 	&__name {
-		display: inline-block;
-		margin: 0 0 0 10px;
+		$corner-size: 12px;
+
 		font-weight: bold;
-		font-size: 18px;
-		vertical-align: middle;
+
+		@media (max-width: $account-bp-mobile) {
+			position: relative;
+			padding-right: $corner-size + 10px;
+
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: $account-user-line-height * $account-user-font-size / 2;
+				right: 0;
+				display: block;
+				width: $corner-size;
+				height: $corner-size;
+				margin: 0 0 0 10px;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: $corner-size $corner-size;
+				background-image: url(../images/ico-arr-r-md-black-30x30.svg);
+				transform: translateY(50%) rotate(90deg);
+			}
+		}
+	}
+}
+
+.acc-navbar-toggle {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	color: transparent;
+	background: none;
+
+	@include user-select-none();
+
+	@media (max-width: $account-bp-mobile) {
+		display: block;
 	}
 }

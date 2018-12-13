@@ -1,8 +1,11 @@
+@import '../../helpers/helpers';
 @import './helpers/helpers';
 
 @import './partial/acc-page';
 @import './partial/acc-navbar';
+@import './partial/acc-navbar-ie9';
 @import './partial/acc-nav';
+@import './partial/acc-nav-ie9';
 @import './partial/acc-bonusbar';
 
 @import './partial/acc-user';

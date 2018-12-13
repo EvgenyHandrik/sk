@@ -121,19 +121,20 @@
 }
 
 .cht2-delivery-group--address-list {
-  max-width: 344px;
-  margin-bottom: 30px;
+  max-width: 600px;
+  margin-bottom: 25px;
 }
 
 .cht2-delivery-group--address {
   max-width: 600px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   /* -- */
   /* -- */
 }
 
 .cht2-delivery-group--address > .cht2-delivery-group__row {
   display: table;
+  /* -- */
   /* -- */
   /* -- */
 }
@@ -147,6 +148,24 @@
 
 .cht2-delivery-group--address > .cht2-delivery-group__row > .cht2-delivery-group__col:first-child {
   padding-left: 0;
+}
+
+.cht2-delivery-group--address > .cht2-delivery-group__row--address-name {
+  display: none;
+}
+
+.cht2-delivery-group--address.cht2-delivery-group--edit > .cht2-delivery-group__row {
+  margin-bottom: 25px;
+}
+
+.cht2-delivery-group--address.cht2-delivery-group--edit > .cht2-delivery-group__row--address-name {
+  display: table;
+  width: 100%;
+  max-width: 295px;
+}
+
+.cht2-delivery-group--address.cht2-delivery-group--edit .cht2-delivery-address-button-edit {
+  display: block;
 }
 
 .cht2-delivery-group--address-g1 > .cht2-delivery-group__row {
@@ -177,7 +196,7 @@
 
 .cht2-delivery-group--date {
   max-width: 600px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   /* -- */
   /* -- */
 }
@@ -186,22 +205,20 @@
   display: table;
   width: 100%;
   /* -- */
-  /* -- */
 }
 
 .cht2-delivery-group--date > .cht2-delivery-group__row > .cht2-delivery-group__col {
   display: table-cell;
   width: 50%;
   /* -- */
-  /* -- */
 }
 
 .cht2-delivery-group--date > .cht2-delivery-group__row > .cht2-delivery-group__col--d-date {
-  padding-right: 15px;
+  padding-right: 5px;
 }
 
 .cht2-delivery-group--date > .cht2-delivery-group__row > .cht2-delivery-group__col--d-time {
-  padding-left: 15px;
+  padding-left: 5px;
 }
 
 .cht2-delivery-group--comment {
@@ -233,17 +250,34 @@
   padding-left: 15px;
 }
 
-.cht2-delivery-address-list__select-box {
-  position: relative;
-  z-index: 1;
-}
-
 .cht2-delivery-address-list__select-box .select.jq-selectbox {
   width: 100%;
 }
 
+.cht2-delivery-address-list__select-box .select .jq-selectbox__select-text {
+  font-weight: bold;
+}
+
+.cht2-delivery-address-list__select-box .select .jq-selectbox__dropdown {
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+}
+
 .cht2-delivery-address-list__select-box .select .jq-selectbox__dropdown li {
   max-width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.cht2-delivery-address-list__select-box .select .jq-selectbox__dropdown li:first-child {
+  font-size: 13px;
+  border-bottom: 1px solid #eee;
+}
+
+.cht2-delivery-address-list__select-box .select .jq-selectbox__dropdown li:hover .cht2-delivery-address-list__opt-addr,
+.cht2-delivery-address-list__select-box .select .jq-selectbox__dropdown li.selected .cht2-delivery-address-list__opt-addr {
+  color: #fff;
 }
 
 .cht2-delivery-address-list__add {
@@ -286,6 +320,22 @@
   background-color: #da5848;
 }
 
+.cht2-delivery-address-list__opt {
+  font-size: 13px;
+}
+
+.cht2-delivery-address-list__opt-name {
+  display: inline-block;
+  padding: 3px 10px;
+  margin: 0 10px 0 0;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.cht2-delivery-address-list__opt-addr {
+  opacity: 0.39;
+}
+
 .cht2-delivery-address-list--new-address .cht2-delivery-address-list__col--add {
   display: none;
 }
@@ -320,55 +370,55 @@
   /* -- */
 }
 
+.cht2-delivery-address-name {
+  margin-bottom: 10px;
+}
+
+.cht2-delivery-address-save {
+  position: static;
+  display: inline;
+  padding: 0;
+  font-weight: normal;
+  font-size: 14px;
+  border: 0;
+  background-color: transparent;
+}
+
+.cht2-delivery-address-save:before {
+  display: none;
+}
+
+.cht2-delivery-address-save:hover .button__text {
+  color: #da5848;
+  border-color: #da5848;
+}
+
+.cht2-delivery-address-save .button__text {
+  position: static;
+  font-weight: bold;
+  font-size: 14px;
+  color: #bb1018;
+  border-bottom: 1px dashed #bb1018;
+  -webkit-transition-property: color, border-color;
+  transition-property: color, border-color;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+}
+
+.cht2-delivery-address-button-edit {
+  display: none;
+}
+
 .cht2-delivery-date {
   /* -- */
-  /* -- */
-  /* -- */
-}
-
-.cht2-delivery-date__row {
-  display: table;
-  width: 100%;
-}
-
-.cht2-delivery-date__col {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.cht2-delivery-date__col--input {
-  width: 100%;
-  padding-left: 15px;
-}
-
-.cht2-delivery-date .form-label--default {
-  margin-bottom: 0;
-}
-
-.cht2-delivery-date__icon {
-  display: block;
-  width: 25px;
-  height: 25px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 25px 25px;
-}
-
-.cht2-delivery-date__icon--calendar {
-  background-image: url(../images/ico-date-calendar-black-30x30.svg);
-}
-
-.cht2-delivery-date__icon--clock {
-  background-image: url(../images/ico-date-clock-black-30x30.svg);
-}
-
-.cht2-delivery-date__hours-box {
-  position: relative;
-  z-index: 1;
 }
 
 .cht2-delivery-date__hours-box .jq-selectbox.select {
   width: 100%;
+}
+
+.cht2-delivery-date__hours-box .jq-selectbox__dropdown li {
+  max-width: 100%;
 }
 
 .cht2-delivery-comment__textarea.form-control--default {
@@ -641,6 +691,10 @@
     display: block;
   }
 
+  .cht2-delivery-group--address > .cht2-delivery-group__row--address-name {
+    display: none;
+  }
+
   .cht2-delivery-group--address > .cht2-delivery-group__row > .cht2-delivery-group__col {
     display: block;
     padding-left: 0;
@@ -655,27 +709,26 @@
     max-width: 349px;
   }
 
-  .cht2-delivery-group--date > .cht2-delivery-group__row {
-    display: block;
-  }
-
-  .cht2-delivery-group--date > .cht2-delivery-group__row > .cht2-delivery-group__col {
-    display: block;
-    width: auto;
-  }
-
-  .cht2-delivery-group--date > .cht2-delivery-group__row > .cht2-delivery-group__col--d-date {
-    padding-right: 0;
-    margin-bottom: 10px;
-  }
-
-  .cht2-delivery-group--date > .cht2-delivery-group__row > .cht2-delivery-group__col--d-time {
-    padding-left: 0;
-  }
-
   .cht2-delivery-group--comment {
     width: auto;
     max-width: 349px;
+  }
+
+  .cht2-delivery-address-list__select-box .select .jq-selectbox__dropdown li:first-child {
+    font-weight: bold;
+  }
+
+  .cht2-delivery-address-list__opt-name {
+    display: block;
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    background-color: transparent;
+  }
+
+  .cht2-delivery-address-list__opt-addr {
+    display: block;
+    margin-top: 3px;
   }
 
   .cht2-delivery-address--street {

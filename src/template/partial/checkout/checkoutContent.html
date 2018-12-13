@@ -96,15 +96,30 @@
 					<div class="sktab-content">
 						<div class="sktab-content__item sktab-content__item--active">
 							<div class="form form--lite cht2-delivery-form">
+
 								<div class="cht2-delivery-group cht2-delivery-group--address-list">
 									<div class="cht2-delivery-address-list js-delivery-address-list">
+										<label class="form-label form-label--default">Мои адреса</label>
 										<div class="cht2-delivery-address-list__row">
 											<div class="cht2-delivery-address-list__col cht2-delivery-address-list__col--list">
 												<div class="cht2-delivery-address-list__select-box">
 													<select class="select">
 														<option>Новый адрес</option>
-														<option>Ул. Ленина 100, кв. 200</option>
-														<option>Ул. Карла Либкнехта 300, кв. 400</option>
+														<option data-opt-content="{
+																&quot;html&quot;:	&quot;&lt;div class=\&quot;cht2-delivery-address-list__opt\&quot;&gt;&lt;span class=\&quot;cht2-delivery-address-list__opt-name\&quot;&gt;Дом&lt;/span&gt;&lt;span class=\&quot;cht2-delivery-address-list__opt-addr\&quot;&gt;ул. Ленина, д. 100, кв. 500&lt;/span&gt;&lt;/div&gt;&quot;
+															}">
+															Дом
+														</option>
+														<option data-opt-content="{
+															&quot;html&quot;:	&quot;&lt;div class=\&quot;cht2-delivery-address-list__opt\&quot;&gt;&lt;span class=\&quot;cht2-delivery-address-list__opt-name\&quot;&gt;Работа&lt;/span&gt;&lt;span class=\&quot;cht2-delivery-address-list__opt-addr\&quot;&gt;ул. Двадцати Шести Бакинских Комиссаров, д. 15, кв. 30&lt;/span&gt;&lt;/div&gt;&quot;
+															}">
+															Работа
+														</option>
+														<option data-opt-content="{
+															&quot;html&quot;:	&quot;&lt;div class=\&quot;cht2-delivery-address-list__opt\&quot;&gt;&lt;span class=\&quot;cht2-delivery-address-list__opt-name\&quot;&gt;Друзья&lt;/span&gt;&lt;span class=\&quot;cht2-delivery-address-list__opt-addr\&quot;&gt;ул. Московкая, д. 10, кв. 300&lt;/span&gt;&lt;/div&gt;&quot;
+															}">
+															Друзья
+														</option>
 													</select>
 												</div>
 											</div>
@@ -112,18 +127,18 @@
 												<button
 													type="button"
 													class="cht2-delivery-address-list__add"
-													title="Добавить адрес">+</button>
+													title="Новый адрес">+</button>
 											</div>
 										</div>
 									</div>
 								</div>
-								
-								<div class="cht2-delivery-group cht2-delivery-group--address">
+
+								<div class="cht2-delivery-group cht2-delivery-group--address cht2-delivery-group--edit">
 									<div class="cht2-delivery-group__row">
 										<div class="cht2-delivery-group__col">
 											<div class="cht2-delivery-address cht2-delivery-address--street">
 												<label class="form-label form-label--default">Улица</label>
-												<div class="form-control-group form-control-group--default form-control-group--error">
+												<div class="form-control-group form-control-group--default">
 													<input type="text" class="form-control form-control--default form-control--text">
 												</div>
 											</div>
@@ -136,7 +151,7 @@
 													<div class="cht2-delivery-group__col">
 														<div class="cht2-delivery-address">
 															<label class="form-label form-label--default">Дом</label>
-															<div class="form-control-group form-control-group--default cht2-delivery-address__control-group cht2-delivery-address__control-group--small form-control-group--error">
+															<div class="form-control-group form-control-group--default cht2-delivery-address__control-group cht2-delivery-address__control-group--small">
 																<input type="text" class="form-control form-control--default form-control--text">
 															</div>
 														</div>
@@ -144,7 +159,7 @@
 													<div class="cht2-delivery-group__col">
 														<div class="cht2-delivery-address">
 															<label class="form-label form-label--default">Подъезд</label>
-															<div class="form-control-group form-control-group--default cht2-delivery-address__control-group cht2-delivery-address__control-group--small form-control-group--success">
+															<div class="form-control-group form-control-group--default cht2-delivery-address__control-group cht2-delivery-address__control-group--small">
 																<input type="text" class="form-control form-control--default form-control--text">
 															</div>
 														</div>
@@ -175,50 +190,45 @@
 													</div>
 												</div>
 											</div>
+										</div>
+									</div>
 
-											
+									<div class="cht2-delivery-group__row cht2-delivery-group__row--address-name">
+										<div class="cht2-delivery-group__col">
+											<div class="cht2-delivery-address-name">
+												<label class="form-label form-label--default">Название адреса</label>
+												<div class="form-control-group form-control-group--default">
+													<input type="text" class="form-control form-control--default form-control--text">
+												</div>
+											</div>
+											<button type="button" class="button cht2-delivery-address-save">
+												<span class="button__text">Сохранить в список моих адресов</span>
+											</button>
 										</div>
 									</div>
 								</div>
 
 								<div class="cht2-delivery-group cht2-delivery-group--date">
-									<span class="form-label form-label--default">Дата доставки</span>
 									<div class="cht2-delivery-group__row">
 										<div class="cht2-delivery-group__col cht2-delivery-group__col--d-date">
 											<div class="cht2-delivery-date">
-												<div class="cht2-delivery-date__row">
-													<div class="cht2-delivery-date__col">
-														<label class="form-label form-label--default">
-															<span class="cht2-delivery-date__icon cht2-delivery-date__icon--calendar"></span>
-														</label>
-													</div>
-													<div class="cht2-delivery-date__col cht2-delivery-date__col--input">
-														<div class="form-control-group form-control-group--default">
-															<input type="text" class="form-control form-control--text form-control--default">
-														</div>
-													</div>
+												<span class="form-label form-label--default">Дата доставки</span>
+												<div class="form-control-group form-control-group--default">
+													<input type="text" class="form-control form-control--text form-control--default cht2-delivery-date__control cht2-delivery-date__control--calendar">
 												</div>
 											</div>
 										</div>
 										<div class="cht2-delivery-group__col cht2-delivery-group__col--d-time">
 											<div class="cht2-delivery-date">
-												<div class="cht2-delivery-date__row">
-													<div class="cht2-delivery-date__col">
-														<label class="form-label form-label--default">
-															<span class="cht2-delivery-date__icon cht2-delivery-date__icon--clock"></span>
-														</label>
-													</div>
-													<div class="cht2-delivery-date__col cht2-delivery-date__col--input">
-														<div class="form-control-group form-control-group--default">
-															<div class="cht2-delivery-date__hours-box">
-																<select class="select">
-																	<option>Ближайшее время</option>
-																	<option>13:30</option>
-																	<option>13:45</option>
-																	<option>14:00</option>
-																</select>
-															</div>
-														</div>
+												<span class="form-label form-label--default">Время доставки</span>
+												<div class="form-control-group form-control-group--default">
+													<div class="cht2-delivery-date__hours-box">
+														<select class="select">
+															<option>Ближайшее</option>
+															<option>13:30</option>
+															<option>13:45</option>
+															<option>14:00</option>
+														</select>
 													</div>
 												</div>
 											</div>

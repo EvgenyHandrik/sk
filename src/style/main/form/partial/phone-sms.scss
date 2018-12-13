@@ -37,6 +37,7 @@ $phone-sms-width: 95px;
 .phone-sms-button {
 	@include phone-sms-button();
 	
+	z-index: 3;
 	background-color: #bb1018;
 	cursor: pointer;
 	transition-duration: 200ms;
@@ -65,10 +66,17 @@ $phone-sms-width: 95px;
 .phone-sms-counter {
 	@include phone-sms-button();
 
-	background-color: #4c4c4c;
+	z-index: 1;
+	width: auto;
+	right: 15px;
+	text-align: right;
+	color: #B2B2B2;
+	background-color: #fff;
 }
 
 .phone-sms-input {
+	z-index: 2;
+
 	&.form-control--default.form-control--text {
 		padding-right: $phone-sms-width + 5px + 4px;
 	}
@@ -76,17 +84,18 @@ $phone-sms-width: 95px;
 
 .phone-sms-counter {
 	&__icon {
-		$icon-size: 15px;
+		$icon-width: 15px;
+		$icon-height: 13px;
 
 		display: inline-block;
-		width: $icon-size;
-		height: $icon-size;
+		width: $icon-width;
+		height: $icon-height;
 		margin: 0 5px 0 0;
 		vertical-align: middle;
-		background-size: $icon-size $icon-size;
+		background-size: $icon-width $icon-height;
 		background-position: center;
 		background-repeat: no-repeat;
-		background-image: url(../images/ico-check-m-white-1-30x30.svg);
+		background-image: url(../images/ico-check-green-15x13.svg);
 	}
 
 	&__number {

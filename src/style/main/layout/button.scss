@@ -63,6 +63,18 @@
 			}
 		}
 
+		&.button--s {
+			height: 34px;
+			line-height: 34px;
+			padding: 0 10px 0 10px;
+
+			.button__text {
+				display: inline;
+				font-size: 13px;
+				vertical-align: baseline;
+			}
+		}
+
 		&.button--order {
 			height: 47px;
 			line-height: 47px;

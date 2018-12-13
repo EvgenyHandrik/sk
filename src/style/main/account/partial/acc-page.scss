@@ -6,12 +6,26 @@
 			display: table;
 			width: 100%;
 
+			@media (max-width: $account-bp-mobile) {
+				display: block;
+			}
+
 			.acc-page {
 				&__col {
 					display: table-cell;
 
+					@media (max-width: $account-bp-mobile) {
+						display: block;
+					}
+
 					&--nav {
-						width: 305px;
+						width: 305px - 18px;
+						padding-right: 15px;
+
+						@media (max-width: $account-bp-mobile) {
+							width: auto;
+							padding-right: 0;
+						}
 					}
 
 				}
@@ -21,5 +35,13 @@
 
 	&__col {
 		
+	}
+
+	&__main-content {
+		padding: 0 0 0 18px;
+
+		@media (max-width: $account-bp-mobile) {
+			padding-left: 0;
+		}
 	}
 }
