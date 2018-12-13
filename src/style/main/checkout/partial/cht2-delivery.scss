@@ -83,6 +83,10 @@
 					display: table;
 					width: 100%;
 					max-width: 300px - 5px;
+
+					@media (max-width: 700px) {
+						max-width: 100%;
+					}
 				}
 			}
 
@@ -140,38 +144,20 @@
 			display: table;
 			width: 100%;
 
-			// @media (max-width: 700px) {
-			// 	display: block;
-			// }
-
 			/* -- */
 
 			& > .cht2-delivery-group__col {
 				display: table-cell;
 				width: 50%;
 
-				// @media (max-width: 700px) {
-				// 	display: block;
-				// 	width: auto;
-				// }
-
 				/* -- */
 	
 				&--d-date {
 					padding-right: 5px;
-
-					// @media (max-width: 700px) {
-					// 	padding-right: 0;
-					// 	margin-bottom: 10px;
-					// }
 				}
 	
 				&--d-time {
 					padding-left: 5px;
-
-					// @media (max-width: 700px) {
-					// 	padding-left: 0;
-					// }
 				}
 			}
 		}
@@ -426,40 +412,66 @@
 
 .cht2-delivery-date {
 
-	// &__control {
-	// 	$icon-size: 20px;
-	// 	$icon-left-space: 10px;
+	&__control {
+		&--calendar {
+			$icon-size: 20px;
+			$icon-size-mobile: 15px;
+			$icon-space-left: 10px;
 
-	// 	background-position: $icon-left-space center;
-	// 	background-repeat: no-repeat;
-	// 	background-size: $icon-size $icon-size;
+			background-position: $icon-space-left center;
+			background-repeat: no-repeat;
+			background-size: $icon-size $icon-size;
+			background-image: url(../images/ico-date-calendar-black-30x30.svg);
 
-	// 	&.form-control--default.form-control--text {
-	// 		padding-left: $icon-size + $icon-left-space + 10px;
-	// 	}
-		
-	// 	&--calendar {
-	// 		background-image: url(../images/ico-date-calendar-black-30x30.svg);
-	// 	}
-	// }
+			@media (max-width: 700px) {
+				background-size: $icon-size-mobile $icon-size-mobile;
+			}
 
-	/* -- */
+			&.form-control--default.form-control--text {
+				padding-left: $icon-size + $icon-space-left + 10px;
+
+				@media (max-width: 700px) {
+					font-size: 14px;
+					padding-left: $icon-size-mobile + $icon-space-left + 10px;
+				}
+			}
+		}
+	}
 
 	&__hours-box {
 		.jq-selectbox {
-			// &__select {
-			// 	$icon-size: 20px;
-			// 	$icon-left-space: 10px;
-
-			// 	padding-left: $icon-size + $icon-left-space + 10px;
-			// 	background-position: $icon-left-space center;
-			// 	background-repeat: no-repeat;
-			// 	background-size: $icon-size $icon-size;
-			// 	background-image: url(../images/ico-date-clock-black-30x30.svg);
-			// }
-			
+		
 			&.select {
 				width: 100%;
+			}
+
+			&__select {
+				$icon-size: 20px;
+				$icon-space-left: 10px;
+
+				padding-top: 0;
+				padding-bottom: 0;
+				height: 42px;
+				line-height: 40px;
+
+				padding-left: $icon-size + $icon-space-left + 10px;
+				background-position: $icon-space-left center;
+				background-repeat: no-repeat;
+				background-size: $icon-size $icon-size;
+				background-image: url(../images/ico-date-clock-black-30x30.svg);
+
+				@media (max-width: 700px) {
+					$icon-size: 15px;
+
+					padding-left: $icon-size + $icon-space-left + 10px;
+					background-size: $icon-size $icon-size;
+				}
+			}
+
+			&__select-text {
+				@media (max-width: 700px) {
+					font-size: 14px;
+				}
 			}
 
 			&__dropdown {

@@ -1,3 +1,4 @@
+@import '../../../helpers/helpers';
 @import './helpers/helpers';
 
 .sktab-nav-wrapper {
@@ -13,7 +14,7 @@
 
 .sktab-nav {
 	display: block;
-	padding: 0;
+	padding: $sktab-nav-padding;
 	margin: 0;
 	
 	&__item {
@@ -25,13 +26,13 @@
 
 		&--active {
 			.sktab-nav__button {
-				box-shadow: 0 0 3px rgba(#000, 0.25);
-				color: rgba(#bb1018, 1);
+				border-color: $sktab-background-color;
+				color: $color-red;
 				background-color: #fff;
 				cursor: default;
 
 				&:hover {
-					color: rgba(#bb1018, 1);
+					color: $color-red;
 				}
 			}
 		}
@@ -43,17 +44,15 @@
 		line-height: $sktab-button-height;
 		padding: 0 15px;
 		font-size: 18px;
-		border: 0;
 		border-radius: 100px;
-		box-shadow: 0 0 $sktab-button-shadow-size rgba(#000, 0);
 		background-color: transparent;
-		color: rgba(#000, 0.5);
+		color: #685959;
 		cursor: pointer;
 		transition-duration: 200ms;
-		transition-property: background-color, box-shadow, color;
+		transition-property: background-color, color;
 
 		&:hover {
-			color: rgba(#000, 1);
+			color: $color-red;
 		}
 	}
 }

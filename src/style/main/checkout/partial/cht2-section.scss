@@ -30,3 +30,19 @@
 		}
 	}
 }
+
+.cht2-section .form {
+	&--lite {
+		.form-label--default {
+			font-size: 14px;
+			color: #a5a5a5; // как в телефоне хедера
+		}
+
+		.form-control--default.form-control--text {
+			@include placeholder() {
+				color: #000;
+				opacity: 0.3;
+			}
+		}
+	}
+}

@@ -8,31 +8,17 @@
 		position: relative;
 		z-index: 1;
 		display: block;
-		height: $button-height + $button-shadow * 2;
+		height: $button-height + $sktab-nav-padding * 2;
 		margin-right: -15px;
 		margin-left: -15px;
 		border-radius: 0px;
 		overflow-y: hidden;
-		background-color: transparent;
-
-		&:before {
-			content: '';
-			position: absolute;
-			z-index: 1;
-			top: $sktab-button-shadow-size;
-			left: 0px;
-			display: block;
-			width: 100%;
-			height: $button-height;
-			background-color: $sktab-background-color;
-		}
 	}
 
 	.sktab-nav-scroll {
 		position: relative;
 		z-index: 2;
 		height: $button-height * 2;
-		padding: $button-shadow 0;
 		overflow-x: auto;
 	}
 

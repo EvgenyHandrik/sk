@@ -68,6 +68,31 @@
   display: none;
 }
 
+.cht2-section .form--lite .form-label--default {
+  font-size: 14px;
+  color: #a5a5a5;
+}
+
+.cht2-section .form--lite .form-control--default.form-control--text::-webkit-input-placeholder {
+  color: #000;
+  opacity: 0.3;
+}
+
+.cht2-section .form--lite .form-control--default.form-control--text:-ms-input-placeholder {
+  color: #000;
+  opacity: 0.3;
+}
+
+.cht2-section .form--lite .form-control--default.form-control--text::-ms-input-placeholder {
+  color: #000;
+  opacity: 0.3;
+}
+
+.cht2-section .form--lite .form-control--default.form-control--text::placeholder {
+  color: #000;
+  opacity: 0.3;
+}
+
 .cht2-auth {
   /* -- */
 }
@@ -409,12 +434,31 @@
   display: none;
 }
 
-.cht2-delivery-date {
-  /* -- */
+.cht2-delivery-date__control--calendar {
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-image: url(../images/ico-date-calendar-black-30x30.svg);
+}
+
+.cht2-delivery-date__control--calendar.form-control--default.form-control--text {
+  padding-left: 40px;
 }
 
 .cht2-delivery-date__hours-box .jq-selectbox.select {
   width: 100%;
+}
+
+.cht2-delivery-date__hours-box .jq-selectbox__select {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 42px;
+  line-height: 40px;
+  padding-left: 40px;
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-image: url(../images/ico-date-clock-black-30x30.svg);
 }
 
 .cht2-delivery-date__hours-box .jq-selectbox__dropdown li {
@@ -501,7 +545,7 @@
 .cht2-bonus-total__info-rate {
   margin: 0 0 0 10px;
   font-size: 12px;
-  color: #929292;
+  color: #a5a5a5;
 }
 
 .cht2-bonus-use {
@@ -705,6 +749,10 @@
     margin-bottom: 0;
   }
 
+  .cht2-delivery-group--address.cht2-delivery-group--edit > .cht2-delivery-group__row--address-name {
+    max-width: 100%;
+  }
+
   .cht2-delivery-group--date {
     max-width: 349px;
   }
@@ -735,6 +783,24 @@
     width: auto;
   }
 
+  .cht2-delivery-date__control--calendar {
+    background-size: 15px 15px;
+  }
+
+  .cht2-delivery-date__control--calendar.form-control--default.form-control--text {
+    font-size: 14px;
+    padding-left: 35px;
+  }
+
+  .cht2-delivery-date__hours-box .jq-selectbox__select {
+    padding-left: 35px;
+    background-size: 15px 15px;
+  }
+
+  .cht2-delivery-date__hours-box .jq-selectbox__select-text {
+    font-size: 14px;
+  }
+
   .cht2-pickup-address-list {
     max-width: 349px;
   }
@@ -751,31 +817,17 @@
     position: relative;
     z-index: 1;
     display: block;
-    height: 46px;
+    height: 44px;
     margin-right: -15px;
     margin-left: -15px;
     border-radius: 0px;
     overflow-y: hidden;
-    background-color: transparent;
-  }
-
-  .cht2-checkout-sktab .sktab-nav-wrapper:before {
-    content: '';
-    position: absolute;
-    z-index: 1;
-    top: 3px;
-    left: 0px;
-    display: block;
-    width: 100%;
-    height: 40px;
-    background-color: #f5f5f5;
   }
 
   .cht2-checkout-sktab .sktab-nav-scroll {
     position: relative;
     z-index: 2;
     height: 80px;
-    padding: 3px 0;
     overflow-x: auto;
   }
 
