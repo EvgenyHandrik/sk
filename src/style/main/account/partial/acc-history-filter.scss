@@ -1,0 +1,53 @@
+
+.acc-history-filter {
+	margin: 0 0 30px 0;
+}
+
+.acc-history-fdate {
+	&__row {
+		display: table;
+		width: 100%;
+		max-width: 300px;
+	}
+
+	&__col {
+		display: table-cell;
+
+		&--control {
+			padding-left: 15px;
+		}
+	}
+
+	&__label {
+		font-size: 13px;
+		white-space: nowrap;
+	}
+
+	&__control-group {
+		$control-icon-size: 20px;
+		$control-icon-right: 10px;
+
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: $control-icon-right;
+			display: block;
+			width: $control-icon-size;
+			height: $control-icon-size;
+			background-position: right center;
+			background-repeat: no-repeat;
+			background-size: $control-icon-size $control-icon-size;
+			background-image: url(../images/ico-date-calendar-black-30x30.svg);
+			opacity: 0.3;
+			transform: translateY(-50%);
+		}
+
+		.form-control--text {
+			font-size: 14px;
+			padding-right: $control-icon-size + $control-icon-right + 10px;
+		}
+	}
+}

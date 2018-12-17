@@ -12,6 +12,10 @@ $acc-history-box-padding-left: 15px;
 	display: table;
 	width: 100%;
 	border-bottom: 1px solid #F6F6F6;
+
+	&:first-child {
+		border-top: 1px solid #F6F6F6;
+	}
 	
 	&__box {
 		display: table-cell;
@@ -336,24 +340,5 @@ $acc-history-box-padding-left: 15px;
 .acc-history-paginator {
 	@media (max-width: 580px) {
 		@include paginator-lt-mobile();
-		// display: block;
-		// text-align: center;
-
-		// .paginator-lt-button {
-		// 	font-size: 13px;
-
-		// 	&:before,
-		// 	&:after {
-		// 		$paginator-icon-size: 12px;
-
-		// 		width: $paginator-icon-size;
-		// 		height: $paginator-icon-size;
-		// 		background-size: $paginator-icon-size $paginator-icon-size;
-		// 	}
-		// }
-
-		// .paginator-lt-pages {
-		// 	font-size: 13px;
-		// }
 	}
 }
