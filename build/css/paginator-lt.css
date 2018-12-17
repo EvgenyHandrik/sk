@@ -1,0 +1,116 @@
+.paginator-lt {
+  display: inline-block;
+  font-size: 1px;
+}
+
+.paginator-lt-button {
+  display: inline-block;
+  padding: 0 15px;
+  margin: 0;
+  height: 34px;
+  font-size: 16px;
+  vertical-align: middle;
+  border: 1px solid #f6f6f6;
+  border-radius: 5px;
+  color: #b2b2b2;
+  background-color: transparent;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+  cursor: pointer;
+}
+
+.paginator-lt-button:hover {
+  color: #000;
+}
+
+.paginator-lt-button:disabled {
+  cursor: not-allowed;
+}
+
+.paginator-lt-button:disabled:before,
+.paginator-lt-button:disabled:after {
+  opacity: 0.3;
+}
+
+.paginator-lt-button:disabled:hover {
+  color: #b2b2b2;
+}
+
+.paginator-lt-button:before,
+.paginator-lt-button:after {
+  content: '';
+  display: none;
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
+}
+
+.paginator-lt-button__text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.paginator-lt-button--prev:before {
+  display: inline-block;
+  background-image: url(../images/ico-arr-r-md-black-30x30.svg);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.paginator-lt-button--next {
+  margin-left: 5px;
+}
+
+.paginator-lt-button--next:after {
+  display: inline-block;
+  background-image: url(../images/ico-arr-r-md-black-30x30.svg);
+}
+
+.paginator-lt-pages {
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+.paginator-lt-pages:hover .paginator-lt-pages__total-num {
+  color: #000;
+}
+
+.paginator-lt-pages__total {
+  display: inline;
+  color: #b2b2b2;
+}
+
+.paginator-lt-pages__total-num {
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+}
+
+.paginator-lt-pages .select .jq-selectbox__select {
+  padding: 0 15px;
+  height: 34px;
+  line-height: 34px;
+  border: 1px solid #f6f6f6;
+}
+
+.paginator-lt-pages .select .jq-selectbox__select-text {
+  display: inline;
+  font-weight: bold;
+}
+
+.paginator-lt-pages .select .jq-selectbox__trigger {
+  display: none;
+}
+
+.paginator-lt-pages .select .jq-selectbox__dropdown {
+  top: 100%;
+}

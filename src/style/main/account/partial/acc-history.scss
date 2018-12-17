@@ -2,6 +2,10 @@ $acc-history-total-width: 100px;
 $acc-history-detail-open-width: 25px;
 $acc-history-box-padding-left: 15px;
 
+.acc-history-list {
+	margin: 0 0 20px 0;
+}
+
 .acc-history {
 	display: table;
 	width: 100%;
@@ -323,6 +327,21 @@ $acc-history-box-padding-left: 15px;
 
 		@media (max-width: $account-bp-mobile) {
 			padding-right: 0;
+		}
+	}
+}
+
+.acc-history-paginator {
+	@media (max-width: 580px) {
+		display: block;
+		text-align: center;
+
+		.paginator-lt-button {
+			font-size: 13px;
+		}
+
+		.paginator-lt-pages {
+			font-size: 13px;
 		}
 	}
 }

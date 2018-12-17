@@ -548,6 +548,10 @@
   font-size: 15px;
 }
 
+.acc-history-list {
+  margin: 0 0 20px 0;
+}
+
 .acc-history {
   display: table;
   width: 100%;
@@ -1050,6 +1054,21 @@
 
   .acc-page__main-content--history {
     padding-right: 0;
+  }
+}
+
+@media (max-width: 580px) {
+  .acc-history-paginator {
+    display: block;
+    text-align: center;
+  }
+
+  .acc-history-paginator .paginator-lt-button {
+    font-size: 13px;
+  }
+
+  .acc-history-paginator .paginator-lt-pages {
+    font-size: 13px;
   }
 }
 

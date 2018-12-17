@@ -1,0 +1,125 @@
+@import '../../helpers/helpers';
+
+$paginator-lt-height: 34px;
+$paginator-lt-space-h: 5px;
+$paginator-lt-border-color: #f6f6f6;
+
+.paginator-lt {
+	display: inline-block;
+	font-size: 1px;
+}
+
+.paginator-lt-button {
+	display: inline-block;
+	padding: 0 15px;
+	margin: 0;
+	height: $paginator-lt-height;
+	font-size: 16px;
+	vertical-align: middle;
+	border: 1px solid $paginator-lt-border-color;
+	border-radius: 5px;
+	color: $color-grey-light;
+	background-color: transparent;
+	transition-property: color;
+	transition-duration: 200ms;
+	cursor: pointer;
+
+	&:hover {
+		color: #000;
+	}
+
+	&:disabled {
+		&:before,
+		&:after {
+			opacity: 0.3;
+		}
+		cursor: not-allowed;
+
+		&:hover {
+			color: $color-grey-light;
+		}
+	}
+
+	&:before,
+	&:after {
+		$icon-size: 14px;
+
+		content: '';
+		display: none;
+		width: $icon-size;
+		height: $icon-size;
+		vertical-align: middle;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: $icon-size $icon-size;
+	}
+
+	&__text {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	&--prev {
+		&:before {
+			display: inline-block;
+			background-image: url(../images/ico-arr-r-md-black-30x30.svg);
+			transform: rotate(180deg);
+		}
+	}
+
+	&--next {
+		margin-left: $paginator-lt-space-h;
+		
+		&:after {
+			display: inline-block;
+			background-image: url(../images/ico-arr-r-md-black-30x30.svg);
+		}
+	}
+}
+
+.paginator-lt-pages {
+	display: inline-block;
+	margin-left: $paginator-lt-space-h;
+	font-size: 16px;
+	vertical-align: middle;
+
+	&:hover {
+		.paginator-lt-pages__total-num {
+			color: #000;
+		}
+	}
+
+	&__total {
+		display: inline;
+		color: $color-grey-light;
+	}
+
+	&__total-num {
+		transition-property: color;
+		transition-duration: 200ms;
+	}
+
+	.select {
+		.jq-selectbox {
+			&__select {
+				padding: 0 15px;
+				height: $paginator-lt-height;
+				line-height: $paginator-lt-height;
+				border: 1px solid $paginator-lt-border-color;
+			}
+
+			&__select-text {
+				display: inline;
+				font-weight: bold;
+			}
+
+			&__trigger {
+				display: none;
+			}
+
+			&__dropdown {
+				top: 100%;
+			}
+		}
+	}
+}
