@@ -1067,6 +1067,13 @@
     font-size: 13px;
   }
 
+  .acc-history-paginator .paginator-lt-button:before,
+  .acc-history-paginator .paginator-lt-button:after {
+    width: 12px;
+    height: 12px;
+    background-size: 12px 12px;
+  }
+
   .acc-history-paginator .paginator-lt-pages {
     font-size: 13px;
   }

@@ -1,3 +1,5 @@
+@import '../layout/paginator-lt/helpers/helpers';
+
 $acc-history-total-width: 100px;
 $acc-history-detail-open-width: 25px;
 $acc-history-box-padding-left: 15px;
@@ -333,15 +335,25 @@ $acc-history-box-padding-left: 15px;
 
 .acc-history-paginator {
 	@media (max-width: 580px) {
-		display: block;
-		text-align: center;
+		@include paginator-lt-mobile();
+		// display: block;
+		// text-align: center;
 
-		.paginator-lt-button {
-			font-size: 13px;
-		}
+		// .paginator-lt-button {
+		// 	font-size: 13px;
 
-		.paginator-lt-pages {
-			font-size: 13px;
-		}
+		// 	&:before,
+		// 	&:after {
+		// 		$paginator-icon-size: 12px;
+
+		// 		width: $paginator-icon-size;
+		// 		height: $paginator-icon-size;
+		// 		background-size: $paginator-icon-size $paginator-icon-size;
+		// 	}
+		// }
+
+		// .paginator-lt-pages {
+		// 	font-size: 13px;
+		// }
 	}
 }

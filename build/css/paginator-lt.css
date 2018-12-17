@@ -42,12 +42,12 @@
 .paginator-lt-button:after {
   content: '';
   display: none;
-  width: 14px;
-  height: 14px;
+  width: 13px;
+  height: 13px;
   vertical-align: middle;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 14px 14px;
+  background-size: 13px 13px;
 }
 
 .paginator-lt-button__text {
@@ -104,7 +104,6 @@
 
 .paginator-lt-pages .select .jq-selectbox__select-text {
   display: inline;
-  font-weight: bold;
 }
 
 .paginator-lt-pages .select .jq-selectbox__trigger {
