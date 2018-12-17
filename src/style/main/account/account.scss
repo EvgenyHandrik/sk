@@ -1,6 +1,9 @@
 @import '../../helpers/helpers';
 @import './helpers/helpers';
 
+@import './partial/acc-ttl';
+@import './partial/acc-rub';
+
 @import './partial/acc-page';
 @import './partial/acc-navbar';
 @import './partial/acc-navbar-ie9';
@@ -9,3 +12,6 @@
 @import './partial/acc-bonusbar';
 
 @import './partial/acc-user';
+@import './partial/acc-cards';
+@import './partial/acc-bonuses';
+@import './partial/acc-history';

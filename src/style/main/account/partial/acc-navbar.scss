@@ -56,7 +56,7 @@
 	&__name {
 		$corner-size: 12px;
 
-		font-weight: bold;
+		font-weight: normal;
 
 		@media (max-width: $account-bp-mobile) {
 			position: relative;

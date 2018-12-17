@@ -538,7 +538,7 @@ ga('require', 'ecommerce');
 
 			<div class="acc-page">
 				<h1>Личный кабинет</h1>
-			
+				
 				<div class="acc-page__row">
 					<div class="acc-page__row acc-page__row--main">
 						<div class="acc-page__col acc-page__col--nav">
@@ -554,10 +554,10 @@ ga('require', 'ecommerce');
 										<button class="acc-nav-toggle">▲</button>
 									</div>
 									<ul class="acc-nav__list">
-										<li class="acc-nav__item acc-nav__item--profile acc-nav__item--active">
+										<li class="acc-nav__item acc-nav__item--profile">
 											<a href="" class="acc-nav__button">Личные данные</a>
 										</li>
-										<li class="acc-nav__item acc-nav__item--card">
+										<li class="acc-nav__item acc-nav__item--card acc-nav__item--active">
 											<a href="" class="acc-nav__button">Банковские карты</a>
 										</li>
 										<li class="acc-nav__item acc-nav__item--bonuses">
@@ -602,63 +602,97 @@ ga('require', 'ecommerce');
 									</div>
 								</div>
 			
-								<h1 class="ttl ttl--2 ttl--account">Личные данные</h1>
+								<h2 class="ttl ttl--2 ttl--account">Банковские карты</h2>
 			
-								<div class="form form--lite acc-user-form">
-									<div class="form-group form-group--default">
-										<label class="form-label form-label--default">Как вас зовут*</label>
-										<div class="form-control-group form-control-group--default form-control-group--error">
-											<input type="text" class="form-control form-control--text form-control--default">
+								<div class="acc-cards">
+									<div class="acc-cards__list">
+										<div class="acc-cards__item">
+											<div class="acc-card acc-card--mastercard">
+												<button type="button" class="acc-card__x">X</button>
+												<div class="acc-card__system"></div>
+												<div class="acc-card__name">MasterCard - Сбербанк</div>
+												<div class="acc-card__number">4378</div>
+												<label class="acc-card-basic">
+													<input type="radio" name="acc-card" id="acc-card-0" class="acc-card-basic__control">
+													<div class="acc-card-basic__content">
+														<span class="acc-card-basic__enabled">Основная</span>
+														<span class="acc-card-basic__disabled">Сделать основной</span>
+													</div>
+												</label>
+												<span class="acc-card-invalid">Недействительна</span>
+											</div>
 										</div>
-										<div class="form-message form-message--default form-message--control form-message--error">
-											Ошибка
+										<div class="acc-cards__item">
+											<div class="acc-card acc-card--mastercard">
+												<button type="button" class="acc-card__x">X</button>
+												<div class="acc-card__system"></div>
+												<div class="acc-card__name">MasterCard - ВТБ</div>
+												<div class="acc-card__number">4378</div>
+												<label class="acc-card-basic">
+													<input type="radio" name="acc-card" id="acc-card-1"  class="acc-card-basic__control">
+													<div class="acc-card-basic__content">
+														<span class="acc-card-basic__enabled">Основная</span>
+														<span class="acc-card-basic__disabled">Сделать основной</span>
+													</div>
+												</label>
+												<span class="acc-card-invalid">Недействительна</span>
+											</div>
 										</div>
-									</div>
-									<div class="form-group form-group--default">
-										<label class="form-label form-label--default">Телефон*</label>
-										<div class="form-control-group form-control-group--default">
-											<input type="text" class="form-control form-control--text form-control--default">
+										<div class="acc-cards__item">
+											<div class="acc-card acc-card--visa">
+												<button type="button" class="acc-card__x">X</button>
+												<div class="acc-card__system"></div>
+												<div class="acc-card__name">Visa - Альфа-Банк</div>
+												<div class="acc-card__number">4378</div>
+												<label class="acc-card-basic">
+													<input type="radio" name="acc-card" id="acc-card-1"  class="acc-card-basic__control">
+													<div class="acc-card-basic__content">
+														<span class="acc-card-basic__enabled">Основная</span>
+														<span class="acc-card-basic__disabled">Сделать основной</span>
+													</div>
+												</label>
+												<span class="acc-card-invalid">Недействительна</span>
+											</div>
 										</div>
-									</div>
-									<div class="form-group form-group--default">
-										<label class="form-label form-label--default">Email</label>
-										<div class="form-control-group form-control-group--default">
-											<input type="text" class="form-control form-control--text form-control--default">
-										</div>
-									</div>
-									<div class="form-group form-group--default">
-										<label class="form-label form-label--default">Дата рождения</label>
-										<div class="form-control-group form-control-group--default">
-											<input type="text" class="form-control form-control--text form-control--default">
-										</div>
-										<div class="form-message form-message--default form-message--control">
-											Во время дня рождения мы пришлем	промокод на скидку
-										</div>
-									</div>
-								
-									<div class="acc-user-rules">
-										<div class="acc-user-rules__group">
-											<label class="acc-user-rules-labelcheck">
-												<input type="checkbox">
-												<span class="acc-user-rules-labelcheck__text">Получать рассылку новостей и акций</span>
-											</label>
+										<div class="acc-cards__item">
+											<div class="acc-card acc-card--visa acc-card--invalid">
+												<button type="button" class="acc-card__x">X</button>
+												<div class="acc-card__system"></div>
+												<div class="acc-card__name">Visa - ВЭБ</div>
+												<div class="acc-card__number">4378</div>
+												<label class="acc-card-basic">
+													<input type="radio" name="acc-card" id="acc-card-1"  class="acc-card-basic__control">
+													<div class="acc-card-basic__content">
+														<span class="acc-card-basic__enabled">Основная</span>
+														<span class="acc-card-basic__disabled">Сделать основной</span>
+													</div>
+												</label>
+												<span class="acc-card-invalid">Недействительна</span>
+											</div>
 										</div>
 									</div>
 			
-									<div class="acc-user-buttons">
-										<div class="acc-user-button">
-											<button type="submit" class="button button--default button--m button--border-radius-m">
-												<span class="button__text">Сохранить</span>
-											</button>
-										</div>
-										<div class="acc-user-button">
-											<button type="button" class="button button--default button--m button--text button--dark-grey">
-												<span class="button__icon button__icon--x-bold-dark-grey"></span>
-												<span class="button__text">Отмена</span>
-											</button>
-										</div>
-									</div>
+									<button type="button" class="acc-addcard">
+										Добавить карту
+									</button>
 								</div>
+			
+								<h2 class="ttl ttl--2 ttl--account">Информация</h2>
+			
+								<ul class="acc-cards-info">
+									<li class="acc-cards-info__item acc-cards-info__item--icon-cards">
+										Сохранив информацию о банковской карте, вы избавитесь от необходимости
+										заполнения этих данных при каждом платеже.
+										В личном кабинете можно хранить данные нескольких карт.
+										Чтобы настроить платежи с конкретной карты, необходимо выбрать её «основной».
+									</li>
+									<li class="acc-cards-info__item acc-cards-info__item--icon-shield-lock">
+										Вся информация о платежных картах хранится в зашифрованном виде
+										в защищенных базах данных банка-эквайера, сертифицированных
+										по международному стандарту PCI DSS.
+									</li>
+								</ul>
+			
 							</div>
 						</div>
 					</div>

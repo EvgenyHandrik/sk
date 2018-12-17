@@ -1,0 +1,279 @@
+.acc-cards {
+	margin: 0 0 50px 0;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&__list {
+		margin: 0 0 25px 0;
+	}
+
+	&__item {
+		&:first-child {
+			.acc-card {
+				border-top: 1px solid #f6f6f6;
+			}
+		}
+	}
+}
+
+.acc-card {
+	$card-padding-v: 15px;
+	$card-system-size: 25px;
+	$card-x-size: 25px;
+	$card-x-space-right: 5px;
+	
+	position: relative;
+	padding: $card-padding-v ($card-x-size + $card-x-space-right + 10px) $card-padding-v ($card-system-size + 15px);
+	border-bottom: 1px solid #f6f6f6;
+
+	&__system {
+		position: absolute;
+		top: $card-padding-v - 2px;
+		left: 0;
+		width: $card-system-size;
+		height: $card-system-size;
+
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: $card-system-size $card-system-size;
+	}
+
+	&__x {
+		position: absolute;
+		top: $card-padding-v - (($card-x-size - 10px) / 2);
+		right: $card-x-space-right;
+		display: block;
+		width: $card-x-size;
+		height: $card-x-size;
+		color: transparent;
+		background-color: transparent;
+		cursor: pointer;
+
+		@include user-select-none();
+
+		&:hover {
+			&:before {
+				opacity: 0;
+			}
+
+			&:after {
+				opacity: 1;
+			}
+		}
+
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			display: block;
+			width: 10px;
+			height: 10px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 10px 10px;
+			transform: translate(-50%, -50%);
+			transition-property: opacity;
+			transition-duration: 200ms;
+		}
+
+		&:before {
+			background-image: url(../images/ico-x-bold-grey-lite-30x30.svg);
+			opacity: 1;
+		}
+
+		&:after {
+			background-image: url(../images/ico-x-bold-red-30x30.svg);
+			opacity: 0;
+		}
+	}
+
+	&__name {
+		font-size: 18px;
+		margin: 0 0 3px 0;
+	}
+
+	&__number {
+		$number-icon-width: 21px;
+		$number-icon-height: 3px;
+
+		padding-left: $number-icon-width + 5px;
+		margin: 0 0 7px 0;
+		font-size: 14px;
+		background-position: left center;
+		color: $account-color-grey-light;
+		background-repeat: no-repeat;
+		background-size: $number-icon-width $number-icon-height;
+		background-image: url(../images/card-number-dots-21x3.svg);
+	}
+
+	&--invalid {
+
+		.acc-card__system {
+			opacity: 0.3;
+		}
+
+		.acc-card__name {
+			color: $account-color-grey-light;
+		}
+
+		.acc-card-basic {
+			display: none;
+		}
+
+		.acc-card-invalid {
+			display: inline;
+		}
+	}
+
+	// card system
+
+	&--mastercard {
+		.acc-card__system {
+			background-image: url(../images/card-system-mastercard-60x60.jpg);
+		}
+	}
+
+	&--visa {
+		.acc-card__system {
+			background-image: url(../images/card-system-visa-60x60.jpg);
+		}
+	}
+}
+
+.acc-card-basic {
+	position: relative;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	vertical-align: middle;
+
+	&__control {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 1px;
+		height: 1px;
+		opacity: 0;
+
+		&:checked {
+			
+			& + .acc-card-basic__content {
+				.acc-card-basic__enabled {
+					display: inline-block;
+				}
+	
+				.acc-card-basic__disabled {
+					display: none;
+				}
+			}
+		}
+	}
+
+	&__content {}
+
+	&__enabled,
+	&__disabled {
+		display: block;
+		line-height: 1;
+		padding: 5px 10px;
+		font-size: 13px;
+		border: 1px solid transparent;
+		border-radius: 5px;
+	}
+
+	&__enabled {
+		display: none;
+		color: #fff;
+		background-color: #4C4C4C;
+	}
+
+	&__disabled {
+		color: #000;
+		border: 1px solid #f1f1f1;
+		transition-property: border-color;
+		transition-duration: 200ms;
+		cursor: pointer;
+
+		&:hover {
+			border-color: #4C4C4C;
+		}
+	}
+}
+
+.acc-card-invalid {
+	display: none;
+	vertical-align: middle;
+	font-weight: bold;
+	font-size: 13px;
+}
+
+.acc-addcard {
+	$icon-size: 34px;
+
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	font-weight: bold;
+	font-size: 14px;
+	background-color: transparent;
+	cursor: pointer;
+
+	&:before {
+		content: '';
+		display: inline-block;
+		width: $icon-size;
+		height: $icon-size;
+		margin: 0 10px 0 0;
+		vertical-align: middle;
+		border-radius: 50%;
+		background-color: $color-red;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: $icon-size $icon-size;
+		background-image: url(../images/ico-plus-m-white-30x30.svg);
+		transition-duration: 200ms;
+		transition-property: background-color;
+	}
+
+	&:hover {
+		&:before {
+			background-color: $color-red-active;
+		}
+	}
+}
+
+.acc-cards-info {
+	$info-icon-size: 37px;
+
+	display: block;
+	padding: 0;
+	margin: 0;
+
+	&__item {
+		display: block;
+		line-height: 1.5;
+		padding: 0 0 0 $info-icon-size + 20px;
+		margin: 0 0 20px 0;
+		font-size: 15px;
+		background-position: top left;
+		background-repeat: no-repeat;
+		background-size: $info-icon-size $info-icon-size;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+		
+		&--icon-cards {
+			background-image: url(../images/ico-cards-black-30x30.svg);
+		}
+
+		&--icon-shield-lock {
+			background-image: url(../images/ico-shield-lock-black-30x30.svg);
+		}
+	}
+}

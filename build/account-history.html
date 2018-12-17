@@ -538,7 +538,7 @@ ga('require', 'ecommerce');
 
 			<div class="acc-page">
 				<h1>Личный кабинет</h1>
-			
+				
 				<div class="acc-page__row">
 					<div class="acc-page__row acc-page__row--main">
 						<div class="acc-page__col acc-page__col--nav">
@@ -554,7 +554,7 @@ ga('require', 'ecommerce');
 										<button class="acc-nav-toggle">▲</button>
 									</div>
 									<ul class="acc-nav__list">
-										<li class="acc-nav__item acc-nav__item--profile acc-nav__item--active">
+										<li class="acc-nav__item acc-nav__item--profile">
 											<a href="" class="acc-nav__button">Личные данные</a>
 										</li>
 										<li class="acc-nav__item acc-nav__item--card">
@@ -563,7 +563,7 @@ ga('require', 'ecommerce');
 										<li class="acc-nav__item acc-nav__item--bonuses">
 											<a href="" class="acc-nav__button">Бонусы</a>
 										</li>
-										<li class="acc-nav__item acc-nav__item--history">
+										<li class="acc-nav__item acc-nav__item--history acc-nav__item--active">
 											<a href="" class="acc-nav__button">История заказов</a>
 										</li>
 										<li class="acc-nav__item acc-nav__item--addresses">
@@ -578,7 +578,7 @@ ga('require', 'ecommerce');
 						</div>
 			
 						<div class="acc-page__col">
-							<div class="acc-page__main-content">
+							<div class="acc-page__main-content acc-page__main-content--history">
 								<div class="acc-bonusbar">
 									<div class="acc-bonusbar__row">
 										<div class="acc-bonusbar__col">
@@ -602,63 +602,158 @@ ga('require', 'ecommerce');
 									</div>
 								</div>
 			
-								<h1 class="ttl ttl--2 ttl--account">Личные данные</h1>
+								<h2 class="ttl ttl--2 ttl--account">История заказов</h2>
 			
-								<div class="form form--lite acc-user-form">
-									<div class="form-group form-group--default">
-										<label class="form-label form-label--default">Как вас зовут*</label>
-										<div class="form-control-group form-control-group--default form-control-group--error">
-											<input type="text" class="form-control form-control--text form-control--default">
+								<div class="acc-history-list js-account-history-delegate">
+									<div class="acc-history">
+										<div class="acc-history__box acc-history__box--order-number">
+											<span class="acc-history__name">Номер заказа:</span>
+											<span class="acc-history__value">758915</span>
 										</div>
-										<div class="form-message form-message--default form-message--control form-message--error">
-											Ошибка
+										<div class="acc-history__box acc-history__box--date">
+											<span class="acc-history__name">Дата доставки:</span>
+											<span class="acc-history__value">01.08.2018</span>
+										</div>
+										<div class="acc-history__box acc-history__box--total">
+											<span class="acc-history__name">Сумма:</span>
+											<span class="acc-history__value">13 700 <span class="acc-rub">₽</span></span>								
+										</div>
+										<div class="acc-history__box acc-history__box--detail">
+											<div class="acc-history__detail">
+												<button type="button" class="acc-history__detail-close">X</button>
+												<div class="acc-history-detail-list">
+													<div class="acc-history-detail">
+														<div class="acc-history-detail__box acc-history-detail__box--product">
+															<span class="acc-history-detail__name">Киото <span class="acc-history-detail__quantity">(5 шт.)</span></span>
+														</div>
+														<div class="acc-history-detail__box acc-history-detail__box--price">
+															700 <span class="acc-rub">₽</span>
+														</div>
+													</div>
+													<div class="acc-history-detail">
+														<div class="acc-history-detail__box acc-history-detail__box--product">
+															<span class="acc-history-detail__name">Запеченный с лососем и креветкой <span class="acc-history-detail__quantity">(2 шт.)</span></span>
+															<span class="acc-history-detail__info acc-history-detail__info--ingredients">Васаби, имбирь, соус спайси</span>
+														</div>
+														<div class="acc-history-detail__box acc-history-detail__box--price">
+															700 <span class="acc-rub">₽</span>
+														</div>
+													</div>
+													<div class="acc-history-detail">
+														<div class="acc-history-detail__box acc-history-detail__box--product">
+															<span class="acc-history-detail__name">Классическая филадельфия <span class="acc-history-detail__quantity">(2 шт.)</span></span>
+														</div>
+														<div class="acc-history-detail__box acc-history-detail__box--price">
+															700 <span class="acc-rub">₽</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="acc-history__box acc-history__box--detail-open">
+											<button type="button" class="acc-history__detail-open">O</button>
 										</div>
 									</div>
-									<div class="form-group form-group--default">
-										<label class="form-label form-label--default">Телефон*</label>
-										<div class="form-control-group form-control-group--default">
-											<input type="text" class="form-control form-control--text form-control--default">
+									<div class="acc-history">
+										<div class="acc-history__box acc-history__box--order-number">
+											<span class="acc-history__name">Номер заказа:</span>
+											<span class="acc-history__value">758915</span>
+										</div>
+										<div class="acc-history__box acc-history__box--date">
+											<span class="acc-history__name">Дата доставки:</span>
+											<span class="acc-history__value">01.08.2018</span>
+										</div>
+										<div class="acc-history__box acc-history__box--total">
+											<span class="acc-history__name">Сумма:</span>
+											<span class="acc-history__value">4 000 <span class="acc-rub">₽</span></span>								
+										</div>
+										<div class="acc-history__box acc-history__box--detail">
+											<div class="acc-history__detail">
+												<button type="button" class="acc-history__detail-close">X</button>
+												<div class="acc-history-detail-list">
+													<div class="acc-history-detail">
+														<div class="acc-history-detail__box acc-history-detail__box--product">
+															<span class="acc-history-detail__name">Киото <span class="acc-history-detail__quantity">(5 шт.)</span></span>
+														</div>
+														<div class="acc-history-detail__box acc-history-detail__box--price">
+															700 <span class="acc-rub">₽</span>
+														</div>
+													</div>
+													<div class="acc-history-detail">
+														<div class="acc-history-detail__box acc-history-detail__box--product">
+															<span class="acc-history-detail__name">Запеченный с лососем и креветкой <span class="acc-history-detail__quantity">(2 шт.)</span></span>
+															<span class="acc-history-detail__info acc-history-detail__info--ingredients">Васаби, имбирь, соус спайси</span>
+														</div>
+														<div class="acc-history-detail__box acc-history-detail__box--price">
+															700 <span class="acc-rub">₽</span>
+														</div>
+													</div>
+													<div class="acc-history-detail">
+														<div class="acc-history-detail__box acc-history-detail__box--product">
+															<span class="acc-history-detail__name">Классическая филадельфия <span class="acc-history-detail__quantity">(2 шт.)</span></span>
+														</div>
+														<div class="acc-history-detail__box acc-history-detail__box--price">
+															700 <span class="acc-rub">₽</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="acc-history__box acc-history__box--detail-open">
+											<button type="button" class="acc-history__detail-open">O</button>
 										</div>
 									</div>
-									<div class="form-group form-group--default">
-										<label class="form-label form-label--default">Email</label>
-										<div class="form-control-group form-control-group--default">
-											<input type="text" class="form-control form-control--text form-control--default">
+									<div class="acc-history">
+										<div class="acc-history__box acc-history__box--order-number">
+											<span class="acc-history__name">Номер заказа:</span>
+											<span class="acc-history__value">758915</span>
 										</div>
-									</div>
-									<div class="form-group form-group--default">
-										<label class="form-label form-label--default">Дата рождения</label>
-										<div class="form-control-group form-control-group--default">
-											<input type="text" class="form-control form-control--text form-control--default">
+										<div class="acc-history__box acc-history__box--date">
+											<span class="acc-history__name">Дата доставки:</span>
+											<span class="acc-history__value">01.08.2018</span>
 										</div>
-										<div class="form-message form-message--default form-message--control">
-											Во время дня рождения мы пришлем	промокод на скидку
+										<div class="acc-history__box acc-history__box--total">
+											<span class="acc-history__name">Сумма:</span>
+											<span class="acc-history__value">200 500 <span class="acc-rub">₽</span></span>								
 										</div>
-									</div>
-								
-									<div class="acc-user-rules">
-										<div class="acc-user-rules__group">
-											<label class="acc-user-rules-labelcheck">
-												<input type="checkbox">
-												<span class="acc-user-rules-labelcheck__text">Получать рассылку новостей и акций</span>
-											</label>
+										<div class="acc-history__box acc-history__box--detail">
+											<div class="acc-history__detail">
+												<button type="button" class="acc-history__detail-close">X</button>
+												<div class="acc-history-detail-list">
+													<div class="acc-history-detail">
+														<div class="acc-history-detail__box acc-history-detail__box--product">
+															<span class="acc-history-detail__name">Киото <span class="acc-history-detail__quantity">(5 шт.)</span></span>
+														</div>
+														<div class="acc-history-detail__box acc-history-detail__box--price">
+															700 <span class="acc-rub">₽</span>
+														</div>
+													</div>
+													<div class="acc-history-detail">
+														<div class="acc-history-detail__box acc-history-detail__box--product">
+															<span class="acc-history-detail__name">Запеченный с лососем и креветкой <span class="acc-history-detail__quantity">(2 шт.)</span></span>
+															<span class="acc-history-detail__info acc-history-detail__info--ingredients">Васаби, имбирь, соус спайси</span>
+														</div>
+														<div class="acc-history-detail__box acc-history-detail__box--price">
+															700 <span class="acc-rub">₽</span>
+														</div>
+													</div>
+													<div class="acc-history-detail">
+														<div class="acc-history-detail__box acc-history-detail__box--product">
+															<span class="acc-history-detail__name">Классическая филадельфия <span class="acc-history-detail__quantity">(2 шт.)</span></span>
+														</div>
+														<div class="acc-history-detail__box acc-history-detail__box--price">
+															700 <span class="acc-rub">₽</span>
+														</div>
+													</div>
+												</div>
+											</div>
 										</div>
-									</div>
-			
-									<div class="acc-user-buttons">
-										<div class="acc-user-button">
-											<button type="submit" class="button button--default button--m button--border-radius-m">
-												<span class="button__text">Сохранить</span>
-											</button>
-										</div>
-										<div class="acc-user-button">
-											<button type="button" class="button button--default button--m button--text button--dark-grey">
-												<span class="button__icon button__icon--x-bold-dark-grey"></span>
-												<span class="button__text">Отмена</span>
-											</button>
+										<div class="acc-history__box acc-history__box--detail-open">
+											<button type="button" class="acc-history__detail-open">O</button>
 										</div>
 									</div>
 								</div>
+			
 							</div>
 						</div>
 					</div>

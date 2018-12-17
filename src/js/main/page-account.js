@@ -35,3 +35,36 @@
 	}
 
 }());
+
+// account-history
+(function() {
+	
+	var $container = $('.js-account-history-delegate');
+	var $current = $();
+
+	$container
+		.on('click.history-open-detail', '.acc-history__detail-open', function() {
+			var $target = $(this);
+			var $history = $target.closest('.acc-history');
+			closeDetail($current);
+			openDetail($history);
+			$current = $history;
+		})
+		.on('click.history-close-detail', '.acc-history__detail-close', function() {
+			closeDetail($current);
+			$current = $();
+		});
+
+	function openDetail($history) {
+		if ($history.length) {
+			$history.addClass('acc-history--detail');
+		}
+	}
+
+	function closeDetail($history) {
+		if ($history.length) {
+			$history.removeClass('acc-history--detail');
+		}
+	}
+
+}());

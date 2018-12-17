@@ -38,7 +38,8 @@
 	}
 
 	&__main-content {
-		padding: 0 0 0 18px;
+		padding: 0 0 0 $account-main-content-space-h;
+		max-width: $account-main-content-max-width;
 
 		@media (max-width: $account-bp-mobile) {
 			padding-left: 0;

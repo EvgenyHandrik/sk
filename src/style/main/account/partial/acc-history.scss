@@ -1,0 +1,328 @@
+$acc-history-total-width: 100px;
+$acc-history-detail-open-width: 25px;
+$acc-history-box-padding-left: 15px;
+
+.acc-history {
+	display: table;
+	width: 100%;
+	border-bottom: 1px solid #F6F6F6;
+	
+	&__box {
+		display: table-cell;
+		padding-top: 10px;
+		padding-left: $acc-history-box-padding-left;
+		padding-bottom: 10px;
+		font-size: 14px;
+
+		&:first-child {
+			padding-left: 0;
+		}
+
+		&--order-number {
+			.acc-history__value {
+				color: $account-color-grey-light;
+			}
+		}
+
+		&--date {
+			width: 100%;
+			text-align: center;
+		}
+
+		&--total {
+			min-width: $acc-history-total-width;
+			max-width: $acc-history-total-width;
+			text-align: right;
+
+			@media (max-width: 520px) {
+				min-width: $acc-history-total-width - 15px;
+				max-width: $acc-history-total-width - 15px;
+			}
+		}
+
+		&--detail-open {
+			min-width: $acc-history-detail-open-width + $acc-history-box-padding-left;
+			max-width: $acc-history-detail-open-width + $acc-history-box-padding-left;
+			text-align: right;
+		}
+
+		&--detail {
+			display: none;
+		}
+	}
+
+	&__name {
+		display: none;
+	}
+
+	&__detail-open {
+		position: relative;
+		display: block;
+		width: $acc-history-detail-open-width;
+		height: $acc-history-detail-open-width;
+		color: transparent;
+		background-color: transparent;
+		@include user-select-none();
+		cursor: pointer;
+
+		&:hover {
+			&:before {
+				opacity: 0;
+			}
+
+			&:after {
+				opacity: 1;
+			}
+		}
+
+		&:before,
+		&:after {
+			$detail-open-icon-size: 13px;
+
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			display: block;
+			width: $detail-open-icon-size;
+			height: $detail-open-icon-size;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: $detail-open-icon-size $detail-open-icon-size;
+			transform: translate(-50%, -50%);
+			transition-property: opacity;
+			transition-duration: 200ms;
+		}
+
+		&:before {
+			opacity: 0.2;
+			background-image: url(../images/ico-search-black-30x30.svg);
+		}
+
+		&:after {
+			opacity: 0;
+			background-image: url(../images/ico-search-red-30x30.svg);
+		}
+	}
+
+	&__detail {
+		position: relative;
+		padding: 20px 18px 20px 18px;
+		margin-right: -18px;
+		margin-left: -18px;
+		border-radius: 10px;
+		box-shadow: 0 0 3px rgba(#000, 0.2);
+
+		@media (max-width: $account-bp-mobile) {
+			padding-right: 15px;
+			padding-left: 15px;
+			margin-right: -15px;
+			margin-left: -15px;
+		}
+
+		@media (max-width: 520px) {
+			padding-right: 10px;
+			padding-left: 10px;
+			margin-right: -10px;
+			margin-left: -10px;
+		}
+	}
+
+	&__detail-close {
+		position: absolute;
+		top: 5px;
+		right: 18px;
+		display: block;
+		width: 25px;
+		height: 25px;
+		color: transparent;
+		background-color: transparent;
+		@include user-select-none();
+		cursor: pointer;
+
+		@media (max-width: $account-bp-mobile) {
+			right: 15px;
+		}
+
+		@media (max-width: 520px) {
+			right: 10px;
+		}
+
+		&:hover {
+			&:before {
+				opacity: 0;
+			}
+
+			&:after {
+				opacity: 1;
+			}
+		}
+
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			display: block;
+			width: 10px;
+			height: 10px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 10px 10px;
+			transition-property: opacity;
+			transition-duration: 200ms;
+			transform: translate(-50%, -50%);
+		}
+
+		&:before {
+			background-image: url(../images/ico-x-bold-grey-lite-30x30.svg);
+			opacity: 1;
+		}
+
+		&:after {
+			background-image: url(../images/ico-x-bold-red-30x30.svg);
+			opacity: 0;
+		}
+	}
+
+	&--detail {
+		display: block;
+		width: auto;
+
+		.acc-history__name {
+			display: inline;
+		}
+
+		.acc-history__box {
+			display: block;
+			padding: 0;
+
+			&--order-number {
+				margin-top: 15px;
+				margin-bottom: 10px;
+
+				.acc-history__name {
+					display: none;
+				}
+
+				.acc-history__value {
+					font-weight: bold;
+					color: #000;
+				}
+			}
+
+			&--date {
+				width: auto;
+				line-height: 1.3;
+				margin-bottom: 6px;
+				font-size: 13px;
+				text-align: left;
+			}
+	
+			&--total {
+				line-height: 1.3;
+				min-width: 0px;
+				max-width: 100%;
+				margin-bottom: 15px;
+				font-size: 13px;
+				text-align: left;
+			}
+	
+			&--detail-open {
+				display: none;
+			}
+			
+			&--detail {
+				display: block;
+				margin-bottom: 15px;
+			}
+		}
+	}
+}
+
+.acc-history-detail-list {}
+
+.acc-history-detail {
+	display: table;
+	width: 100%;
+
+	&:last-child {
+		.acc-history-detail__box {
+			padding-bottom: 0;
+		}
+	}
+
+	&__box {
+		display: table-cell;
+		padding-bottom: 15px;
+		font-size: 15px;
+
+		&--product {
+			width: 100%;
+		}
+
+		&--price {
+			min-width: $acc-history-total-width + $acc-history-detail-open-width + $acc-history-box-padding-left;
+			max-width: $acc-history-total-width + $acc-history-detail-open-width + $acc-history-box-padding-left;
+			padding-right: $acc-history-box-padding-left + $acc-history-detail-open-width;
+			padding-left: $acc-history-box-padding-left;
+			text-align: right;
+
+			@media (max-width: 520px) {
+				min-width: $acc-history-total-width + $acc-history-detail-open-width + $acc-history-box-padding-left - 15px;
+				max-width: $acc-history-total-width + $acc-history-detail-open-width + $acc-history-box-padding-left - 15px;
+			}
+		}
+	}
+
+	&__name {
+		display: block;
+		line-height: 1.3;
+		margin: 0 0 5px 0;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__quantity {
+		white-space: nowrap;
+		color: $account-color-grey-light;
+	}
+
+	&__info {
+		display: block;
+		line-height: 1.3;
+		font-size: 12px;
+		color: $account-color-grey-light;
+
+		&--ingredients {
+			&:before {
+				$info-icon-size: 15px;
+	
+				content: '';
+				display: inline-block;
+				width: $info-icon-size;
+				height: $info-icon-size;
+				margin: 0 5px 0 0;
+				vertical-align: middle;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: $info-icon-size $info-icon-size;
+				background-image: url(../images/ico-fire-red-active-30x30.svg);
+			}
+		}
+	}
+}
+
+.acc-page__main-content {
+	&--history {
+		max-width: $account-main-content-max-width + $account-main-content-space-h;
+		padding-right: $account-main-content-space-h;
+
+		@media (max-width: $account-bp-mobile) {
+			padding-right: 0;
+		}
+	}
+}
