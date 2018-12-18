@@ -3,6 +3,14 @@
 }
 
 .acc-user-form {
+	.form-label {
+		&--default {
+			margin-bottom: 7px;
+			font-size: 14px;
+			color: $account-color-grey-light;
+		}
+	}
+	
 	.form-group {
 		max-width: 280px;
 

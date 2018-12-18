@@ -244,6 +244,12 @@
   background-image: url(../images/ico-bonus-card-flat-red-30x30.svg);
 }
 
+.acc-user-form .form-label--default {
+  margin-bottom: 7px;
+  font-size: 14px;
+  color: #a5a5a5;
+}
+
 .acc-user-form .form-group {
   max-width: 280px;
 }
@@ -980,6 +986,10 @@
   width: 100%;
 }
 
+.acc-address-list__select-box .select .jq-selectbox__select {
+  border-color: #e0e1e3;
+}
+
 .acc-address-list__select-box .select .jq-selectbox__select-text {
   font-weight: bold;
 }
@@ -1088,6 +1098,7 @@
 
 .acc-address-buttons--new-address > .acc-address-buttons__row > .acc-address-buttons__col {
   display: table-cell;
+  vertical-align: middle;
 }
 
 .acc-address-buttons--new-address > .acc-address-buttons__row > .acc-address-buttons__col--cancel {

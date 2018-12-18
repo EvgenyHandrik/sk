@@ -124,6 +124,10 @@
 			}
 
 			.jq-selectbox {
+				&__select {
+					border-color: $form-input-border-color;
+				}
+				
 				&__select-text {
 					font-weight: bold;
 				}
@@ -256,6 +260,7 @@
 
 			& > .acc-address-buttons__col {
 				display: table-cell;
+				vertical-align: middle;
 
 				&--cancel {
 					padding-left: 30px;
