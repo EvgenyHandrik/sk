@@ -567,10 +567,10 @@ ga('require', 'ecommerce');
 										<li class="acc-nav__item acc-nav__item--history">
 											<a href="" class="acc-nav__button">История заказов</a>
 										</li>
-										<li class="acc-nav__item acc-nav__item--addresses acc-nav__item--active">
+										<li class="acc-nav__item acc-nav__item--addresses">
 											<a href="" class="acc-nav__button">Адреса</a>
 										</li>
-										<li class="acc-nav__item acc-nav__item--notifications">
+										<li class="acc-nav__item acc-nav__item--notifications acc-nav__item--active">
 											<a href="" class="acc-nav__button">Уведомления</a>
 										</li>
 									</ul>
@@ -603,138 +603,108 @@ ga('require', 'ecommerce');
 									</div>
 								</div>
 			
-								<h2 class="ttl ttl--2 ttl--account">Адреса</h2>
+								<h2 class="ttl ttl--2 ttl--account">Уведомления</h2>
 			
-								<div class="form form--lite acc-address-form acc-address-form--new-address js-acc-address">
-									<div class="acc-address-group acc-address-group--address-list">
-										<div class="acc-address-group__row">
-											<div class="acc-address-group__col">
-												<div class="acc-address-list">
-													<div class="acc-address-list__row">
-														<div class="acc-address-list__col acc-address-list__col--list">
-															<div class="acc-address-list__select-box">
-																<select class="select">
-																	<option>Новый адрес</option>
-																	<option data-opt-content="{
-																			&quot;html&quot;:	&quot;&lt;div class=\&quot;acc-address-list__opt\&quot;&gt;&lt;span class=\&quot;acc-address-list__opt-name\&quot;&gt;Дом&lt;/span&gt;&lt;span class=\&quot;acc-address-list__opt-addr\&quot;&gt;ул. Ленина, д. 100, кв. 500&lt;/span&gt;&lt;/div&gt;&quot;
-																		}">
-																		Дом
-																	</option>
-																	<option data-opt-content="{
-																			&quot;html&quot;:	&quot;&lt;div class=\&quot;acc-address-list__opt\&quot;&gt;&lt;span class=\&quot;acc-address-list__opt-name\&quot;&gt;Работа&lt;/span&gt;&lt;span class=\&quot;acc-address-list__opt-addr\&quot;&gt;ул. Двадцати Шести Бакинских Комиссаров, д. 15, кв. 30&lt;/span&gt;&lt;/div&gt;&quot;
-																		}">
-																		Работа
-																	</option>
-																	<option data-opt-content="{
-																			&quot;html&quot;:	&quot;&lt;div class=\&quot;acc-address-list__opt\&quot;&gt;&lt;span class=\&quot;acc-address-list__opt-name\&quot;&gt;Друзья&lt;/span&gt;&lt;span class=\&quot;acc-address-list__opt-addr\&quot;&gt;ул. Московкая, д. 10, кв. 300&lt;/span&gt;&lt;/div&gt;&quot;
-																		}">
-																		Друзья
-																	</option>
-																</select>
-															</div>
-														</div>
-														<div class="acc-address-list__col acc-address-list__col--add">
-															<button type="button" class="acc-address-list__add" title="Новый адрес">+</button>
-														</div>
-													</div>
-												</div>
+								<div class="acc-notifications">
+									<div class="acc-notification">
+										<span class="acc-notification__date">01.08.2018</span>
+										<div class="acc-notification__main">
+											<div class="acc-notification__header">
+												<span class="acc-notification__title">Начисление бонусов</span>
+											</div>
+											<div class="acc-notification__body">
+												С последнего заказа вам начислено 70 бонусных рублей!
+											</div>
+										</div>
+									</div>
+									<div class="acc-notification">
+										<span class="acc-notification__date">01.08.2018</span>
+										<div class="acc-notification__main">
+											<div class="acc-notification__header">
+												<span class="acc-notification__title">Подтверждение почтового адреса</span>
+											</div>
+											<div class="acc-notification__body">
+												Вы получили это письмо, поскольку указали его при работе с сайтом
+											</div>
+										</div>
+									</div>
+									<div class="acc-notification">
+										<span class="acc-notification__date">01.08.2018</span>
+										<div class="acc-notification__main">
+											<div class="acc-notification__header">
+												<span class="acc-notification__title">Дополнение в Пользовательском соглашении</span>
+											</div>
+											<div class="acc-notification__body">
+												Недавно мы дополнили Пользовательское соглашение пунктом 3.2.
+												Это означает, что мы будем рассказывать только о сервисах компании
+												и не планируем присылать вам рекламу сторонних организаций.
 											</div>
 										</div>
 									</div>
 			
-									<div class="acc-address-group acc-address-group--address">
-										<div class="acc-address-group__row">
-											<div class="acc-address-group__col">
-												<div class="acc-address">
-													<label class="form-label form-label--default">Улица</label>
-													<div class="form-control-group form-control-group--default">
-														<input type="text" class="form-control form-control--text form-control--default">
-													</div>
-												</div>
+									<div class="acc-notification">
+										<span class="acc-notification__date">01.08.2018</span>
+										<div class="acc-notification__main">
+											<div class="acc-notification__header">
+												<span class="acc-notification__title">Начисление бонусов</span>
 											</div>
-											<div class="acc-address-group__col">
-												<div class="acc-address-group acc-address-group--address-g1">
-													<div class="acc-address-group__row">
-														<div class="acc-address-group__col">
-															<div class="acc-address">
-																<label class="form-label form-label--default">Дом</label>
-																<div class="form-control-group form-control-group--default">
-																	<input type="text" class="form-control form-control--text form-control--default">
-																</div>
-															</div>
-														</div>
-														<div class="acc-address-group__col">
-															<div class="acc-address">
-																<label class="form-label form-label--default">Подъезд</label>
-																<div class="form-control-group form-control-group--default">
-																	<input type="text" class="form-control form-control--text form-control--default">
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="acc-address-group__col">
-												<div class="acc-address-group acc-address-group--address-g2">
-													<div class="acc-address-group__row">
-														<div class="acc-address-group__col">
-															<div class="acc-address">
-																<label class="form-label form-label--default">Квартира</label>
-																<div class="form-control-group form-control-group--default">
-																	<input type="text" class="form-control form-control--text form-control--default">
-																</div>
-															</div>
-														</div>
-														<div class="acc-address-group__col">
-															<div class="acc-address">
-																<label class="form-label form-label--default">Этаж</label>
-																<div class="form-control-group form-control-group--default">
-																	<input type="text" class="form-control form-control--text form-control--default">
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="acc-address-group__row acc-address-group__row--address-name">
-											<div class="acc-address-group__col">
-												<div class="acc-address-name">
-													<label class="form-label form-label--default">Название адреса</label>
-													<div class="form-control-group form-control-group--default">
-														<input type="text" class="form-control form-control--text form-control--default">
-													</div>
-												</div>
+											<div class="acc-notification__body">
+												С последнего заказа вам начислено 70 бонусных рублей!
 											</div>
 										</div>
 									</div>
+									<div class="acc-notification">
+										<span class="acc-notification__date">01.08.2018</span>
+										<div class="acc-notification__main">
+											<div class="acc-notification__header">
+												<span class="acc-notification__title">Подтверждение почтового адреса</span>
+											</div>
+											<div class="acc-notification__body">
+												Вы получили это письмо, поскольку указали его при работе с сайтом
+											</div>
+										</div>
+									</div>
+									<div class="acc-notification">
+										<span class="acc-notification__date">01.08.2018</span>
+										<div class="acc-notification__main">
+											<div class="acc-notification__header">
+												<span class="acc-notification__title">Дополнение в Пользовательском соглашении</span>
+											</div>
+											<div class="acc-notification__body">
+												Недавно мы дополнили Пользовательское соглашение пунктом 3.2.
+												Это означает, что мы будем рассказывать только о сервисах компании
+												и не планируем присылать вам рекламу сторонних организаций.
+											</div>
+										</div>
+									</div>
+								</div>
 			
-									<div class="acc-address-buttons acc-address-buttons--address">
-										<div class="acc-address-buttons__row">
-											<div class="acc-address-buttons__col">
-												<button type="button" class="button button--default button--m button--text" class="acc-address-delete">
-													<span class="button__icon button__icon--minus-circle-flat-dark-grey"></span>
-													<span class="button__text">Удалить адрес</span>
-												</button>
-											</div>
-										</div>
+								<div class="paginator-lt acc-notification-paginator js-paginator-lt">
+									<button type="button" class="paginator-lt-button paginator-lt-button--prev" disabled>
+										<span class="paginator-lt-button__text">Назад</span>
+									</button>
+									<div class="paginator-lt-pages">
+										<select
+											class="select paginator-lt__select"
+											data-paginator-settings="{
+												&quot;totalPages&quot;:	20
+											}">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+											<option>7</option>
+											<option>8</option>
+											<option>9</option>
+											<option>10</option>
+											<option>11</option>
+										</select>
 									</div>
-			
-									<div class="acc-address-buttons acc-address-buttons--new-address">
-										<div class="acc-address-buttons__row">
-											<div class="acc-address-buttons__col">
-												<button type="button" class="button button--default button--m button--border-radius-m acc-address-save">
-													<span class="button__text">Сохранить адрес</span>
-												</button>
-											</div>
-											<div class="acc-address-buttons__col acc-address-buttons__col--cancel">
-												<button type="button" class="button button--default button--m button--text button--dark-grey acc-address-cancel">
-													<span class="button__icon button__icon--x-bold-dark-grey"></span>
-													<span class="button__text">Отмена</span>
-												</button>
-											</div>
-										</div>
-									</div>
+									<button type="button" class="paginator-lt-button paginator-lt-button--next">
+										<span class="paginator-lt-button__text">Вперед</span>
+									</button>
 								</div>
 			
 							</div>

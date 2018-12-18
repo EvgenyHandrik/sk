@@ -1,0 +1,58 @@
+.acc-notifications {
+	margin: 0 0 25px 0;
+}
+
+.acc-notification {
+	
+	margin: 0 0 20px 0;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+	
+	&__date {
+		display: block;
+		line-height: 1.5;
+		margin: 0 10px 7px 15px;
+		font-size: 13px;
+		color: $account-color-grey-light;
+
+		@media (max-width: 520px) {
+			margin-left: 0;
+		}
+	}
+
+	&__main {
+		padding: 13px 15px;
+		box-shadow: 0 0 3px rgba(#000, 0.2);
+		border-radius: 10px;
+
+		@media (max-width: 520px) {
+			padding: 10px;
+			margin-right: -10px;
+			margin-left: -10px;
+		}
+	}
+
+	&__header {
+		margin: 0 0 5px 0;
+	}
+
+	&__title {
+		display: block;
+		line-height: 1.5;
+		font-size: 13px;
+		font-weight: bold;
+	}
+
+	&__body {
+		line-height: 1.7;
+		font-size: 15px;
+	}
+}
+
+.acc-notification-paginator {
+	@media (max-width: 580px) {
+		@include paginator-lt-mobile();
+	}
+}
