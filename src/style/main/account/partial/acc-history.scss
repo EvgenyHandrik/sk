@@ -31,6 +31,13 @@ $acc-history-box-padding-left: 15px;
 		&--order-number {
 			.acc-history__value {
 				color: $account-color-grey-light;
+				transition-property: color;
+				transition-duration: 200ms;
+				cursor: pointer;
+
+				&:hover {
+					color: $color-red;
+				}
 			}
 		}
 
@@ -219,6 +226,10 @@ $acc-history-box-padding-left: 15px;
 				.acc-history__value {
 					font-weight: bold;
 					color: #000;
+
+					&:hover {
+						color: $color-red;
+					}
 				}
 			}
 

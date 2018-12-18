@@ -582,6 +582,15 @@
 
 .acc-history__box--order-number .acc-history__value {
   color: #a5a5a5;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+  cursor: pointer;
+}
+
+.acc-history__box--order-number .acc-history__value:hover {
+  color: #bb1018;
 }
 
 .acc-history__box--date {
@@ -757,6 +766,10 @@
 .acc-history--detail .acc-history__box--order-number .acc-history__value {
   font-weight: bold;
   color: #000;
+}
+
+.acc-history--detail .acc-history__box--order-number .acc-history__value:hover {
+  color: #bb1018;
 }
 
 .acc-history--detail .acc-history__box--date {

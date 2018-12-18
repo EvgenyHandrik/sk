@@ -41,29 +41,31 @@
 	
 	var $container = $('.js-account-history-delegate');
 	var $current = $();
-
+	
 	$container
-		.on('click.history-open-detail', '.acc-history__detail-open', function() {
+		.on('click.history-detail-toggle', '.acc-history__detail-toggle', function() {
 			var $target = $(this);
 			var $history = $target.closest('.acc-history');
-			closeDetail($current);
-			openDetail($history);
-			$current = $history;
-		})
-		.on('click.history-close-detail', '.acc-history__detail-close', function() {
-			closeDetail($current);
-			$current = $();
+			toggleDetail($history)
 		});
 
-	function openDetail($history) {
-		if ($history.length) {
-			$history.addClass('acc-history--detail');
+	function toggleDetail($history) {
+		if ($history.hasClass('acc-history--detail')) {
+			closeDetail();
+		} else {
+			openDetail($history);
 		}
 	}
 
-	function closeDetail($history) {
-		if ($history.length) {
-			$history.removeClass('acc-history--detail');
+	function openDetail($history) {
+		closeDetail();
+		$history.addClass('acc-history--detail');
+		$current = $history;
+	}
+
+	function closeDetail() {
+		if ($current.length) {
+			$current.removeClass('acc-history--detail');
 		}
 	}
 
