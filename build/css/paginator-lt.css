@@ -12,7 +12,7 @@
   vertical-align: middle;
   border: 1px solid #f6f6f6;
   border-radius: 5px;
-  color: #b2b2b2;
+  color: #a5a5a5;
   background-color: transparent;
   -webkit-transition-property: color;
   transition-property: color;
@@ -35,7 +35,7 @@
 }
 
 .paginator-lt-button:disabled:hover {
-  color: #b2b2b2;
+  color: #a5a5a5;
 }
 
 .paginator-lt-button:before,
@@ -85,7 +85,7 @@
 
 .paginator-lt-pages__total {
   display: inline;
-  color: #b2b2b2;
+  color: #a5a5a5;
 }
 
 .paginator-lt-pages__total-num {

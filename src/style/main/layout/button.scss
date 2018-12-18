@@ -49,6 +49,28 @@
 					background-image: url(../images/ico-x-bold-red-30x30.svg);
 				}
 			}
+
+			&--minus-circle-flat-dark-grey {
+				$icon-size: 15px;
+
+				width: $icon-size;
+				height: $icon-size;
+
+				&:before,
+				&:after {
+					width: $icon-size;
+					height: $icon-size;
+					background-size: $icon-size $icon-size;
+				}
+
+				&:before {
+					background-image: url(../images/ico-minus-circle-flat-dark-grey-30x30.svg);
+				}
+
+				&:after {
+					background-image: url(../images/ico-minus-circle-flat-red-30x30.svg);
+				}
+			}
 		}
 		
 		&.button--m {

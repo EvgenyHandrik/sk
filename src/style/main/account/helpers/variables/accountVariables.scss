@@ -1,7 +1,8 @@
 $account-bp-mobile: 800px;
 $account-bp-bonusbar-mobile: 460px;
 $account-bp-mobile-full-width: 460px;
-$account-color-grey-light: #b2b2b2;
+// $account-color-grey-light: #b2b2b2; // изначальный цвет
+$account-color-grey-light: $color-grey-light;
 
 $account-user-icon-size: 38px;
 $account-user-icon-space: 10px;

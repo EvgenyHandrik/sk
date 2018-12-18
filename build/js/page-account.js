@@ -68,3 +68,96 @@
 	}
 
 }());
+
+// account-addresses
+(function() {
+
+	var $container = $('.js-acc-address');
+	var $button = $container.find('.acc-address-list__add');
+	var $selectBox = $container.find('.acc-address-list__select-box');
+	var $select = $selectBox.find('select');
+	var $options = $select.find('option');
+
+	if ($container.length) {
+		changeStyle();
+		ready(function() {
+			addContent();
+			addDropDownHandlers();
+		})
+
+		$select.on('change.js-delivery-address-list', function() {
+			changeStyle();
+		});
+
+		$button.on('click.js-delivery-address-list', function() {
+			$options.filter(':selected').removeAttr('selected');
+			$options.eq(0).prop('selected', true);
+			
+			$select
+				.trigger('refresh')
+				.change();
+			
+			addContent();
+			addDropDownHandlers();
+		});
+	}
+
+	function changeStyle() {
+		if ($options.index($options.filter(':selected')) == 0) {
+			$container
+				.addClass('acc-address-form--new-address');
+		} else {
+			$container
+				.removeClass('acc-address-form--new-address');
+		}
+	}
+
+	function addContent() {
+		var $li = $selectBox.find('.jq-selectbox__dropdown li');
+
+		$options.each(function(i) {
+			var $option = $(this);
+
+			var data = $option.data('opt-content');
+
+			if (data) {
+				$li.eq(i).html(data.html);
+			}
+		})
+	}
+
+	function addDropDownHandlers() {
+		var $dropDown = $selectBox.find('.jq-selectbox__dropdown');
+		var $li = $dropDown.find('li');
+
+		$li
+			.off('mouseover mouseout mouseenter.js-address-list')
+			.on('mouseenter.js-address-list', function() {
+				$li.removeClass('selected');
+			});
+		
+		$dropDown
+			.off('mouseover mouseout mouseleave.js-address-list')
+			.on('mouseleave.js-address-list', function() {
+				$li.filter('.sel').addClass('selected');
+			});
+	}
+
+	function ready(func) {
+		var count = 10;
+
+		var timer = setInterval(function() {
+			if (count < 0) {
+				clearInterval(timer);
+			}
+			
+			if ($select.parent('.jq-selectbox').length) {
+				clearInterval(timer);
+				func();
+			}
+
+			--count;
+		 }, 1000);
+	};
+
+}());

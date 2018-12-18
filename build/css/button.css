@@ -49,6 +49,26 @@
   background-image: url(../images/ico-x-bold-red-30x30.svg);
 }
 
+.button--default .button__icon--minus-circle-flat-dark-grey {
+  width: 15px;
+  height: 15px;
+}
+
+.button--default .button__icon--minus-circle-flat-dark-grey:before,
+.button--default .button__icon--minus-circle-flat-dark-grey:after {
+  width: 15px;
+  height: 15px;
+  background-size: 15px 15px;
+}
+
+.button--default .button__icon--minus-circle-flat-dark-grey:before {
+  background-image: url(../images/ico-minus-circle-flat-dark-grey-30x30.svg);
+}
+
+.button--default .button__icon--minus-circle-flat-dark-grey:after {
+  background-image: url(../images/ico-minus-circle-flat-red-30x30.svg);
+}
+
 .button--default.button--m {
   height: 42px;
   line-height: 42px;

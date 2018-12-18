@@ -6,7 +6,7 @@
 }
 
 .acc-rub {
-  color: #b2b2b2;
+  color: #a5a5a5;
 }
 
 .acc-page {
@@ -103,7 +103,7 @@
 
 .acc-nav__button {
   border: 0;
-  color: #b2b2b2;
+  color: #a5a5a5;
 }
 
 .acc-nav__button:hover {
@@ -219,7 +219,7 @@
   display: block;
   margin: 5px 0 0 0;
   font-size: 14px;
-  color: #b2b2b2;
+  color: #a5a5a5;
 }
 
 .acc-bonusbar-item--total .acc-bonusbar-item__main {
@@ -370,7 +370,7 @@
   margin: 0 0 7px 0;
   font-size: 14px;
   background-position: left center;
-  color: #b2b2b2;
+  color: #a5a5a5;
   background-repeat: no-repeat;
   background-size: 21px 3px;
   background-image: url(../images/card-number-dots-21x3.svg);
@@ -381,7 +381,7 @@
 }
 
 .acc-card--invalid .acc-card__name {
-  color: #b2b2b2;
+  color: #a5a5a5;
 }
 
 .acc-card--invalid .acc-card-basic {
@@ -575,7 +575,7 @@
 }
 
 .acc-history__box--order-number .acc-history__value {
-  color: #b2b2b2;
+  color: #a5a5a5;
 }
 
 .acc-history__box--date {
@@ -818,14 +818,14 @@
 
 .acc-history-detail__quantity {
   white-space: nowrap;
-  color: #b2b2b2;
+  color: #a5a5a5;
 }
 
 .acc-history-detail__info {
   display: block;
   line-height: 1.3;
   font-size: 12px;
-  color: #b2b2b2;
+  color: #a5a5a5;
 }
 
 .acc-history-detail__info--ingredients:before {
@@ -894,6 +894,204 @@
 .acc-history-fdate__control-group .form-control--text {
   font-size: 14px;
   padding-right: 40px;
+}
+
+.acc-address-form .form-label--default {
+  font-size: 14px;
+  margin-bottom: 7px;
+  color: #a5a5a5;
+}
+
+.acc-address-form--new-address .acc-address-list__col--add {
+  display: none;
+}
+
+.acc-address-form--new-address .acc-address-group--address .acc-address-group__row--address-name {
+  display: block;
+}
+
+.acc-address-form--new-address .acc-address-buttons--address {
+  display: none;
+}
+
+.acc-address-form--new-address .acc-address-buttons--new-address {
+  display: block;
+}
+
+.acc-address-group--address-list > .acc-address-group__row > .acc-address-group__col {
+  margin-bottom: 20px;
+}
+
+.acc-address-group--address > .acc-address-group__row > .acc-address-group__col {
+  margin-bottom: 20px;
+}
+
+.acc-address-group--address > .acc-address-group__row--address-name {
+  display: none;
+}
+
+.acc-address-group--address-g1 > .acc-address-group__row {
+  display: table;
+  width: 100%;
+}
+
+.acc-address-group--address-g1 > .acc-address-group__row > .acc-address-group__col {
+  display: table-cell;
+  padding-left: 10px;
+}
+
+.acc-address-group--address-g1 > .acc-address-group__row > .acc-address-group__col:first-child {
+  padding-left: 0;
+}
+
+.acc-address-group--address-g2 > .acc-address-group__row {
+  display: table;
+  width: 100%;
+}
+
+.acc-address-group--address-g2 > .acc-address-group__row > .acc-address-group__col {
+  display: table-cell;
+  padding-left: 10px;
+}
+
+.acc-address-group--address-g2 > .acc-address-group__row > .acc-address-group__col:first-child {
+  padding-left: 0;
+}
+
+.acc-address-list__row {
+  display: table;
+  width: 100%;
+}
+
+.acc-address-list__col {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.acc-address-list__col--list {
+  width: 100%;
+}
+
+.acc-address-list__col--add {
+  padding-left: 15px;
+}
+
+.acc-address-list__select-box .select.jq-selectbox {
+  width: 100%;
+}
+
+.acc-address-list__select-box .select .jq-selectbox__select-text {
+  font-weight: bold;
+}
+
+.acc-address-list__select-box .select .jq-selectbox__dropdown {
+  padding-top: 0;
+  padding-bottom: 0;
+  overflow: hidden;
+}
+
+.acc-address-list__select-box .select .jq-selectbox__dropdown li {
+  max-width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.acc-address-list__select-box .select .jq-selectbox__dropdown li:first-child {
+  font-size: 13px;
+  border-bottom: 1px solid #eee;
+}
+
+.acc-address-list__select-box .select .jq-selectbox__dropdown li:hover .cht2-delivery-address-list__opt-addr,
+.acc-address-list__select-box .select .jq-selectbox__dropdown li.selected .cht2-delivery-address-list__opt-addr {
+  color: #fff;
+}
+
+.acc-address-list__add {
+  position: relative;
+  display: block;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  margin: 0;
+  border-radius: 100px;
+  color: transparent;
+  background-color: transparent;
+  overflow: hidden;
+  cursor: pointer;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+.acc-address-list__add:before {
+  content: '';
+  display: block;
+  width: 34px;
+  height: 34px;
+  background-color: #bb1018;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 34px 34px;
+  background-image: url(../images/ico-plus-m-white-30x30.svg);
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+}
+
+.acc-address-list__add:hover:before {
+  background-color: #da5848;
+}
+
+.acc-address-list__opt {
+  font-size: 13px;
+}
+
+.acc-address-list__opt-name {
+  display: inline-block;
+  padding: 3px 10px;
+  margin: 0 10px 0 0;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.acc-address-list__opt-addr {
+  opacity: 0.39;
+}
+
+.acc-address-buttons {
+  margin: 30px 0 0 0;
+}
+
+.acc-address-buttons--address {
+  margin-top: 25px;
+}
+
+.acc-address-buttons--address > .acc-address-buttons__row {
+  text-align: right;
+}
+
+.acc-address-buttons--address > .acc-address-buttons__row > .acc-address-buttons__col {
+  display: inline;
+}
+
+.acc-address-buttons--new-address {
+  display: none;
+}
+
+.acc-address-buttons--new-address > .acc-address-buttons__row {
+  display: table;
+}
+
+.acc-address-buttons--new-address > .acc-address-buttons__row > .acc-address-buttons__col {
+  display: table-cell;
+}
+
+.acc-address-buttons--new-address > .acc-address-buttons__row > .acc-address-buttons__col--cancel {
+  padding-left: 30px;
 }
 
 @media (max-width: 800px) {
@@ -1108,6 +1306,25 @@
 
   .acc-page__main-content--history {
     padding-right: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .acc-address-list__select-box .select .jq-selectbox__dropdown li:first-child {
+    font-weight: bold;
+  }
+
+  .acc-address-list__opt-name {
+    display: block;
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    background-color: transparent;
+  }
+
+  .acc-address-list__opt-addr {
+    display: block;
+    margin-top: 3px;
   }
 }
 

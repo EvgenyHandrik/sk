@@ -1,0 +1,266 @@
+.acc-address-form {
+	.form-label {
+		&--default {
+			font-size: 14px;
+			margin-bottom: 7px;
+			color: $color-grey-light;
+		}
+	}
+
+	&--new-address {
+		.acc-address-list__col--add {
+			display: none;
+		}
+
+		.acc-address-group {
+			&--address {
+				.acc-address-group__row {
+					&--address-name {
+						display: block;
+					}
+				}
+			}
+		}
+
+		.acc-address-buttons {
+			&--address {
+				display: none;
+			}
+
+			&--new-address {
+				display: block;
+			}
+		}
+	}
+}
+
+.acc-address-group {
+	$address-group-col-margin-bottom: 20px;
+
+	&__row {
+
+	}
+
+	&__col {
+
+	}
+
+	&--address-list {
+		& > .acc-address-group__row {
+			& > .acc-address-group__col {
+				margin-bottom: $address-group-col-margin-bottom;
+			}
+		}
+	}
+
+	&--address {
+		& > .acc-address-group__row {
+			& > .acc-address-group__col {
+				margin-bottom: $address-group-col-margin-bottom;
+			}
+
+			&--address-name {
+				display: none;
+			}
+		}
+	}
+
+	&--address-g1 {
+		& > .acc-address-group__row {
+			display: table;
+			width: 100%;
+
+			& > .acc-address-group__col {
+				display: table-cell;
+				padding-left: 10px;
+
+				&:first-child {
+					padding-left: 0;
+				}
+			}
+		}
+	}
+
+	&--address-g2 {
+		& > .acc-address-group__row {
+			display: table;
+			width: 100%;
+
+			& > .acc-address-group__col {
+				display: table-cell;
+				padding-left: 10px;
+
+				&:first-child {
+					padding-left: 0;
+				}
+			}
+		}
+	}
+}
+
+.acc-address-list {
+	&__row {
+		display: table;
+		width: 100%;
+	}
+
+	&__col {
+		display: table-cell;
+		vertical-align: middle;
+
+		&--list {
+			width: 100%;
+		}
+
+		&--add {
+			padding-left: 15px;
+		}
+	}
+
+	&__select-box {
+		.select {
+			&.jq-selectbox {
+				width: 100%;
+			}
+
+			.jq-selectbox {
+				&__select-text {
+					font-weight: bold;
+				}
+				
+				&__dropdown {
+					padding-top: 0;
+					padding-bottom: 0;
+					overflow: hidden;
+
+					li {
+						max-width: 100%;
+						padding-top: 10px;
+						padding-bottom: 10px;
+
+						&:first-child {
+							font-size: 13px;
+							border-bottom: 1px solid #eee;
+
+							@media (max-width: 700px) {
+								font-weight: bold;
+							}
+						}
+
+						&:hover,
+						&.selected {
+							.cht2-delivery-address-list {
+								&__opt-addr {
+									color: #fff;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&__add {
+		$add-icon-size: 34px;
+
+		position: relative;
+		display: block;
+		width: $add-icon-size;
+		height: $add-icon-size;
+		padding: 0;
+		margin: 0;
+		border-radius: 100px;
+		color: transparent;
+		background-color: transparent;
+		overflow: hidden;
+		cursor: pointer;
+
+		@include user-select-none;
+
+		&:before {
+			content: '';
+			display: block;
+			width: $add-icon-size;
+			height: $add-icon-size;
+			background-color: $color-red;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: $add-icon-size $add-icon-size;
+			background-image: url(../images/ico-plus-m-white-30x30.svg);
+			transition-duration: 200ms;
+			transition-property: background-color;
+		}
+
+		&:hover {
+			&:before {
+				background-color: $color-red-active;
+			}
+		}
+	}
+
+	&__opt {
+		font-size: 13px;
+	}
+
+	&__opt-name {
+		display: inline-block;
+		padding: 3px 10px;
+		margin: 0 10px 0 0;
+		border-radius: 20px;
+		background-color: rgba(#000, 0.08);
+
+		@media (max-width: 700px) {
+			display: block;
+			padding: 0;
+			margin: 0;
+			font-weight: bold;
+			background-color: transparent;
+		}
+	}
+
+	&__opt-addr {
+		opacity: 0.39;
+
+		@media (max-width: 700px) {
+			display: block;
+			margin-top: 3px;
+		}
+	}
+}
+
+.acc-address-buttons {
+	margin: 30px 0 0 0;
+	
+	&__row {}
+
+	&__col {}
+
+	&--address {
+		margin-top: 25px;
+
+		& > .acc-address-buttons__row {
+			text-align: right;
+
+			& > .acc-address-buttons__col {
+				display: inline;
+			}
+		}
+	}
+
+	&--new-address {
+		display: none;
+
+		& > .acc-address-buttons__row {
+			display: table;
+
+			& > .acc-address-buttons__col {
+				display: table-cell;
+
+				&--cancel {
+					padding-left: 30px;
+				}
+			}
+		}
+	}
+}
