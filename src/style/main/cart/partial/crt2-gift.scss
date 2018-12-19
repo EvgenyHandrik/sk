@@ -92,6 +92,10 @@
 				& + .crt2-gift-one__label {
 					.crt2-gift-one__name {
 						// font-weight: bold;
+
+						@media (max-width: 640px) {
+							font-weight: bold;
+						}
 					}
 				}
 			}

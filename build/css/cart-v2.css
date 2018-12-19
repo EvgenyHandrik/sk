@@ -318,8 +318,17 @@ a.crt2-dish__image-wrapper:hover {
 
 .crt2-dish__name-box {
   width: 100%;
+  line-height: 1.2;
   padding-left: 15px;
   /* -- */
+}
+
+.crt2-dish__name-wrapper {
+  margin: 0 0 5px 0;
+}
+
+.crt2-dish__name-wrapper:last-child {
+  margin-bottom: 0;
 }
 
 .crt2-dish__name {
@@ -535,6 +544,10 @@ a.crt2-dish__name:hover {
     display: none;
   }
 
+  .crt2-gift-one--default .crt2-gift-one__hidden-control:checked + .crt2-gift-one__label .crt2-gift-one__name {
+    font-weight: bold;
+  }
+
   .crt2-dishes {
     margin-bottom: 40px;
   }
@@ -570,28 +583,30 @@ a.crt2-dish__name:hover {
   .crt2-dish__count-box,
   .crt2-dish__price-box,
   .crt2-dish__button-box {
-    display: inline-block;
+    display: block;
     padding-bottom: 0;
   }
 
   .crt2-dish__image-box {
-    display: none;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 20px;
   }
 
   .crt2-dish__name-box {
-    width: 100%;
-    padding-right: 46px;
-    padding-bottom: 15px;
+    width: auto;
     padding-left: 0;
+    margin-bottom: 20px;
+    overflow: hidden;
   }
 
   .crt2-dish__name {
-    font-size: 17px;
+    font-weight: bold;
   }
 
   .crt2-dish__count-box {
     position: absolute;
-    right: 0;
+    left: 0;
     bottom: 15px;
     min-width: 98px;
     padding-left: 0;
@@ -599,17 +614,16 @@ a.crt2-dish__name:hover {
 
   .crt2-dish__price-box {
     position: absolute;
-    right: 128px;
+    left: 128px;
     bottom: 15px;
     height: 30px;
     line-height: 30px;
     padding-left: 0;
-    text-align: right;
   }
 
   .crt2-dish__button-box {
     position: absolute;
-    top: 7px;
+    bottom: 18px;
     right: 2px;
     padding-bottom: 0;
     padding-left: 0;
