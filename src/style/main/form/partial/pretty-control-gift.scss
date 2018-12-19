@@ -1,8 +1,8 @@
 .pretty-control {
 	&--gift {
 		.pretty-control__item {
-			$item-width: 21px;
-			$item-height: 21px;
+			$item-width: 18px;
+			$item-height: 18px;
 
 			position: relative;
 			display: block;
@@ -14,31 +14,24 @@
 				content: '';
 				box-sizing: border-box;
 				position: absolute;
-				top: 0;
-				left: 0;
+				top: 50%;
+				left: 50%;
 				display: block;
 				width: $item-width;
 				height: $item-height;
-				transition-property: opacity;
-				transition-duration: 200ms;
+				border-radius: 100%;
+				transform: translate(-50%, -50%);
 			}
 
 			&:before {
-				top: 1px;
-				left: 1px;
-				width: $item-width - 2px;
-				height: $item-height - 2px;
-				border-radius: 100%;
-				border: 2px solid #ba131a;
+				border: 1px solid #ba131a;
 				opacity: 1;
 			}
 
 			&:after {
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: $item-width $item-height;
-				background-image: url(../images/ico-check-circle-flat-red-20x20.svg);
+				background-color: $color-red;
 				opacity: 0;
+				transform: translate(-50%, -50%) scale(0.6);
 			}
 		}
 	}
