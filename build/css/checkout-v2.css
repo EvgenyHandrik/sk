@@ -861,6 +861,7 @@
 
   .cht2-bcard-add .bcard-add-vc__col {
     display: table-cell;
+    width: 50%;
     vertical-align: bottom;
   }
 

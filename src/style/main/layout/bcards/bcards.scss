@@ -216,12 +216,44 @@
 	.bcard-add-num__label {
 		display: none;
 	}
+
+	&__form-control-group {
+		&.form-control-group--success {
+			&.form-control-group--default {
+				&:before {
+					display: none;
+				}
+			}
+
+			.bcard-add-num__control-icon {
+				display: block;
+			}
+		}
+	}
+	
+	&__control-icon {
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: none;
+		width: $form-input-m-height;
+		height: 100%;
+
+		& > img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			display: block;
+			max-width: 20px;
+			height: auto;
+			transform: translate(-50%, -50%);
+		}
+	}
 }
 
 .bcard-add-vc {
 	$vc-space-h: 15px;
 	$code-width: $bcard-add-back-width - $bcard-add-space-h - $vc-space-h;
-	
 
 	position: absolute;
 	top: 50px + $form-input-m-height + 15px;
@@ -285,6 +317,19 @@
 				line-height: 1.2;
 				color: #000;
 			}
+		}
+	}
+
+	&__control-group {
+		border-radius: $form-input-m-border-radius;
+		background-color: #fff;
+	}
+
+	&__control {
+		background-color: transparent;
+
+		&.form-control--text.form-control--default {
+			background-color: transparent;
 		}
 	}
 }

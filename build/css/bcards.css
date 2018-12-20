@@ -199,6 +199,35 @@
   display: none;
 }
 
+.bcard-add-num__form-control-group.form-control-group--success.form-control-group--default:before {
+  display: none;
+}
+
+.bcard-add-num__form-control-group.form-control-group--success .bcard-add-num__control-icon {
+  display: block;
+}
+
+.bcard-add-num__control-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  width: 42px;
+  height: 100%;
+}
+
+.bcard-add-num__control-icon > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  max-width: 20px;
+  height: auto;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 .bcard-add-vc {
   position: absolute;
   top: 107px;
@@ -251,6 +280,19 @@
   font-size: 13px;
   line-height: 1.2;
   color: #000;
+}
+
+.bcard-add-code__control-group {
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.bcard-add-code__control {
+  background-color: transparent;
+}
+
+.bcard-add-code__control.form-control--text.form-control--default {
+  background-color: transparent;
 }
 
 .bcard-add-remember {
