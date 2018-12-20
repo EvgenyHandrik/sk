@@ -1,23 +1,184 @@
+@mixin acc-nav-mobile() {
+	$acc-nav-space-top: 15px;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	width: 300px;
+	padding: $acc-nav-space-top 0 10px 0;
+	margin: -$acc-nav-space-top 0 0 0;
+	border-radius: 10px;
+	box-shadow: 0 0 3px rgba(#000, 0.2);
+	background-color: #fff;
+	overflow: hidden;
+
+	.acc-nav__item {
+		margin-bottom: 0;
+
+		&:last-child {
+			.acc-nav__button {
+				border-bottom: 0;
+			}
+		}
+
+		&--active {
+			.acc-nav__button {
+				color: $color-red;
+
+				&:before {
+					display: none;
+				}
+
+				&:after {
+					display: block;
+				}
+			}
+		}
+
+		&--profile {
+			.acc-nav__button {
+				$icon-width: 13px;
+				$icon-height: 16px;
+				
+				&:before {
+					background-size: $icon-width $icon-height;
+					background-image: url(../images/ico-hacc-user-grey-13x16.svg);
+				}
+
+				&:after {
+					background-size: $icon-width $icon-height;
+					background-image: url(../images/ico-hacc-user-red-13x16.svg);
+				}
+			}
+		}
+
+		&--card {
+			.acc-nav__button {
+				$icon-width: 18px;
+				$icon-height: 19px;
+
+				&:before {
+					background-size: $icon-width $icon-height;
+					background-image: url(../images/ico-hacc-card-grey-18x19.svg);
+				}
+
+				&:after {
+					background-size: $icon-width $icon-height;
+					background-image: url(../images/ico-hacc-card-red-18x19.svg);
+				}
+			}
+		}
+
+		&--bonuses {
+			.acc-nav__button {
+				$icon-width: 18px;
+				$icon-height: 16px;
+
+				&:before {
+					background-size: $icon-width $icon-height;
+					background-image: url(../images/ico-hacc-money-grey-18x16.svg);
+				}
+
+				&:after {
+					background-size: $icon-width $icon-height;
+					background-image: url(../images/ico-hacc-money-red-18x16.svg);
+				}
+			}
+		}
+
+		&--history {
+			.acc-nav__button {
+				$icon-width: 18px;
+				$icon-height: 17px;
+				
+				&:before {
+					background-size: $icon-width $icon-height;
+					background-image: url(../images/ico-hacc-history-grey-18x17.svg);
+				}
+
+				&:after {
+					background-size: $icon-width $icon-height;
+					background-image: url(../images/ico-hacc-history-red-18x17.svg);
+				}
+			}
+		}
+
+		&--addresses {
+			.acc-nav__button {
+				$icon-width: 18px;
+				$icon-height: 18px;
+
+				&:before {
+					background-size: $icon-width $icon-height;
+					background-image: url(../images/ico-hacc-placemark-grey-30x30.svg);
+				}
+
+				&:after {
+					background-size: $icon-width $icon-height;
+					background-image: url(../images/ico-hacc-placemark-red-30x30.svg);
+				}
+			}
+		}
+
+		&--notifications {
+			.acc-nav__button {
+				$icon-width: 17px;
+				$icon-height: 17px;
+				
+				&:before {
+					background-size: $icon-width $icon-height;
+					background-image: url(../images/ico-hacc-bell-grey-30x30.svg);
+				}
+
+				&:after {
+					background-size: $icon-width $icon-height;
+					background-image: url(../images/ico-hacc-bell-red-30x30.svg);
+				}
+			}
+		}
+	}
+
+	.acc-nav__button {
+		$padding-h: $account-user-icon-size + $account-user-icon-space;
+
+		position: relative;
+		display: block;
+		padding: 8px $padding-h;
+		color: #000;
+
+		&:before,
+		&:after {
+			$icon-size: 20px;
+			$left: $account-user-icon-size - $icon-size;
+
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: $left;
+			display: block;
+			width: 20px;
+			height: 20px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 20px 20px;
+			transform: translateY(-50%);
+		}
+
+		&:after {
+			display: none;
+		}
+	}
+
+	.acc-nav-user {
+		display: block;
+	}
+}
+
 .acc-nav {
 	display: block;
 	padding: 0 0 0 ($account-user-icon-size + $account-user-icon-space);
 	margin: 20px 0 0 0;
-
-	@media (max-width: $account-bp-mobile) {
-		$acc-nav-space-top: 15px;
-
-		position: absolute;
-		top: 0;
-		left: 0;
-		display: none;
-		width: 300px;
-		padding: $acc-nav-space-top 0 10px 0;
-		margin: -$acc-nav-space-top 0 0 0;
-		border-radius: 10px;
-		box-shadow: 0 0 3px rgba(#000, 0.2);
-		background-color: #fff;
-		overflow: hidden;
-	}
 
 	&__list {
 
@@ -28,16 +189,8 @@
 		padding: 0;
 		margin: 0 0 20px 0;
 
-		@media (max-width: $account-bp-mobile) {
+		&:last-child {
 			margin-bottom: 0;
-
-			&:last-child {
-				.acc-nav {
-					&__button {
-						border-bottom: 0;
-					}
-				}
-			}
 		}
 
 		&--active {
@@ -45,144 +198,6 @@
 			.acc-nav  {
 				&__button {
 					color: #000;
-				
-					@media (max-width: $account-bp-mobile) {
-						color: $color-red;
-
-						&:before {
-							display: none;
-						}
-
-						&:after {
-							display: block;
-						}
-					}
-				}
-			}
-		}
-
-		&--profile {
-			@media (max-width: $account-bp-mobile) {
-				.acc-nav {
-					&__button {
-						$icon-width: 13px;
-						$icon-height: 16px;
-						
-						&:before {
-							background-size: $icon-width $icon-height;
-							background-image: url(../images/ico-hacc-user-grey-13x16.svg);
-						}
-
-						&:after {
-							background-size: $icon-width $icon-height;
-							background-image: url(../images/ico-hacc-user-red-13x16.svg);
-						}
-					}
-				}
-			}
-		}
-
-		&--card {
-			@media (max-width: $account-bp-mobile) {
-				.acc-nav {
-					&__button {
-						$icon-width: 18px;
-						$icon-height: 19px;
-
-						&:before {
-							background-size: $icon-width $icon-height;
-							background-image: url(../images/ico-hacc-card-grey-18x19.svg);
-						}
-
-						&:after {
-							background-size: $icon-width $icon-height;
-							background-image: url(../images/ico-hacc-card-red-18x19.svg);
-						}
-					}
-				}
-			}
-		}
-
-		&--bonuses {
-			@media (max-width: $account-bp-mobile) {
-				.acc-nav {
-					&__button {
-						$icon-width: 18px;
-						$icon-height: 16px;
-
-						&:before {
-							background-size: $icon-width $icon-height;
-							background-image: url(../images/ico-hacc-money-grey-18x16.svg);
-						}
-
-						&:after {
-							background-size: $icon-width $icon-height;
-							background-image: url(../images/ico-hacc-money-red-18x16.svg);
-						}
-					}
-				}
-			}
-		}
-
-		&--history {
-			@media (max-width: $account-bp-mobile) {
-				.acc-nav {
-					&__button {
-						$icon-width: 18px;
-						$icon-height: 17px;
-						
-						&:before {
-							background-size: $icon-width $icon-height;
-							background-image: url(../images/ico-hacc-history-grey-18x17.svg);
-						}
-
-						&:after {
-							background-size: $icon-width $icon-height;
-							background-image: url(../images/ico-hacc-history-red-18x17.svg);
-						}
-					}
-				}
-			}
-		}
-
-		&--addresses {
-			@media (max-width: $account-bp-mobile) {
-				.acc-nav {
-					&__button {
-						$icon-width: 18px;
-						$icon-height: 18px;
-
-						&:before {
-							background-size: $icon-width $icon-height;
-							background-image: url(../images/ico-hacc-placemark-grey-30x30.svg);
-						}
-
-						&:after {
-							background-size: $icon-width $icon-height;
-							background-image: url(../images/ico-hacc-placemark-red-30x30.svg);
-						}
-					}
-				}
-			}
-		}
-
-		&--notifications {
-			@media (max-width: $account-bp-mobile) {
-				.acc-nav {
-					&__button {
-						$icon-width: 17px;
-						$icon-height: 17px;
-						
-						&:before {
-							background-size: $icon-width $icon-height;
-							background-image: url(../images/ico-hacc-bell-grey-30x30.svg);
-						}
-
-						&:after {
-							background-size: $icon-width $icon-height;
-							background-image: url(../images/ico-hacc-bell-red-30x30.svg);
-						}
-					}
 				}
 			}
 		}
@@ -191,37 +206,6 @@
 	&__button {
 		border: 0;
 		color: $account-color-grey-light;
-
-		@media (max-width: $account-bp-mobile) {
-			$padding-h: $account-user-icon-size + $account-user-icon-space;
-
-			position: relative;
-			display: block;
-			padding: 8px $padding-h;
-			color: #000;
-
-			&:before,
-			&:after {
-				$icon-size: 20px;
-				$left: $account-user-icon-size - $icon-size;
-
-				content: '';
-				position: absolute;
-				top: 50%;
-				left: $left;
-				display: block;
-				width: 20px;
-				height: 20px;
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: 20px 20px;
-				transform: translateY(-50%);
-			}
-
-			&:after {
-				display: none;
-			}
-		}
 
 		&:hover {
 			color: #000;
@@ -238,10 +222,6 @@
 	line-height: $account-user-line-height;
 	padding: $acc-nav-padding-v $acc-nav-padding-h $acc-nav-padding-v $acc-nav-padding-h;
 	font-size: $account-user-font-size;
-
-	@media (max-width: $account-bp-mobile) {
-		display: block;
-	}
 
 	&__name {
 		$corner-size: 12px;
@@ -290,5 +270,11 @@
 				}
 			}
 		}
+	}
+}
+
+.acc-navbar--mobile {
+	.acc-nav {
+		@include acc-nav-mobile();
 	}
 }

@@ -1,10 +1,53 @@
-.acc-navbar {
+.acc-navbar-container {
+	position: relative;
+}
 
-	@media (max-width: $account-bp-mobile) {
-		display: inline-block;
-		padding-right: $account-user-icon-size + $account-user-icon-space;
-		margin-bottom: 20px;
+@mixin acc-navbar-mobile() {
+	display: inline-block;
+	padding-right: $account-user-icon-size + $account-user-icon-space;
+	margin-bottom: 20px;
+
+	&.acc-navbar--open {
+		.acc-nav {
+			display: block;
+		}
+
+		.acc-navbar-user {
+			opacity: 0;
+		}
 	}
+
+	.acc-navbar-user {
+		&__name {
+			$corner-size: 12px;
+
+			position: relative;
+			padding-right: $corner-size + 10px;
+
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: $account-user-line-height * $account-user-font-size / 2;
+				right: 0;
+				display: block;
+				width: $corner-size;
+				height: $corner-size;
+				margin: 0 0 0 10px;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: $corner-size $corner-size;
+				background-image: url(../images/ico-arr-r-md-black-30x30.svg);
+				transform: translateY(50%) rotate(90deg);
+			}
+		}
+	}
+
+	.acc-navbar-toggle {
+		display: block;
+	}
+}
+
+.acc-navbar {
 
 	@media (max-width: $account-bp-mobile-full-width) {
 		display: block;
@@ -14,18 +57,10 @@
 	&--open {
 		position: relative;
 		z-index: 2;
+	}
 
-		.acc-nav {
-			@media (max-width: $account-bp-mobile) {
-				display: block;
-			}
-		}
-
-		.acc-navbar-user {
-			@media (max-width: $account-bp-mobile) {
-				opacity: 0;
-			}
-		}
+	&--mobile {
+		@include acc-navbar-mobile();
 	}
 }
 
@@ -57,27 +92,6 @@
 		$corner-size: 12px;
 
 		font-weight: normal;
-
-		@media (max-width: $account-bp-mobile) {
-			position: relative;
-			padding-right: $corner-size + 10px;
-
-			&:after {
-				content: '';
-				position: absolute;
-				bottom: $account-user-line-height * $account-user-font-size / 2;
-				right: 0;
-				display: block;
-				width: $corner-size;
-				height: $corner-size;
-				margin: 0 0 0 10px;
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: $corner-size $corner-size;
-				background-image: url(../images/ico-arr-r-md-black-30x30.svg);
-				transform: translateY(50%) rotate(90deg);
-			}
-		}
 	}
 }
 
@@ -94,8 +108,4 @@
 	background: none;
 
 	@include user-select-none();
-
-	@media (max-width: $account-bp-mobile) {
-		display: block;
-	}
 }

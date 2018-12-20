@@ -1,6 +1,7 @@
+// acc-navbar-open
 ;(function() {
 
-	var $container = $('.js-acc-navbar');
+	var $container = $('.js-acc-navbar-open');
 	var $buttonOpen = $('.acc-navbar-toggle');
 	var $nav = $('.acc-nav');
 
@@ -32,6 +33,197 @@
 		} else {
 			open();
 		}
+	}
+
+}());
+
+// acc-navbar mobile
+(function() {
+	var headerHeight = 100;
+	var mobileBreakpoint = 800;
+
+	var $window = $(window);
+
+	var isDesktop = false;
+	var isMobile = false;
+
+	var isDesktopFixedTop = false;
+	var isDesktopFixedBottom = false;
+	var isDesktopUnfixed = false;
+
+	var $nav = $('.js-acc-navbar-mobile');
+	var $container = $('.acc-navbar-container');
+
+	var getDesktopSizes = function() {
+		var f = getDesktopSizes;
+		f.offset = 20;
+		f.containerWidth = $container.width();
+		f.containerHeight = $container.height();
+		f.containerOffset = $container.offset().top;
+		f.navHeight = $nav.height();
+		f.point1 = f.containerOffset - headerHeight - f.offset;
+		f.point2 = f.containerOffset + f.containerHeight - f.navHeight - headerHeight - f.offset;
+		f.fixedIsEnabled = f.containerHeight > f.navHeight;
+		return f;
+	}
+
+	var desktopTimer = 0;
+
+	desktopMobileToggle();
+
+	$window.on('resize.acc-navbar', function() {
+		desktopMobileToggle();
+	});
+
+	function desktopMobileToggle() {
+		if (window.innerWidth > mobileBreakpoint) {
+			if (!isDesktop) {
+				desktop();
+			}
+		} else {
+			if (!isMobile) {
+				mobile();
+			}
+		}
+	}
+
+	function desktop() {
+		if (isMobile) destroyMobile();
+
+		isDesktop = true;
+		
+		$nav
+			.addClass('acc-navbar--desktop');
+		
+		getDesktopSizes();
+		desktopFixedToggle();
+		addDesktopHandlers();
+	}
+
+	function destroyDesktop() {
+		isDesktop = false;
+
+		isDesktopUnfixed = false;
+		isDesktopFixedTop = false;
+		isDesktopFixedBottom = false;
+
+		clearTimeout(desktopTimer);
+
+		removeDesktopHandlers();
+
+		$nav
+			.removeClass('acc-navbar--desktop acc-navbar--desktop-is-fixed')
+			.css({
+				'position': '',
+				'width': '',
+				'top': '',
+				'right': '',
+				'bottom': ''
+			});
+	}
+
+	function mobile() {
+		if (isDesktop) destroyDesktop();
+		
+		isMobile = true;
+
+		$nav
+			.addClass('acc-navbar--mobile');
+	}
+
+	function destroyMobile() {
+		isMobile = false;
+
+		$nav
+			.removeClass('acc-navbar--mobile');
+	}
+
+	function desktopFixedTop() {
+		$nav
+			.addClass('acc-navbar--desktop-is-fixed')
+			.css({
+				'position': 'fixed',
+				'top': headerHeight + getDesktopSizes.offset,
+				'width': getDesktopSizes.containerWidth,
+				'bottom': ''
+			});
+		
+		isDesktopUnfixed = false;
+		isDesktopFixedTop = true;
+		isDesktopFixedBottom = false;
+	}
+
+	function desktopFixedBottom() {
+		$nav
+			.removeClass('acc-navbar--desktop-is-fixed')
+			.css({
+				'position': 'absolute',
+				'top': '',
+				'width': getDesktopSizes.containerWidth,
+				'bottom': 0
+			})
+		
+		isDesktopUnfixed = false;
+		isDesktopFixedTop = false;
+		isDesktopFixedBottom = true;
+	}
+
+	function desktopUnfixed() {
+		$nav
+			.removeClass('acc-navbar--desktop-is-fixed')
+			.css({
+				'position': '',
+				'width': '',
+				'top': '',
+				'right': '',
+				'bottom': ''
+			});
+		
+		isDesktopUnfixed = true;
+		isDesktopFixedTop = false;
+		isDesktopFixedBottom = false;
+	}
+	
+	function desktopFixedToggle() {
+		if (isDesktop && getDesktopSizes.fixedIsEnabled) {
+			
+			var scroll = $window.scrollTop();
+		
+			if (scroll < getDesktopSizes.point1) {
+				if (isDesktopUnfixed == false) {
+					desktopUnfixed();
+				}
+			} else if (scroll >= getDesktopSizes.point1 && scroll < getDesktopSizes.point2) {
+				if (isDesktopFixedTop == false) {
+					desktopFixedTop();
+				}
+			} else if (scroll >= getDesktopSizes.point1) {
+				if (isDesktopFixedBottom == false) {
+					desktopFixedBottom();
+				}
+			}
+		}
+	}
+
+	function addDesktopHandlers() {
+		$window
+			.on('scroll.acc-navbar-desktop-fixed', function() {
+				desktopFixedToggle();
+			})
+			.on('resize.acc-navbar-desktop-fixed', function() {
+				getDesktopSizes();
+				clearTimeout(desktopTimer);
+				desktopTimer = setTimeout(function() {
+					getDesktopSizes();
+					desktopFixedToggle();
+				}, 300);
+			});
+	}
+
+	function removeDesktopHandlers() {
+		$window
+			.off('scroll.acc-navbar-desktop-fixed')
+			.off('resize.acc-navbar-desktop-fixed');
 	}
 
 }());

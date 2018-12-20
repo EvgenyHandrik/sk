@@ -32,9 +32,54 @@
   max-width: 530px;
 }
 
+.acc-navbar-container {
+  position: relative;
+}
+
 .acc-navbar--open {
   position: relative;
   z-index: 2;
+}
+
+.acc-navbar--mobile {
+  display: inline-block;
+  padding-right: 48px;
+  margin-bottom: 20px;
+}
+
+.acc-navbar--mobile.acc-navbar--open .acc-nav {
+  display: block;
+}
+
+.acc-navbar--mobile.acc-navbar--open .acc-navbar-user {
+  opacity: 0;
+}
+
+.acc-navbar--mobile .acc-navbar-user__name {
+  position: relative;
+  padding-right: 22px;
+}
+
+.acc-navbar--mobile .acc-navbar-user__name:after {
+  content: '';
+  position: absolute;
+  bottom: 10.8px;
+  right: 0;
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: 0 0 0 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+  background-image: url(../images/ico-arr-r-md-black-30x30.svg);
+  -webkit-transform: translateY(50%) rotate(90deg);
+  -ms-transform: translateY(50%) rotate(90deg);
+  transform: translateY(50%) rotate(90deg);
+}
+
+.acc-navbar--mobile .acc-navbar-toggle {
+  display: block;
 }
 
 .acc-navbar-user {
@@ -95,6 +140,10 @@
   display: block;
   padding: 0;
   margin: 0 0 20px 0;
+}
+
+.acc-nav__item:last-child {
+  margin-bottom: 0;
 }
 
 .acc-nav__item--active .acc-nav__button {
@@ -162,6 +211,133 @@
 }
 
 .acc-navbar--open .acc-nav-toggle {
+  display: block;
+}
+
+.acc-navbar--mobile .acc-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 300px;
+  padding: 15px 0 10px 0;
+  margin: -15px 0 0 0;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.acc-navbar--mobile .acc-nav .acc-nav__item {
+  margin-bottom: 0;
+}
+
+.acc-navbar--mobile .acc-nav .acc-nav__item:last-child .acc-nav__button {
+  border-bottom: 0;
+}
+
+.acc-navbar--mobile .acc-nav .acc-nav__item--active .acc-nav__button {
+  color: #bb1018;
+}
+
+.acc-navbar--mobile .acc-nav .acc-nav__item--active .acc-nav__button:before {
+  display: none;
+}
+
+.acc-navbar--mobile .acc-nav .acc-nav__item--active .acc-nav__button:after {
+  display: block;
+}
+
+.acc-navbar--mobile .acc-nav .acc-nav__item--profile .acc-nav__button:before {
+  background-size: 13px 16px;
+  background-image: url(../images/ico-hacc-user-grey-13x16.svg);
+}
+
+.acc-navbar--mobile .acc-nav .acc-nav__item--profile .acc-nav__button:after {
+  background-size: 13px 16px;
+  background-image: url(../images/ico-hacc-user-red-13x16.svg);
+}
+
+.acc-navbar--mobile .acc-nav .acc-nav__item--card .acc-nav__button:before {
+  background-size: 18px 19px;
+  background-image: url(../images/ico-hacc-card-grey-18x19.svg);
+}
+
+.acc-navbar--mobile .acc-nav .acc-nav__item--card .acc-nav__button:after {
+  background-size: 18px 19px;
+  background-image: url(../images/ico-hacc-card-red-18x19.svg);
+}
+
+.acc-navbar--mobile .acc-nav .acc-nav__item--bonuses .acc-nav__button:before {
+  background-size: 18px 16px;
+  background-image: url(../images/ico-hacc-money-grey-18x16.svg);
+}
+
+.acc-navbar--mobile .acc-nav .acc-nav__item--bonuses .acc-nav__button:after {
+  background-size: 18px 16px;
+  background-image: url(../images/ico-hacc-money-red-18x16.svg);
+}
+
+.acc-navbar--mobile .acc-nav .acc-nav__item--history .acc-nav__button:before {
+  background-size: 18px 17px;
+  background-image: url(../images/ico-hacc-history-grey-18x17.svg);
+}
+
+.acc-navbar--mobile .acc-nav .acc-nav__item--history .acc-nav__button:after {
+  background-size: 18px 17px;
+  background-image: url(../images/ico-hacc-history-red-18x17.svg);
+}
+
+.acc-navbar--mobile .acc-nav .acc-nav__item--addresses .acc-nav__button:before {
+  background-size: 18px 18px;
+  background-image: url(../images/ico-hacc-placemark-grey-30x30.svg);
+}
+
+.acc-navbar--mobile .acc-nav .acc-nav__item--addresses .acc-nav__button:after {
+  background-size: 18px 18px;
+  background-image: url(../images/ico-hacc-placemark-red-30x30.svg);
+}
+
+.acc-navbar--mobile .acc-nav .acc-nav__item--notifications .acc-nav__button:before {
+  background-size: 17px 17px;
+  background-image: url(../images/ico-hacc-bell-grey-30x30.svg);
+}
+
+.acc-navbar--mobile .acc-nav .acc-nav__item--notifications .acc-nav__button:after {
+  background-size: 17px 17px;
+  background-image: url(../images/ico-hacc-bell-red-30x30.svg);
+}
+
+.acc-navbar--mobile .acc-nav .acc-nav__button {
+  position: relative;
+  display: block;
+  padding: 8px 48px;
+  color: #000;
+}
+
+.acc-navbar--mobile .acc-nav .acc-nav__button:before,
+.acc-navbar--mobile .acc-nav .acc-nav__button:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.acc-navbar--mobile .acc-nav .acc-nav__button:after {
+  display: none;
+}
+
+.acc-navbar--mobile .acc-nav .acc-nav-user {
   display: block;
 }
 
@@ -1326,176 +1502,8 @@
     padding-left: 0;
   }
 
-  .acc-navbar {
-    display: inline-block;
-    padding-right: 48px;
-    margin-bottom: 20px;
-  }
-
-  .acc-navbar--open .acc-nav {
-    display: block;
-  }
-
-  .acc-navbar--open .acc-navbar-user {
-    opacity: 0;
-  }
-
-  .acc-navbar-user__name {
-    position: relative;
-    padding-right: 22px;
-  }
-
-  .acc-navbar-user__name:after {
-    content: '';
-    position: absolute;
-    bottom: 10.8px;
-    right: 0;
-    display: block;
-    width: 12px;
-    height: 12px;
-    margin: 0 0 0 10px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 12px 12px;
-    background-image: url(../images/ico-arr-r-md-black-30x30.svg);
-    -webkit-transform: translateY(50%) rotate(90deg);
-    -ms-transform: translateY(50%) rotate(90deg);
-    transform: translateY(50%) rotate(90deg);
-  }
-
-  .acc-navbar-toggle {
-    display: block;
-  }
-
   .bx-ie9 .acc-navbar-user__name:after {
     background-image: url(../images/ico-arr-r-md-black-30x30.png);
-  }
-
-  .acc-nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
-    width: 300px;
-    padding: 15px 0 10px 0;
-    margin: -15px 0 0 0;
-    border-radius: 10px;
-    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-    background-color: #fff;
-    overflow: hidden;
-  }
-
-  .acc-nav__item {
-    margin-bottom: 0;
-  }
-
-  .acc-nav__item:last-child .acc-nav__button {
-    border-bottom: 0;
-  }
-
-  .acc-nav__item--active .acc-nav__button {
-    color: #bb1018;
-  }
-
-  .acc-nav__item--active .acc-nav__button:before {
-    display: none;
-  }
-
-  .acc-nav__item--active .acc-nav__button:after {
-    display: block;
-  }
-
-  .acc-nav__item--profile .acc-nav__button:before {
-    background-size: 13px 16px;
-    background-image: url(../images/ico-hacc-user-grey-13x16.svg);
-  }
-
-  .acc-nav__item--profile .acc-nav__button:after {
-    background-size: 13px 16px;
-    background-image: url(../images/ico-hacc-user-red-13x16.svg);
-  }
-
-  .acc-nav__item--card .acc-nav__button:before {
-    background-size: 18px 19px;
-    background-image: url(../images/ico-hacc-card-grey-18x19.svg);
-  }
-
-  .acc-nav__item--card .acc-nav__button:after {
-    background-size: 18px 19px;
-    background-image: url(../images/ico-hacc-card-red-18x19.svg);
-  }
-
-  .acc-nav__item--bonuses .acc-nav__button:before {
-    background-size: 18px 16px;
-    background-image: url(../images/ico-hacc-money-grey-18x16.svg);
-  }
-
-  .acc-nav__item--bonuses .acc-nav__button:after {
-    background-size: 18px 16px;
-    background-image: url(../images/ico-hacc-money-red-18x16.svg);
-  }
-
-  .acc-nav__item--history .acc-nav__button:before {
-    background-size: 18px 17px;
-    background-image: url(../images/ico-hacc-history-grey-18x17.svg);
-  }
-
-  .acc-nav__item--history .acc-nav__button:after {
-    background-size: 18px 17px;
-    background-image: url(../images/ico-hacc-history-red-18x17.svg);
-  }
-
-  .acc-nav__item--addresses .acc-nav__button:before {
-    background-size: 18px 18px;
-    background-image: url(../images/ico-hacc-placemark-grey-30x30.svg);
-  }
-
-  .acc-nav__item--addresses .acc-nav__button:after {
-    background-size: 18px 18px;
-    background-image: url(../images/ico-hacc-placemark-red-30x30.svg);
-  }
-
-  .acc-nav__item--notifications .acc-nav__button:before {
-    background-size: 17px 17px;
-    background-image: url(../images/ico-hacc-bell-grey-30x30.svg);
-  }
-
-  .acc-nav__item--notifications .acc-nav__button:after {
-    background-size: 17px 17px;
-    background-image: url(../images/ico-hacc-bell-red-30x30.svg);
-  }
-
-  .acc-nav__button {
-    position: relative;
-    display: block;
-    padding: 8px 48px;
-    color: #000;
-  }
-
-  .acc-nav__button:before,
-  .acc-nav__button:after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 18px;
-    display: block;
-    width: 20px;
-    height: 20px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 20px 20px;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
-
-  .acc-nav__button:after {
-    display: none;
-  }
-
-  .acc-nav-user {
-    display: block;
   }
 
   .acc-bonusbar {
