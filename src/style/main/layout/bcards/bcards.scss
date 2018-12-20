@@ -1,4 +1,5 @@
-@import '../../helpers/helpers';
+@import '../../../helpers/helpers';
+@import './helpers/helpers';
 
 .bcards {
 	display: block;
@@ -152,24 +153,11 @@
 
 /* -- */
 
-$bcard-add-width: 403px;
-$bcard-add-height: 231px;
-$bcard-add-space-v: 20px;
-$bcard-add-space-h: 25px;
-$bcard-add-back-width: 185px;
-$bcard-add-back-height: 32px;
-
 .bcard-add {
 	position: relative;
 	z-index: 1;
 	width: $bcard-add-width + $bcard-add-back-width;
 	height: $bcard-add-height + $bcard-add-back-height;
-
-	@media (max-width: 700px) {
-		position: static;
-		width: auto;
-		height: auto;
-	}
 
 	&:before {
 		content: '';
@@ -183,12 +171,6 @@ $bcard-add-back-height: 32px;
 		border-radius: 10px;
 		box-shadow: 0 0 5px rgba(#000, 0.2);
 		background-color: #fff;
-
-		/* -- */
-
-		@media (max-width: 700px) {
-			display: none;
-		}
 	}
 
 	&:after {
@@ -206,12 +188,6 @@ $bcard-add-back-height: 32px;
 		background-repeat: repeat-x;
 		background-size: 1px 42px;
 		background-image: url("data:image/svg+xml,%3Csvg width='1' height='1' viewBox='0 0 1 1' fill='none' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='1' height='1' fill='black' fill-opacity='0.1'/%3E%3C/svg%3E%0A");
-
-		/* -- */
-
-		@media (max-width: 700px) {
-			display: none;
-		}
 	}
 
 	/* -- */
@@ -219,12 +195,6 @@ $bcard-add-back-height: 32px;
 	&__title {
 		display: block;
 		font-size: 18px;
-
-		/* -- */
-
-		@media (max-width: 700px) {
-			display: none;
-		}
 	}
 }
 
@@ -235,15 +205,6 @@ $bcard-add-back-height: 32px;
 	left: $bcard-add-space-h;
 	width: $bcard-add-width - $bcard-add-space-h * 2;
 	height: $bcard-add-height - $bcard-add-space-v * 2;
-
-	/* -- */
-
-	@media (max-width: 700px) {
-		position: static;
-		width: auto;
-		max-width: 300px + 49px;
-		height: auto;
-	}
 }
 
 .bcard-add-num {
@@ -252,24 +213,8 @@ $bcard-add-back-height: 32px;
 	left: 0;
 	width: 100%;
 
-	/* -- */
-
-	@media (max-width: 700px) {
-		position: static;
-		width: auto;
-		margin: 0 0 20px 0;
-	}
-
-	/* -- */
-
 	.bcard-add-num__label {
 		display: none;
-
-		/* -- */
-
-		@media (max-width: 700px) {
-			display: block;
-		}
 	}
 }
 
@@ -285,40 +230,10 @@ $bcard-add-back-height: 32px;
 
 	/* -- */
 
-	@media (max-width: 700px) {
-		position: static;
-		width: auto;
-		margin: 0 0 25px 0;
-	}
-
-	/* -- */
-
 	&__row {
-		
-		/* -- */
-
-		@media (max-width: 700px) {
-			display: table;
-			width: 100%;
-		}
 	}
 
 	&__col {
-
-		/* -- */
-
-		@media (max-width: 700px) {
-			display: table-cell;
-			vertical-align: bottom;
-
-			&:first-child {
-				padding-right: 5px;
-			}
-
-			&:last-child {
-				padding-left: 5px;
-			}
-		}
 
 		/* -- */
 
@@ -328,14 +243,6 @@ $bcard-add-back-height: 32px;
 			left: 100%;
 			width: $code-width;
 			margin-left: $bcard-add-space-h + $vc-space-h;
-
-			/* -- */
-
-			@media (max-width: 700px) {
-				position: static;
-				width: auto;
-				margin-left: 0;
-			}
 		}
 	}
 }
@@ -344,22 +251,10 @@ $bcard-add-back-height: 32px;
 	
 	.bcard-add-validity__label {
 		display: none;
-
-		/* -- */
-
-		@media (max-width: 700px) {
-			display: block;
-		}
 	}
 
 	&__control {
 		text-align: center;
-
-		/* -- */
-
-		@media (max-width: 700px) {
-			text-align: left;
-		}
 	}
 }
 
@@ -368,12 +263,6 @@ $bcard-add-back-height: 32px;
 		&.form-control--default.form-control--text {
 			text-align: center;
 			background-color: #fff;
-
-			/* -- */
-
-			@media (max-width: 700px) {
-				text-align: left;
-			}
 		}
 	}
 
@@ -384,35 +273,17 @@ $bcard-add-back-height: 32px;
 
 		/* -- */
 
-		@media (max-width: 700px) {
-			position: static;
-		}
-
-		/* -- */
-
 		&-text {
 			display: block;
 
 			&--1 {
 				display: none;
-
-				/* -- */
-
-				@media (max-width: 700px) {
-					display: block;
-				}
 			}
 
 			&--2 {
 				font-size: 13px;
 				line-height: 1.2;
 				color: #000;
-
-				/* -- */
-
-				@media (max-width: 700px) {
-					display: none;
-				}
 			}
 		}
 	}
@@ -422,14 +293,6 @@ $bcard-add-back-height: 32px;
 	position: absolute;
 	bottom: 0;
 	left: 0;
-
-	/* -- */
-
-	@media (max-width: 700px) {
-		position: static;
-	}
-
-	/* -- */
 
 	&__text {
 		margin-left: 5px;

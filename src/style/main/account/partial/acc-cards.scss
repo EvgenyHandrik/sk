@@ -1,3 +1,5 @@
+@import '../layout/bcards/helpers/helpers';
+
 .acc-cards {
 	margin: 0 0 50px 0;
 
@@ -14,6 +16,31 @@
 			.acc-card {
 				border-top: 1px solid #f6f6f6;
 			}
+		}
+	}
+
+	&--add {
+		.acc-cards-add {
+			display: none;
+		}
+
+		.acc-addcard {
+			display: block;
+		}
+	}
+
+	.form-label {
+		&--default {
+			margin-bottom: 7px;
+			font-size: 14px;
+			color: $color-grey-light;
+		}
+	}
+
+	.form-control--default.form-control--text {
+		@include placeholder() {
+			color: #000;
+			opacity: 0.3;
 		}
 	}
 }
@@ -212,7 +239,7 @@
 	font-size: 13px;
 }
 
-.acc-addcard {
+.acc-cards-add {
 	$icon-size: 34px;
 
 	display: inline-block;
@@ -247,6 +274,26 @@
 	}
 }
 
+.acc-addcard {
+	display: none;
+	margin-top: 30px;
+}
+
+.acc-addcard-buttons {
+	& > .acc-addcard-buttons__row {
+		display: table;
+
+		& > .acc-addcard-buttons__col {
+			display: table-cell;
+			vertical-align: middle;
+
+			&--cancel {
+				padding-left: 30px;
+			}
+		}
+	}
+}
+
 .acc-cards-info {
 	$info-icon-size: 37px;
 
@@ -275,5 +322,13 @@
 		&--icon-shield-lock {
 			background-image: url(../images/ico-shield-lock-black-30x30.svg);
 		}
+	}
+}
+
+.bcard-add {
+	&--account {
+		margin-bottom: 30px;
+
+		@include bcard-add-mobile();
 	}
 }

@@ -1,3 +1,11 @@
+@import '../layout/bcards/helpers/helpers';
+
 .cht2-card {
 	
+}
+
+.cht2-bcard-add {
+	@media (max-width: 700px) {
+		@include bcard-add-mobile();
+	}
 }

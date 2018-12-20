@@ -1,0 +1,102 @@
+@mixin bcard-add-mobile() {
+	position: static;
+	width: auto;
+	height: auto;
+
+	&:before {
+		display: none;
+	}
+
+	&:after {
+		display: none;
+	}
+
+	.bcard-add {
+		&__title {
+			display: none;
+		}
+	}
+
+	.bcard-add-form {
+		position: static;
+		width: auto;
+		max-width: 300px + 49px;
+		height: auto;
+	}
+
+	.bcard-add-num {
+		position: static;
+		width: auto;
+		margin: 0 0 20px 0;
+
+		.bcard-add-num__label {
+			display: block;
+		}
+	}
+
+	.bcard-add-vc {
+		position: static;
+		width: auto;
+		margin: 0 0 25px 0;
+
+		&__row {
+			display: table;
+			width: 100%;
+		}
+
+		&__col {
+			display: table-cell;
+			vertical-align: bottom;
+
+			&:first-child {
+				padding-right: 5px;
+			}
+
+			&:last-child {
+				padding-left: 5px;
+			}
+
+			&--code {
+				position: static;
+				width: auto;
+				margin-left: 0;
+			}
+		}
+	}
+
+	.bcard-add-validity {
+		.bcard-add-validity__label {
+			display: block;
+		}
+
+		&__control {
+			text-align: left;
+		}
+	}
+
+	.bcard-add-code {
+		&__control {
+			&.form-control--default.form-control--text {
+				text-align: left;
+			}
+		}
+
+		&__label {
+			position: static;
+		
+			&-text {
+				&--1 {
+					display: block;
+				}
+	
+				&--2 {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.bcard-add-remember {
+		position: static;
+	}
+}
