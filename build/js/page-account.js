@@ -238,7 +238,8 @@
 		.on('click.history-detail-toggle', '.acc-history__detail-toggle', function() {
 			var $target = $(this);
 			var $history = $target.closest('.acc-history');
-			toggleDetail($history)
+			toggleDetail($history);
+			$(window).trigger('resize');
 		});
 
 	function toggleDetail($history) {

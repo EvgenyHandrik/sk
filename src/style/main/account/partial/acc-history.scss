@@ -66,6 +66,10 @@ $acc-history-box-padding-left: 15px;
 		&--detail {
 			display: none;
 		}
+
+		&--bonuses {
+			display: none;
+		}
 	}
 
 	&__name {
@@ -123,9 +127,14 @@ $acc-history-box-padding-left: 15px;
 	}
 
 	&__detail {
+
+	}
+
+	&__detail-main {
 		position: relative;
 		padding: 20px 18px 20px 18px;
 		margin-right: -18px;
+		margin-bottom: 15px;
 		margin-left: -18px;
 		border-radius: 10px;
 		box-shadow: 0 0 3px rgba(#000, 0.2);
@@ -258,6 +267,11 @@ $acc-history-box-padding-left: 15px;
 				display: block;
 				margin-bottom: 15px;
 			}
+
+			&--bonuses {
+				display: block;
+				margin-bottom: 15px;
+			}
 		}
 	}
 }
@@ -334,6 +348,34 @@ $acc-history-box-padding-left: 15px;
 				background-image: url(../images/ico-fire-red-active-30x30.svg);
 			}
 		}
+	}
+}
+
+.acc-history-bonus {
+	margin: 0 0 17px 0;
+	font-size: 1px;
+
+	&__title {
+		display: inline-block;
+		font-size: 13px;
+		vertical-align: middle;
+	}
+
+	&__plus,
+	&__minus {
+		display: inline-block;
+		line-height: 1;
+		padding: 3px 8px;
+		margin: 0 0 0 5px;
+		font-size: 13px;
+		vertical-align: middle;
+		border-radius: 50px;
+		background-color: #f0f0f0;
+	}
+
+	&__plus {
+		color: #fff;
+		background-color: $color-red-active;
 	}
 }
 

@@ -937,6 +937,10 @@
   display: none;
 }
 
+.acc-history__box--bonuses {
+  display: none;
+}
+
 .acc-history__name {
   display: none;
 }
@@ -996,10 +1000,11 @@
   background-image: url(../images/ico-search-red-30x30.svg);
 }
 
-.acc-history__detail {
+.acc-history__detail-main {
   position: relative;
   padding: 20px 18px 20px 18px;
   margin-right: -18px;
+  margin-bottom: 15px;
   margin-left: -18px;
   border-radius: 10px;
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
@@ -1121,6 +1126,11 @@
   margin-bottom: 15px;
 }
 
+.acc-history--detail .acc-history__box--bonuses {
+  display: block;
+  margin-bottom: 15px;
+}
+
 .acc-history-detail {
   display: table;
   width: 100%;
@@ -1181,6 +1191,34 @@
   background-repeat: no-repeat;
   background-size: 15px 15px;
   background-image: url(../images/ico-fire-red-active-30x30.svg);
+}
+
+.acc-history-bonus {
+  margin: 0 0 17px 0;
+  font-size: 1px;
+}
+
+.acc-history-bonus__title {
+  display: inline-block;
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.acc-history-bonus__plus,
+.acc-history-bonus__minus {
+  display: inline-block;
+  line-height: 1;
+  padding: 3px 8px;
+  margin: 0 0 0 5px;
+  font-size: 13px;
+  vertical-align: middle;
+  border-radius: 50px;
+  background-color: #f0f0f0;
+}
+
+.acc-history-bonus__plus {
+  color: #fff;
+  background-color: #da5848;
 }
 
 .acc-page__main-content--history {
@@ -1515,7 +1553,7 @@
     max-width: 420px;
   }
 
-  .acc-history__detail {
+  .acc-history__detail-main {
     padding-right: 15px;
     padding-left: 15px;
     margin-right: -15px;
@@ -1598,7 +1636,7 @@
     max-width: 85px;
   }
 
-  .acc-history__detail {
+  .acc-history__detail-main {
     padding-right: 10px;
     padding-left: 10px;
     margin-right: -10px;
