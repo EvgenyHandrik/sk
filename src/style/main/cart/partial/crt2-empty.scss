@@ -1,0 +1,25 @@
+.crt2-empty {
+	margin: 40px 0 0 0;
+	text-align: center;
+
+	&:before {
+		$icon-size: 65px;
+
+		content: '';
+		display: block;
+		width: $icon-size;
+		height: $icon-size;
+		margin: 0 auto 20px auto;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: $icon-size;
+		background-image: url(../images/ico-cart-empty-arrow-black-30x30.svg);
+		opacity: 0.06;
+	}
+
+	&__title {
+		display: block;
+		margin: 0 0 20px 0;
+		font-size: 20px;
+	}
+}

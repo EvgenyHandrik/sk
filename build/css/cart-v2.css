@@ -543,6 +543,30 @@ a.crt2-dish__name:hover {
   /* -- */
 }
 
+.crt2-empty {
+  margin: 40px 0 0 0;
+  text-align: center;
+}
+
+.crt2-empty:before {
+  content: '';
+  display: block;
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 20px auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 65px;
+  background-image: url(../images/ico-cart-empty-arrow-black-30x30.svg);
+  opacity: 0.06;
+}
+
+.crt2-empty__title {
+  display: block;
+  margin: 0 0 20px 0;
+  font-size: 20px;
+}
+
 @media (max-width: 640px) {
   .crt2-action {
     margin-bottom: 40px;

@@ -678,7 +678,7 @@
 .cht2-success__title {
   display: block;
   line-height: 1.4;
-  margin: 0 0 1em 0;
+  margin: 0 0 0.3em 0;
   font-weight: bold;
   font-size: 24px;
 }
@@ -686,7 +686,7 @@
 .cht2-success p {
   line-height: 1.5;
   margin: 0 0 0.8em 0;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .cht2-success__redirect {
