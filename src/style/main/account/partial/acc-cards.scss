@@ -60,11 +60,17 @@
 		top: $card-padding-v - 2px;
 		left: 0;
 		width: $card-system-size;
-		height: $card-system-size;
+		// height: $card-system-size;
 
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: $card-system-size $card-system-size;
+
+		& > img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
 	}
 
 	&__x {

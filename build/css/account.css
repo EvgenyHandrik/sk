@@ -513,10 +513,15 @@
   top: 13px;
   left: 0;
   width: 25px;
-  height: 25px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 25px 25px;
+}
+
+.acc-card__system > img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .acc-card__x {

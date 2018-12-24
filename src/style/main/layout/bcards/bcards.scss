@@ -97,11 +97,17 @@
 		left: $left-space;
 		display: block;
 		width: $icon-size;
-		height: $icon-size;
+		// height: $icon-size;
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: $icon-size $icon-size;
 		transform: translateY(-50%);
+
+		& > img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
 	}
 
 	&__name {
