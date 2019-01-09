@@ -1,0 +1,17 @@
+.crt2-notes {}
+
+.crt2-note {
+	position: relative;
+	padding: 0 0 0 15px;
+	font-size: 13px;
+	// font-style: italic;
+	color: #a5a5a5;
+
+	&__sign {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	&__text {}
+}

@@ -1,0 +1,66 @@
+.pretty-control {
+	$b: &;
+
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	overflow: hidden;
+
+	&__input {
+		position: absolute;
+		z-index: 1;
+		top: 50%;
+		left: 50%;
+		display: block;
+		width: 150%;
+		height: 150%;
+		transform: translate(-50%, -50%);
+		opacity: 0;
+		cursor: pointer;
+	}
+
+	&__item {
+		display: block;
+	}
+
+	/* -- */
+
+	&--default {
+		$color-main: #ac3023;
+
+		#{$b}__item {
+			box-sizing: border-box;
+			width: 16px;
+			height: 16px;
+			border: 1px solid $color-main;
+
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 50%;
+				height: 50%;
+				transform: translate(-50%, -50%);
+				background-color: $color-main;
+				opacity: 0;
+			}
+		}
+
+		#{$b}__input[type=radio] + #{$b}__item,
+		&#{$b}--radio #{$b}__item {
+			border-radius: 50%;
+
+			&:before {
+				border-radius: 50%;
+			}
+		}
+
+		#{$b}__input:checked + #{$b}__item {
+			&:before {
+				opacity: 1;
+			}
+		}
+	}
+}
