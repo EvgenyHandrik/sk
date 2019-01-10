@@ -143,6 +143,8 @@
 
 		.crt2-gift-one__name {
 			display: inline;
+			transition-property: color;
+			transition-duration: 200ms;
 		}
 	}
 

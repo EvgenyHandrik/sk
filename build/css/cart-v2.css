@@ -234,6 +234,10 @@
 
 .crt2-gift-one__name-button .crt2-gift-one__name {
   display: inline;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
 }
 
 .crt2-gift-one__name {
