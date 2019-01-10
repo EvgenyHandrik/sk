@@ -82,8 +82,6 @@
 		width: 100%;
 		font-family: Roboto, Arimo, sans-serif;
 		font-size: 15px;
-		transition-property: box-shadow, background-color;
-		transition-duration: 200ms;
 	}
 
 	&__fake-control-box {
@@ -98,6 +96,17 @@
 		vertical-align: middle;
 		transition-property: opacity;
 		transition-duration: 200ms;
+	}
+
+	&__image-button {
+		display: block;
+		border: 0;
+		transition-property: opacity;
+		transition-duration: 200ms;
+
+		&:hover {
+			opacity: 0.5;
+		}
 	}
 	
 	&__image {
@@ -122,9 +131,34 @@
 		transition-property: opacity;
 	}
 
+	&__name-button {
+		border: 0;
+		color: #000;
+		
+		&:hover {
+			.crt2-gift-one__name {
+				color: $color-red;
+			}
+		}
+
+		.crt2-gift-one__name {
+			display: inline;
+		}
+	}
+
 	&__name {
 		display: block;
 		line-height: 1.4;
 		color: $color-grey-light;
+	}
+
+	&--no-radio {
+		.crt2-gift-one__image-box {
+			padding-left: 0;
+		}
+
+		.crt2-gift-one__name {
+			color: #000;
+		}
 	}
 }

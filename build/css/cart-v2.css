@@ -174,12 +174,6 @@
   width: 100%;
   font-family: Roboto, Arimo, sans-serif;
   font-size: 15px;
-  -webkit-transition-property: background-color, -webkit-box-shadow;
-  transition-property: background-color, -webkit-box-shadow;
-  transition-property: box-shadow, background-color;
-  transition-property: box-shadow, background-color, -webkit-box-shadow;
-  -webkit-transition-duration: 200ms;
-  transition-duration: 200ms;
 }
 
 .crt2-gift-one__fake-control-box {
@@ -196,6 +190,19 @@
   transition-property: opacity;
   -webkit-transition-duration: 200ms;
   transition-duration: 200ms;
+}
+
+.crt2-gift-one__image-button {
+  display: block;
+  border: 0;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+}
+
+.crt2-gift-one__image-button:hover {
+  opacity: 0.5;
 }
 
 .crt2-gift-one__image {
@@ -216,10 +223,31 @@
   transition-property: opacity;
 }
 
+.crt2-gift-one__name-button {
+  border: 0;
+  color: #000;
+}
+
+.crt2-gift-one__name-button:hover .crt2-gift-one__name {
+  color: #bb1018;
+}
+
+.crt2-gift-one__name-button .crt2-gift-one__name {
+  display: inline;
+}
+
 .crt2-gift-one__name {
   display: block;
   line-height: 1.4;
   color: #a5a5a5;
+}
+
+.crt2-gift-one--no-radio .crt2-gift-one__image-box {
+  padding-left: 0;
+}
+
+.crt2-gift-one--no-radio .crt2-gift-one__name {
+  color: #000;
 }
 
 .crt2-pcode {
