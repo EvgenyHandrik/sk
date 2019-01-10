@@ -218,8 +218,8 @@
 
 .crt2-gift-one__name {
   display: block;
-  line-height: 1.2;
-  color: #a9a9a9;
+  line-height: 1.4;
+  color: #a5a5a5;
 }
 
 .crt2-pcode {
@@ -347,7 +347,7 @@ a.crt2-dish__name:hover {
 .crt2-dish__info {
   display: block;
   font-size: 13px;
-  color: #999;
+  color: #a5a5a5;
 }
 
 .crt2-dish__info--ingredients:before {
@@ -621,19 +621,6 @@ a.crt2-dish__name:hover {
   font-weight: normal;
 }
 
-.crt2-steps {
-  position: relative;
-  padding-right: 260px;
-  /* -- */
-}
-
-.crt2-steps__steps {
-  position: absolute;
-  top: 0;
-  right: 0;
-  /* -- */
-}
-
 .crt2-empty {
   margin: 40px 0 0 0;
   text-align: center;
@@ -744,14 +731,6 @@ a.crt2-dish__name:hover {
 
   .crt2-cutlery__count.count--default.count--lite .count__field {
     font-size: 16px;
-  }
-
-  .crt2-steps {
-    padding-right: 0;
-  }
-
-  .crt2-steps__steps.order-steps--default {
-    display: none;
   }
 }
 
