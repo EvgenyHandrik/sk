@@ -1,10 +1,6 @@
 .c-login-form {
 	max-width: 350px;
-	margin: 0 auto 40px auto;
-
-	&:last-child {
-		margin-bottom: 0;
-	}
+	margin: 0 auto;
 
 	&.form--lite {
 		.form-label--default {
@@ -17,6 +13,10 @@
 
 .c-login-title {
 	text-align: center;
+
+	// @media (max-width: 1200px) {
+	// 	margin-top: 10px;
+	// }
 }
 
 .c-login-subtitle {
@@ -57,4 +57,13 @@
 
 .c-login-action-btn {
 	min-width: 150px;
+}
+
+.content {
+	&--c-login {
+		@media(max-width: 1200px) {
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+	}
 }
