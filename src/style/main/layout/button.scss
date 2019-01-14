@@ -97,7 +97,8 @@
 			}
 		}
 
-		&.button--order {
+		&.button--order,
+		&.button--l {
 			height: 47px;
 			line-height: 47px;
 			padding: 0 25px;
@@ -105,6 +106,14 @@
 			.button__text {
 				display: inline;
 				vertical-align: baseline;
+			}
+		}
+
+		&.button--l {
+			border-radius: 5px;
+
+			&:before {
+				border-radius: 5px;
 			}
 		}
 

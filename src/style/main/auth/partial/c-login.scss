@@ -1,0 +1,60 @@
+.c-login-form {
+	max-width: 350px;
+	margin: 0 auto 40px auto;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&.form--lite {
+		.form-label--default {
+			margin-bottom: 7px;
+			font-size: 14px;
+			color: $color-grey-light;
+		}
+	}
+}
+
+.c-login-title {
+	text-align: center;
+}
+
+.c-login-subtitle {
+	line-height: 1.4;
+	margin: -15px 0 30px 0;
+	font-size: 12px;
+	text-align: center;
+}
+
+.c-login-group {
+	&__row {}
+
+	&__col {
+		margin: 0 0 20px 0;
+	}
+}
+
+.c-login-rules {
+	line-height: 1.4;
+	font-size: 12px;
+	text-align: center;
+	color: $color-grey-light;
+}
+
+.c-login-rules-button {
+	color: $color-grey-light;
+	border-bottom-color: $color-grey-light;
+}
+
+.c-login-action {
+	margin: 30px 0 20px 0;
+	text-align: center;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.c-login-action-btn {
+	min-width: 150px;
+}

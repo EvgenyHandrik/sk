@@ -93,15 +93,25 @@
   vertical-align: baseline;
 }
 
-.button--default.button--order {
+.button--default.button--order,
+.button--default.button--l {
   height: 47px;
   line-height: 47px;
   padding: 0 25px;
 }
 
-.button--default.button--order .button__text {
+.button--default.button--order .button__text,
+.button--default.button--l .button__text {
   display: inline;
   vertical-align: baseline;
+}
+
+.button--default.button--l {
+  border-radius: 5px;
+}
+
+.button--default.button--l:before {
+  border-radius: 5px;
 }
 
 .button--default.button--text {

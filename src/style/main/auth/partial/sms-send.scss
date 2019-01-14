@@ -1,0 +1,46 @@
+.sms-send {
+	$counter-font-size: 15px; // c-login.scss $label-font-size
+	$counter-line-height: 1.4; // c-login.scss $label-line-height
+
+	$bp-laptop-l: 1200px;
+
+	@mixin bp-laptop-l() {
+		@media (max-width: $bp-laptop-l) {
+			@content;
+		}
+	}
+
+	/* -- */
+
+	text-align: center;
+
+	// @include bp-laptop-l {
+	// 	text-align: center;
+	// }
+	
+	&-button {
+		display: inline;
+		border-bottom: 1px solid #ba131a;
+		color: #ba131a;
+		background: transparent;
+		cursor: pointer;
+		transition-property: color, border-color;
+		transition-duration: 300ms;
+
+		&:hover {
+			color: #000;
+			border-bottom-color: rgba(#000, 0.2);
+		}
+	}
+
+	/* -- */
+
+	&-counter {
+		line-height: $counter-line-height;
+		font-size: $counter-font-size;
+		
+		&__time {
+			color: #acacac;
+		}
+	}
+}
