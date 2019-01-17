@@ -1,21 +1,18 @@
 .bs-lunch-info {
-	line-height: 1.5;
-	padding: 18px 0;
+	line-height: 1.4;
 	margin: 0 0 30px 0;
-	font-size: 18px;
-	border-top: 1px solid rgba(#000, 0.1);
-	border-bottom: 1px solid rgba(#000, 0.1);
-}
+	font-size: 20px;
 
-.bs-lunch-info-title {
-	display: block;
-	margin: 0 0 5px 0;
-	font-size: 21px;
-	color: $color-grey-light;
-}
+	&:last-child {
+		margin-bottom: 0px;
+	}
 
-.bs-lunch-info-subtitle {
-	margin: 0 0 10px 0;
-	font-size: 14px;
-	color: $color-grey-light;
+	&--modal {
+		margin-bottom: 20px;
+		font-size: 17px;
+
+		&:last-child {
+			margin-bottom: 0px;
+		}
+	}
 }
