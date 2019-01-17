@@ -1,18 +1,36 @@
 .bs-lunch-info {
-  line-height: 1.4;
   margin: 0 0 30px 0;
-  font-size: 20px;
 }
 
 .bs-lunch-info:last-child {
   margin-bottom: 0px;
 }
 
+.bs-lunch-info > p {
+  margin-bottom: 9px;
+}
+
 .bs-lunch-info--modal {
   margin-bottom: 20px;
-  font-size: 17px;
 }
 
 .bs-lunch-info--modal:last-child {
   margin-bottom: 0px;
+}
+
+.bs-lunch-info--modal > p {
+  font-size: 15px;
+}
+
+.bs-lunch-info-title {
+  display: block;
+  margin: 0 0 9px 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.bs-lunch-info-phone {
+  display: inline;
+  border: 0;
+  color: inherit;
 }
