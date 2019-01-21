@@ -1,0 +1,39 @@
+.cht2-rules-promo {
+	$bp-mobile: 700px;
+
+	&__row {}
+
+	&__col {
+		display: inline;
+
+		@media (max-width: $bp-mobile) {
+			display: block;
+			
+			&:first-child {
+				margin-bottom: 5px;
+			}
+		}
+	}
+
+	&__label-check {
+		margin-left: 15px;
+
+		&:first-child {
+			margin-left: 10px;
+		}
+
+		@media (max-width: $bp-mobile) {
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+
+		.cht2-rules-label-check__text {
+			margin-left: 5px;
+		}
+	}
+
+	p {
+		display: inline;
+	}
+}

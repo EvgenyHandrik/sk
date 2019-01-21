@@ -616,6 +616,11 @@ ga('require', 'ecommerce');
 						</div>
 						<div class="cht2-section__content">
 							
+							<label class="cht2-chk-operator">
+								<input type="checkbox">
+								<span class="cht2-chk-operator__text">Подтвердить заказ с оператором</span>
+							</label>
+							
 							<div class="sktab cht2-shipping-tab cht2-checkout-sktab js-sktab">
 								<div class="sktab-nav-wrapper">
 									<div class="sktab-nav-scroll">
@@ -632,6 +637,12 @@ ga('require', 'ecommerce');
 			
 								<div class="sktab-content">
 									<div class="sktab-content__item sktab-content__item--active">
+										
+										<div class="cht2-c-message">
+											<p>Минимальная сумма заказа на доставку - 500 руб.</p>
+											<p>Предлагаем вам <a href="">дополнить</a> заказ на сумму 500 руб.</p>
+										</div>
+										
 										<div class="form form--lite cht2-delivery-form">
 			
 											<div class="cht2-delivery-group cht2-delivery-group--address-list">
@@ -1000,11 +1011,22 @@ ga('require', 'ecommerce');
 											<a href="ekaterinburg/license/" class="cht2-rules-link">персональных данных</a>
 										</p>
 									</div>
-									<div class="cht2-rules-group">
-										<label class="cht2-rules-label-check">
-											<input type="checkbox">
-											<span class="cht2-rules-label-check__text">Я согласен (на) получать рассылку новостей и акций.</span>
-										</label>
+									<div class="cht2-rules-group cht2-rules-promo">
+										<div class="cht2-rules-promo__row">
+											<div class="cht2-rules-promo__col">
+												<p>Рассылка новостей и акций:</p>
+											</div>
+											<div class="cht2-rules-promo__col cht2-rules-promo__col--check">
+												<label class="cht2-rules-label-check cht2-rules-promo__label-check">
+													<input type="checkbox">
+													<span class="cht2-rules-label-check__text">СМС</span>
+												</label>
+												<label class="cht2-rules-label-check cht2-rules-promo__label-check">
+													<input type="checkbox">
+													<span class="cht2-rules-label-check__text">Email</span>
+												</label>
+											</div>
+										</div>						
 									</div>
 								</div>
 							</div>
