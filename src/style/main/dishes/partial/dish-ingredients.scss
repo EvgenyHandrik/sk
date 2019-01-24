@@ -1,0 +1,47 @@
+.dish-ingredients-btn {
+	$icon-size: 15px;
+
+	position: relative;
+	display: inline-block;
+	line-height: 1.2;
+	padding: 0 0 0 ($icon-size + 6px);
+	margin: 15px 0 3px 0;
+	font-weight: bold;
+	font-size: 13px;
+	text-align: left;
+	color: $color-grey-light;
+	background-color: transparent;
+	transition-property: color;
+	transition-duration: 200ms;
+	cursor: pointer;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 0;
+		display: block;
+		width: $icon-size;
+		height: $icon-size;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: $icon-size $icon-size;
+		background-image: url(../images/ico-fire-red-active-30x30.svg);
+		transform: translateY(-50%);
+	}
+
+	&:hover {
+		color: $color-red;
+	}
+
+	@media (max-width: 530px) {
+		margin-top: 5px;
+		margin-bottom: 3px;
+		font-size: 12px;
+	}
+
+	@media (max-width: 390px) {
+		margin-bottom: 10px;
+		font-size: 11px;
+	}
+}

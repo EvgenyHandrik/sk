@@ -1,0 +1,53 @@
+.dish-ingredients-btn {
+  position: relative;
+  display: inline-block;
+  line-height: 1.2;
+  padding: 0 0 0 21px;
+  margin: 15px 0 3px 0;
+  font-weight: bold;
+  font-size: 13px;
+  text-align: left;
+  color: #a5a5a5;
+  background-color: transparent;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+  cursor: pointer;
+}
+
+.dish-ingredients-btn:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-image: url(../images/ico-fire-red-active-30x30.svg);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.dish-ingredients-btn:hover {
+  color: #bb1018;
+}
+
+@media (max-width: 530px) {
+  .dish-ingredients-btn {
+    margin-top: 5px;
+    margin-bottom: 3px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 390px) {
+  .dish-ingredients-btn {
+    margin-bottom: 10px;
+    font-size: 11px;
+  }
+}
