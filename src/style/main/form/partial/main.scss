@@ -5,14 +5,15 @@
 	&-group {
 		&--default {
 			$form-group-margin-bottom: 15px;
+			$form-group-margin-bottom-m: 20px;
 			
 			margin: 0 0 $form-group-margin-bottom 0;
 
-			&:last-child {
-				margin-bottom: 0;
-			}
-
 			/* -- */
+
+			&.form-group--m {
+				margin-bottom: $form-group-margin-bottom-m;
+			}
 
 			&.form-group--margin-bottom {
 				margin-bottom: $form-group-margin-bottom;
@@ -24,6 +25,10 @@
 
 			&.form-group--margin-top-x1-8 {
 				margin-top: $form-group-margin-bottom * 1.8;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
 			}
 		}
 	}
@@ -232,10 +237,18 @@
 	/* -- */
 
 	&--lite {
-		.form-label {
-			&--default {
-				// color: #787878;
-				color: #4d4d4d;
+		.form-label--default {
+			margin-bottom: 7px;
+			font-size: 14px;
+			color: $color-grey-light;
+		}
+
+		.form-control--default {
+			&.form-control--text {
+				@include placeholder() {
+					color: #000;
+					opacity: 0.3;
+				}
 			}
 		}
 
@@ -245,11 +258,55 @@
 			}
 		}
 	}
+
+	&--center {
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	&--s {
+		max-width: 300px;
+	}
 }
 
 .form-forgot-password {
 	color: #a5a5a5;
 	border-bottom: 1px solid #a5a5a5;
+}
+
+.form-action {
+	margin: 30px 0 20px 0;
+
+	&--center {
+		text-align: center;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.form-rules {
+	line-height: 1.4;
+	color: $color-grey-light;
+
+	&--s {
+		font-size: 12px;
+	}
+
+	&--center {
+		text-align: center;
+	}
+
+	a {
+		color: $color-grey-light;
+		border-bottom-color: $color-grey-light;
+
+		&:hover {
+			color: #000;
+			border-bottom-color: rgba(0,0,0,0.2);
+		}
+	}
 }
 
 /* -- */

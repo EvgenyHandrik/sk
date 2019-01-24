@@ -7,8 +7,8 @@
   /* -- */
 }
 
-.form-group--default:last-child {
-  margin-bottom: 0;
+.form-group--default.form-group--m {
+  margin-bottom: 20px;
 }
 
 .form-group--default.form-group--margin-bottom {
@@ -21,6 +21,10 @@
 
 .form-group--default.form-group--margin-top-x1-8 {
   margin-top: 27px;
+}
+
+.form-group--default:last-child {
+  margin-bottom: 0;
 }
 
 .form-label--default {
@@ -198,16 +202,82 @@
 }
 
 .form--lite .form-label--default {
-  color: #4d4d4d;
+  margin-bottom: 7px;
+  font-size: 14px;
+  color: #a5a5a5;
+}
+
+.form--lite .form-control--default.form-control--text::-webkit-input-placeholder {
+  color: #000;
+  opacity: 0.3;
+}
+
+.form--lite .form-control--default.form-control--text:-ms-input-placeholder {
+  color: #000;
+  opacity: 0.3;
+}
+
+.form--lite .form-control--default.form-control--text::-ms-input-placeholder {
+  color: #000;
+  opacity: 0.3;
+}
+
+.form--lite .form-control--default.form-control--text::placeholder {
+  color: #000;
+  opacity: 0.3;
 }
 
 .form--lite .form-message--default {
   color: #000;
 }
 
+.form--center {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.form--s {
+  max-width: 300px;
+}
+
 .form-forgot-password {
   color: #a5a5a5;
   border-bottom: 1px solid #a5a5a5;
+}
+
+.form-action {
+  margin: 30px 0 20px 0;
+}
+
+.form-action--center {
+  text-align: center;
+}
+
+.form-action:last-child {
+  margin-bottom: 0;
+}
+
+.form-rules {
+  line-height: 1.4;
+  color: #a5a5a5;
+}
+
+.form-rules--s {
+  font-size: 12px;
+}
+
+.form-rules--center {
+  text-align: center;
+}
+
+.form-rules a {
+  color: #a5a5a5;
+  border-bottom-color: #a5a5a5;
+}
+
+.form-rules a:hover {
+  color: #000;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
 }
 
 /* -- */
