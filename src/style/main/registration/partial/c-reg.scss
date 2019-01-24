@@ -1,0 +1,63 @@
+.c-reg-form {
+	max-width: 300px;
+	margin: 0 auto;
+
+	&.form--lite {
+		.form-label--default {
+			margin-bottom: 7px;
+			font-size: 14px;
+			color: $color-grey-light;
+		}
+
+		.form-control--default.form-control--text {
+			@include placeholder() {
+				color: #000;
+				opacity: 0.3;
+			}
+		}
+	}
+}
+
+.c-reg-title {
+	text-align: center;
+}
+
+.c-reg-action {
+	margin: 30px 0 20px 0;
+	text-align: center;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.c-reg-action-btn {
+	min-width: 150px;
+}
+
+.c-reg-rules {
+	line-height: 1.4;
+	font-size: 12px;
+	text-align: center;
+	color: $color-grey-light;
+}
+
+.c-reg-rules-button {
+	color: $color-grey-light;
+	border-bottom-color: $color-grey-light;
+}
+
+.content {
+	&--c-reg {
+		@media(max-width: 1200px) {
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+	}
+}
+
+.form-group {
+	&--c-reg {
+		margin-bottom: 20px;
+	}
+}

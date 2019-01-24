@@ -92,7 +92,9 @@
 	<link href="./html-source/base-page-files/fonts.css" type="text/css" data-template-style="true" rel="stylesheet">
 	<link href="./html-source/base-page-files/app.min.css" type="text/css" data-template-style="true" rel="stylesheet">
 
-	//= ../partial/auth/loginStyles.html
+	//= ../partial/common/styles/mainStyles.html
+	
+	//= ../partial/registration/registrationStyles.html
 
 	<title>
 		Ресторан «Своя компания» Екатеринбург - уютный семейный ресторан-кафе в центре
@@ -245,10 +247,10 @@ ga('require', 'ecommerce');
 		<!-- Стандартная шапка -->
 		//= ../partial/layout/header.html
 
-		<!-- Добавление класса "content--c-login" [new_content] -->
-		<section class="content content--c-login">
+		<!-- Добавление класса "content--c-reg" [new_content] -->
+		<section class="content content--c-reg">
 
-			//= ../partial/auth/loginContent-1b-sms-counter.html
+			//= ../partial/registration/registrationContent.html
 					
 		</section>
 
@@ -551,7 +553,7 @@ ga('require', 'ecommerce');
 		})();
 	</script>
 
-	//= ../partial/auth/loginScripts.html
+	//= ../partial/common/scripts/mainScripts.html
 
 	<script>
 		! function (f, b, e, v, n, t, s) {

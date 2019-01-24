@@ -49,6 +49,44 @@
   min-width: 150px;
 }
 
+/* -- */
+
+.c-login-sktab {
+  text-align: center;
+}
+
+.c-login-sktab .sktab-nav-wrapper {
+  margin: 0 0 30px 0;
+}
+
+.c-login-sktab .sktab-content {
+  text-align: left;
+}
+
+.c-login-reg-container {
+  text-align: right;
+  margin: 0 0 -10px 0;
+}
+
+.c-login-reg {
+  display: inline-block;
+  line-height: 1;
+  padding: 5px 10px;
+  font-size: 11px;
+  border: 1px solid #f1f1f1;
+  border-radius: 5px;
+  color: #000;
+}
+
+.c-login-reg:hover {
+  border-color: #f1f1f1;
+  color: #bb1018;
+}
+
+.form-group--c-login {
+  margin-bottom: 20px;
+}
+
 .sms-send {
   /* -- */
   text-align: center;

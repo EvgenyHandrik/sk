@@ -63,3 +63,44 @@
 		}
 	}
 }
+
+/* -- */
+
+.c-login-sktab {
+	text-align: center;
+
+	.sktab-nav-wrapper {
+		margin: 0 0 30px 0;
+	}
+
+	.sktab-content {
+		text-align: left;
+	}
+}
+
+.c-login-reg-container {
+	text-align: right;
+	margin: 0 0 -10px 0;
+}
+
+.c-login-reg {
+	display: inline-block;
+	line-height: 1;
+	padding: 5px 10px;
+	
+	font-size: 11px;
+	border: 1px solid #f1f1f1;
+	border-radius: 5px;
+	color: #000;
+
+	&:hover {
+		border-color: #f1f1f1;
+		color: $color-red;
+	}
+}
+
+.form-group {
+	&--c-login {
+		margin-bottom: 20px;
+	}
+}

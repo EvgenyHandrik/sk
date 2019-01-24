@@ -58,7 +58,8 @@
 			/* -- */
 			
 			&#{$b}-control-group--success,
-			&#{$b}-control-group--error {
+			&#{$b}-control-group--error,
+			&#{$b}-control-group--waiting {
 				
 				&:before {
 					content: '';
@@ -92,6 +93,14 @@
 				&:before {
 					background-size: 15px 15px;
 					background-image: url(../images/ico-x-red-dark-13x13.svg);
+				}
+			}
+
+			&#{$b}-control-group--waiting {
+				&:before {
+					background-size: 16px 16px;
+					background-image: url(../images/ico-spinner-grey-30x30.svg);
+					animation: formIconRotation 1s linear infinite;
 				}
 			}
 
@@ -206,6 +215,18 @@
 				}
 			}
 		}
+
+		&--forgot-password {
+			margin: 0 0 10px 0;
+			font-size: 13px;
+			text-align: right;
+		}
+
+		&--code-sent {
+			font-size: 12px;
+			text-transform: uppercase;
+			text-align: right;
+		}
 	}
 
 	/* -- */
@@ -223,5 +244,22 @@
 				color: #000;
 			}
 		}
+	}
+}
+
+.form-forgot-password {
+	color: #a5a5a5;
+	border-bottom: 1px solid #a5a5a5;
+}
+
+/* -- */
+
+@keyframes formIconRotation {
+	0% {
+		trasnform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
 	}
 }

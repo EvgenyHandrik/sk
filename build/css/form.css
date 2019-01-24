@@ -47,12 +47,14 @@
 }
 
 .form-control-group--default.form-control-group--success,
-.form-control-group--default.form-control-group--error {
+.form-control-group--default.form-control-group--error,
+.form-control-group--default.form-control-group--waiting {
   /* -- */
 }
 
 .form-control-group--default.form-control-group--success:before,
-.form-control-group--default.form-control-group--error:before {
+.form-control-group--default.form-control-group--error:before,
+.form-control-group--default.form-control-group--waiting:before {
   content: '';
   position: absolute;
   top: 0;
@@ -65,7 +67,8 @@
 }
 
 .form-control-group--default.form-control-group--success .form-control--default,
-.form-control-group--default.form-control-group--error .form-control--default {
+.form-control-group--default.form-control-group--error .form-control--default,
+.form-control-group--default.form-control-group--waiting .form-control--default {
   padding-right: 42px;
 }
 
@@ -77,6 +80,13 @@
 .form-control-group--default.form-control-group--error:before {
   background-size: 15px 15px;
   background-image: url(../images/ico-x-red-dark-13x13.svg);
+}
+
+.form-control-group--default.form-control-group--waiting:before {
+  background-size: 16px 16px;
+  background-image: url(../images/ico-spinner-grey-30x30.svg);
+  -webkit-animation: formIconRotation 1s linear infinite;
+  animation: formIconRotation 1s linear infinite;
 }
 
 .form-control-group--default.form-control-group--ico-s:before {
@@ -175,12 +185,53 @@
   color: #bb1018;
 }
 
+.form-message--forgot-password {
+  margin: 0 0 10px 0;
+  font-size: 13px;
+  text-align: right;
+}
+
+.form-message--code-sent {
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: right;
+}
+
 .form--lite .form-label--default {
   color: #4d4d4d;
 }
 
 .form--lite .form-message--default {
   color: #000;
+}
+
+.form-forgot-password {
+  color: #a5a5a5;
+  border-bottom: 1px solid #a5a5a5;
+}
+
+/* -- */
+
+@-webkit-keyframes formIconRotation {
+  0% {
+    trasnform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes formIconRotation {
+  0% {
+    trasnform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 .pretty-control {

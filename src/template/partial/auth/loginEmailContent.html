@@ -1,0 +1,91 @@
+<form class="form form--lite c-login-form">
+	<h1 class="c-login-title">Вход на сайт</h1>
+
+	<div class="sktab js-sktab c-login-sktab">
+		<div class="sktab-nav-wrapper">
+			<div class="sktab-nav-scroll">
+				<ul class="sktab-nav">
+					<li class="sktab-nav__item">
+						<button type="button" class="sktab-nav__button">По СМС</button>
+					</li>
+					<li class="sktab-nav__item sktab-nav__item--active">
+						<button type="button" class="sktab-nav__button">По email</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="sktab-content">
+			<div class="sktab-content__item">
+				<div class="c-login-reg-container">
+					<a href="" class="c-login-reg">Регистрация</a>
+				</div>
+
+				<div class="form-group form-group--default form-group--c-login">
+					<label class="form-label form-label--default">Ваш телефон</label>
+					<div class="form-control-group form-control-group--default phone-sms phone-sms--button">
+						<button type="button" class="phone-sms-button" disabled>
+							<span class="phone-sms-button__text">Получить код</span>
+						</button>
+						<div class="phone-sms-counter">
+							<span class="phone-sms-counter__icon"></span>
+							<span class="phone-sms-counter__number">0:53</span>
+						</div>
+						<input type="text" class="form-control form-control--default form-control--text phone-sms-input">
+					</div>
+				</div>
+
+				<div class="form-group form-group--default form-group--c-login">
+					<label class="form-label form-label--default">Код из СМС</label>
+					<div class="form-control-group form-control-group--default">
+						<input type="text" class="form-control form-control--default form-control--text">
+					</div>
+				</div>
+			
+				<div class="c-login-action">
+					<button type="submit" class="button button--default button--l c-login-action-btn">
+						<span class="button__text">Войти</span>
+					</button>
+				</div>
+			
+				<div class="c-login-rules">
+					<p>Нажимая эту кнопку, я соглашаюсь с <a href="/регион/license/" class="c-login-rules-button">политикой обработки моих персональных данных</a>.</p>
+				</div>
+
+			</div>
+			<div class="sktab-content__item sktab-content__item--active">
+				<div class="c-login-reg-container">
+					<a href="" class="c-login-reg">Регистрация</a>
+				</div>
+
+				<div class="form-group form-group--default form-group--c-login">
+					<label class="form-label form-label--default">Ваш email</label>
+					<div class="form-control-group form-control-group--default  form-control-group--waiting">
+						<input type="text" value="ivanov@email.com" class="form-control form-control--default form-control--text">
+					</div>
+				</div>
+
+				<div class="form-group form-group--default form-group--c-login">
+					<label class="form-label form-label--default">Пароль (не менее 8 символов)</label>
+					<div class="form-control-group form-control-group--default">
+						<input type="password" class="form-control form-control--default form-control--text">
+					</div>
+					<div class="form-message form-message--forgot-password">
+						<a href="" class="form-forgot-password">Забыли пароль?</a>
+					</div>
+				</div>
+		
+				<div class="c-login-action">
+					<button type="submit" class="button button--default button--l c-login-action-btn">
+						<span class="button__text">Войти</span>
+					</button>
+				</div>
+			
+				<div class="c-login-rules">
+					<p>Нажимая эту кнопку, я соглашаюсь с <a href="/регион/license/" class="c-login-rules-button">политикой обработки моих персональных данных</a>.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</form>
