@@ -123,12 +123,20 @@
 	<link href="css/footer-v2-add.css" type="text/css" rel="stylesheet">
 	<link href="css/f-nav.css" type="text/css" rel="stylesheet">
 	<link href="css/f-contact.css" type="text/css" rel="stylesheet">
+	
+	<!-- Dishes Styles [new_content] -->
+	<link href="css/dishes.css" type="text/css" rel="stylesheet">
 
-	<!-- Tab Styles -->
-	<link href="css/sktab.css" type="text/css" rel="stylesheet">
-
-	<!-- Login Styles [new_content] -->
-	<link href="css/auth.css" type="text/css" rel="stylesheet">
+	<style>
+		.button__ico--cart-small {
+			width: 16px;
+			height: 16px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 16px 16px;
+			background-image: url(./images/ico-54x54-cart.png);
+		}
+	</style>
 
 	<title>
 		Ресторан «Своя компания» Екатеринбург - уютный семейный ресторан-кафе в центре
@@ -208,7 +216,7 @@ ga('require', 'ecommerce');
 </head>
 
 
-<body class="body" cz-shortcut-listen="true">
+<body class="body body--blured body--modal" cz-shortcut-listen="true">
 
 
 	<!--    -->
@@ -527,135 +535,376 @@ ga('require', 'ecommerce');
 			</div>
 		</header>
 
-		<!-- Добавление класса "content--c-login" [new_content] -->
-		<section class="content content--c-login">
-
-			<form class="form form--lite c-login-form">
-				<h1 class="c-login-title">Вход на сайт</h1>
-			
-				<div class="sktab js-sktab c-login-sktab">
-					<div class="sktab-nav-wrapper">
-						<div class="sktab-nav-scroll">
-							<ul class="sktab-nav">
-								<li class="sktab-nav__item">
-									<button type="button" class="sktab-nav__button">По СМС</button>
-								</li>
-								<li class="sktab-nav__item sktab-nav__item--active">
-									<button type="button" class="sktab-nav__button">По email</button>
-								</li>
-							</ul>
-						</div>
-					</div>
-			
-					<div class="sktab-content">
-						<div class="sktab-content__item">
-							<div class="c-login-reg-container">
-								<a href="" class="c-login-reg">Регистрация</a>
-							</div>
-			
-							<div class="form-group form-group--default form-group--c-login">
-								<label class="form-label form-label--default">Ваш телефон</label>
-								<div class="form-control-group form-control-group--default phone-sms phone-sms--button">
-									<button type="button" class="phone-sms-button" disabled>
-										<span class="phone-sms-button__text">Получить код</span>
-									</button>
-									<div class="phone-sms-counter">
-										<span class="phone-sms-counter__icon"></span>
-										<span class="phone-sms-counter__number">0:53</span>
-									</div>
-									<input type="text" class="form-control form-control--default form-control--text phone-sms-input">
-								</div>
-							</div>
-			
-							<div class="form-group form-group--default form-group--c-login">
-								<label class="form-label form-label--default">Код из СМС</label>
-								<div class="form-control-group form-control-group--default">
-									<input type="text" class="form-control form-control--default form-control--text">
-								</div>
-							</div>
-						
-							<div class="c-login-action">
-								<button type="submit" class="button button--default button--l c-login-action-btn">
-									<span class="button__text">Войти</span>
-								</button>
-							</div>
-						
-							<div class="c-login-rules">
-								<p>Нажимая эту кнопку, я соглашаюсь с <a href="/регион/license/" class="c-login-rules-button">политикой обработки моих персональных данных</a>.</p>
-							</div>
-			
-						</div>
-						<div class="sktab-content__item sktab-content__item--active">
-							<div class="c-login-reg-container">
-								<a href="" class="c-login-reg">Регистрация</a>
-							</div>
-			
-							<div class="form-group form-group--default form-group--c-login">
-								<label class="form-label form-label--default">Ваш email</label>
-								<div class="form-control-group form-control-group--default">
-									<input type="text" value="ivanov@email.com" class="form-control form-control--default form-control--text">
-								</div>
-							</div>
-			
-							<div class="form-group form-group--default form-group--c-login">
-								<label class="form-label form-label--default">Пароль (не менее 8 символов)</label>
-								<div class="form-control-group form-control-group--default">
-									<input type="password" class="form-control form-control--default form-control--text">
-								</div>
-								<div class="form-message form-message--default form-message--control">
-									<p>Андрей Иванов! Вы уже заказывали у нас. Чтобы просматривать ЛК без телефона под рукой, заведите пароль для вашей учетной записи.</p>
-								</div>
-							</div>
-			
-							<div class="form-group form-group--default form-group--c-login">
-								<label class="form-label form-label--default">Повторить пароль</label>
-								<div class="form-control-group form-control-group--default">
-									<input type="password" class="form-control form-control--default form-control--text">
-								</div>
-							</div>
-						
-							<div class="c-login-action">
-								<button type="submit" class="button button--default button--l c-login-action-btn">
-									<span class="button__text">Войти</span>
-								</button>
-							</div>
-						
-							<div class="c-login-rules">
-								<p>Нажимая эту кнопку, я соглашаюсь с <a href="/регион/license/" class="c-login-rules-button">политикой обработки моих персональных данных</a>.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			
-			</form>
-
-			<div class="c-advantage c-advantage--c-login">
-				<ul class="c-advantage__list">
-					<li class="c-advantage__item c-advantage__item--bonuses">
-						<div class="c-advantage__item-content">
-							Копите бонусы и оплачивайте ими до 100% заказа
-						</div>
-					</li>
-					<li class="c-advantage__item c-advantage__item--delivery">
-						<div class="c-advantage__item-content">
-							Сохраните адрес доставки, чтобы не указывать каждый раз
-						</div>
-					</li>
-					<li class="c-advantage__item c-advantage__item--card">
-						<div class="c-advantage__item-content">
-							Добавьте банковскую карту для быстрой оплаты
-						</div>			
-					</li>
-					<li class="c-advantage__item c-advantage__item--review">
-						<div class="c-advantage__item-content">
-							Оставляйте отзывы о доставке
-						</div>			
-					</li>
-				</ul>
+		<section class="content">
+			<div class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+				<span itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem"><a itemprop="item" href="http://svoya-kompaniya.ru/" title="Своя компания"><span itemprop="name">Своя компания</span><meta itemprop="position" content="1"></a></span>
+				<span itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem"><a itemprop="item" href="http://svoya-kompaniya.ru/" title="Меню"><span itemprop="name">Меню</span><meta itemprop="position" content="2"></a></span>
+				<span itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem"><span itemprop="item"><span itemprop="name">Роллы</span><meta itemprop="position" content="3"></span></span>
 			</div>
+
+			<h1>Роллы</h1>
+
+			<nav class="menu-category">
+				<span class="menu-category__item menu-category__item--current">Все</span>
+				<a href="http://svoya-kompaniya.ru/menu/rollyi/traditsionnye-rolly/" class="menu-category__item ">традиционные роллы</a>
+				<a href="http://svoya-kompaniya.ru/menu/rollyi/goryachie-rolly/" class="menu-category__item ">горячие роллы</a>
+			</nav>
+
+			<section class="dishes dishes--short">
+				<div id="dishes__list" class="dishes__list">
+					<div id="23198" class="dishes__item dish js-card_wrapper">
+						<a id="fav_23198" data-favorite="23198" href="javascript://" class="dish__favorite"></a>
+			
+						<a data-prod="23198" href="http://svoya-kompaniya.ru/menu/rollyi/klasicheskaya-filadelfia/" class="dish__image">
+			
+							<img class="lazy" src="images/dev-dishes-klassicheskaya-filadelfiya.jpg" data-original="/upload/resize_cache/iblock/3e6/550_400_175511db9cefbc414a902a46f1b8fae16/3e6a132cf13fce137810cca984377bd0.jpg"
+							width="" height="" alt="традиционные роллы Классическая филадельфия" title="традиционные роллыКлассическая филадельфия">
+			
+							<div class="dish__labels">
+								<div><span class="dish__label" style="background-color:#f05d86">Хит продаж</span></div>
+							</div>
+						</a>
+			
+						<div class="dish__content">
+							<a href="http://svoya-kompaniya.ru/menu/rollyi/traditsionnye-rolly/" class="dish__category">традиционные
+								роллы</a>
+			
+							<button type="button" class="dish-ingredients-btn">Добавить больше вкуса</button>
+			
+							<div class="dish__description item-info" style="height: 37px;">
+								<h3 class="item-info__title">
+									<a data-prod="23198" href="http://svoya-kompaniya.ru/menu/rollyi/klasicheskaya-filadelfia/">
+										Классическая филадельфия
+									</a>
+								</h3>
+			
+								<div class="item-info__price-mobile">
+									<span class="js-price">209</span> <span class="rub">р</span>
+								</div>
+			
+							</div>
+			
+							<footer class="dish__footer" style="height: 28px;">
+			
+								<div class="dish__price">
+									<span class="js-price" data-element="23198">209</span>&nbsp;<span class="rub">р</span>
+								</div>
+			
+								<div class="dish__controls">
+									<div class="dish__count count">
+										<span class="count__btn count__btn--minus count__btn--disable"></span>
+			
+										<input id="element_23198" type="text" class="count__field" value="1" maxlength="3">
+			
+										<span class="count__btn count__btn--plus"></span>
+									</div>
+			
+									<a id="a_23198" data-element="23195" data-parent="23198" data-name="Классическая филадельфия" data-category="/menu/rollyi/traditsionnye-rolly/"
+									data-price="" href="javascript://" class="dish__btn button button--small addtobasket">
+										<span class="button__ico button__ico--cart-small" style=" width: 16px; height: 16px; background-size: 16px 16px; background-position: center;"></span>
+										<span class="button__text">В корзину</span>
+									</a>
+								</div>
+							</footer>
+						</div>
+					</div>
+			
+					<div id="23264" class="dishes__item dish js-card_wrapper">
+						<a id="fav_23264" data-favorite="23264" href="javascript://" class="dish__favorite"></a>
+			
+						<a data-prod="23264" href="http://svoya-kompaniya.ru/menu/rollyi/khotchiz/" class="dish__image">
+			
+							<img class="lazy" src="images/dev-dishes-hot-chiz.jpg" data-original="/upload/resize_cache/iblock/592/550_400_175511db9cefbc414a902a46f1b8fae16/59299c915d8b71a39f672cfe5e9935bd.jpg"
+							width="" height="" alt="горячие роллы Хот Чиз" title="горячие роллыХот Чиз">
+			
+							<div class="dish__labels">
+								<div><span class="dish__label" style="background-color:#f05d86">Хит продаж</span></div>
+							</div>
+						</a>
+			
+						<div class="dish__content">
+							<a href="http://svoya-kompaniya.ru/menu/rollyi/goryachie-rolly/" class="dish__category">горячие
+								роллы</a>
+			
+							<button type="button" class="dish-ingredients-btn">Добавить больше вкуса</button>
+			
+							<div class="dish__description item-info" style="height: 37px;">
+								<h3 class="item-info__title">
+									<a data-prod="23264" href="http://svoya-kompaniya.ru/menu/rollyi/khotchiz/">
+										Хот Чиз
+									</a>
+								</h3>
+			
+								<div class="item-info__price-mobile">
+									<span class="js-price">109</span> <span class="rub">р</span>
+								</div>
+			
+							</div>
+			
+							<footer class="dish__footer" style="height: 28px;">
+			
+								<div class="dish__price">
+									<span class="js-price" data-element="23264">109</span>&nbsp;<span class="rub">р</span>
+								</div>
+			
+								<div class="dish__controls">
+									<div class="dish__count count">
+										<span class="count__btn count__btn--minus count__btn--disable"></span>
+			
+										<input id="element_23264" type="text" class="count__field" value="1" maxlength="3">
+			
+										<span class="count__btn count__btn--plus"></span>
+									</div>
+			
+									<a id="a_23264" data-element="23260" data-parent="23264" data-name="Хот Чиз" data-category="/menu/rollyi/goryachie-rolly/"
+									data-price="" href="javascript://" class="dish__btn button button--small addtobasket">
+										<span class="button__ico button__ico--cart-small"></span>
+										<span class="button__text">В корзину</span>
+									</a>
+								</div>
+							</footer>
+						</div>
+					</div>
+			
+					<div id="45705" class="dishes__item dish js-card_wrapper">
+						<a id="fav_45705" data-favorite="45705" href="javascript://" class="dish__favorite"></a>
+			
+						<a data-prod="45705" href="http://svoya-kompaniya.ru/menu/rollyi/s-surimi-i-ogurtsom-/" class="dish__image">
+			
+							<img class="lazy" src="images/dev-dishes-s-surimi-i-ogurtzom.jpg"
+									data-original="/upload/resize_cache/iblock/f92/550_400_175511db9cefbc414a902a46f1b8fae16/f92088c26b03f3f6e77530ba1dbde639.jpg"
+									width="" height="" alt="традиционные роллы С сурими и огурцом " title="традиционные роллыС сурими и огурцом "
+									style="display: inline;">
+			
+						</a>
+			
+						<div class="dish__content">
+							<a href="http://svoya-kompaniya.ru/menu/rollyi/traditsionnye-rolly/" class="dish__category">традиционные
+									роллы</a>
+			
+			
+							<div class="dish__description item-info" style="height: 37px;">
+									<h3 class="item-info__title">
+										<a data-prod="45705" href="http://svoya-kompaniya.ru/menu/rollyi/s-surimi-i-ogurtsom-/">
+											С сурими и огурцом
+										</a>
+									</h3>
+			
+									<div class="item-info__price-mobile">
+										<span class="js-price">119</span> <span class="rub">р</span>
+									</div>
+			
+							</div>
+			
+							<footer class="dish__footer" style="height: 28px;">
+			
+									<div class="dish__price">
+										<span class="js-price" data-element="45705">119</span>&nbsp;<span class="rub">р</span>
+									</div>
+			
+									<div class="dish__controls">
+										<div class="dish__count count">
+											<span class="count__btn count__btn--minus count__btn--disable"></span>
+			
+											<input id="element_45705" type="text" class="count__field" value="1" maxlength="3">
+			
+											<span class="count__btn count__btn--plus"></span>
+										</div>
+			
+										<a id="a_45705" data-element="45702" data-parent="45705" data-name="С сурими и огурцом "
+											data-category="/menu/rollyi/traditsionnye-rolly/" data-price="" href="javascript://"
+											class="dish__btn button button--small addtobasket">
+											<span class="button__ico button__ico--cart-small"></span>
+											<span class="button__text">В корзину</span>
+										</a>
+									</div>
+							</footer>
+						</div>
+					</div>
+			
+					<div id="45701" class="dishes__item dish js-card_wrapper">
+						<a id="fav_45701" data-favorite="45701" href="javascript://" class="dish__favorite"></a>
+			
+						<a data-prod="45701" href="http://svoya-kompaniya.ru/menu/rollyi/slivochnyy-s-kuroy/" class="dish__image">
+			
+							<img class="lazy" src="images/dev-dishes-slivochniy-s-kuroy.jpg"
+									data-original="/upload/resize_cache/iblock/a09/550_400_175511db9cefbc414a902a46f1b8fae16/a09d634f5bcc58506252365b61d93fc3.jpg"
+									width="" height="" alt="традиционные роллы Сливочный с курой" title="традиционные роллыСливочный с курой"
+									style="display: inline;">
+			
+						</a>
+			
+						<div class="dish__content">
+							<a href="http://svoya-kompaniya.ru/menu/rollyi/traditsionnye-rolly/" class="dish__category">традиционные
+									роллы</a>
+			
+			
+							<div class="dish__description item-info" style="height: 58px;">
+									<h3 class="item-info__title">
+										<a data-prod="45701" href="http://svoya-kompaniya.ru/menu/rollyi/slivochnyy-s-kuroy/"
+											class="">
+											Сливочный с курой
+										</a>
+									</h3>
+			
+									<div class="item-info__price-mobile">
+										<span class="js-price">89</span> <span class="rub">р</span>
+									</div>
+			
+							</div>
+			
+							<footer class="dish__footer" style="height: 28px;">
+			
+									<div class="dish__price">
+										<span class="js-price" data-element="45701">89</span>&nbsp;<span class="rub">р</span>
+									</div>
+			
+									<div class="dish__controls">
+										<div class="dish__count count">
+											<span class="count__btn count__btn--minus count__btn--disable"></span>
+			
+											<input id="element_45701" type="text" class="count__field" value="1" maxlength="3">
+			
+											<span class="count__btn count__btn--plus"></span>
+										</div>
+			
+										<a id="a_45701" data-element="45699" data-parent="45701" data-name="Сливочный с курой"
+											data-category="/menu/rollyi/traditsionnye-rolly/" data-price="" href="javascript://"
+											class="dish__btn button button--small addtobasket">
+											<span class="button__ico button__ico--cart-small"></span>
+											<span class="button__text">В корзину</span>
+										</a>
+									</div>
+							</footer>
+						</div>
+					</div>
+			
+					<div id="45697" class="dishes__item dish js-card_wrapper">
+						<a id="fav_45697" data-favorite="45697" href="javascript://" class="dish__favorite"></a>
+			
+						<a data-prod="45697" href="http://svoya-kompaniya.ru/menu/rollyi/goryachie-rolly-tovar/" class="dish__image">
+			
+							<img class="lazy" src="images/dev-dishes-meksikanskiy-s-kopchenoy-kurinoy-grudkoy.jpg"
+									data-original="/upload/resize_cache/iblock/0ce/550_400_175511db9cefbc414a902a46f1b8fae16/0ce13fac287deb1ced95c78f889988f3.jpg"
+									width="" height="" alt="горячие роллы Мексиканский с копченой куриной грудкой " title="горячие роллыМексиканский с копченой куриной грудкой "
+									style="display: inline;">
+			
+						</a>
+			
+						<div class="dish__content">
+							<a href="http://svoya-kompaniya.ru/menu/rollyi/goryachie-rolly/" class="dish__category">горячие
+									роллы</a>
+			
+			
+							<div class="dish__description item-info" style="height: 58px;">
+									<h3 class="item-info__title">
+										<a data-prod="45697" href="http://svoya-kompaniya.ru/menu/rollyi/goryachie-rolly-tovar/">
+											Мексиканский с копченой куриной грудкой
+										</a>
+									</h3>
+			
+									<div class="item-info__price-mobile">
+										<span class="js-price">119</span> <span class="rub">р</span>
+									</div>
+			
+							</div>
+			
+							<footer class="dish__footer" style="height: 28px;">
+			
+									<div class="dish__price">
+										<span class="js-price" data-element="45697">119</span>&nbsp;<span class="rub">р</span>
+									</div>
+			
+									<div class="dish__controls">
+										<div class="dish__count count">
+											<span class="count__btn count__btn--minus count__btn--disable"></span>
+			
+											<input id="element_45697" type="text" class="count__field" value="1" maxlength="3">
+			
+											<span class="count__btn count__btn--plus"></span>
+										</div>
+			
+										<a id="a_45697" data-element="45696" data-parent="45697" data-name="Мексиканский с копченой куриной грудкой "
+											data-category="/menu/rollyi/goryachie-rolly/" data-price="" href="javascript://"
+											class="dish__btn button button--small addtobasket">
+											<span class="button__ico button__ico--cart-small"></span>
+											<span class="button__text">В корзину</span>
+										</a>
+									</div>
+							</footer>
+						</div>
+					</div>
+			
+					<div id="23290" class="dishes__item dish js-card_wrapper">
+						<a id="fav_23290" data-favorite="23290" href="javascript://" class="dish__favorite"></a>
+			
+						<a data-prod="23290" href="http://svoya-kompaniya.ru/menu/rollyi/s-lososem-i-krevetkoy/" class="dish__image">
+			
+							<img class="lazy" src="images/dev-dishes-zapecheniy-s-lososem-i-krevetkoy.jpg"
+									data-original="/upload/resize_cache/iblock/9cd/550_400_175511db9cefbc414a902a46f1b8fae16/9cd97979fb31990967e16c2a4d30fe71.jpg"
+									width="" height="" alt="горячие роллы Запеченный с лососем и креветкой" title="горячие роллыЗапеченный с лососем и креветкой"
+									style="display: inline;">
+			
+							<div class="dish__labels">
+									<div><span class="dish__label" style="background-color:#f05d86">Хит продаж</span></div>
+							</div>
+						</a>
+			
+						<div class="dish__content">
+							<a href="http://svoya-kompaniya.ru/menu/rollyi/goryachie-rolly/" class="dish__category">горячие
+									роллы</a>
+			
+							<button type="button" class="dish-ingredients-btn">Добавить больше вкуса</button>
+			
+							<div class="dish__description item-info" style="height: 58px;">
+									<h3 class="item-info__title">
+										<a data-prod="23290" href="http://svoya-kompaniya.ru/menu/rollyi/s-lososem-i-krevetkoy/">
+											Запеченный с лососем и креветкой
+										</a>
+									</h3>
+			
+									<div class="item-info__price-mobile">
+										<span class="js-price">189</span> <span class="rub">р</span>
+									</div>
+			
+							</div>
+			
+							<footer class="dish__footer" style="height: 28px;">
+			
+									<div class="dish__price">
+										<span class="js-price" data-element="23290">189</span>&nbsp;<span class="rub">р</span>
+									</div>
+			
+									<div class="dish__controls">
+										<div class="dish__count count">
+											<span class="count__btn count__btn--minus count__btn--disable"></span>
+			
+											<input id="element_23290" type="text" class="count__field" value="1" maxlength="3">
+			
+											<span class="count__btn count__btn--plus"></span>
+										</div>
+			
+										<a id="a_23290" data-element="23287" data-parent="23290" data-name="Запеченный с лососем и креветкой"
+											data-category="/menu/rollyi/goryachie-rolly/" data-price="" href="javascript://"
+											class="dish__btn button button--small addtobasket">
+											<span class="button__ico button__ico--cart-small"></span>
+											<span class="button__text">В корзину</span>
+										</a>
+									</div>
+							</footer>
+						</div>
+					</div>
+				</div> 
+			</section>
 					
 		</section>
 
+		<div class="seo"><h2>Бизнес ланч в ресторане «Своя компания»</h2>
+			<p>Хотите насладиться вкусом своих любимых блюд? Планируете потратить на это минимум свободного времени, денег и с комфортом пообедать в одном из лучших ресторанов? Наша сеть ресторанов «Своя компания» предложит Вам быстро и недорого заказать бизнес-ланч в кафе в Екатеринбурге.</p>
+			<p>Комплексный обед – это лучшее, что Вы можете придумать для повышения своей работоспособности. По Вашему желанию мы приготовим простые, полезные и сытные бизнес ланчи из ресторана. Именно с нашим кафе Вы поменяете свой ежедневный рацион питания.</p>
+			<p>Чтобы скомпоновать свой вкусный обед на сегодня, Вам достаточно воспользоваться меню наших бизнес-ланчей. Оно постоянно обновляется и позволяет Вам экспериментировать со своим обедом. На свое усмотрение для бизнес ланча в Екатеринбурге Вы можете выбрать суп и сытное горячее блюдо, вкусный гарнир с мясом или рыбой, роллы или легкий (сытный) салатик. В стоимость комплексного обеда в офисе входит напиток, выбранный лично Вами, а также порционный белый или черный хлеб. Дополнительно в заказ Вы можете внести необычный десерт.</p>
+			<p>Все горячие обеды готовятся руками нашего шеф-повара из свежих и тщательно отобранных ингредиентов. В каждое блюдо он вкладывает частичку своей души и мастерства. Именно поэтому наши готовые обеды из ресторана становятся настоящими шедеврами и радуют наших гостей.</p>
+		</div>
 
 		<style>
 			.heart:hover {
@@ -692,6 +941,9 @@ ga('require', 'ecommerce');
 	position:relative;
 	}
 </style>
+		
+
+		
 		<div id="favorite" class="popup-page">
 			<div class="popup-page__out">
 				<div class="popup-page__in">
@@ -818,7 +1070,183 @@ ga('require', 'ecommerce');
 	<!-- Форма коллективного заказа -->
 	<div class="popup-page" id="collective_order"></div>
 	<!-- Форма допродаж -->
-	<div class="popup-page" id="additional_sales"></div>
+	
+	<div class="popup-page" id="additional_sales" style="display: block;">
+		<!--<div class="popup-page" id="additional_sales" style="display: block;">-->
+		<div class="popup-page__out">
+			 <div class="popup-page__in">
+				  <div class="popup-page__content popup-page__content--ingredients">
+						<div class="popup-page__close"></div>
+						<h2>Добавьте ингредиенты в Гриль-паста с курицей и песто</h2>
+						<!-- <ul class="add-ingredients__list">
+							 <li class="add-ingredients__item" data-id="42374">
+								  <div class="add-ingredients__main">
+										<span class="add-ingredients__title">Кедровые орешки</span>
+										<div class="add-ingredients__n-facts">
+											 10 гр.<br>
+											 Белки: 18,0 гр.<br>
+											 Жиры: 60,0 гр.<br>
+											 Углеводы: 13,0 гр.<br>
+										</div>
+										<span class="add-ingredients__price">
+											 <span class="add-ingredients__price-num">0</span>
+											 <span class="add-ingredients__price-rub rub">р</span>
+										</span>
+								  </div>
+								  <div class="count add-ingredients__count">
+										<span class="count__btn count__btn--minus ingredients--minus" data-oper="minus"></span>
+										<input type="text" class="count__field add-ingredients__count__field" value="0"
+											 maxlength="3" data-prod="42374" data-price="40">
+										<span class="count__btn count__btn--plus ingredients--plus" data-oper="plus"></span>
+								  </div>
+							 </li>
+							 <li class="add-ingredients__item" data-id="35981">
+								  <div class="add-ingredients__main">
+										<span class="add-ingredients__title">Пармезан</span>
+										<div class="add-ingredients__n-facts">
+											 50 гр.<br>
+											 Белки: 30 гр.<br>
+											 Жиры: 25 гр.<br>
+											 Углеводы: 0 гр.<br>
+										</div>
+										<span class="add-ingredients__price">
+											 <span class="add-ingredients__price-num">0</span>
+											 <span class="add-ingredients__price-rub rub">р</span>
+										</span>
+								  </div>
+								  <div class="count add-ingredients__count">
+										<span class="count__btn count__btn--minus ingredients--minus" data-oper="minus"></span>
+										<input type="text" class="count__field add-ingredients__count__field" value="0"
+											 maxlength="3" data-prod="35981" data-price="125">
+										<span class="count__btn count__btn--plus ingredients--plus" data-oper="plus"></span>
+								  </div>
+							 </li>
+							 <li class="add-ingredients__item" data-id="36013">
+								  <div class="add-ingredients__main">
+										<span class="add-ingredients__title">Соевый соус</span>
+										<div class="add-ingredients__n-facts">
+											 50 гр.<br>
+											 Белки: 1,6 гр.<br>
+											 Жиры: 0 гр.<br>
+											 Углеводы: 1,7 гр.<br>
+										</div>
+										<span class="add-ingredients__price">
+											 <span class="add-ingredients__price-num">0</span>
+											 <span class="add-ingredients__price-rub rub">р</span>
+										</span>
+								  </div>
+								  <div class="count add-ingredients__count">
+										<span class="count__btn count__btn--minus ingredients--minus" data-oper="minus"></span>
+										<input type="text" class="count__field add-ingredients__count__field" value="0"
+											 maxlength="3" data-prod="36013" data-price="10">
+										<span class="count__btn count__btn--plus ingredients--plus" data-oper="plus"></span>
+								  </div>
+							 </li>
+	
+						</ul> -->
+						
+	
+						<div class="d-pu-ingredient-list">
+							<div class="d-pu-ingredient">
+								<div class="d-pu-ingredient__image-box">
+									<a href="" class="d-pu-ingredient__image-wrapper">
+										<img src="images/dev-001-fresh-roll.jpg" class="d-pu-ingredient__image">
+									</a>
+								</div>
+								<div class="d-pu-ingredient__name-box">
+									<div class="d-pu-ingredient__name-wrapper">
+										<a href="" class="d-pu-ingredient__name">Фреш-ролл</a>
+									</div>
+									<span class="d-pu-ingredient__info d-pu-ingredient__info--d-pu-ingredients">
+										Васаби, имбирь, соус спайси
+									</span>
+								</div>
+								<div class="d-pu-ingredient__count-box">
+									<span class="count count--default count--lite count--joint count--block count--inherit-font d-pu-ingredient__count">
+										<button class="count__minus" type="button">-</button>
+										<input type="text" value="5" class="count__field">
+										<button class="count__plus" type="button">+</button>
+									</span>
+								</div>
+								<div class="d-pu-ingredient__price-box">
+									<span class="d-pu-ingredient__price">1300 <span class="d-pu-ingredient__price-rub">₽</span></span>
+								</div>
+								<div class="d-pu-ingredient__button-box">
+									<button type="button" class="d-pu-ingredient__x">X</button>
+								</div>
+							</div>
+							<div class="d-pu-ingredient">
+								<div class="d-pu-ingredient__image-box">
+									<a href="" class="d-pu-ingredient__image-wrapper">
+										<img src="images/dev-002-tikvenniy-krem-sup.jpg" class="d-pu-ingredient__image">
+									</a>
+								</div>
+								<div class="d-pu-ingredient__name-box">
+									<div class="d-pu-ingredient__name-wrapper">
+										<a href="" class="d-pu-ingredient__name">Тыквенный крем-суп с беконом и соусом песто</a>
+									</div>
+								</div>
+								<div class="d-pu-ingredient__count-box">
+									<span class="count count--default count--lite count--joint count--block count--inherit-font d-pu-ingredient__count">
+										<button class="count__minus" type="button">-</button>
+										<input type="text" value="1" class="count__field">
+										<button class="count__plus" type="button">+</button>
+									</span>
+								</div>
+								<div class="d-pu-ingredient__price-box">
+									<span class="d-pu-ingredient__price">700 <span class="d-pu-ingredient__price-rub">₽</span></span>
+								</div>
+								<div class="d-pu-ingredient__button-box">
+									<button type="button" class="d-pu-ingredient__x">X</button>
+								</div>
+							</div>
+							<div class="d-pu-ingredient">
+								<div class="d-pu-ingredient__image-box">
+									<a href="" class="d-pu-ingredient__image-wrapper">
+										<img src="images/dev-004-kioto.jpg" class="d-pu-ingredient__image">
+									</a>
+								</div>
+								<div class="d-pu-ingredient__name-box">
+									<div class="d-pu-ingredient__name-wrapper">
+										<a href="" class="d-pu-ingredient__name">Киото</a>
+									</div>
+									<span class="d-pu-ingredient__info d-pu-ingredient__info--d-pu-ingredients">
+										Имбирь, соус унаги
+									</span>
+								</div>
+								<div class="d-pu-ingredient__count-box">
+									<span class="count count--default count--lite count--joint count--block count--inherit-font d-pu-ingredient__count">
+										<button class="count__minus" type="button">-</button>
+										<input type="text" value="7" class="count__field">
+										<button class="count__plus" type="button">+</button>
+									</span>
+								</div>
+								<div class="d-pu-ingredient__price-box">
+									<span class="d-pu-ingredient__price">580 <span class="d-pu-ingredient__price-rub">₽</span></span>
+								</div>
+								<div class="d-pu-ingredient__button-box">
+									<button type="button" class="d-pu-ingredient__x">X</button>
+								</div>
+							</div>
+						</div>
+						
+						<span class="add-ingredients__total">
+							 <span class="add-ingredients__total-title">Сумма</span>
+							 <span class="add-ingredients__total-price">
+								  <span class="add-ingredients__total-num">0</span>
+								  <span class="add-ingredients__total-rub rub">р</span>
+							 </span>
+						</span>
+						<a type="submit" id="additional_sales_submit" class="button button--short add-ingredients__add"
+							 data-basketid="" data-modify="" data-city="1" data-element="44278" onclick="return false">
+							 <span class="button__text">Добавить</span>
+						</a>
+				  </div>
+			 </div>
+		</div>
+		<!--</div>-->
+	</div>
+
 	<!-- Форма допродажного предупреждения об удалении -->
 	<div class="popup-page" id="ingredients__removal"></div>
 	<!-- Попапы для десктопа -->
@@ -1042,9 +1470,6 @@ ga('require', 'ecommerce');
 	<script type="text/javascript" src="js/h-city-toggle.js"></script>
 	
 	<script type="text/javascript" src="js/h-acc.js"></script>
-
-	<!-- Tab Scripts -->
-	<script type="text/javascript" src="js/sktab.js"></script>
 
 	<script>
 		! function (f, b, e, v, n, t, s) {

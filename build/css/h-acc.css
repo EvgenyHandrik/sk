@@ -314,6 +314,44 @@
   opacity: 0;
 }
 
+.h-acc-dd__spinner {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 0 0 3px;
+  vertical-align: middle;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+  background-image: url(../images/ico-spinner-grey-30x30.svg);
+  -webkit-animation: hAccDDSpinnerRotation 1s linear infinite;
+  animation: hAccDDSpinnerRotation 1s linear infinite;
+}
+
+@-webkit-keyframes hAccDDSpinnerRotation {
+  0% {
+    -webkit-transform: rotage(0deg);
+    transform: rotage(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes hAccDDSpinnerRotation {
+  0% {
+    -webkit-transform: rotage(0deg);
+    transform: rotage(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
 .h-acc-dd-bonuses__total-badge {
   display: inline-block;
   line-height: 1;

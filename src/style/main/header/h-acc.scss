@@ -372,6 +372,31 @@
 			}
 		}
 
+		&__spinner {
+			$icon-size: 12px;
+
+			display: inline-block;
+			width: $icon-size;
+			height: $icon-size;
+			margin: 0 0 0 3px;
+			vertical-align: middle;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: $icon-size $icon-size;
+			background-image: url(../images/ico-spinner-grey-30x30.svg);
+			animation: hAccDDSpinnerRotation 1s linear infinite;
+		}
+
+		@keyframes hAccDDSpinnerRotation {
+			0% {
+				transform: rotage(0deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+
 		/* -- */
 
 		&-bonuses {
