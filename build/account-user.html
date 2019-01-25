@@ -101,18 +101,17 @@
 	</style>
 	
 	<!-- Layout Styles -->
-	<!-- new [new_content] -->
+	<link href="css/layout.css" type="text/css" rel="stylesheet">
 	<link href="css/content.css" type="text/css" rel="stylesheet">
 	<link href="css/base.css" type="text/css" rel="stylesheet">
 	<link href="css/button.css" type="text/css" rel="stylesheet">
-	<link href="css/count.css" type="text/css" rel="stylesheet">
 	<link href="css/sktab.css" type="text/css" rel="stylesheet">
-	<link href="css/bcards.css" type="text/css" rel="stylesheet">
 	<link href="css/paginator-lt.css" type="text/css" rel="stylesheet">
-	<!-- end new -->
+	<link href="css/bcards.css" type="text/css" rel="stylesheet">
 	
 	<!-- Typography Styles -->
 	<link href="css/fonts.css" type="text/css" rel="stylesheet">
+	<link href="css/typography.css" type="text/css" rel="stylesheet">
 	
 	<!-- Form Styles -->
 	<link href="css/form.css" type="text/css" rel="stylesheet">
@@ -130,10 +129,9 @@
 	<link href="css/footer-v2-add.css" type="text/css" rel="stylesheet">
 	<link href="css/f-nav.css" type="text/css" rel="stylesheet">
 	<link href="css/f-contact.css" type="text/css" rel="stylesheet">
-	
+
 	<!-- Account Styles [new_content] -->
 	<link href="css/account.css" type="text/css" rel="stylesheet">
-	<!-- end Account Styles -->
 
 	<title>
 		Ресторан «Своя компания» Екатеринбург - уютный семейный ресторан-кафе в центре
@@ -609,8 +607,8 @@ ga('require', 'ecommerce');
 								<h1 class="ttl ttl--2 ttl--account">Личные данные</h1>
 			
 								<div class="form form--lite acc-user-form">
-									<div class="form-group form-group--default">
-										<label class="form-label form-label--default">Как вас зовут*</label>
+									<div class="form-group form-group--default form-group--m">
+										<label class="form-label form-label--default">Как вас зовут</label>
 										<div class="form-control-group form-control-group--default form-control-group--error">
 											<input type="text" class="form-control form-control--text form-control--default">
 										</div>
@@ -618,25 +616,67 @@ ga('require', 'ecommerce');
 											Ошибка
 										</div>
 									</div>
-									<div class="form-group form-group--default">
-										<label class="form-label form-label--default">Телефон*</label>
-										<div class="form-control-group form-control-group--default">
-											<input type="text" class="form-control form-control--text form-control--default">
+									<div class="form-group form-group--default form-group--m">
+										<label class="form-label form-label--default">Телефон</label>
+										
+										<!-- Чтобы убрать кнопку Получить код, нужно убрать класс phone-sms--button -->
+										<!-- Класс для счетчика: phone-sms--counter -->
+										<div class="form-control-group form-control-group--default phone-sms phone-sms--button">
+											<button type="button" class="phone-sms-button" disabled>
+												<span class="phone-sms-button__text">Получить код</span>
+											</button>
+											<div class="phone-sms-counter">
+												<span class="phone-sms-counter__icon"></span>
+												<span class="phone-sms-counter__number">0:53</span>
+											</div>
+											<input type="text" class="form-control form-control--default form-control--text phone-sms-input">
 										</div>
 									</div>
-									<div class="form-group form-group--default">
+									<div class="form-group form-group--default form-group--m">
+										<label class="form-label form-label--default">Код из СМС</label>
+										<div class="form-control-group form-control-group--default">
+											<input class="form-control form-control--default form-control--text">
+										</div>
+									</div>
+									<div class="form-group form-group--default form-group--m">
 										<label class="form-label form-label--default">Email</label>
 										<div class="form-control-group form-control-group--default">
 											<input type="text" class="form-control form-control--text form-control--default">
 										</div>
 									</div>
-									<div class="form-group form-group--default">
+									<div class="c-notify-group">
+										<div class="c-notify">
+											Ссылка на подтверждение нового адреса электронный почты отправлена
+										</div>
+									</div>
+									<div class="form-group form-group--default form-group--m">
 										<label class="form-label form-label--default">Дата рождения</label>
 										<div class="form-control-group form-control-group--default">
 											<input type="text" class="form-control form-control--text form-control--default">
 										</div>
 										<div class="form-message form-message--default form-message--control">
 											Во время дня рождения мы пришлем	промокод на скидку
+										</div>
+									</div>
+			
+									<div class="form-group form-group--default form-group--m">
+										<label class="form-label form-label--default">Текущий пароль</label>
+										<div class="form-control-group form-control-group--default">
+											<input type="password" class="form-control form-control--text form-control--default">
+										</div>
+									</div>
+			
+									<div class="form-group form-group--default form-group--m">
+										<label class="form-label form-label--default">Новый пароль</label>
+										<div class="form-control-group form-control-group--default">
+											<input type="password" class="form-control form-control--text form-control--default">
+										</div>
+									</div>
+			
+									<div class="form-group form-group--default form-group--m">
+										<label class="form-label form-label--default">Подтверждение пароля</label>
+										<div class="form-control-group form-control-group--default">
+											<input type="password" class="form-control form-control--text form-control--default">
 										</div>
 									</div>
 								
@@ -1055,13 +1095,14 @@ ga('require', 'ecommerce');
 	<!-- Header Scripts -->
 	<script type="text/javascript" src="js/header-v2.1.js"></script>
 	<script type="text/javascript" src="js/h-city-toggle.js"></script>
-	
 	<script type="text/javascript" src="js/h-acc.js"></script>
 	
-	<!-- Account Scripts [new_content] -->
+	<!-- Layout Scripts -->
+	<script type="text/javascript" src="js/sktab.js"></script>
 	<script type="text/javascript" src="js/paginator-lt.js"></script>
+
+	<!-- Account Scripts [new_content] -->
 	<script type="text/javascript" src="js/page-account.js"></script>
-	<!-- end Account Scripts -->
 
 	<script>
 		! function (f, b, e, v, n, t, s) {

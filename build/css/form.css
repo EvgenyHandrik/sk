@@ -415,12 +415,12 @@
   /* -- */
 }
 
-.phone-sms--button .phone-sms-counter {
-  display: none;
+.phone-sms--button .phone-sms-button {
+  display: block;
 }
 
-.phone-sms--counter .phone-sms-button {
-  display: none;
+.phone-sms--counter .phone-sms-count {
+  display: block;
 }
 
 .phone-sms-button {
@@ -428,7 +428,7 @@
   z-index: 2;
   top: 4px;
   right: 4px;
-  display: block;
+  display: none;
   width: 95px;
   height: 34px;
   line-height: 34px;
@@ -466,7 +466,7 @@
   z-index: 2;
   top: 4px;
   right: 4px;
-  display: block;
+  display: none;
   width: 95px;
   height: 34px;
   line-height: 34px;

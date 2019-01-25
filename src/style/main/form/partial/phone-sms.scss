@@ -5,7 +5,7 @@ $phone-sms-width: 95px;
 	z-index: 2;
 	top: 4px;
 	right: 4px;
-	display: block;
+	display: none;
 	width: $phone-sms-width;
 	height: 34px;
 	line-height: 34px;
@@ -22,14 +22,14 @@ $phone-sms-width: 95px;
 	/* -- */
 
 	&--button {
-		.phone-sms-counter {
-			display: none;
+		.phone-sms-button {
+			display: block;
 		}
 	}
 
 	&--counter {
-		.phone-sms-button {
-			display: none;
+		.phone-sms-count {
+			display: block;
 		}
 	}
 }
