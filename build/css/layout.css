@@ -34,12 +34,12 @@
   background-image: url(../images/ico-info-grey-30x30.svg);
 }
 
-.c-notify--error {
+.c-notify--warning {
   padding-left: 35px;
   background-color: rgba(187, 16, 24, 0.1);
 }
 
-.c-notify--error:before {
+.c-notify--warning:before {
   content: '';
   position: absolute;
   top: 10px;
