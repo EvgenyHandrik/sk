@@ -441,6 +441,11 @@
 
 .acc-user-buttons {
   display: table;
+  margin: 0 0 30px 0;
+}
+
+.acc-user-buttons:last-child {
+  margin-bottom: 0;
 }
 
 .acc-user-button {
