@@ -20,6 +20,7 @@
 
 .acc-page__row--main .acc-page__col {
   display: table-cell;
+  vertical-align: top;
 }
 
 .acc-page__row--main .acc-page__col--nav {

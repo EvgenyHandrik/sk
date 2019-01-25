@@ -13,6 +13,7 @@
 			.acc-page {
 				&__col {
 					display: table-cell;
+					vertical-align: top;
 
 					@media (max-width: $account-bp-mobile) {
 						display: block;
