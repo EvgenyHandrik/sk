@@ -1,5 +1,7 @@
 .button--default {
   /* -- */
+  /* -- */
+  /* -- */
 }
 
 .button--default .button__icon {
@@ -67,6 +69,11 @@
 
 .button--default .button__icon--minus-circle-flat-dark-grey:after {
   background-image: url(../images/ico-minus-circle-flat-red-30x30.svg);
+}
+
+.button--default.button--block {
+  display: block;
+  width: 100%;
 }
 
 .button--default.button--m {

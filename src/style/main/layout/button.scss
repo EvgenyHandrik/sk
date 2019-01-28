@@ -72,6 +72,15 @@
 				}
 			}
 		}
+
+		/* -- */
+
+		&.button--block {
+			display: block;
+			width: 100%;
+		}
+
+		/* -- */
 		
 		&.button--m {
 			height: 42px;

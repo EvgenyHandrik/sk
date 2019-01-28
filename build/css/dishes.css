@@ -37,6 +37,136 @@
   color: #bb1018;
 }
 
+.d-pu-ingredient-list {
+  margin: 0 0 20px 0;
+}
+
+.d-pu-ingredient-list:last-child {
+  margin-bottom: 0;
+}
+
+.d-pu-ingredient {
+  position: relative;
+  display: block;
+  padding: 17px 0 67px 0;
+  font-family: Roboto, Arimo, sans-serif;
+  border-bottom: 1px solid #F6F6F6;
+  /* -- */
+  /* -- */
+  /* -- */
+  /* -- */
+  /* -- */
+}
+
+.d-pu-ingredient:after {
+  content: '';
+  display: block;
+  clear: both;
+  font-size: 1px;
+}
+
+.d-pu-ingredient:first-child {
+  border-top: 1px solid #F6F6F6;
+}
+
+.d-pu-ingredient__image-box,
+.d-pu-ingredient__name-box,
+.d-pu-ingredient__count-box,
+.d-pu-ingredient__price-box,
+.d-pu-ingredient__button-box {
+  display: block;
+  padding-bottom: 0;
+}
+
+.d-pu-ingredient__image-box {
+  float: left;
+  margin-right: 15px;
+}
+
+a.d-pu-ingredient__image-wrapper:hover {
+  opacity: 0.5;
+}
+
+.d-pu-ingredient__image {
+  display: block;
+  width: 62px;
+  height: 45px;
+}
+
+.d-pu-ingredient__name-box {
+  width: auto;
+  line-height: 1.4;
+  padding-bottom: 0;
+  padding-left: 0;
+  overflow: hidden;
+}
+
+.d-pu-ingredient__name {
+  font-size: 15px;
+  border: 0;
+  color: #000;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+}
+
+a.d-pu-ingredient__name:hover {
+  color: #ba131a;
+}
+
+.d-pu-ingredient__info {
+  display: block;
+  font-size: 13px;
+  color: #a5a5a5;
+}
+
+.d-pu-ingredient__count-box {
+  position: absolute;
+  right: 0;
+  bottom: 17px;
+  min-width: 98px;
+  padding-left: 0;
+}
+
+.d-pu-ingredient__count.count--default.count--lite .count__field {
+  font-size: 16px;
+}
+
+.d-pu-ingredient__price-box {
+  position: absolute;
+  right: 128px;
+  bottom: 17px;
+  min-width: 80px;
+  height: 30px;
+  line-height: 30px;
+  text-align: right;
+}
+
+.d-pu-ingredient__price {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.d-pu-ingredient__price-rub {
+  font-weight: normal;
+  color: #D1D1D1;
+}
+
+.d-pu-ingredients-total {
+  display: block;
+  font-size: 18px;
+  margin: 0 0 30px 0;
+}
+
+.d-pu-ingredients-total:last-child {
+  margin-bottom: 0;
+}
+
+.d-pu-ingredients-total__price {
+  font-weight: bold;
+}
+
 @media (max-width: 530px) {
   .dish-ingredients-btn {
     margin-top: 5px;
