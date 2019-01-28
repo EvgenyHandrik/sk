@@ -46,6 +46,12 @@
 	}
 
 	&__image-wrapper {
+		display: block;
+		width: 62px;
+		border: 0;
+		border-radius: 5px;
+		overflow: hidden;
+		
 		@at-root a#{&} {
 			&:hover {
 				opacity: 0.5;

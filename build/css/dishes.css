@@ -83,6 +83,14 @@
   margin-right: 15px;
 }
 
+.d-pu-ingredient__image-wrapper {
+  display: block;
+  width: 62px;
+  border: 0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
 a.d-pu-ingredient__image-wrapper:hover {
   opacity: 0.5;
 }
