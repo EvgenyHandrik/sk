@@ -3,3 +3,38 @@
   font-weight: bold;
   text-align: center;
 }
+
+.pass-recovery-success {
+  margin: 40px 0 0 0;
+  text-align: center;
+}
+
+.pass-recovery-success__content {
+  display: inline-block;
+  max-width: 420px;
+  padding-top: 85px;
+  text-align: left;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 65px 65px;
+  background-image: url(../images/ico-smile-pale-yellow-65x65.svg);
+}
+
+.pass-recovery-success__title {
+  display: block;
+  line-height: 1.4;
+  margin: 0 0 0.3em 0;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.pass-recovery-success p {
+  line-height: 1.5;
+  margin: 0 0 0.8em 0;
+  font-size: 15px;
+}
+
+.pass-recovery-success__button-container {
+  margin: 30px 0 0 0;
+  text-align: center;
+}
