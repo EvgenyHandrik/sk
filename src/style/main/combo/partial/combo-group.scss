@@ -1,0 +1,20 @@
+.combo-group {
+	padding: 15px 0;
+	border-bottom: 1px solid #f6f6f6;
+
+	&:first-child {
+		padding-top: 0;
+	}
+
+	&:last-child {
+		padding-bottom: 0;
+		border-bottom: 0;
+	}
+}
+
+.combo-group-title {
+	display: block;
+	margin: 0 0 10px 0;
+	font-weight: bold;
+	font-size: 13px;
+}

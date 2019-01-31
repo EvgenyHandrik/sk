@@ -1,0 +1,26 @@
+.combo {
+	max-width: 360px;
+
+	&__title {
+		display: block;
+		margin: 0 0 15px 0;
+		font-size: 20px;
+	}
+
+	&__title-text {
+		margin: 0 0 10px 0;
+	}
+
+	&__title-price {
+		display: inline-block;
+		line-height: 1;
+		padding: 5px 10px;
+		font-weight: bold;
+		border: 1px solid #f6f6f6;
+		border-radius: 50px;
+	}
+}
+
+.combo-container {
+	margin: 0 0 20px 0;
+}
