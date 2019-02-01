@@ -58,7 +58,7 @@
   line-height: 1;
   padding: 5px 10px;
   font-weight: bold;
-  border: 1px solid #f6f6f6;
+  border: 1px solid #f0f0f0;
   border-radius: 50px;
 }
 
@@ -141,11 +141,11 @@ a.combo-dish__name:hover {
 
 .combo-dish-ibar__item {
   display: inline-block;
-  margin: 0 0 0 10px;
+  margin: 0 10px 0 0;
 }
 
-.combo-dish-ibar__item:first-child {
-  margin-left: 0;
+.combo-dish-ibar__item:last-child {
+  margin-right: 0;
 }
 
 .combo-dish-brief {
@@ -155,7 +155,7 @@ a.combo-dish__name:hover {
   color: #a5a5a5;
 }
 
-.combo-dish-brief--is-hidden {
+.combo-dish-brief--hidden {
   display: none;
 }
 
@@ -174,7 +174,7 @@ a.combo-dish__name:hover {
 }
 
 .combo-dish-brief-toggle:hover,
-.combo-dish-brief-toggle--is-active {
+.combo-dish-brief-toggle--active {
   color: #bb1018;
   border-color: #bb1018;
 }
@@ -193,7 +193,7 @@ a.combo-dish__name:hover {
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: #f6f6f6;
+  background-color: #f0f0f0;
 }
 
 .combo-or__text {
@@ -202,7 +202,7 @@ a.combo-dish__name:hover {
   line-height: 1;
   padding: 5px 10px;
   font-size: 12px;
-  border: 1px solid #f6f6f6;
+  border: 1px solid #f0f0f0;
   border-radius: 50px;
   color: #000;
   background-color: #fff;
@@ -331,6 +331,10 @@ a.combo-dish__name:hover {
   margin: 0 0 40px 0;
 }
 
+.combo-c-info__content > p {
+  margin-bottom: 9px;
+}
+
 .combo-c-info__buttons {
   margin: 5px 0 0 0;
 }
@@ -413,7 +417,7 @@ a.combo-dish__name:hover {
     border-color: #a5a5a5;
   }
 
-  .combo-dish-brief-toggle:hover.combo-dish-brief-toggle--is-active {
+  .combo-dish-brief-toggle:hover.combo-dish-brief-toggle--active {
     color: #bb1018;
     border-color: #bb1018;
   }

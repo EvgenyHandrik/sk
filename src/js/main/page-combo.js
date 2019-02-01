@@ -7,12 +7,12 @@
 			$dish = $button.closest('.combo-dish');
 			$brief = $dish.find('.combo-dish-brief');
 
-			if ($brief.hasClass('combo-dish-brief--is-hidden')) {
-				$brief.removeClass('combo-dish-brief--is-hidden');
-				$button.addClass('combo-dish-brief-toggle--is-active');
+			if ($brief.hasClass('combo-dish-brief--hidden')) {
+				$brief.removeClass('combo-dish-brief--hidden');
+				$button.addClass('combo-dish-brief-toggle--active');
 			} else {
-				$brief.addClass('combo-dish-brief--is-hidden');
-				$button.removeClass('combo-dish-brief-toggle--is-active');
+				$brief.addClass('combo-dish-brief--hidden');
+				$button.removeClass('combo-dish-brief-toggle--active');
 			}
 		});
 

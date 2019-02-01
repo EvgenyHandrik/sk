@@ -79,10 +79,10 @@ $combo-dish-image-height: 62px;
 
 	&__item {
 		display: inline-block;
-		margin: 0 0 0 10px;
+		margin: 0 10px 0 0;
 
-		&:first-child {
-			margin-left: 0;
+		&:last-child {
+			margin-right: 0;
 		}
 	}
 }
@@ -93,7 +93,7 @@ $combo-dish-image-height: 62px;
 	font-size: 15px;
 	color: $color-grey-light;
 
-	&--is-hidden {
+	&--hidden {
 		display: none;
 	}
 }
@@ -111,7 +111,7 @@ $combo-dish-image-height: 62px;
 	cursor: pointer;
 
 	&:hover,
-	&--is-active {
+	&--active {
 		color: $color-red;
 		border-color: $color-red;
 	}
@@ -121,7 +121,7 @@ $combo-dish-image-height: 62px;
 			color: $color-grey-light;
 			border-color: $color-grey-light;
 			
-			&#{$b}--is-active {
+			&#{$b}--active {
 				color: $color-red;
 				border-color: $color-red;
 			}
@@ -142,7 +142,7 @@ $combo-dish-image-height: 62px;
 		left: 0;
 		width: 100%;
 		height: 1px;
-		background-color: #f6f6f6;
+		background-color: #f0f0f0;
 	}
 
 	&__text {
@@ -151,7 +151,7 @@ $combo-dish-image-height: 62px;
 		line-height: 1;
 		padding: 5px 10px;
 		font-size: 12px;
-		border: 1px solid #f6f6f6;
+		border: 1px solid #f0f0f0;
 		border-radius: 50px;
 		color: #000;
 		background-color: #fff;

@@ -1,7 +1,11 @@
 .combo-c-info {
 	margin: 0 0 40px 0;
 
-	&__content {}
+	&__content {
+		& > p {
+			margin-bottom: 9px;
+		}
+	}
 
 	&__buttons {
 		margin: 5px 0 0 0;
