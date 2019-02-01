@@ -470,7 +470,7 @@ a.combo-dish__name:hover {
 }
 
 .combo-section--complex {
-  margin: 0 0 50px 0;
+  margin: 0 0 45px 0;
 }
 
 .combo-section--complex:last-child {
@@ -487,10 +487,6 @@ a.combo-dish__name:hover {
     margin-bottom: -20px;
   }
 
-  .combo-grid--complex > .combo-row:last-child {
-    margin-bottom: -15px;
-  }
-
   .combo-grid--complex > .combo-row > .combo-col {
     margin-bottom: 20px;
   }
@@ -503,18 +499,6 @@ a.combo-dish__name:hover {
     padding-left: 10px;
   }
 
-  .combo-grid--complex > .combo-row > .combo-col {
-    margin-bottom: 15px;
-  }
-
-  .combo-grid--complex > .combo-row > .combo-col:nth-of-type(odd) {
-    padding-right: 7.5px;
-  }
-
-  .combo-grid--complex > .combo-row > .combo-col:nth-of-type(even) {
-    padding-left: 7.5px;
-  }
-
   .combo-container {
     margin-bottom: 15px;
   }
@@ -525,6 +509,24 @@ a.combo-dish__name:hover {
 
   .combo-section--complex {
     margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .combo-grid--complex > .combo-row:last-child {
+    margin-bottom: -15px;
+  }
+
+  .combo-grid--complex > .combo-row > .combo-col {
+    margin-bottom: 15px;
+  }
+
+  .combo-grid--complex > .combo-row > .combo-col:nth-of-type(odd) {
+    padding-right: 7.5px;
+  }
+
+  .combo-grid--complex > .combo-row > .combo-col:nth-of-type(even) {
+    padding-left: 7.5px;
   }
 }
 
