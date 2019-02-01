@@ -5,6 +5,7 @@
 .combo-col {
   display: inline-block;
   width: 49%;
+  margin: 0 0 40px 0;
   font-size: 15px;
   vertical-align: top;
 }
@@ -154,7 +155,7 @@ a.combo-dish__name:hover {
   color: #a5a5a5;
 }
 
-.combo-dish-brief--isHidden {
+.combo-dish-brief--is-hidden {
   display: none;
 }
 
@@ -173,7 +174,7 @@ a.combo-dish__name:hover {
 }
 
 .combo-dish-brief-toggle:hover,
-.combo-dish-brief-toggle--isActive {
+.combo-dish-brief-toggle--is-active {
   color: #bb1018;
   border-color: #bb1018;
 }
@@ -207,13 +208,212 @@ a.combo-dish__name:hover {
   background-color: #fff;
 }
 
+.combo-tab-nav-c {
+  margin: 0 0 10px 0;
+}
+
+.combo-tab-nav-c__wrapper {
+  height: 32px;
+  overflow: hidden;
+}
+
+.combo-tab-nav-c__scroll {
+  height: 100px;
+  overflow-x: auto;
+}
+
+.combo-tab-nav {
+  display: block;
+  padding: 0;
+  margin: 0;
+  font-size: 1;
+  white-space: nowrap;
+}
+
+.combo-tab-nav__item {
+  display: inline-block;
+  margin: 0 0 0 15px;
+}
+
+.combo-tab-nav__item:first-child {
+  margin-left: 0;
+}
+
+.combo-tab-nav__item--active .combo-tab-nav__button {
+  background-color: #f1f1f1;
+  cursor: default;
+}
+
+.combo-tab-nav__item--active .combo-tab-nav__button-text {
+  text-decoration: none;
+  color: #000;
+}
+
+.combo-tab-nav__button {
+  display: block;
+  line-height: 32px;
+  border-radius: 50px;
+  padding: 0 10px;
+  margin: 0;
+  font-size: 15px;
+  color: #a5a5a5;
+  background-color: transparent;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+  cursor: pointer;
+}
+
+.combo-tab-nav__button:hover {
+  color: #000;
+}
+
+.combo-tab-nav__button-text {
+  text-decoration: underline;
+}
+
+.combo-tab-content__item {
+  display: none;
+}
+
+.combo-tab-content__item--active {
+  display: block;
+}
+
+.combo-phone {
+  position: relative;
+  text-align: center;
+  margin: 0 0 25px 0;
+}
+
+.combo-phone:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.combo-phone-button {
+  position: relative;
+  display: inline-block;
+  padding: 0 20px;
+  text-align: center;
+  border: 0;
+  background-color: #fff;
+}
+
+.combo-phone-button:hover .combo-phone-button__number {
+  color: #000;
+}
+
+.combo-phone-button__title {
+  display: block;
+  font-size: 15px;
+  color: #a5a5a5;
+}
+
+.combo-phone-button__number {
+  font-weight: bold;
+  font-size: 17px;
+  color: #bb1018;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+}
+
+.combo-c-info {
+  margin: 0 0 40px 0;
+}
+
+.combo-c-info__buttons {
+  margin: 5px 0 0 0;
+}
+
+.combo-c-info__button {
+  display: inline;
+  line-height: 1.3;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+  border-bottom: 1px dashed #a5a5a5;
+  color: #a5a5a5;
+  background-color: transparent;
+  -webkit-transition-property: color, border-color;
+  transition-property: color, border-color;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+  cursor: pointer;
+}
+
+.combo-c-info__button:hover {
+  border-color: #bb1018;
+  color: #bb1018;
+}
+
+.combo-c-info--short .combo-c-info__content--short {
+  display: block;
+}
+
+.combo-c-info--short .combo-c-info__content--full {
+  display: none;
+}
+
+.combo-c-info--short .combo-c-info__button--short {
+  display: none;
+}
+
+.combo-c-info--short .combo-c-info__button--full {
+  display: inline;
+}
+
+.combo-c-info--full .combo-c-info__content--short {
+  display: none;
+}
+
+.combo-c-info--full .combo-c-info__content--full {
+  display: block;
+}
+
+.combo-c-info--full .combo-c-info__button--short {
+  display: inline;
+}
+
+.combo-c-info--full .combo-c-info__button--full {
+  display: none;
+}
+
+@media (max-width: 680px) {
+  .combo-col {
+    display: block;
+    width: auto;
+  }
+
+  .combo-col:nth-of-type(odd) {
+    padding-right: 0;
+  }
+
+  .combo-col:nth-of-type(even) {
+    padding-left: 0;
+  }
+
+  .combo {
+    max-width: 100%;
+  }
+}
+
 @media (hover: none) {
   .combo-dish-brief-toggle:hover {
     color: #a5a5a5;
     border-color: #a5a5a5;
   }
 
-  .combo-dish-brief-toggle:hover.combo-dish-brief-toggle--isActive {
+  .combo-dish-brief-toggle:hover.combo-dish-brief-toggle--is-active {
     color: #bb1018;
     border-color: #bb1018;
   }

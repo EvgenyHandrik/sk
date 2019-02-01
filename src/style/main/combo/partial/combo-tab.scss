@@ -1,0 +1,79 @@
+$combo-nav-button-height: 32px;
+
+.combo-tab {
+
+}
+
+.combo-tab-nav-c {
+	margin: 0 0 10px 0;
+
+	&__wrapper {
+		height: $combo-nav-button-height;
+		overflow: hidden;
+	}
+
+	&__scroll {
+		height: 100px;
+		overflow-x: auto;
+	}
+}
+
+.combo-tab-nav {
+	display: block;
+	padding: 0;
+	margin: 0;
+	font-size: 1;
+	white-space: nowrap;
+
+	&__item {
+		display: inline-block;
+		margin: 0 0 0 15px;
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		&--active {
+			.combo-tab-nav__button {
+				background-color: #f1f1f1;
+				cursor: default;
+
+				&-text {
+					text-decoration: none;
+					color: #000
+				}
+			}
+		}
+	}
+
+	&__button {
+		display: block;
+		line-height: $combo-nav-button-height;
+		border-radius: 50px;
+		padding: 0 10px;
+		margin: 0;
+		font-size: 15px;
+		color: $color-grey-light;
+		background-color: transparent;
+		@include transition(color);
+		cursor: pointer;
+
+		&:hover {
+			color: #000;
+		}
+
+		&-text {
+			text-decoration: underline;
+		}
+	}
+}
+
+.combo-tab-content {
+	&__item {
+		display: none;
+
+		&--active {
+			display: block;
+		}
+	}
+}

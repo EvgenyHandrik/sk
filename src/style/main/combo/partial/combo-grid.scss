@@ -5,6 +5,7 @@
 .combo-col {
 	display: inline-block;
 	width: 49%;
+	margin: 0 0 40px 0;
 	font-size: 15px;
 	vertical-align: top;
 
@@ -14,5 +15,18 @@
 
 	&:nth-of-type(even) {
 		padding-left: 20px;
+	}
+
+	@media (max-width: $combo-bp-mobile) {
+		display: block;
+		width: auto;
+
+		&:nth-of-type(odd) {
+			padding-right: 0;
+		}
+	
+		&:nth-of-type(even) {
+			padding-left: 0;
+		}
 	}
 }

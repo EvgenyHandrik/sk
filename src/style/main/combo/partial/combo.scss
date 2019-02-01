@@ -1,6 +1,10 @@
 .combo {
 	max-width: 360px;
 
+	@media (max-width: $combo-bp-mobile) {
+		max-width: 100%;
+	}
+
 	&__title {
 		display: block;
 		margin: 0 0 15px 0;
