@@ -13,6 +13,20 @@
 		height: 1px;
 		background-color: rgba(0,0,0, 0.1);
 	}
+
+	@media (max-width: 500px) {
+		margin-bottom: 30px;
+	}
+
+	/* -- */
+
+	&--complex {
+		margin-bottom: 15px;
+
+		@media (max-width: 500px) {
+			margin-bottom: 20px;
+		}
+	}
 }
 
 .combo-phone-button {

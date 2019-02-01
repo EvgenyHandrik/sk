@@ -1,3 +1,36 @@
+.combo-grid > .combo-row:last-child {
+  margin-bottom: -40px;
+}
+
+.combo-grid--complex > .combo-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.combo-grid--complex > .combo-row:last-child {
+  margin-bottom: -30px;
+}
+
+.combo-grid--complex > .combo-row > .combo-col {
+  width: 50%;
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
+  margin-bottom: 30px;
+  /* -- */
+}
+
+.combo-grid--complex > .combo-row > .combo-col:nth-of-type(odd) {
+  padding-right: 15px;
+}
+
+.combo-grid--complex > .combo-row > .combo-col:nth-of-type(even) {
+  padding-left: 15px;
+}
+
 .combo-row {
   font-size: 1px;
 }
@@ -39,8 +72,13 @@
   font-size: 13px;
 }
 
+.combo-container {
+  /* -- */
+}
+
 .combo {
   max-width: 360px;
+  /* -- */
 }
 
 .combo__title {
@@ -50,7 +88,7 @@
 }
 
 .combo__title-text {
-  margin: 0 0 10px 0;
+  margin: 0 10px 0 0;
 }
 
 .combo__title-price {
@@ -62,8 +100,37 @@
   border-radius: 50px;
 }
 
-.combo-container {
-  margin: 0 0 20px 0;
+.combo--complex {
+  max-width: 100%;
+  height: 100%;
+  padding: 15px 10px;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+}
+
+.combo--complex .combo__title {
+  display: block;
+  padding: 15px 10px;
+  margin: -15px -10px 15px -10px;
+  border-radius: 10px 10px 0 0;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.combo--complex .combo__title-text {
+  display: inline;
+  margin: 0 7px 0 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 17px;
+}
+
+.combo--complex .combo__title-price {
+  display: inline;
+  padding: 0;
+  font-size: 17px;
+  border: 0;
+  border-radius: 0;
 }
 
 .combo-dish {
@@ -285,6 +352,7 @@ a.combo-dish__name:hover {
   position: relative;
   text-align: center;
   margin: 0 0 25px 0;
+  /* -- */
 }
 
 .combo-phone:before {
@@ -296,6 +364,10 @@ a.combo-dish__name:hover {
   width: 100%;
   height: 1px;
   background-color: rgba(0, 0, 0, 0.1);
+}
+
+.combo-phone--complex {
+  margin-bottom: 15px;
 }
 
 .combo-phone-button {
@@ -329,6 +401,7 @@ a.combo-dish__name:hover {
 
 .combo-c-info {
   margin: 0 0 40px 0;
+  /* -- */
 }
 
 .combo-c-info__content > p {
@@ -392,7 +465,104 @@ a.combo-dish__name:hover {
   display: none;
 }
 
+.combo-c-info--complex {
+  margin-bottom: 15px;
+}
+
+.combo-section--complex {
+  margin: 0 0 50px 0;
+}
+
+.combo-section--complex:last-child {
+  margin-bottom: 0;
+}
+
+.combo-section-title--complex.ttl--2 {
+  font-size: 20px;
+  margin: 0 0 20px 0;
+}
+
+@media (max-width: 1200px) {
+  .combo-grid--complex > .combo-row:last-child {
+    margin-bottom: -20px;
+  }
+
+  .combo-grid--complex > .combo-row:last-child {
+    margin-bottom: -15px;
+  }
+
+  .combo-grid--complex > .combo-row > .combo-col {
+    margin-bottom: 20px;
+  }
+
+  .combo-grid--complex > .combo-row > .combo-col:nth-of-type(odd) {
+    padding-right: 10px;
+  }
+
+  .combo-grid--complex > .combo-row > .combo-col:nth-of-type(even) {
+    padding-left: 10px;
+  }
+
+  .combo-grid--complex > .combo-row > .combo-col {
+    margin-bottom: 15px;
+  }
+
+  .combo-grid--complex > .combo-row > .combo-col:nth-of-type(odd) {
+    padding-right: 7.5px;
+  }
+
+  .combo-grid--complex > .combo-row > .combo-col:nth-of-type(even) {
+    padding-left: 7.5px;
+  }
+
+  .combo-container {
+    margin-bottom: 15px;
+  }
+
+  .combo-container--complex {
+    margin-bottom: 10px;
+  }
+
+  .combo-section--complex {
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 800px) {
+  .combo-grid--complex > .combo-row:last-child {
+    margin-bottom: -10px;
+  }
+
+  .combo-grid--complex > .combo-row > .combo-col {
+    margin-bottom: 10px;
+  }
+
+  .combo-grid--complex > .combo-row > .combo-col:nth-of-type(odd) {
+    padding-right: 5px;
+  }
+
+  .combo-grid--complex > .combo-row > .combo-col:nth-of-type(even) {
+    padding-left: 5px;
+  }
+}
+
 @media (max-width: 680px) {
+  .combo-grid--complex > .combo-row {
+    display: block;
+  }
+
+  .combo-grid--complex > .combo-row > .combo-col {
+    width: auto;
+  }
+
+  .combo-grid--complex > .combo-row > .combo-col:nth-of-type(odd) {
+    padding-right: 0;
+  }
+
+  .combo-grid--complex > .combo-row > .combo-col:nth-of-type(even) {
+    padding-left: 0;
+  }
+
   .combo-col {
     display: block;
     width: auto;
@@ -406,8 +576,38 @@ a.combo-dish__name:hover {
     padding-left: 0;
   }
 
+  .combo-container {
+    margin-bottom: 55px;
+  }
+
+  .combo-container--complex {
+    margin-bottom: 15px;
+  }
+
   .combo {
     max-width: 100%;
+  }
+
+  .combo-section--complex {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .combo-phone {
+    margin-bottom: 30px;
+  }
+
+  .combo-phone--complex {
+    margin-bottom: 20px;
+  }
+
+  .combo-c-info {
+    margin-bottom: 30px;
+  }
+
+  .combo-c-info--complex {
+    margin-bottom: 20px;
   }
 }
 

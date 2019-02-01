@@ -1,0 +1,26 @@
+.combo-section {
+	&--complex {
+		margin: 0 0 ($combo-grid-col-v-space-complex * 2 + 20px) 0;
+		
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		@media (max-width: 1200px) {
+			margin-bottom: 35px;
+		}
+
+		@media (max-width: $combo-bp-mobile) {
+			margin-bottom: 40px;
+		}
+	}
+}
+
+.combo-section-title {
+	&--complex {
+		&.ttl--2 {
+			font-size: 20px;
+			margin: 0 0 20px 0;
+		}
+	}	
+}
