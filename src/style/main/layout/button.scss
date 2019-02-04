@@ -39,6 +39,21 @@
 
 			/* -- */
 
+			&--18 {
+				width: 18px;
+				height: 18px;
+				margin-right: 5px;
+
+				&:before,
+				&:after {
+					width: 18px;
+					height: 18px;
+					background-size: 18px 18px;
+				}
+			}
+
+			/* -- */
+
 			&--x-bold-dark-grey {
 				&:before {
 					background-image: url(../images/ico-x-bold-black-30x30.svg);
@@ -70,6 +85,32 @@
 				&:after {
 					background-image: url(../images/ico-minus-circle-flat-red-30x30.svg);
 				}
+			}
+
+			&--reload-grey {
+				&:before {
+					background-image: url(../images/ico-reload-grey-30x30.svg);
+				}
+
+				&:after {
+					background-image: url(../images/ico-reload-red-30x30.svg);
+				}
+			}
+
+			&--trash-grey {
+				&:before {
+					background-image: url(../images/ico-trash-flat-grey-30x30.svg);
+				}
+
+				&:after {
+					background-image: url(../images/ico-trash-flat-red-30x30.svg);
+				}
+			}
+
+			/* -- */
+
+			&:last-child {
+				margin-right: 0;
 			}
 		}
 
@@ -157,6 +198,17 @@
 					&:after {
 						opacity: 1;
 					}
+				}
+			}
+
+			/* -- */
+
+			&.button--grey {
+				border: 0;
+				color: $color-grey-light;
+
+				&:hover {
+					color: $color-red;
 				}
 			}
 		}

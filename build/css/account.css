@@ -1460,11 +1460,17 @@
 
 .acc-address-buttons > .acc-address-buttons__row > .acc-address-buttons__col {
   display: table-cell;
+  padding: 0 0 0 10px;
   vertical-align: middle;
+}
+
+.acc-address-buttons > .acc-address-buttons__row > .acc-address-buttons__col:first-child {
+  padding-left: 0;
 }
 
 .acc-address-buttons > .acc-address-buttons__row > .acc-address-buttons__col--cancel {
   width: 100%;
+  padding-left: 20px;
 }
 
 .acc-address-buttons--new-address {
@@ -1684,5 +1690,20 @@
 
   .acc-user-form .form-group {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .acc-address-buttons > .acc-address-buttons__row > .acc-address-buttons__col--remove {
+    position: relative;
+  }
+
+  .acc-address-buttons > .acc-address-buttons__row > .acc-address-buttons__col--remove:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 1px;
+    height: 15px;
   }
 }

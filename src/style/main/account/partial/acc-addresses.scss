@@ -242,10 +242,30 @@
 
 		& > .acc-address-buttons__col {
 			display: table-cell;
+			padding: 0 0 0 10px;
 			vertical-align: middle;
+
+			&:first-child {
+				padding-left: 0;
+			}
 
 			&--cancel {
 				width: 100%;
+				padding-left: 20px;
+			}
+
+			&--remove {
+				@media (max-width: 360px) {
+					position: relative;
+					&:before {
+						content: '';
+						position: absolute;
+						top: 50%;
+						left: 0;
+						width: 1px;
+						height: 15px;
+					}
+				}
 			}
 		}
 	}
