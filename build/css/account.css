@@ -39,7 +39,7 @@
 
 .acc-navbar--open {
   position: relative;
-  z-index: 2;
+  z-index: 110;
 }
 
 .acc-navbar--mobile {
@@ -1470,11 +1470,31 @@
 
 .acc-address-buttons > .acc-address-buttons__row > .acc-address-buttons__col--cancel {
   width: 100%;
-  padding-left: 20px;
+  padding-left: 30px;
+}
+
+.acc-address-buttons > .acc-address-buttons__row > .acc-address-buttons__col--remove {
+  padding-left: 0;
+  font-size: 1px;
+  white-space: nowrap;
 }
 
 .acc-address-buttons--new-address {
   display: none;
+}
+
+.acc-address-cancel.button--text .button__text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.acc-address-remove {
+  margin-left: 10px;
+}
+
+.acc-address-remove.button--text {
+  display: inline-block;
+  padding: 3.5px;
 }
 
 .acc-notifications {
@@ -1694,16 +1714,16 @@
 }
 
 @media (max-width: 360px) {
-  .acc-address-buttons > .acc-address-buttons__row > .acc-address-buttons__col--remove {
-    position: relative;
+  .acc-address-buttons > .acc-address-buttons__row > .acc-address-buttons__col--cancel {
+    padding-left: 20px;
   }
 
   .acc-address-buttons > .acc-address-buttons__row > .acc-address-buttons__col--remove:before {
     content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
+    display: inline-block;
     width: 1px;
-    height: 15px;
+    height: 30px;
+    vertical-align: middle;
+    background-color: #f0f0f0;
   }
 }

@@ -56,7 +56,7 @@
 
 	&--open {
 		position: relative;
-		z-index: 2;
+		z-index: $z-index-acc-navbar-open;
 	}
 
 	&--mobile {
