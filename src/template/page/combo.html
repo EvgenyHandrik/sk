@@ -251,17 +251,44 @@ ga('require', 'ecommerce');
 			<div class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
 				<span itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem"><a itemprop="item" href="http://svoya-kompaniya.ru/" title="Своя компания"><span itemprop="name">Своя компания</span><meta itemprop="position" content="1"></a></span>
 				<span itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem"><a itemprop="item" href="http://svoya-kompaniya.ru/" title="Меню"><span itemprop="name">Меню</span><meta itemprop="position" content="2"></a></span>
-				<span itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem"><span itemprop="item"><span itemprop="name">Вкусные обеды</span><meta itemprop="position" content="3"></span></span>
+				<span itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem"><span itemprop="item"><span itemprop="name">Бизнес-ланчи</span><meta itemprop="position" content="3"></span></span>
 			</div>
 
-			<h1>Вкусные обеды</h1>
+			
 
 			<!-- Combo Content [new_content] -->
-			
-			//= ../partial/combo/comboTopTextContent.html
+			<div class="sktab combo-sktab js-sktab">
+				<div class="sktab-nav-wrapper">
+					<div class="sktab-nav-scroll">
+						<ul class="sktab-nav">
+							<li class="sktab-nav__item sktab-nav__item--active">
+								<button class="sktab-nav__button">Вкусные обеды</button>
+							</li>
+							<li class="sktab-nav__item">
+								<button class="sktab-nav__button">Бизнес-ланчи</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="sktab-content">
+					<div class="sktab-content__item sktab-content__item--active">
+						<h1>Вкусные обеды</h1>
+						
+						//= ../partial/combo/comboTopTextContent.html
 
-			//= ../partial/combo/comboContent.html
-					
+						//= ../partial/combo/comboContent.html
+					</div>
+					<div class="sktab-content__item">
+						<h1>Вкусные обеды</h1>
+
+						//= ../partial/combo/comboComplexTopTextContent.html
+
+						//= ../partial/combo/comboComplexContent.html
+					</div>
+				</div>
+			</div>
+				
 		</section>
 
 		//= ../partial/common/partial/seo-footer.html

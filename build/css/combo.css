@@ -566,6 +566,14 @@ a.combo-dish__name:hover {
   color: #000;
 }
 
+.combo-sktab {
+  margin-top: 26px;
+}
+
+.combo-sktab > .sktab-nav-wrapper {
+  margin-bottom: 30px;
+}
+
 @media (max-width: 1200px) {
   .combo-grid--complex > .combo-row:last-child {
     margin-bottom: -20px;
@@ -593,6 +601,10 @@ a.combo-dish__name:hover {
 
   .combo-section--complex {
     margin-bottom: 35px;
+  }
+
+  .combo-sktab {
+    margin-top: 25px;
   }
 }
 
@@ -748,6 +760,17 @@ a.combo-dish__name:hover {
   }
 }
 
+@media (max-width: 520px) {
+  .combo-sktab {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .combo-sktab > .sktab-content {
+    text-align: left;
+  }
+}
+
 @media (max-width: 500px) {
   .combo-phone {
     margin-bottom: 30px;
@@ -763,6 +786,20 @@ a.combo-dish__name:hover {
 
   .combo-c-info--complex {
     margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 460px) {
+  .combo-sktab {
+    margin-top: 27px;
+  }
+
+  .combo-sktab > .sktab-nav-wrapper {
+    margin-bottom: 27px;
+  }
+
+  .combo-sktab > .sktab-nav-wrapper .sktab-nav__button {
+    font-size: 15px;
   }
 }
 
