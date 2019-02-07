@@ -564,7 +564,7 @@ ga('require', 'ecommerce');
 				</div>
 			</div>
 
-			<div class="combo-container combo-container--complex js-combo-dbrief-toggle-delegate">
+			<div class="combo-container combo-container--complex js-combo-dbrief-toggle-delegate js-combo-select-delegate">
 			
 				<div class="combo-phone combo-phone--complex">
 					<a href="tel:83432980044" class="combo-phone-button">
@@ -573,17 +573,21 @@ ga('require', 'ecommerce');
 					</a>
 				</div>
 			
+				<!-- Полные обеды -->
 				<div class="combo-section combo-section--complex">
 					<h2 class="ttl ttl--2 combo-section-title combo-section-title--complex">Полный обед</h2>
 			
 					<div class="combo-grid combo-grid--complex">
 						<div class="combo-row">
+							
+							<!-- Полный обед 1 -->
 							<div class="combo-col">
 								<div class="combo combo--complex">
 									<div class="combo__title">
-										<span class="combo__title-text">Комплекс 1:</span><span class="combo__title-price">400 <span class="c-rub">₽</span></span>
+										<span class="combo__title-text">Комплекс 1</span>
 									</div>
 									
+									<!-- Полный обед 1. Список блюд -->
 									<div class="combo-group-list">
 										<div class="combo-group">
 											<div class="combo-dish">
@@ -637,17 +641,21 @@ ga('require', 'ecommerce');
 												</div>
 											</div>
 										</div>
-										<div class="combo-group">
+			
+										<!-- Полный обед 1. Супы -->
+										<div class="combo-group combo-select">
 											<span class="combo-group-title">Суп на выбор</span>
 											<div class="combo-dish-list">
-												<div class="combo-dish">
+												
+												<!-- Полный обед 1. Суп 1 -->
+												<div class="combo-dish combo-select__option">
 													<div class="combo-dish__image-box">
 														<img src="images/combo-soup-krem-sup-iz-shpinata-170x124.jpg" class="combo-dish__image" alt="">
 													</div>
 													<div class="combo-dish__name-box">
-														<div class="combo-dish__name-wrapper">
+														<label class="combo-dish__name-label" for="c-soup-d0-0">
 															<span class="combo-dish__name">Крем суп из шпината</span>
-														</div>
+														</label>
 														<div class="combo-dish-ibar">
 															<div class="combo-dish-ibar__item">
 																<span class="combo-dish__weight">250 гр.</span>
@@ -663,18 +671,23 @@ ga('require', 'ecommerce');
 															Шпинат, картофель, репчатый лук, сливки, оливковое масло.
 														</div>
 													</div>
+													<div class="combo-dish__select-switch-box">
+														<span class="pretty-control pretty-control--default pretty-control--radio">
+															<input type="radio" class="pretty-control__input combo-select__switch" name="c-soup-d0" id="c-soup-d0-0">
+															<span class="pretty-control__item"></span>
+														</span>
+													</div>
 												</div>
-												<div class="combo-or">
-													<span class="combo-or__text">Или</span>
-												</div>
-												<div class="combo-dish">
+			
+												<!-- Полный обед 1. Суп 2 -->
+												<div class="combo-dish combo-select__option">
 													<div class="combo-dish__image-box">
 														<img src="images/combo-soup-borsh-170x124.jpg" class="combo-dish__image" alt="">
 													</div>
 													<div class="combo-dish__name-box">
-														<div class="combo-dish__name-wrapper">
+														<label class="combo-dish__name-label" for="c-soup-d0-1">
 															<span class="combo-dish__name">Борщ</span>
-														</div>
+														</label>
 														<div class="combo-dish-ibar">
 															<div class="combo-dish-ibar__item">
 																<span class="combo-dish__weight">250 гр.</span>
@@ -690,18 +703,48 @@ ga('require', 'ecommerce');
 															Говядина, белокочанная капуста, свекла, морковь, картофель, репчатый лук, чеснок, зелень, томатная паста.
 														</div>
 													</div>
+													<div class="combo-dish__select-switch-box">
+														<span class="pretty-control pretty-control--default pretty-control--radio">
+															<input type="radio" class="pretty-control__input combo-select__switch" name="c-soup-d0" id="c-soup-d0-1">
+															<span class="pretty-control__item"></span>
+														</span>
+													</div>
 												</div>
+											</div>
+										</div>
+									</div>
+			
+									<div class="combo__footer">
+										<div class="combo__f-row">
+											<div class="combo__f-col">
+												<span class="count count--default count--lite count--joint count--block count--inherit-font crt2-dish__count">
+													<button class="count__minus" type="button">-</button>
+													<input type="text" value="1" class="count__field">
+													<button class="count__plus" type="button">+</button>
+												</span>
+											</div>
+											<div class="combo__f-col combo__f-col--price">
+												<span class="combo__f-price"><span class="combo__f-price-num">400</span> <span class="c-rub">₽</span></span>
+											</div>
+											<div class="combo__f-col">
+												<button type="button" class="button button--default button--m combo__f-add-to-basket">
+													<span class="button__icon button__icon--cart-white"></span>
+													<span class="button__text">Купить</span>
+												</button>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
+							
+							<!-- Полный обед 2 -->
 							<div class="combo-col">
 								<div class="combo combo--complex">
 									<div class="combo__title">
-										<span class="combo__title-text">Комплекс 2:</span><span class="combo__title-price">400 <span class="c-rub">₽</span></span>
+										<span class="combo__title-text">Комплекс 2</span>
 									</div>
 									
+									<!-- Полный обед 2. Список блюд -->
 									<div class="combo-group-list">
 										<div class="combo-group">
 											<div class="combo-dish">
@@ -755,17 +798,21 @@ ga('require', 'ecommerce');
 												</div>
 											</div>
 										</div>
-										<div class="combo-group">
+			
+										<!-- Полный обед 2. Супы -->
+										<div class="combo-group combo-select">
 											<span class="combo-group-title">Суп на выбор</span>
 											<div class="combo-dish-list">
-												<div class="combo-dish">
+												
+												<!-- Полный обед 2. Суп 1 -->
+												<div class="combo-dish combo-select__option">
 													<div class="combo-dish__image-box">
 														<img src="images/combo-soup-krem-sup-iz-shpinata-170x124.jpg" class="combo-dish__image" alt="">
 													</div>
 													<div class="combo-dish__name-box">
-														<div class="combo-dish__name-wrapper">
+														<label class="combo-dish__name-label" for="c-soup-d2-0">
 															<span class="combo-dish__name">Крем-суп из шпината</span>
-														</div>
+														</label>
 														<div class="combo-dish-ibar">
 															<div class="combo-dish-ibar__item">
 																<span class="combo-dish__weight">250 гр.</span>
@@ -781,18 +828,23 @@ ga('require', 'ecommerce');
 															Шпинат, картофель, репчатый лук, сливки, оливковое масло.
 														</div>
 													</div>
+													<div class="combo-dish__select-switch-box">
+														<span class="pretty-control pretty-control--default pretty-control--radio">
+															<input type="radio" class="pretty-control__input combo-select__switch" name="c-soup-d2" id="c-soup-d2-0">
+															<span class="pretty-control__item"></span>
+														</span>
+													</div>
 												</div>
-												<div class="combo-or">
-													<span class="combo-or__text">Или</span>
-												</div>
-												<div class="combo-dish">
+			
+												<!-- Полный обед 2. Суп 2 -->
+												<div class="combo-dish combo-select__option">
 													<div class="combo-dish__image-box">
 														<img src="images/combo-soup-sup-lapsha-170x124.jpg" class="combo-dish__image" alt="">
 													</div>
 													<div class="combo-dish__name-box">
-														<div class="combo-dish__name-wrapper">
+														<label class="combo-dish__name-label" for="c-soup-d2-1">
 															<span class="combo-dish__name">Суп-лапша</span>
-														</div>
+														</label>
 														<div class="combo-dish-ibar">
 															<div class="combo-dish-ibar__item">
 																<span class="combo-dish__weight">250 гр.</span>
@@ -808,18 +860,48 @@ ga('require', 'ecommerce');
 															Курица, домашняя лапша, перепелиное яйцо, зелень.
 														</div>
 													</div>
+													<div class="combo-dish__select-switch-box">
+														<span class="pretty-control pretty-control--default pretty-control--radio">
+															<input type="radio" class="pretty-control__input combo-select__switch" name="c-soup-d2" id="c-soup-d2-1">
+															<span class="pretty-control__item"></span>
+														</span>
+													</div>
 												</div>
+											</div>
+										</div>
+									</div>
+			
+									<div class="combo__footer">
+										<div class="combo__f-row">
+											<div class="combo__f-col">
+												<span class="count count--default count--lite count--joint count--block count--inherit-font crt2-dish__count">
+													<button class="count__minus" type="button">-</button>
+													<input type="text" value="1" class="count__field">
+													<button class="count__plus" type="button">+</button>
+												</span>
+											</div>
+											<div class="combo__f-col combo__f-col--price">
+												<span class="combo__f-price"><span class="combo__f-price-num">400</span> <span class="c-rub">₽</span></span>
+											</div>
+											<div class="combo__f-col">
+												<button type="button" class="button button--default button--m combo__f-add-to-basket">
+													<span class="button__icon button__icon--cart-white"></span>
+													<span class="button__text">Купить</span>
+												</button>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
+							
+							<!-- Полный обед 3 -->
 							<div class="combo-col">
 								<div class="combo combo--complex">
 									<div class="combo__title">
-										<span class="combo__title-text">Комплекс 3:</span><span class="combo__title-price">400 <span class="c-rub">₽</span></span>
+										<span class="combo__title-text">Комплекс 3</span>
 									</div>
 									
+									<!-- Полный обед 3. Список блюд -->
 									<div class="combo-group-list">
 										<div class="combo-group">
 											<div class="combo-dish">
@@ -873,17 +955,21 @@ ga('require', 'ecommerce');
 												</div>
 											</div>
 										</div>
-										<div class="combo-group">
+			
+										<!-- Полный обед 3. Супы -->
+										<div class="combo-group combo-select">
 											<span class="combo-group-title">Суп на выбор</span>
 											<div class="combo-dish-list">
-												<div class="combo-dish">
+												
+												<!-- Полный обед 3. Суп 1 -->
+												<div class="combo-dish combo-select__option">
 													<div class="combo-dish__image-box">
 														<img src="images/combo-soup-krem-sup-iz-shpinata-170x124.jpg" class="combo-dish__image" alt="">
 													</div>
 													<div class="combo-dish__name-box">
-														<div class="combo-dish__name-wrapper">
+														<label class="combo-dish__name-label" for="c-soup-d4-0">
 															<span class="combo-dish__name">Крем-суп из шпината</span>
-														</div>
+														</label>
 														<div class="combo-dish-ibar">
 															<div class="combo-dish-ibar__item">
 																<span class="combo-dish__weight">250 гр.</span>
@@ -899,18 +985,23 @@ ga('require', 'ecommerce');
 															Шпинат, картофель, репчатый лук, сливки, оливковое масло.
 														</div>
 													</div>
+													<div class="combo-dish__select-switch-box">
+														<span class="pretty-control pretty-control--default pretty-control--radio">
+															<input type="radio" class="pretty-control__input combo-select__switch" name="c-soup-d4" id="c-soup-d4-0">
+															<span class="pretty-control__item"></span>
+														</span>
+													</div>
 												</div>
-												<div class="combo-or">
-													<span class="combo-or__text">Или</span>
-												</div>
-												<div class="combo-dish">
+			
+												<!-- Полный обед 3. Суп 2 -->
+												<div class="combo-dish combo-select__option">
 													<div class="combo-dish__image-box">
 														<img src="images/combo-soup-sup-lapsha-170x124.jpg" class="combo-dish__image" alt="">
 													</div>
 													<div class="combo-dish__name-box">
-														<div class="combo-dish__name-wrapper">
+														<label class="combo-dish__name-label" for="c-soup-d4-1">
 															<span class="combo-dish__name">Суп-лапша</span>
-														</div>
+														</label>
 														<div class="combo-dish-ibar">
 															<div class="combo-dish-ibar__item">
 																<span class="combo-dish__weight">250 гр.</span>
@@ -926,7 +1017,34 @@ ga('require', 'ecommerce');
 															Курица, домашняя лапша, перепелиное яйцо, зелень.
 														</div>
 													</div>
+													<div class="combo-dish__select-switch-box">
+														<span class="pretty-control pretty-control--default pretty-control--radio">
+															<input type="radio" class="pretty-control__input combo-select__switch" name="c-soup-d4" id="c-soup-d4-1">
+															<span class="pretty-control__item"></span>
+														</span>
+													</div>
 												</div>
+											</div>
+										</div>
+									</div>
+			
+									<div class="combo__footer">
+										<div class="combo__f-row">
+											<div class="combo__f-col">
+												<span class="count count--default count--lite count--joint count--block count--inherit-font crt2-dish__count">
+													<button class="count__minus" type="button">-</button>
+													<input type="text" value="1" class="count__field">
+													<button class="count__plus" type="button">+</button>
+												</span>
+											</div>
+											<div class="combo__f-col combo__f-col--price">
+												<span class="combo__f-price"><span class="combo__f-price-num">400</span> <span class="c-rub">₽</span></span>
+											</div>
+											<div class="combo__f-col">
+												<button type="button" class="button button--default button--m combo__f-add-to-basket">
+													<span class="button__icon button__icon--cart-white"></span>
+													<span class="button__text">Купить</span>
+												</button>
 											</div>
 										</div>
 									</div>
@@ -936,16 +1054,21 @@ ga('require', 'ecommerce');
 					</div>
 				</div>
 			
+				<!-- Легкие обеды -->
 				<div class="combo-section combo-section--complex">
 					<h2 class="ttl ttl--2 combo-section-title combo-section-title--complex">Легкий обед</h2>
 			
 					<div class="combo-grid combo-grid--complex">
 						<div class="combo-row">
+			
+							<!-- Легкий обед 1 -->
 							<div class="combo-col">
 								<div class="combo combo--complex">
 									<div class="combo__title">
-										<span class="combo__title-text">Комплекс 1:</span><span class="combo__title-price">340 <span class="c-rub">₽</span></span>
+										<span class="combo__title-text">Комплекс 1</span>
 									</div>
+									
+									<!-- Легкий обед 1. Список блюд -->
 									<div class="combo-group-list">
 										<div class="combo-group">
 											<div class="combo-dish">
@@ -1000,13 +1123,38 @@ ga('require', 'ecommerce');
 											</div>
 										</div>
 									</div>
+			
+									<div class="combo__footer">
+										<div class="combo__f-row">
+											<div class="combo__f-col">
+												<span class="count count--default count--lite count--joint count--block count--inherit-font crt2-dish__count">
+													<button class="count__minus" type="button">-</button>
+													<input type="text" value="1" class="count__field">
+													<button class="count__plus" type="button">+</button>
+												</span>
+											</div>
+											<div class="combo__f-col combo__f-col--price">
+												<span class="combo__f-price"><span class="combo__f-price-num">340</span> <span class="c-rub">₽</span></span>
+											</div>
+											<div class="combo__f-col">
+												<button type="button" class="button button--default button--m combo__f-add-to-basket">
+													<span class="button__icon button__icon--cart-white"></span>
+													<span class="button__text">Купить</span>
+												</button>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
+			
+							<!-- Легкий обед 2 -->
 							<div class="combo-col">
 								<div class="combo combo--complex">
 									<div class="combo__title">
-										<span class="combo__title-text">Комплекс 2:</span><span class="combo__title-price">340 <span class="c-rub">₽</span></span>
+										<span class="combo__title-text">Комплекс 2</span>
 									</div>
+			
+									<!-- Легкий обед 2. Список блюд -->
 									<div class="combo-group-list">
 										<div class="combo-group">
 											<div class="combo-dish">
@@ -1061,13 +1209,38 @@ ga('require', 'ecommerce');
 											</div>
 										</div>
 									</div>
+			
+									<div class="combo__footer">
+										<div class="combo__f-row">
+											<div class="combo__f-col">
+												<span class="count count--default count--lite count--joint count--block count--inherit-font crt2-dish__count">
+													<button class="count__minus" type="button">-</button>
+													<input type="text" value="1" class="count__field">
+													<button class="count__plus" type="button">+</button>
+												</span>
+											</div>
+											<div class="combo__f-col combo__f-col--price">
+												<span class="combo__f-price"><span class="combo__f-price-num">340</span> <span class="c-rub">₽</span></span>
+											</div>
+											<div class="combo__f-col">
+												<button type="button" class="button button--default button--m combo__f-add-to-basket">
+													<span class="button__icon button__icon--cart-white"></span>
+													<span class="button__text">Купить</span>
+												</button>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
+							
+							<!-- Легкий обед 3 -->
 							<div class="combo-col">
-								<div class="combo combo--complex">
+								<div class="combo combo--complex combo--h-auto">
 									<div class="combo__title">
-										<span class="combo__title-text">Комплекс 3:</span><span class="combo__title-price">340 <span class="c-rub">₽</span></span>
+										<span class="combo__title-text">Комплекс 3</span>
 									</div>
+									
+									<!-- Легкий обед 3. Список блюд -->
 									<div class="combo-group-list">
 										<div class="combo-group">
 											<div class="combo-dish">
@@ -1119,6 +1292,27 @@ ga('require', 'ecommerce');
 														Куриное филе, болгарский перец, томаты, репчатый лук, кабачок, соевый соус, розмарин, микс салата, соус песто, крем-бальзамик, базилик, соус ранч, итальянские травы.
 													</div>
 												</div>
+											</div>
+										</div>
+									</div>
+			
+									<div class="combo__footer">
+										<div class="combo__f-row">
+											<div class="combo__f-col">
+												<span class="count count--default count--lite count--joint count--block count--inherit-font crt2-dish__count">
+													<button class="count__minus" type="button">-</button>
+													<input type="text" value="1" class="count__field">
+													<button class="count__plus" type="button">+</button>
+												</span>
+											</div>
+											<div class="combo__f-col combo__f-col--price">
+												<span class="combo__f-price"><span class="combo__f-price-num">340</span> <span class="c-rub">₽</span></span>
+											</div>
+											<div class="combo__f-col">
+												<button type="button" class="button button--default button--m combo__f-add-to-basket">
+													<span class="button__icon button__icon--cart-white"></span>
+													<span class="button__text">Купить</span>
+												</button>
 											</div>
 										</div>
 									</div>
