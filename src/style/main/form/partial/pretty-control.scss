@@ -30,8 +30,8 @@
 
 		#{$b}__item {
 			box-sizing: border-box;
-			width: 16px;
-			height: 16px;
+			width: $pretty-control-width;
+			height: $pretty-control-height;
 			border: 1px solid $color-main;
 
 			&:before {

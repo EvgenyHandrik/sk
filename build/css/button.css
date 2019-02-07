@@ -44,17 +44,8 @@
   opacity: 0;
 }
 
-.button--default .button__icon--18 {
-  width: 18px;
-  height: 18px;
-  margin-right: 5px;
-}
-
-.button--default .button__icon--18:before,
-.button--default .button__icon--18:after {
-  width: 18px;
-  height: 18px;
-  background-size: 18px 18px;
+.button--default .button__icon--cart-white:before {
+  background-image: url(../images/ico-54x54-cart.png);
 }
 
 .button--default .button__icon--x-bold-dark-grey:before {
@@ -115,13 +106,35 @@
   height: 42px;
   line-height: 42px;
   padding: 0 15px 0 15px;
+  border-radius: 5px;
   /* -- */
+}
+
+.button--default.button--m:before {
+  border-radius: 5px;
 }
 
 .button--default.button--m .button__text {
   display: inline;
   font-size: 14px;
   vertical-align: baseline;
+}
+
+.button--default.button--m .button__icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+}
+
+.button--default.button--m .button__icon:before,
+.button--default.button--m .button__icon:after {
+  width: 18px;
+  height: 18px;
+  background-size: 18px 18px;
+}
+
+.button--default.button--m .button__icon:last-child {
+  margin-right: 0;
 }
 
 .button--default.button--m.button--min-width {

@@ -39,16 +39,9 @@
 
 			/* -- */
 
-			&--18 {
-				width: 18px;
-				height: 18px;
-				margin-right: 5px;
-
-				&:before,
-				&:after {
-					width: 18px;
-					height: 18px;
-					background-size: 18px 18px;
+			&--cart-white {
+				&:before {
+					background-image: url(../images/ico-54x54-cart.png);
 				}
 			}
 
@@ -127,11 +120,33 @@
 			height: 42px;
 			line-height: 42px;
 			padding: 0 15px 0 15px;
+			border-radius: 5px;
+
+			&:before {
+				border-radius: 5px;
+			}
 
 			.button__text {
 				display: inline;
 				font-size: 14px;
 				vertical-align: baseline;
+			}
+
+			.button__icon {
+				width: 18px;
+				height: 18px;
+				margin-right: 5px;
+
+				&:before,
+				&:after {
+					width: 18px;
+					height: 18px;
+					background-size: 18px 18px;
+				}
+
+				&:last-child {
+					margin-right: 0;
+				}
 			}
 
 			/* -- */

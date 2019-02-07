@@ -65,3 +65,29 @@
 	});
 
 }());
+
+
+// Combo Select
+;(function() {
+
+	var $box = $('.js-combo-select-delegate');
+
+	$box.on('change', '.combo-select__switch', function() {
+		var $switch = $(this);
+		var $select = $switch.closest('.combo-select');		
+		setStyle($select, $switch);
+	});
+
+	function setStyle($select, $switch) {
+		if ($select && $select.length) {
+			
+			$switch = $switch || $select.find('.combo-select__switch:checked');
+			var $option = $switch.closest('.combo-select__option');
+			var $prevOption = $select.find('.combo-select__option--selected');
+			
+			$prevOption.removeClass('combo-select__option--selected');
+			$option.addClass('combo-select__option--selected');
+		}
+	}
+
+}());

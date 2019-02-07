@@ -4,10 +4,16 @@ $combo-dish-image-height: 62px;
 .combo-dish {
 	display: table;
 	width: 100%;
+	margin: 0 0 $combo-dish-v-space 0;
 	font-family: Roboto, Arimo, sans-serif;
 
+	&:last-child {
+		margin-bottom: 0;
+	}
+
 	&__image-box,
-	&__name-box {
+	&__name-box,
+	&__select-switch-box {
 		display: table-cell;
 		vertical-align: top;
 	}
@@ -46,6 +52,10 @@ $combo-dish-image-height: 62px;
 		margin: 0 0 5px 0;
 	}
 
+	&__name-label {
+		margin: 0 0 5px 0;
+	}
+
 	&__name {
 		font-size: 15px;
 		border: 0;
@@ -71,6 +81,16 @@ $combo-dish-image-height: 62px;
 		border-radius: 30px;
 		color: #000;
 		background-color: #e5e5e5;
+	}
+
+	/* -- */
+
+	&__select-switch-box {
+		padding: (($combo-dish-image-height - $pretty-control-height) / 2) 5px 0 15px;
+
+		@media (max-width: 360px) {
+			padding-right: 0;
+		}
 	}
 }
 

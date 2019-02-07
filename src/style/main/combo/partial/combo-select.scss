@@ -1,0 +1,15 @@
+.combo-select {
+	&__option {
+		.combo-dish__name {
+			color: $color-grey-light;
+		}
+
+		&--selected {
+			.combo-dish__name {
+				color: #000;
+			}
+		}
+	}
+
+	&__switch {}
+}
