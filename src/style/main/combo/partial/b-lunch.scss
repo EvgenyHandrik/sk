@@ -1,0 +1,38 @@
+.b-lunch {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+
+	@media (max-width: $b-lunch-bp-mobile) {
+		display: block;
+	}
+
+	&__title {
+		display: block;
+		flex: none;
+		margin: 0 0 20px 0;
+		font-weight: bold;
+		font-size: 20px;
+	}
+
+	&__dishes {
+		flex: 1 1 100%;
+		padding: 15px 10px;
+		border: 1px solid $border-color-grey-light;
+		border-radius: 10px;
+	}
+}
+
+/* -- */
+
+.combo-c-info {
+	&--b-lunch {
+		margin-bottom: 20px;
+	}
+}
+
+.combo-phone {
+	&--b-lunch {
+		margin-bottom: 20px;
+	}
+}

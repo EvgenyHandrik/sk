@@ -1,10 +1,17 @@
 .b-lunch-dish {
 	display: table;
+	width: 100%;
+	margin: 0 0 15px 0;
 	font-family: Roboto, Arimo, sans-serif;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
 
 	&__control-box,
 	&__name-box {
 		display: table-cell;
+		vertical-align: top;
 	}
 
 	/* -- */
@@ -14,6 +21,8 @@
 	/* -- */
 
 	&__name-box {
+		width: 100%;
+		padding-top: 1px;
 		padding-left: 10px;
 
 		&:first-child {
@@ -21,7 +30,9 @@
 		}
 	}
 
-	&__header {}
+	&__header {
+		margin: 0 0 5px 0;
+	}
 
 	&__h-row {
 		position: relative;
@@ -37,12 +48,14 @@
 		}
 
 		&--price {
+			padding-left: 10px;
 			vertical-align: bottom;
 		}
 	}
 
-	&__name-container {
+	&__name-wrapper {
 		position: relative;
+		display: block;
 
 		&:before {
 			content: '';
@@ -55,11 +68,10 @@
 		}
 	}
 
-	&__name-label {
-		position: relative;
-	}
+	&__name-label {}
 
 	&__name {
+		position: relative;
 		padding: 0 10px 0 0;
 		font-size: 16px;
 		background-color: #fff;
@@ -75,5 +87,71 @@
 		&-rub {
 			margin-left: 5px;
 		}
+	}
+
+	/* -- */
+
+	&__weight {
+		font-size: 13px;
+		color: $color-grey-light;
+	}
+}
+
+.b-lunch-dish-list {}
+
+.b-lunch-dish-ibar {
+	&__row {
+		font-size: 1px;
+	}
+
+	&__col {
+		display: inline-block;
+		margin: 0 10px 0 0;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.b-lunch-dish-brief-toggle {
+	$b: &;
+
+	display: inline;
+	line-height: 1.3;
+	border-bottom: 1px dashed $color-grey-light;
+	font-size: 13px;
+	color: $color-grey-light;
+	background: transparent;
+	@include transition((color, border-color));
+	cursor: pointer;
+
+	&:hover,
+	&--active {
+		color: $color-red;
+		border-color: $color-red;
+	}
+
+	@media (hover: none) {
+		&:hover {
+			color: $color-grey-light;
+			border-color: $color-grey-light;
+			
+			&#{$b}--active {
+				color: $color-red;
+				border-color: $color-red;
+			}
+		}
+  }
+}
+
+.b-lunch-dish-brief {
+	line-height: 1.5;
+	margin: 5px 0 0 0;
+	font-size: 15px;
+	color: $color-grey-light;
+
+	&--hidden {
+		display: none;
 	}
 }

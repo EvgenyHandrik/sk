@@ -72,7 +72,7 @@
 
 	var $box = $('.js-combo-select-delegate');
 
-	$box.on('change', '.combo-select__switch', function() {
+	$box.on('change.combo-select', '.combo-select__switch', function() {
 		var $switch = $(this);
 		var $select = $switch.closest('.combo-select');		
 		setStyle($select, $switch);
@@ -89,5 +89,25 @@
 			$option.addClass('combo-select__option--selected');
 		}
 	}
+
+}());
+
+// b-lunch-dish brief toggle
+;(function() {
+
+	$('.js-b-lunch-dbrief-toggle-delegate')
+		.on('click.brief-toggle-delegate', '.b-lunch-dish-brief-toggle', function() {
+			$button = $(this);
+			$dish = $button.closest('.b-lunch-dish');
+			$brief = $dish.find('.b-lunch-dish-brief');
+
+			if ($brief.hasClass('b-lunch-dish-brief--hidden')) {
+				$brief.removeClass('b-lunch-dish-brief--hidden');
+				$button.addClass('b-lunch-dish-brief-toggle--active');
+			} else {
+				$brief.addClass('b-lunch-dish-brief--hidden');
+				$button.removeClass('b-lunch-dish-brief-toggle--active');
+			}
+		});
 
 }());
