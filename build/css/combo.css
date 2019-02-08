@@ -325,7 +325,8 @@ a.combo-dish__name:hover {
 .combo-or {
   position: relative;
   width: 85px;
-  padding: 15px 0;
+  margin: -5px 0 15px 0;
+  /* combo-dish margin-bottom: 20px */
   text-align: center;
 }
 

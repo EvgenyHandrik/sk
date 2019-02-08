@@ -123,7 +123,7 @@ gulp.task('serve', function() {
 			baseDir: 'build/',
 			index: 'index.html'
 		},
-		reloadDebounce: 1000
+		reloadDebounce: 2000
 	});
 
 	browserSync.watch('build/**/*.*')

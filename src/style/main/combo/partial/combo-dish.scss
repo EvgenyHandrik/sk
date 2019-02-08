@@ -152,7 +152,7 @@ $combo-dish-image-height: 62px;
 .combo-or {
 	position: relative;
 	width: $combo-dish-image-width;
-	padding: 15px 0;
+	margin: -5px 0 15px 0; /* combo-dish margin-bottom: 20px */
 	text-align: center;
 
 	&:before {
