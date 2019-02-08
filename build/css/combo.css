@@ -574,6 +574,78 @@ a.combo-dish__name:hover {
   margin-bottom: 30px;
 }
 
+.b-lunch-dish {
+  display: table;
+  font-family: Roboto, Arimo, sans-serif;
+  /* -- */
+  /* -- */
+}
+
+.b-lunch-dish__control-box,
+.b-lunch-dish__name-box {
+  display: table-cell;
+}
+
+.b-lunch-dish__name-box {
+  padding-left: 10px;
+}
+
+.b-lunch-dish__name-box:first-child {
+  padding-left: 0;
+}
+
+.b-lunch-dish__h-row {
+  position: relative;
+  display: table;
+  width: 100%;
+}
+
+.b-lunch-dish__h-col {
+  display: table-cell;
+}
+
+.b-lunch-dish__h-col--name {
+  width: 100%;
+}
+
+.b-lunch-dish__h-col--price {
+  vertical-align: bottom;
+}
+
+.b-lunch-dish__name-container {
+  position: relative;
+}
+
+.b-lunch-dish__name-container:before {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #f0f0f0;
+}
+
+.b-lunch-dish__name-label {
+  position: relative;
+}
+
+.b-lunch-dish__name {
+  padding: 0 10px 0 0;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+.b-lunch-dish__price {
+  font-weight: bold;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.b-lunch-dish__price-rub {
+  margin-left: 5px;
+}
+
 @media (max-width: 1200px) {
   .combo-grid--complex > .combo-row:last-child {
     margin-bottom: -20px;

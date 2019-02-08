@@ -1,0 +1,79 @@
+.b-lunch-dish {
+	display: table;
+	font-family: Roboto, Arimo, sans-serif;
+
+	&__control-box,
+	&__name-box {
+		display: table-cell;
+	}
+
+	/* -- */
+
+	&__control-box {}
+
+	/* -- */
+
+	&__name-box {
+		padding-left: 10px;
+
+		&:first-child {
+			padding-left: 0;
+		}
+	}
+
+	&__header {}
+
+	&__h-row {
+		position: relative;
+		display: table;
+		width: 100%;
+	}
+
+	&__h-col {
+		display: table-cell;
+
+		&--name {
+			width: 100%;
+		}
+
+		&--price {
+			vertical-align: bottom;
+		}
+	}
+
+	&__name-container {
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			bottom: 5px;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background-color: #f0f0f0;
+		}
+	}
+
+	&__name-label {
+		position: relative;
+	}
+
+	&__name {
+		padding: 0 10px 0 0;
+		font-size: 16px;
+		background-color: #fff;
+	}
+
+	&__price {
+		font-weight: bold;
+		font-size: 16px;
+		white-space: nowrap;
+
+		&-num {}
+
+		&-rub {
+			margin-left: 5px;
+		}
+	}
+}
