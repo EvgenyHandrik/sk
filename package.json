@@ -22,6 +22,6 @@
     "gulp-sass": "^4.0.1"
   },
   "dependencies": {
-    "air-datepicker": "^2.2.3"
+    "photoswipe": "^4.1.3"
   }
 }

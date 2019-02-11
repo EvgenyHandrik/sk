@@ -111,3 +111,38 @@
 		});
 
 }());
+
+// PhotoSwipe Gallery
+;(function() {
+
+	var defaults = {
+		pswpElement: $('.pswp')[0],
+		pswpClass: PhotoSwipeUI_Default,
+		options: {
+			mainClass: 'pswp--sk-default',
+			bgOpacity: 0.8,
+			shareEl: false
+		}
+	}
+
+	var $box = $('.js-combo-dish-pswp-delegate');
+
+	$box.on('click.photoswipe-show', '.combo-dish__image-button', function(e) {
+		e.preventDefault();
+
+		var data = $(this).data('gallery');
+
+		show($.extend(true, {}, defaults, data));
+	});
+
+	function show(opts) {
+		var pswpElement = opts.pswpElement;
+		var pswpClass = opts.pswpClass;
+		var items = opts.items;
+		var options = opts.options;
+
+		var gallery = new PhotoSwipe(pswpElement, pswpClass, items, options);
+		gallery.init();
+	}
+
+}());

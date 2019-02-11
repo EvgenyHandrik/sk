@@ -41,7 +41,7 @@ gulp.task('sass:main', function() {
 });
 
 gulp.task('css:vendor', function() {
-	return gulp.src('src/style/vendor/**/*.css', {since: gulp.lastRun('css:vendor')})
+	return gulp.src('src/style/vendor/**/*.*', {since: gulp.lastRun('css:vendor')})
 		.pipe(gulp.dest('build/css/vendor/'));
 });
 
