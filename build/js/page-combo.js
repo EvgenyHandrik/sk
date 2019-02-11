@@ -121,7 +121,8 @@
 		options: {
 			mainClass: 'pswp--sk-default',
 			bgOpacity: 0.8,
-			shareEl: false
+			shareEl: false,
+			fullscreenEl: false
 		}
 	}
 
