@@ -1,5 +1,13 @@
 /* -- */
 
+.combo-grid {
+  margin: 0 0 45px 0;
+}
+
+.combo-grid:last-child {
+  margin-bottom: 0;
+}
+
 .combo-grid > .combo-row:last-child {
   margin-bottom: -40px;
 }
@@ -72,10 +80,6 @@
   margin: 0 0 10px 0;
   font-weight: bold;
   font-size: 13px;
-}
-
-.combo-container {
-  /* -- */
 }
 
 .combo {
@@ -747,6 +751,14 @@ a.combo-dish__name:hover {
   margin-bottom: 20px;
 }
 
+.b-lunch-grid {
+  margin: 0 0 45px 0;
+}
+
+.b-lunch-grid:last-child {
+  margin-bottom: 0;
+}
+
 .b-lunch-grid > .b-lunch-row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -775,7 +787,16 @@ a.combo-dish__name:hover {
   padding-left: 15px;
 }
 
+.b-lunch-s-total {
+  font-weight: bold;
+  font-size: 24px;
+}
+
 @media (max-width: 1200px) {
+  .combo-grid {
+    margin-bottom: 35px;
+  }
+
   .combo-grid--complex > .combo-row:last-child {
     margin-bottom: -20px;
   }
@@ -792,20 +813,16 @@ a.combo-dish__name:hover {
     padding-left: 10px;
   }
 
-  .combo-container {
-    margin-bottom: 15px;
-  }
-
-  .combo-container--complex {
-    margin-bottom: 10px;
-  }
-
   .combo-section--complex {
     margin-bottom: 35px;
   }
 
   .combo-sktab {
     margin-top: 25px;
+  }
+
+  .b-lunch-grid {
+    margin-bottom: 35px;
   }
 
   .b-lunch-grid > .b-lunch-row:last-child {
@@ -823,13 +840,13 @@ a.combo-dish__name:hover {
   .b-lunch-grid > .b-lunch-row > .b-lunch-col:nth-of-type(even) {
     padding-left: 10px;
   }
-
-  .b-lunch-container {
-    margin-bottom: 10px;
-  }
 }
 
 @media (max-width: 1100px) {
+  .combo-grid {
+    margin-bottom: 35px;
+  }
+
   .combo-grid--complex > .combo-row:last-child {
     margin-bottom: -15px;
   }
@@ -844,6 +861,10 @@ a.combo-dish__name:hover {
 
   .combo-grid--complex > .combo-row > .combo-col:nth-of-type(even) {
     padding-left: 7.5px;
+  }
+
+  .b-lunch-grid {
+    margin-bottom: 35px;
   }
 
   .b-lunch-grid > .b-lunch-row:last-child {
@@ -899,6 +920,10 @@ a.combo-dish__name:hover {
 }
 
 @media (max-width: 800px) {
+  .combo-grid {
+    margin-bottom: 35px;
+  }
+
   .combo-grid--complex > .combo-row:last-child {
     margin-bottom: -10px;
   }
@@ -913,6 +938,10 @@ a.combo-dish__name:hover {
 
   .combo-grid--complex > .combo-row > .combo-col:nth-of-type(even) {
     padding-left: 5px;
+  }
+
+  .b-lunch-grid {
+    margin-bottom: 35px;
   }
 
   .b-lunch-grid > .b-lunch-row:last-child {
@@ -933,6 +962,10 @@ a.combo-dish__name:hover {
 }
 
 @media (max-width: 680px) {
+  .combo-grid {
+    margin-bottom: 60px;
+  }
+
   .combo-grid--complex > .combo-row {
     display: block;
   }
@@ -960,14 +993,6 @@ a.combo-dish__name:hover {
 
   .combo-col:nth-of-type(even) {
     padding-left: 0;
-  }
-
-  .combo-container {
-    margin-bottom: 35px;
-  }
-
-  .combo-container--complex {
-    margin-bottom: 20px;
   }
 
   .combo {
@@ -1016,6 +1041,10 @@ a.combo-dish__name:hover {
     display: block;
   }
 
+  .b-lunch-grid {
+    margin-bottom: 60px;
+  }
+
   .b-lunch-grid > .b-lunch-row {
     display: block;
   }
@@ -1030,10 +1059,6 @@ a.combo-dish__name:hover {
 
   .b-lunch-grid > .b-lunch-row > .b-lunch-col:nth-of-type(even) {
     padding-left: 0;
-  }
-
-  .b-lunch-container {
-    margin-bottom: 40px;
   }
 }
 

@@ -33,6 +33,16 @@
 		}
 	}
 
+	&--padding-bottom-m {
+		@media (max-width: 1200px) {
+			padding-bottom: 40px;
+		}
+
+		@media (max-width: 1100px) {
+			padding-bottom: 40px;
+		}
+	}
+
 	/* -- */
 
 	@media (max-width: 930px) {

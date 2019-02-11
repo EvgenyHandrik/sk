@@ -1,9 +1,2 @@
 .b-lunch-container {
-	@media (max-width: 1200px) {
-		margin-bottom: 10px;
-	}
-
-	@media (max-width: $b-lunch-bp-mobile) {
-		margin-bottom: 30px + 10px;
-	}
 }
