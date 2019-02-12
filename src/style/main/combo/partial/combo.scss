@@ -42,25 +42,54 @@
 	&__f-col {
 		display: table-cell;
 		vertical-align: middle;
+		text-align: right;
 
-		&--price {
-			width: 100%;
+		&--count {
+			font-size: 1px;
 		}
+
+		&--price {}
+
+		&--add-to-cart {}
 	}
 
-	
+	&__f-count {}
 
-	@mixin combo-footer-desktop {
-		&__f-col {
-			&--price {
-				text-align: left;
-				padding-left: 30px;
-			}
+	&__f-price {
+		display: inline-block;
+		font-weight: bold;
+		font-family: Roboto, Arimo, sans-serif;
+		white-space: nowrap;
+		vertical-align: middle;
+	}
+
+	@mixin combo-footer-big {
+		&__f-count {
+			$f-count-height: 42px - 2px;
+			$f-count-button-width: 30px;
+	
+			display: inline-block;
+			vertical-align: middle;
+	
+			&.count--default.count--joint {
+				width: 44px + 2px + $f-count-button-width * 2;
+	
+				.count__minus,
+				.count__plus {
+					width: $f-count-button-width;
+					height: $f-count-height;
+				}
+	
+				.count__field {
+					height: $f-count-height;
+					font-family: Roboto, Arimo, sans-serif;
+					font-size: 22px;
+				}
+			}		
 		}
 
 		&__f-price {
-			font-weight: bold;
-			font-size: 19px;
+			font-size: 22px;
 		}
 
 		&__f-add-to-basket {
@@ -90,18 +119,55 @@
 		}
 	}
 
-	@mixin combo-footer-mobile {
+	@mixin combo-footer-right {
 		&__f-col {
-			&--price {
-				padding-left: 0;
-				text-align: center;
+			text-align: right;
+
+			&--count {
+				width: 100%;
 			}
+
+			&--price {
+				width: auto;
+				padding-left: 30px;
+			}
+
+			&--add-to-basket {
+				padding-left: 30px;
+			}
+		}
+	}
+
+	@mixin combo-footer-small {
+		&__f-count {
+			$f-count-height: 38px - 2px;
+			$f-count-button-width: 25px;
+	
+			display: inline-block;
+			vertical-align: middle;
+	
+			&.count--default.count--joint {
+				width: 44px + 2px + $f-count-button-width * 2;
+	
+				.count__minus,
+				.count__plus {
+					width: $f-count-button-width;
+					height: $f-count-height;
+				}
+	
+				.count__field {
+					height: $f-count-height;
+					font-family: Roboto, Arimo, sans-serif;
+					font-size: 19px;
+				}
+			}		
 		}
 
 		&__f-price {
-			font-size: 18px;
+			font-size: 19px;
+			font-size: 21px;
 		}
-
+		
 		&__f-add-to-basket {
 			&.button--default {
 				height: 38px;
@@ -129,18 +195,47 @@
 		}
 	}
 
-	@include combo-footer-desktop();
+	@mixin combo-footer-center {
+		&__f-col {
+			text-align: center;
 
-	@media (max-width: 860px) {
-		@include combo-footer-mobile();
+			&--count {
+				width: auto;
+			}
+
+			&--price {
+				width: 100%;
+				padding-left: 0;
+			}
+
+			&--add-to-basket {
+				padding-left: 0;
+			}
+		}
+	}
+
+	@include combo-footer-big();
+	@include combo-footer-right();
+
+	@media (max-width: 890px) {
+		@include combo-footer-center();
+	}
+
+	@media (max-width: 760px) {
+		@include combo-footer-small();
 	}
 
 	@media (max-width: 680px) {
-		@include combo-footer-desktop();
+		@include combo-footer-right();
+		@include combo-footer-big();
 	}
 
-	@media (max-width: 400px) {
-		@include combo-footer-mobile();
+	@media (max-width: 480px) {
+		@include combo-footer-center();
+	}
+
+	@media (max-width: 380px) {
+		@include combo-footer-small();
 	}
 
 	@media (max-width: 360px) {

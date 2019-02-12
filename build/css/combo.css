@@ -115,20 +115,44 @@
 .combo__f-col {
   display: table-cell;
   vertical-align: middle;
+  text-align: right;
 }
 
-.combo__f-col--price {
-  width: 100%;
-}
-
-.combo__f-col--price {
-  text-align: left;
-  padding-left: 30px;
+.combo__f-col--count {
+  font-size: 1px;
 }
 
 .combo__f-price {
+  display: inline-block;
   font-weight: bold;
-  font-size: 19px;
+  font-family: Roboto, Arimo, sans-serif;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.combo__f-count {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.combo__f-count.count--default.count--joint {
+  width: 106px;
+}
+
+.combo__f-count.count--default.count--joint .count__minus,
+.combo__f-count.count--default.count--joint .count__plus {
+  width: 30px;
+  height: 40px;
+}
+
+.combo__f-count.count--default.count--joint .count__field {
+  height: 40px;
+  font-family: Roboto, Arimo, sans-serif;
+  font-size: 22px;
+}
+
+.combo__f-price {
+  font-size: 22px;
 }
 
 .combo__f-add-to-basket.button--default {
@@ -153,6 +177,23 @@
 
 .combo__f-add-to-basket.button--default .button__text {
   font-size: 14px;
+}
+
+.combo__f-col {
+  text-align: right;
+}
+
+.combo__f-col--count {
+  width: 100%;
+}
+
+.combo__f-col--price {
+  width: auto;
+  padding-left: 30px;
+}
+
+.combo__f-col--add-to-basket {
+  padding-left: 30px;
 }
 
 .combo--complex {
@@ -884,38 +925,22 @@ a.combo-dish__name:hover {
   }
 }
 
-@media (max-width: 860px) {
-  .combo__f-col--price {
-    padding-left: 0;
+@media (max-width: 890px) {
+  .combo__f-col {
     text-align: center;
   }
 
-  .combo__f-price {
-    font-size: 18px;
+  .combo__f-col--count {
+    width: auto;
   }
 
-  .combo__f-add-to-basket.button--default {
-    height: 38px;
-    padding-right: 10px;
-    padding-left: 10px;
-    line-height: 38px;
-    font-size: 13px;
+  .combo__f-col--price {
+    width: 100%;
+    padding-left: 0;
   }
 
-  .combo__f-add-to-basket.button--default .button__icon {
-    width: 16px;
-    height: 16px;
-  }
-
-  .combo__f-add-to-basket.button--default .button__icon:before,
-  .combo__f-add-to-basket.button--default .button__icon:after {
-    width: 16px;
-    height: 16px;
-    background-size: 16px 16px;
-  }
-
-  .combo__f-add-to-basket.button--default .button__text {
-    font-size: 13px;
+  .combo__f-col--add-to-basket {
+    padding-left: 0;
   }
 }
 
@@ -961,6 +986,58 @@ a.combo-dish__name:hover {
   }
 }
 
+@media (max-width: 760px) {
+  .combo__f-count {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .combo__f-count.count--default.count--joint {
+    width: 96px;
+  }
+
+  .combo__f-count.count--default.count--joint .count__minus,
+  .combo__f-count.count--default.count--joint .count__plus {
+    width: 25px;
+    height: 36px;
+  }
+
+  .combo__f-count.count--default.count--joint .count__field {
+    height: 36px;
+    font-family: Roboto, Arimo, sans-serif;
+    font-size: 19px;
+  }
+
+  .combo__f-price {
+    font-size: 19px;
+    font-size: 21px;
+  }
+
+  .combo__f-add-to-basket.button--default {
+    height: 38px;
+    padding-right: 10px;
+    padding-left: 10px;
+    line-height: 38px;
+    font-size: 13px;
+  }
+
+  .combo__f-add-to-basket.button--default .button__icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .combo__f-add-to-basket.button--default .button__icon:before,
+  .combo__f-add-to-basket.button--default .button__icon:after {
+    width: 16px;
+    height: 16px;
+    background-size: 16px 16px;
+  }
+
+  .combo__f-add-to-basket.button--default .button__text {
+    font-size: 13px;
+  }
+}
+
 @media (max-width: 680px) {
   .combo-grid {
     margin-bottom: 60px;
@@ -999,14 +1076,46 @@ a.combo-dish__name:hover {
     max-width: 100%;
   }
 
+  .combo__f-col {
+    text-align: right;
+  }
+
+  .combo__f-col--count {
+    width: 100%;
+  }
+
   .combo__f-col--price {
-    text-align: left;
+    width: auto;
     padding-left: 30px;
   }
 
+  .combo__f-col--add-to-basket {
+    padding-left: 30px;
+  }
+
+  .combo__f-count {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .combo__f-count.count--default.count--joint {
+    width: 106px;
+  }
+
+  .combo__f-count.count--default.count--joint .count__minus,
+  .combo__f-count.count--default.count--joint .count__plus {
+    width: 30px;
+    height: 40px;
+  }
+
+  .combo__f-count.count--default.count--joint .count__field {
+    height: 40px;
+    font-family: Roboto, Arimo, sans-serif;
+    font-size: 22px;
+  }
+
   .combo__f-price {
-    font-weight: bold;
-    font-size: 19px;
+    font-size: 22px;
   }
 
   .combo__f-add-to-basket.button--default {
@@ -1091,6 +1200,25 @@ a.combo-dish__name:hover {
   }
 }
 
+@media (max-width: 480px) {
+  .combo__f-col {
+    text-align: center;
+  }
+
+  .combo__f-col--count {
+    width: auto;
+  }
+
+  .combo__f-col--price {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .combo__f-col--add-to-basket {
+    padding-left: 0;
+  }
+}
+
 @media (max-width: 460px) {
   .combo-sktab {
     margin-top: 27px;
@@ -1105,14 +1233,31 @@ a.combo-dish__name:hover {
   }
 }
 
-@media (max-width: 400px) {
-  .combo__f-col--price {
-    padding-left: 0;
-    text-align: center;
+@media (max-width: 380px) {
+  .combo__f-count {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .combo__f-count.count--default.count--joint {
+    width: 96px;
+  }
+
+  .combo__f-count.count--default.count--joint .count__minus,
+  .combo__f-count.count--default.count--joint .count__plus {
+    width: 25px;
+    height: 36px;
+  }
+
+  .combo__f-count.count--default.count--joint .count__field {
+    height: 36px;
+    font-family: Roboto, Arimo, sans-serif;
+    font-size: 19px;
   }
 
   .combo__f-price {
-    font-size: 18px;
+    font-size: 19px;
+    font-size: 21px;
   }
 
   .combo__f-add-to-basket.button--default {

@@ -29,7 +29,7 @@
   display: block;
   height: 25px;
   width: 30px;
-  border: 1px solid #eee;
+  border: 1px solid #f0f0f0;
 }
 
 .count--default.count--lite {
@@ -121,7 +121,7 @@
 
 .count--default.count--lite.count--separate .count__minus,
 .count--default.count--lite.count--separate .count__plus {
-  border: 1px solid #f1f1f1;
+  border: 1px solid #f0f0f0;
   border-radius: 5px;
 }
 
@@ -132,7 +132,7 @@
 
 .count--default.count--lite.count--joint {
   width: 98px;
-  border: 1px solid #f1f1f1;
+  border: 1px solid #f0f0f0;
   border-radius: 5px;
 }
 
