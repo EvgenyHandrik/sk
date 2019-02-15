@@ -94,6 +94,10 @@
   font-size: 20px;
 }
 
+.combo__title--light-grey {
+  background-color: #f9f9f9;
+}
+
 .combo__title-text {
   margin: 0 10px 0 0;
 }
@@ -500,7 +504,7 @@ a.combo-dish__name:hover {
 }
 
 .combo-phone-button:hover .combo-phone-button__number {
-  color: #000;
+  color: #da5848;
 }
 
 .combo-phone-button__title {
