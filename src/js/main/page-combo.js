@@ -48,10 +48,11 @@
 // Combo c-info
 ;(function() {
 
-	var $box = $('.js-combo-c-info');
+	var $boxes = $('.js-combo-c-info');
 	
-	$box.on('click.combo-c-info', '.combo-c-info__button', function() {
-		var $button = $(this);
+	$boxes.on('click.combo-c-info', '.combo-c-info__button', function(e) {
+		var $button = $(e.currentTarget);
+		var $box = $(e.delegateTarget);
 
 		if ($button.hasClass('combo-c-info__button--short')) {
 			$box
