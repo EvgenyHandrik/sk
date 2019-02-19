@@ -9,6 +9,8 @@ var groupCssMediaQueries = require('gulp-group-css-media-queries');
 var browserSync = require('browser-sync').create();
 var remember = require('gulp-remember');
 var cached = require('gulp-cached');
+var changed = require('gulp-changed');
+var path = require('path');
 
 gulp.task('sass:main', function() {
 	return gulp.src([
@@ -37,12 +39,14 @@ gulp.task('sass:main', function() {
 				message: err.message
 			}
 		})))
+		.pipe(changed('build/css', {hasChanged: changed.compareContents}))
 		.pipe(gulp.dest('build/css/'));
 });
 
 gulp.task('css:vendor', function() {
 	return gulp.src('src/style/vendor/**/*.*', {since: gulp.lastRun('css:vendor')})
-		.pipe(gulp.dest('build/css/vendor/'));
+		.pipe(changed('build/css/vendor', {hasChanged: changed.compareContents}))
+		.pipe(gulp.dest('build/css/vendor'));
 });
 
 gulp.task('style', gulp.parallel(
@@ -52,12 +56,14 @@ gulp.task('style', gulp.parallel(
 gulp.task('js:main', function() {
 	return gulp.src('src/js/main/**/*.js',
 			{since: gulp.lastRun('js:main')})
-		.pipe(gulp.dest('build/js/'));
+		.pipe(changed('build/js', {hasChanged: changed.compareContents}))
+		.pipe(gulp.dest('build/js'));
 });
 
 gulp.task('js:vendor', function() {
 	return gulp.src('src/js/vendor/**/*.js',
 			{since: gulp.lastRun('js:vendor')})
+		.pipe(changed('build/js/vendor', {hasChanged: changed.compareContents}))
 		.pipe(gulp.dest('build/js/vendor'));
 });
 
@@ -74,7 +80,8 @@ gulp.task('html:pages', function() {
 				message: err.message
 			}
 		})))
-		.pipe(gulp.dest('build/'));
+		.pipe(changed('build', {hasChanged: changed.compareContents}))
+		.pipe(gulp.dest('build'));
 });
 
 gulp.task('html:partials', function() {
@@ -91,36 +98,40 @@ gulp.task('html:partials', function() {
 				message: err.message
 			}
 		})))
+		.pipe(changed('build', {hasChanged: changed.compareContents}))
 		.pipe(gulp.dest('build/'));
 });
 
 gulp.task('image', function() {
 	return gulp.src('src/images/**/*.*', {since: gulp.lastRun('image')})
-		.pipe(gulp.dest('build/images/'))
+		.pipe(changed('build/images', {hasChanged: changed.compareContents}))
+		.pipe(gulp.dest('build/images'))
 });
 
 gulp.task('font', function() {
 	return gulp.src('src/fonts/**/*.*')
-		.pipe(gulp.dest('build/fonts/'));
+		.pipe(changed('build/fonts', {hasChanged: changed.compareContents}))
+		.pipe(gulp.dest('build/fonts'));
 });
 
 gulp.task('other:html-files', function() {
 	return gulp.src('src/other/**/*.*')
-		.pipe(gulp.dest('build/'));
+		.pipe(changed('build', {hasChanged: changed.compareContents}))
+		.pipe(gulp.dest('build'));
 });
 
 gulp.task('clean', function() {
 	return del('build/');
 });
 
-gulp.task('build', gulp.series('clean', gulp.parallel(
+gulp.task('build', gulp.parallel(
 	'style', 'js', 'html:pages', 'image', 'font', 'other:html-files'
-)));
+));
 
 gulp.task('serve', function() {
 	browserSync.init({
 		server: {
-			baseDir: 'build/',
+			baseDir: 'build',
 			index: 'index.html'
 		},
 		reloadDebounce: 2000
@@ -135,7 +146,8 @@ gulp.task('watch', function() {
 		'src/style/helpers/**/*.scss',
 		'src/style/main/**/*.scss'
 	], gulp.series('sass:main'))
-		.on('unlink', function(path) {
+		.on('unlink', function(filepath) {
+			if (/partial|helpers/.test(filepath)) return;
 			remember.forget('sassMainMemory', path.resolve(filepath));
 			delete cached.caches.sassMainCache[path.resolve(filepath)];
 		});
