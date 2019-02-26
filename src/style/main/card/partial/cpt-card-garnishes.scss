@@ -1,0 +1,31 @@
+.cpt-card-garnishes {
+	margin: 0 0 30px 0;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&__title {
+		@include cpt-card-addition-title;
+
+		&-text {
+			@include cpt-card-addition-title-text;
+		}
+	}
+
+	&__content {}
+
+	&__list {}
+
+	&__item {
+		margin: 0 0 15px 0;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.cpt-card-garnish {
+	@include pu-garnish();
+}

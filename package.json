@@ -20,7 +20,7 @@
     "gulp-remember": "^1.0.1",
     "gulp-rename": "^1.4.0",
     "gulp-rigger": "^0.5.8",
-    "gulp-sass": "^4.0.1"
+    "gulp-sass": "^4.0.2"
   },
   "dependencies": {
     "photoswipe": "^4.1.3"

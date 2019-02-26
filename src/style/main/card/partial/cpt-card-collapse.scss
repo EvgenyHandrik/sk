@@ -1,0 +1,80 @@
+.cpt-card-collapse {
+	$b: &;
+
+	&__toggle {
+		display: inline-block;
+		background-color: transparent;
+		cursor: pointer;
+
+		&-text {
+			@include transition(color);
+		}
+
+		&-angle {
+			$angle-icon-size: 14px;
+
+			display: inline-block;
+			margin: 0 0 0 7px;
+			width: $angle-icon-size;
+			height: $angle-icon-size;
+			vertical-align: middle;
+			transform: rotate(-90deg);
+
+			&:before,
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: $angle-icon-size;
+				height: $angle-icon-size;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: $angle-icon-size $angle-icon-size;
+				@include transition(opacity);
+			}
+
+			&:before {
+				background-image: img('ico-arr-r-md-black-30x30.svg');
+				opacity: 1;
+			}
+
+			&:after {
+				background-image: img('ico-arr-r-md-red-30x30.svg');
+				opacity: 0;
+			}
+		}
+
+		&:hover {
+			#{$b}__toggle-text {
+				color: $color-red;
+			}
+
+			#{$b}__toggle-angle {
+				&:before {
+					opacity: 0;
+				}
+
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&__content {}
+
+	/* -- */
+
+	&--closed {
+		#{$b}__content {
+			display: none;
+		}
+
+		#{$b}__toggle {
+			&-angle {
+				transform: rotate(90deg);
+			}
+		}
+	}
+}

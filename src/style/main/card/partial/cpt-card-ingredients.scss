@@ -1,0 +1,304 @@
+.cpt-card-ingredients {
+	margin: 0 0 25px 0;
+
+	&__title-toggle {
+		// margin-bottom: $cpt-card-addition-title-margin-bottom + 5px;
+	}
+
+	&__title {
+		&-plus {
+			$plus-icon-size: 24px;
+
+			display: inline-block;
+			width: $plus-icon-size;
+			height: $plus-icon-size;
+			margin: 0 10px 0 0;
+			vertical-align: middle;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: $plus-icon-size $plus-icon-size;
+			background-image: img('ico-plus-circle-flat-red-orange-24x24.svg');
+		}
+
+		&-text {
+			@include cpt-card-addition-title-text;
+		}
+
+		&-angle {}
+	}
+
+	&__content {
+		margin-top: 15px;
+	}
+}
+
+.cpt-card-ingredients-clean-c {
+	margin: 10px 0 0 0;
+	text-align: right;
+}
+
+.cpt-card-ingredients-clean {
+	$b: &;
+	
+	display: inline;
+	font-size: 13px;
+	color: $color-grey-light;
+	overflow: hidden;
+	background-color: transparent;
+	@include transition(color);
+	cursor: pointer;
+
+	&__icon {
+		$clean-icon-size: 14px;
+
+		position: relative;
+		display: inline-block;
+		width: $clean-icon-size;
+		height: $clean-icon-size;
+		margin: 0 5px 0 0;
+		vertical-align: middle;
+
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: $clean-icon-size;
+			height: $clean-icon-size;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: $clean-icon-size $clean-icon-size;
+			transform: translate(-50%, -50%);
+			@include transition(opacity);
+		}
+
+		&:before {
+			background-image: img('ico-reload-grey-30x30.svg');
+			opacity: 1;
+		}
+
+		&:after {
+			background-image: img('ico-reload-red-30x30.svg');
+			opacity: 0;
+		}
+	}
+
+	&__text {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	&:hover {
+		color: $color-red;
+
+		#{$b}__icon {
+			&:before {
+				opacity: 0;
+			}
+	
+			&:after {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+/* -- */
+
+.cpt-card-ingredient-list {
+	display: table;
+	width: 100%;
+
+	@media (max-width: $bp-cpt-card-ingredient-mobile) {
+		display: block;
+		width: auto;
+	}
+}
+
+.cpt-card-ingredient {
+	$b: &;
+
+	display: table-row;
+	font-family: Roboto, Arimo, sans-serif;
+
+	@media (max-width: $bp-cpt-card-ingredient-mobile) {
+		position: relative;
+		display: block;
+		padding: $cpt-card-ingredient-padding-v 0 ($cpt-card-ingredient-padding-v + 30px + 20px) 0;
+		border-bottom: 1px solid $border-color-grey-light;
+
+		&:after {
+			content: '';
+			display: block;
+			clear: both;
+			font-size: 1px;
+		}
+
+		&:first-child {
+			// border-top: 0;
+			// padding-top: 0;
+
+			border-top: 1px solid #f0f0f0;
+		}
+
+		// &:last-child {
+		// 	padding-bottom: 30px + 20px;
+		// 	border-bottom: 0;
+
+		// 	#{$b}__count-box {
+		// 		bottom: 0;
+		// 	}
+
+		// 	#{$b}__price-box {
+		// 		bottom: 0;
+		// 	}
+		// }
+	}
+
+	&:last-child {
+		.cpt-card-ingredient__image-box,
+		.cpt-card-ingredient__name-box,
+		.cpt-card-ingredient__count-box,
+		.cpt-card-ingredient__price-box {
+			padding-bottom: 0;
+		}
+	}
+
+	&__image-box,
+	&__name-box,
+	&__count-box,
+	&__price-box {
+		display: table-cell;
+		padding-bottom: 25px;
+		vertical-align: middle;
+
+		@media (max-width: $bp-cpt-card-ingredient-mobile) {
+			display: block;
+			padding-bottom: 0;
+		}
+	}
+
+	/* -- */
+
+	&__image-box {
+		@media (max-width: $bp-cpt-card-ingredient-mobile) {
+			float: left;
+			margin-right: 15px;
+		}
+	}
+
+	&__image-wrapper {
+		display: block;
+		width: 62px;
+		border-radius: 5px;
+		overflow: hidden;
+	}
+
+	&__image {
+		display: block;
+		width: 62px;
+		height: 45px;
+	}
+
+	/* -- */
+
+	&__name-box {
+		width: 100%;
+		line-height: 1.4;
+		padding-left: 15px;
+
+		@media (max-width: $bp-cpt-card-ingredient-mobile) {
+			width: auto;
+			padding-bottom: 0;
+			padding-left: 0;
+			overflow: hidden;
+		}
+	}
+
+	&__name-wrapper {}
+
+	&__name {
+		font-size: 15px;
+		border: 0;
+		color: #000;
+		transition-property: color;
+		transition-duration: 200ms;
+	}
+
+	&__info {
+		display: block;
+		font-size: 13px;
+		color: $color-grey-light;
+	}
+
+	/* -- */
+
+	&__count-box {
+		padding-left: 15px;
+
+		@media (max-width: $bp-cpt-card-ingredient-mobile) {
+			position: absolute;
+			right: 0;
+			bottom: $cpt-card-ingredient-padding-v;
+			min-width: 98px;
+			padding-left: 0;
+		}
+	}
+
+	&__count {
+		vertical-align: middle;
+		
+		&.count--default.count--lite {
+			.count__field {
+				font-size: 16px;
+				font-family: inherit;
+			}
+		}
+	}
+
+	/* -- */
+
+	&__price-box {
+		padding-left: 30px;
+
+		@media (max-width: $bp-cpt-card-ingredient-mobile) {
+			position: absolute;
+			right: 98px + 30px;
+			bottom: $cpt-card-ingredient-padding-v;
+			height: 30px;
+			line-height: 30px;
+			padding-left: 0;
+			text-align: right;
+		}
+	}
+
+	&__price {
+		font-weight: bold;
+		font-size: 16px;
+		white-space: nowrap;
+	}
+}
+
+/* -- */
+
+// Для кнопки очистить справа от заголовка. Сделал её внизу
+// .cpt-card-grid {
+// 	&--ingredients-title {
+// 		margin-bottom: $cpt-card-addition-title-margin-bottom;
+
+// 		& > .cpt-card-row {
+// 			display: table;
+// 			width: 100%;
+
+// 			& > .cpt-card-col {
+// 				display: table-cell;
+// 				vertical-align: middle;
+
+// 				&--title {
+// 					width: 100%;
+// 				}
+// 			}
+// 		}
+// 	}
+// }

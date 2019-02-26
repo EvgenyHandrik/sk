@@ -98,6 +98,8 @@
 	
 	//= ../partial/cart/cartStyles.html
 
+	//= ../partial/card/cardStyles.html
+
 	<title>
 		Ресторан «Своя компания» Екатеринбург - уютный семейный ресторан-кафе в центре
 	</title>
@@ -175,8 +177,10 @@ ga('require', 'ecommerce');
 	</style>
 </head>
 
-
-<body class="body" cz-shortcut-listen="true">
+<!-- [new_content] -->
+<!-- Добавление классов: -->
+<!-- "js-cpt-card-collapse-delegate" (сворачивание ингредиентов)-->
+<body class="body body--blured body--modal js-cpt-card-collapse-delegate js-cpt-card-info-toggle-delegate" cz-shortcut-listen="true">
 
 
 	<!--    -->
@@ -332,6 +336,11 @@ ga('require', 'ecommerce');
 
 	<!-- Карточка товара -->
 	<div class="popup-page" id="card"></div>
+
+
+	<!-- Карточка товара (compact) [new_content] -->
+	//= ../partial/card/cardCompactModalContent.html
+
 	<!-- Форма заказа -->
 	<div class="popup-page" id="order"></div>
 	<!-- Форма отзывов -->
@@ -562,7 +571,7 @@ ga('require', 'ecommerce');
 
 	//= ../partial/common/scripts/mainScripts.html
 
-	//= ../partial/cart/cartScripts.html
+	//= ../partial/card/cardScripts.html
 
 	<script>
 		! function (f, b, e, v, n, t, s) {

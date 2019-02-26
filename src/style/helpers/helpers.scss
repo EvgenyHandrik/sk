@@ -1,6 +1,9 @@
+@import "./variables/path";
 @import "./variables/colors";
 @import "./variables/form";
 @import "./variables/z-index";
+
+@import "./functions/img";
 
 @import "./mixin/user-select-none";
 @import "./mixin/placeholder";
