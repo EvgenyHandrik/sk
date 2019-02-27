@@ -1,0 +1,27 @@
+.cmb-additions-container {
+
+}
+
+.cmb-additions-title {
+	display: block;
+	margin: 0 0 15px 0;
+	font-size: 19px;
+}
+
+.cmb-additions-grid {
+	&--list {
+		& > .cmb-additions-row {
+			display: flex;
+
+			& > .cmb-additions-col {
+				flex: none;
+				width: 260px;
+				margin: 0 0 0 10px;
+
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}

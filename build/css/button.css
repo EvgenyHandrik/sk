@@ -145,6 +145,11 @@
   height: 34px;
   line-height: 34px;
   padding: 0 10px 0 10px;
+  border-radius: 5px;
+}
+
+.button--default.button--s:before {
+  border-radius: 5px;
 }
 
 .button--default.button--s .button__text {

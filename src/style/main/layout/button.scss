@@ -160,6 +160,11 @@
 			height: 34px;
 			line-height: 34px;
 			padding: 0 10px 0 10px;
+			border-radius: 5px;
+
+			&:before {
+				border-radius: 5px;
+			}
 
 			.button__text {
 				display: inline;
