@@ -470,6 +470,45 @@
   vertical-align: middle;
 }
 
+.cpt-card-summary-grid--main > .cpt-card-summary-row {
+  display: table;
+  width: 100%;
+}
+
+.cpt-card-summary-grid--main > .cpt-card-summary-row > .cpt-card-summary-col {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.cpt-card-summary-grid--main > .cpt-card-summary-row > .cpt-card-summary-col--price {
+  width: 100%;
+}
+
+.cpt-card-summary-grid--col-valign-bottom > .cpt-card-summary-row > .cpt-card-summary-col {
+  vertical-align: bottom;
+}
+
+.popup-page__content--cpt-card {
+  width: 550px;
+  padding: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0);
+}
+
+.popup-page__content--cpt-card .cpt-card {
+  -webkit-transition: opacity .2s linear,-webkit-transform .2s linear;
+  transition: opacity .2s linear,-webkit-transform .2s linear;
+  transition: transform .2s linear,opacity .2s linear;
+  transition: transform .2s linear,opacity .2s linear,-webkit-transform .2s linear;
+  border-radius: 8px;
+  background: #fff;
+  padding: 30px;
+  -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+}
+
 @media (max-width: 640px) {
   .cpt-card-ingredient-list {
     display: block;
@@ -533,24 +572,58 @@
   }
 }
 
-@media (max-width: 590px) {
-  .cpt-card-dish__name-wrapper {
-    margin-right: 40px;
+@media (max-width: 620px) {
+  .popup-page__content--cpt-card .popup-page__close {
+    right: 0;
   }
+}
 
+@media (max-width: 590px) {
   .cpt-card-summary {
-    padding-top: 25px;
-    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-bottom: 0;
     padding-right: 10px;
     padding-left: 10px;
     margin-right: -10px;
     margin-left: -10px;
+  }
+
+  .popup-page__content--cpt-card {
+    width: auto;
+    margin: 0 20px;
+  }
+
+  .popup-page__content--cpt-card .cpt-card {
+    padding: 15px 10px;
+  }
+}
+
+@media (max-width: 530px) {
+  .cpt-card-summary-grid--main > .cpt-card-summary-row {
+    display: block;
+    width: auto;
+  }
+
+  .cpt-card-summary-grid--main > .cpt-card-summary-row > .cpt-card-summary-col {
+    display: block;
+  }
+
+  .cpt-card-summary-grid--main > .cpt-card-summary-row > .cpt-card-summary-col--price {
+    margin-bottom: 25px;
+  }
+
+  .popup-page__content--cpt-card {
+    margin: 0 10px;
   }
 }
 
 @media (max-width: 460px) {
   .cpt-card-dish__name {
     font-size: 16px;
+  }
+
+  .cpt-card-summary-submit {
+    width: 100%;
   }
 }
 

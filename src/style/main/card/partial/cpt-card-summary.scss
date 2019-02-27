@@ -4,8 +4,8 @@
 	border-top: 1px solid $border-color-grey-light;
 
 	@media (max-width: 590px) {
-		padding-top: 10px + 15px;
-		padding-bottom: 15px;
+		padding-top: 15px;
+		padding-bottom: 0;
 
 		padding-right: 10px;
 		padding-left: 10px;
@@ -38,5 +38,49 @@
 	vertical-align: middle;
 }
 
+.cpt-card-summary-submit {
+	@media (max-width: 460px) {
+		width: 100%;
+	}
+}
 
+.cpt-card-summary-grid {
+	&--main {
+		& > .cpt-card-summary-row {
+			display: table;
+			width: 100%;
 
+			& > .cpt-card-summary-col {
+				display: table-cell;
+				vertical-align: middle;
+
+				&--price {
+					width: 100%;
+				}
+			}
+		}
+
+		@media (max-width: 530px) {
+			& > .cpt-card-summary-row {
+				display: block;
+				width: auto;
+
+				& > .cpt-card-summary-col {
+					display: block;
+
+					&--price {
+						margin-bottom: 25px;
+					}
+				}
+			}
+		}
+	}
+
+	&--col-valign-bottom {
+		& > .cpt-card-summary-row {
+			& > .cpt-card-summary-col {
+				vertical-align: bottom;
+			}
+		}
+	}
+}

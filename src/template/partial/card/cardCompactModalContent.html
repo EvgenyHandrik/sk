@@ -1,10 +1,10 @@
 <div class="popup-page" style="display: block;">
 	<div class="popup-page__out">
 		 <div class="popup-page__in">
-			  <div class="popup-page__content popup-page__content--card">
+			  <div class="popup-page__content popup-page__content--cpt-card">
 					<div class="popup-page__close"></div>
 
-					<section class="card cpt-card">
+					<section class="cpt-card">
 						<div class="cpt-card-main">
 							<div class="cpt-card-main__dish">
 								<div class="cpt-card-dish">
@@ -164,28 +164,43 @@
 						</div>
 
 						<div class="cpt-card-summary">
-							<div class="cpt-card-summary__set">
-								<ul class="p-switch p-switch--default">
-									<li class="p-switch__item">
-										<input checked type="radio" name="p-switch-radio" id="p-switch-radio-1" class="p-switch__control">
-										<label class="p-switch__label" for="p-switch-radio-1">
-											8 шт.
-										</label>
-									</li>
-									<li class="p-switch__item">
-										<input type="radio" name="p-switch-radio" id="p-switch-radio-2" class="p-switch__control">
-										<label class="p-switch__label" for="p-switch-radio-2">
-											4 шт.
-										</label>
-									</li>
-								</ul>
-							</div>
-							<div class="cpt-card-summary__price">
-								<span class="cpt-card-summary-price">129 <span class="c-rub">₽</span></span>
-								<div class="count cpt-card-summary-count">
-									<span class="count__btn count__btn--minus"></span>
-									<input type="text" class="count__field" value="1">
-									<span class="count__btn count__btn--plus"></span>
+							
+							<!-- Если есть .cpt-card-summary__set, -->
+							<!-- .cpt-card-summary-grid--main нужно добавить класс: -->
+							<!-- "cpt-card-summary-grid--col-valign-bottom" -->
+							<div class="cpt-card-summary-grid cpt-card-summary-grid--main cpt-card-summary-grid--col-valign-bottom">
+								<div class="cpt-card-summary-row">
+									<div class="cpt-card-summary-col cpt-card-summary-col--price">
+										<div class="cpt-card-summary__set">
+											<ul class="p-switch p-switch--default">
+												<li class="p-switch__item">
+													<input checked type="radio" name="p-switch-radio" id="p-switch-radio-1" class="p-switch__control">
+													<label class="p-switch__label" for="p-switch-radio-1">
+														8 шт.
+													</label>
+												</li>
+												<li class="p-switch__item">
+													<input type="radio" name="p-switch-radio" id="p-switch-radio-2" class="p-switch__control">
+													<label class="p-switch__label" for="p-switch-radio-2">
+														4 шт.
+													</label>
+												</li>
+											</ul>
+										</div>
+										<div class="cpt-card-summary__price">
+											<span class="cpt-card-summary-price">129 <span class="c-rub">₽</span></span>
+											<div class="count cpt-card-summary-count">
+												<span class="count__btn count__btn--minus"></span>
+												<input type="text" class="count__field" value="1">
+												<span class="count__btn count__btn--plus"></span>
+											</div>
+										</div>
+									</div>
+									<div class="cpt-card-summary-col">
+										<button type="button" class="button button--default button--l cpt-card-summary-submit">
+											<span class="button__text">Изменить</span>
+										</button>
+									</div>
 								</div>
 							</div>
 						</div>

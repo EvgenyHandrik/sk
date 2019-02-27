@@ -1,0 +1,38 @@
+.popup-page {
+	&__content {
+		&--cpt-card {
+			width: 550px;
+			padding: 0;
+			border-radius: 0;
+			box-shadow: none;
+			background: rgba(255, 255, 255, 0);
+
+			@media (max-width: 590px) {
+				width: auto;
+				margin: 0 20px;
+			}
+
+			@media (max-width: 530px) {
+				margin: 0 10px;
+			}
+
+			.popup-page__close {
+				@media (max-width: 620px) {
+					right: 0;
+				}
+			}
+
+			.cpt-card {
+				transition: transform .2s linear,opacity .2s linear;
+				border-radius: 8px;
+				background: #fff;
+				padding: 30px;
+				box-shadow: 0 0 7px rgba(0,0,0,0.2);
+
+				@media (max-width: 590px) {
+					padding: 15px 10px;
+				}
+			}
+		}
+	}
+}
