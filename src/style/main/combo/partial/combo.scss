@@ -125,6 +125,7 @@
 				}
 
 				.button__text {
+					display: inline;
 					font-size: 14px;
 				}
 			}
@@ -201,6 +202,7 @@
 				}
 
 				.button__text {
+					display: inline;
 					font-size: 13px;
 				}
 			}
@@ -226,31 +228,7 @@
 		}
 	}
 
-	@include combo-footer-big();
-	@include combo-footer-right();
-
-	@media (max-width: 890px) {
-		@include combo-footer-center();
-	}
-
-	@media (max-width: 760px) {
-		@include combo-footer-small();
-	}
-
-	@media (max-width: 680px) {
-		@include combo-footer-right();
-		@include combo-footer-big();
-	}
-
-	@media (max-width: 480px) {
-		@include combo-footer-center();
-	}
-
-	@media (max-width: 380px) {
-		@include combo-footer-small();
-	}
-
-	@media (max-width: 360px) {
+	@mixin combo-footer-compact {
 		&__f-add-to-basket {
 			&.button--default {
 				.button__icon {
@@ -273,6 +251,38 @@
 				}
 			}
 		}
+	}
+
+	@include combo-footer-big();
+	@include combo-footer-right();
+
+	@media (max-width: 980px) {
+		@include combo-footer-center();
+	}
+
+	@media (max-width: 830px) {
+		@include combo-footer-small();
+	}
+
+	@media (max-width: 740px) {
+		@include combo-footer-compact();
+	}
+
+	@media (max-width: 680px) {
+		@include combo-footer-right();
+		@include combo-footer-big();
+	}
+
+	@media (max-width: 470px) {
+		@include combo-footer-center();
+	}
+
+	@media (max-width: 410px) {
+		@include combo-footer-small();
+	}
+
+	@media (max-width: 380px) {
+		@include combo-footer-compact();
 	}
 
 	/* -- */

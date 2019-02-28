@@ -4,7 +4,15 @@
 			color: $color-grey-light;
 		}
 
+		.combo-dish__image {
+			opacity: 0.3;
+		}
+
 		&--selected {
+			.combo-dish__image {
+				opacity: 1;
+			}
+
 			.combo-dish__name {
 				color: #000;
 			}

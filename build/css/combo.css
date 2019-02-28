@@ -190,6 +190,7 @@
 }
 
 .combo__f-add-to-basket.button--default .button__text {
+  display: inline;
   font-size: 14px;
 }
 
@@ -623,6 +624,14 @@ a.combo-dish__name:hover {
 
 .combo-select__option .combo-dish__name {
   color: #a5a5a5;
+}
+
+.combo-select__option .combo-dish__image {
+  opacity: 0.3;
+}
+
+.combo-select__option--selected .combo-dish__image {
+  opacity: 1;
 }
 
 .combo-select__option--selected .combo-dish__name {
@@ -1085,7 +1094,7 @@ a.combo-dish__name:hover {
   }
 }
 
-@media (max-width: 890px) {
+@media (max-width: 980px) {
   .combo__f-col {
     text-align: center;
   }
@@ -1104,49 +1113,7 @@ a.combo-dish__name:hover {
   }
 }
 
-@media (max-width: 800px) {
-  .combo-grid {
-    margin-bottom: 35px;
-  }
-
-  .combo-grid--complex > .combo-row:last-child {
-    margin-bottom: -10px;
-  }
-
-  .combo-grid--complex > .combo-row > .combo-col {
-    margin-bottom: 10px;
-  }
-
-  .combo-grid--complex > .combo-row > .combo-col:nth-of-type(odd) {
-    padding-right: 5px;
-  }
-
-  .combo-grid--complex > .combo-row > .combo-col:nth-of-type(even) {
-    padding-left: 5px;
-  }
-
-  .b-lunch-grid {
-    margin-bottom: 35px;
-  }
-
-  .b-lunch-grid > .b-lunch-row:last-child {
-    margin-bottom: -30px;
-  }
-
-  .b-lunch-grid > .b-lunch-row > .b-lunch-col {
-    margin-bottom: 30px;
-  }
-
-  .b-lunch-grid > .b-lunch-row > .b-lunch-col:nth-of-type(odd) {
-    padding-right: 5px;
-  }
-
-  .b-lunch-grid > .b-lunch-row > .b-lunch-col:nth-of-type(even) {
-    padding-left: 5px;
-  }
-}
-
-@media (max-width: 760px) {
+@media (max-width: 830px) {
   .combo__f-count {
     display: inline-block;
     vertical-align: middle;
@@ -1194,7 +1161,70 @@ a.combo-dish__name:hover {
   }
 
   .combo__f-add-to-basket.button--default .button__text {
+    display: inline;
     font-size: 13px;
+  }
+}
+
+@media (max-width: 800px) {
+  .combo-grid {
+    margin-bottom: 35px;
+  }
+
+  .combo-grid--complex > .combo-row:last-child {
+    margin-bottom: -10px;
+  }
+
+  .combo-grid--complex > .combo-row > .combo-col {
+    margin-bottom: 10px;
+  }
+
+  .combo-grid--complex > .combo-row > .combo-col:nth-of-type(odd) {
+    padding-right: 5px;
+  }
+
+  .combo-grid--complex > .combo-row > .combo-col:nth-of-type(even) {
+    padding-left: 5px;
+  }
+
+  .b-lunch-grid {
+    margin-bottom: 35px;
+  }
+
+  .b-lunch-grid > .b-lunch-row:last-child {
+    margin-bottom: -30px;
+  }
+
+  .b-lunch-grid > .b-lunch-row > .b-lunch-col {
+    margin-bottom: 30px;
+  }
+
+  .b-lunch-grid > .b-lunch-row > .b-lunch-col:nth-of-type(odd) {
+    padding-right: 5px;
+  }
+
+  .b-lunch-grid > .b-lunch-row > .b-lunch-col:nth-of-type(even) {
+    padding-left: 5px;
+  }
+}
+
+@media (max-width: 740px) {
+  .combo__f-add-to-basket.button--default .button__icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .combo__f-add-to-basket.button--default .button__icon:before,
+  .combo__f-add-to-basket.button--default .button__icon:after {
+    width: 18px;
+    height: 18px;
+    background-size: 18px 18px;
+  }
+
+  .combo__f-add-to-basket.button--default .button__text {
+    display: none;
   }
 }
 
@@ -1319,6 +1349,7 @@ a.combo-dish__name:hover {
   }
 
   .combo__f-add-to-basket.button--default .button__text {
+    display: inline;
     font-size: 14px;
   }
 
@@ -1380,7 +1411,7 @@ a.combo-dish__name:hover {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 470px) {
   .combo__f-col {
     text-align: center;
   }
@@ -1413,7 +1444,7 @@ a.combo-dish__name:hover {
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 410px) {
   .combo__f-count {
     display: inline-block;
     vertical-align: middle;
@@ -1461,11 +1492,12 @@ a.combo-dish__name:hover {
   }
 
   .combo__f-add-to-basket.button--default .button__text {
+    display: inline;
     font-size: 13px;
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 380px) {
   .combo__f-add-to-basket.button--default .button__icon {
     width: 18px;
     height: 18px;
@@ -1483,7 +1515,9 @@ a.combo-dish__name:hover {
   .combo__f-add-to-basket.button--default .button__text {
     display: none;
   }
+}
 
+@media (max-width: 360px) {
   .combo-dish__select-switch-box {
     padding-right: 0;
   }
