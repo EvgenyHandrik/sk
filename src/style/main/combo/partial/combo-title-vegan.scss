@@ -1,0 +1,25 @@
+.combo-title-vegan {
+	$title-vegan-size: 20px;
+
+	position: relative;
+	display: inline-block;
+	width: $title-vegan-size;
+	height: $title-vegan-size;
+	margin: 0 0 0 7px;
+	border-radius: 100px;
+	font-weight: normal;
+	font-size: 13px;
+	vertical-align: middle;
+	color: #fff;
+	background-color: #00960F;
+
+	&:before {
+		content: 'V';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		display: block;
+		line-height: 1;
+		transform: translate(-50%, -50%);
+	}
+}

@@ -24,6 +24,11 @@
 						.removeClass('sktab-content__item--active')
 						.eq(index)
 							.addClass('sktab-content__item--active');
+					
+					$sktab.trigger('sktab-change', [{
+						$activeNavItem: $navItems.eq(index),
+						$activeContentItem: $contentItems.eq(index)
+					}]);
 				}
 			});
 	})

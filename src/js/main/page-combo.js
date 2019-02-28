@@ -73,11 +73,18 @@
 
 	var $box = $('.js-combo-select-delegate');
 
-	$box.on('change.combo-select', '.combo-select__switch', function() {
-		var $switch = $(this);
-		var $select = $switch.closest('.combo-select');		
-		setStyle($select, $switch);
-	});
+	if ($box.length) {
+		
+		$('.combo-select').each(function() {
+			setStyle($(this));
+		})
+
+		$box.on('change.combo-select', '.combo-select__switch', function() {
+			var $switch = $(this);
+			var $select = $switch.closest('.combo-select');		
+			setStyle($select, $switch);
+		});
+	}
 
 	function setStyle($select, $switch) {
 		if ($select && $select.length) {
