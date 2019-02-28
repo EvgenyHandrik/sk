@@ -20,7 +20,11 @@
 
 	// bp 5 (mobile)
 	@media (max-width: $combo-bp-mobile) {
-		margin-bottom: 30px + 30px;
+		//margin-bottom: 40px + 30px;
+		// было 30 + 30, но кажется должно быть 40
+
+		margin-bottom: 35px;
+		// после добавления правила col bp-mobile last-child mb 0
 	}
 
 	&:last-child {
@@ -30,6 +34,12 @@
 	& > .combo-row {
 		&:last-child {
 			margin-bottom: -($combo-grid-col-v-space * 2);
+		}
+
+		@media (max-width: $combo-bp-mobile) {
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 	}
 
@@ -56,6 +66,10 @@
 				@media (max-width: 800px) {
 					margin-bottom: -10px;
 				}
+
+				@media (max-width: $combo-bp-mobile) {
+					margin-bottom: 0;
+				}
 			}
 
 			& > .combo-col {
@@ -81,6 +95,10 @@
 				
 					&:nth-of-type(even) {
 						padding-left: 0;
+					}
+
+					&:last-child {
+						margin-bottom: 0;
 					}
 				}
 
@@ -155,6 +173,10 @@
 	
 		&:nth-of-type(even) {
 			padding-left: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
 		}
 	}
 }

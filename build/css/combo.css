@@ -604,7 +604,7 @@ a.combo-dish__name:hover {
 }
 
 .combo-section--complex {
-  margin: 0 0 45px 0;
+  margin: 0 0 40px 0;
 }
 
 .combo-section--complex:last-child {
@@ -1018,10 +1018,6 @@ a.combo-dish__name:hover {
     padding-left: 10px;
   }
 
-  .combo-section--complex {
-    margin-bottom: 35px;
-  }
-
   .combo-sktab {
     margin-top: 25px;
   }
@@ -1204,11 +1200,19 @@ a.combo-dish__name:hover {
 
 @media (max-width: 680px) {
   .combo-grid {
-    margin-bottom: 60px;
+    margin-bottom: 35px;
+  }
+
+  .combo-grid > .combo-row:last-child {
+    margin-bottom: 0;
   }
 
   .combo-grid--complex > .combo-row {
     display: block;
+  }
+
+  .combo-grid--complex > .combo-row:last-child {
+    margin-bottom: 0;
   }
 
   .combo-grid--complex > .combo-row > .combo-col {
@@ -1223,6 +1227,10 @@ a.combo-dish__name:hover {
     padding-left: 0;
   }
 
+  .combo-grid--complex > .combo-row > .combo-col:last-child {
+    margin-bottom: 0;
+  }
+
   .combo-col {
     display: block;
     width: auto;
@@ -1234,6 +1242,14 @@ a.combo-dish__name:hover {
 
   .combo-col:nth-of-type(even) {
     padding-left: 0;
+  }
+
+  .combo-col:last-child {
+    margin-bottom: 0;
+  }
+
+  .combo-container {
+    margin-bottom: 35px;
   }
 
   .combo {
@@ -1307,7 +1323,7 @@ a.combo-dish__name:hover {
   }
 
   .combo-section--complex {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
   }
 
   .b-lunch {

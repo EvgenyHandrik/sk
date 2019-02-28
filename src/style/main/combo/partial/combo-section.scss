@@ -1,17 +1,18 @@
 .combo-section {
 	&--complex {
-		margin: 0 0 ($combo-grid-col-v-space-complex * 2 + 15px) 0;
-		
-		&:last-child {
-			margin-bottom: 0;
-		}
+		// margin: 0 0 ($combo-grid-col-v-space-complex * 2 + 15px) 0;
+		margin: 0 0 40px 0;
 
-		@media (max-width: 1200px) {
+		// @media (max-width: 1200px) {
+		// 	margin-bottom: 35px;
+		// }
+
+		@media (max-width: $combo-bp-mobile) {
 			margin-bottom: 35px;
 		}
 
-		@media (max-width: $combo-bp-mobile) {
-			margin-bottom: 40px;
+		&:last-child {
+			margin-bottom: 0;
 		}
 	}
 }

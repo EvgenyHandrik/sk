@@ -1,6 +1,10 @@
 .combo-container {
 	margin: 0 0 40px 0;
 
+	@media (max-width: $combo-bp-mobile) {
+		margin-bottom: 35px;
+	}
+
 	&:last-child {
 		margin-bottom: 0;
 	}
