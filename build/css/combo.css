@@ -673,6 +673,12 @@ a.combo-dish__name:hover {
   transform: translate(-50%, -50%);
 }
 
+.b-lunsh-dishes {
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
+}
+
 .b-lunch-dish {
   display: table;
   width: 100%;
@@ -828,10 +834,17 @@ a.combo-dish__name:hover {
   font-size: 20px;
 }
 
-.b-lunch__dishes {
+.b-lunch__main {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   padding: 15px 10px;
   border: 1px solid #f0f0f0;
   border-radius: 10px;
@@ -886,6 +899,86 @@ a.combo-dish__name:hover {
 .b-lunch-s-total {
   font-weight: bold;
   font-size: 24px;
+}
+
+.b-lunch-garnishes {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 20px 10px 20px 10px;
+  margin: 15px -10px -15px -10px;
+  border-radius: 0 0 10px 10px;
+  background-color: #F9F9F9;
+}
+
+.b-lunch-garnishes-title {
+  display: block;
+  margin: 0 0 10px 0;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.b-lunch-garnish {
+  display: table;
+  width: 100%;
+  margin: 0 0 15px 0;
+  /* -- */
+  /* -- */
+}
+
+.b-lunch-garnish:last-child {
+  margin-bottom: 0;
+}
+
+.b-lunch-garnish__control-box,
+.b-lunch-garnish__name-box {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.b-lunch-garnish__control-box {
+  font-size: 1px;
+}
+
+.b-lunch-garnish__name-box {
+  width: 100%;
+  padding-left: 10px;
+}
+
+.b-lunch-garnish__name-wrapper {
+  margin: 0 0 5px 0;
+}
+
+.b-lunch-garnish__name-wrapper:last-child {
+  margin-bottom: 0;
+}
+
+.b-lunch-garnish__name {
+  font-size: 16px;
+}
+
+.b-lunch-garnish__weight {
+  font-size: 13px;
+  color: #a5a5a5;
+}
+
+.b-lunch-has-garnish-container {
+  margin: 0 0 5px 0;
+}
+
+.b-lunch-has-garnish-container:last-child {
+  margin-bottom: 0;
+}
+
+.b-lunch-has-garnish {
+  display: inline-block;
+  line-height: 1;
+  padding: 3px 10px;
+  font-size: 13px;
+  border: 1px solid #E5B709;
+  border-radius: 5px;
+  vertical-align: middle;
+  color: #B28F07;
 }
 
 .cmb-additions-title {

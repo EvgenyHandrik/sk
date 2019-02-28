@@ -120,6 +120,38 @@
 
 }());
 
+// b-lunch garnishes toggle
+;(function() {
+
+	var $container = $('.js-b-lunch-garnishes-select-delegate');
+	
+	if ($container.length) {
+
+	}
+
+	function setStyle($lunch) {
+		var $switch = $select.find('.b-lunch-garnishes-select__switch:checked');
+		var $dish = $switch.closest('.b-lunch-garnishes-select__dish');
+		var $garnishes = $select.find('.b-lunch-garnishes-select__garnishes');
+		var $garnishesSwitch = $garnishes.find('.b-lunch-garnishes-select__garnishes-switch');
+
+		// b-lunch--garnish-enable
+
+		if ($dish.hasClass('b-lunch-dish--has-garnish')) {
+			$lunch
+				.removeClass('b-lunch--garnish-disable')
+				.addClass('b-lunch--garnish-enable');
+			$garnishesSwitch.prop('disabled', false);
+		} else {
+			$lunch
+				.removeClass('b-lunch--garnish-enable')
+				.addClass('b-lunch--garnish-disable');
+			$garnishesSwitch.prop('disabled', true);
+		}
+	}
+
+}());
+
 // PhotoSwipe Gallery
 ;(function() {
 

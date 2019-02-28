@@ -1,0 +1,18 @@
+.b-lunch-has-garnish-container {
+	margin: 0 0 5px 0;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.b-lunch-has-garnish {
+	display: inline-block;
+	line-height: 1;
+	padding: 3px 10px;
+	font-size: 13px;
+	border: 1px solid #E5B709;
+	border-radius: 5px;
+	vertical-align: middle;
+	color: #B28F07;
+}

@@ -1,0 +1,64 @@
+.b-lunch-garnishes {
+	flex: 1 1 auto;
+	padding: (10px + 10px) 10px (10px + 10px) 10px;
+	margin: 15px -10px -15px -10px;
+	border-radius: 0 0 10px 10px;
+	background-color: #F9F9F9;
+}
+
+.b-lunch-garnishes-title {
+	display: block;
+	margin: 0 0 10px 0;
+	font-weight: bold;
+	font-size: 17px;
+}
+
+.b-lunch-garnishes-list {}
+
+.b-lunch-garnish {
+	display: table;
+	width: 100%;
+	margin: 0 0 15px 0;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&__control-box,
+	&__name-box {
+		display: table-cell;
+		vertical-align: top;
+	}
+
+	/* -- */
+
+	&__control-box {
+		font-size: 1px;
+	}
+
+	/* -- */
+
+	&__name-box {
+		width: 100%;
+		padding-left: 10px;
+	}
+
+	&__name-wrapper {
+		margin: 0 0 5px 0;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__name-label {}
+
+	&__name {
+		font-size: 16px;
+	}
+
+	&__weight {
+		font-size: 13px;
+		color: $color-grey-light;
+	}
+}

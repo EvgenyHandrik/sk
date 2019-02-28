@@ -2012,7 +2012,7 @@ ga('require', 'ecommerce');
 						</div>
 
 						
-						<div class="b-lunch-container js-b-lunch-dbrief-toggle-delegate">
+						<div class="b-lunch-container js-b-lunch-dbrief-toggle-delegate js-b-lunch-garnishes-select-delegate">
 							<div class="combo-phone combo-phone--b-lunch">
 								<a href="tel:83432980044" class="combo-phone-button">
 									<span class="combo-phone-button__title">Заказать по телефону</span>
@@ -2025,7 +2025,7 @@ ga('require', 'ecommerce');
 									<div class="b-lunch-col">
 										<div class="b-lunch">
 											<span class="b-lunch__title">Салат и роллы</span>
-											<div class="b-lunch__dishes">
+											<div class="b-lunch__main">
 												<div class="b-lunch-dish-list">
 													<div class="b-lunch-dish">
 														<div class="b-lunch-dish__control-box">
@@ -2129,7 +2129,7 @@ ga('require', 'ecommerce');
 									<div class="b-lunch-col">
 										<div class="b-lunch">
 											<span class="b-lunch__title">Суп</span>
-											<div class="b-lunch__dishes">
+											<div class="b-lunch__main">
 												<div class="b-lunch-dish-list">
 													<div class="b-lunch-dish">
 														<div class="b-lunch-dish__control-box">
@@ -2231,102 +2231,344 @@ ga('require', 'ecommerce');
 										</div>
 									</div>
 									<div class="b-lunch-col">
-										<div class="b-lunch">
+										<div class="b-lunch b-lunch-garnishes-select">
 											<span class="b-lunch__title">Горячее</span>
-											<div class="b-lunch__dishes">
-												<div class="b-lunch-dish-list">
-													<div class="b-lunch-dish">
-														<div class="b-lunch-dish__control-box">
-															<span class="pretty-control pretty-control--default pretty-control--radio">
-																<input type="radio" class="pretty-control__input" name="radio-hot" id="radio-hot-0">
-																<span class="pretty-control__item"></span>
-															</span>
+											<div class="b-lunch__main">
+												<div class="b-lunch-dishes">
+													<div class="b-lunch-dish-list">
+														<div class="b-lunch-dish b-lunch-dish--has-garnish b-lunch-garnishes-select__dish">
+															<div class="b-lunch-dish__control-box">
+																<span class="pretty-control pretty-control--default pretty-control--radio">
+																	<input type="radio" class="pretty-control__input b-lunch-garnishes-select__switch" name="radio-hot" id="radio-hot-1">
+																	<span class="pretty-control__item"></span>
+																</span>
+															</div>
+															<div class="b-lunch-dish__name-box">
+																<div class="b-lunch-dish__header">
+																	<div class="b-lunch-dish__h-row">
+																		<div class="b-lunch-dish__h-col b-lunch-dish__h-col--name">
+																			<div class="b-lunch-dish__name-wrapper">
+																				<label class="b-lunch-dish__name-label" for="radio-hot-1">
+																					<span class="b-lunch-dish__name">С копченой курицей и имбирной заправкой</span>
+																				</label>
+																			</div>
+																		</div>
+																		<div class="b-lunch-dish__h-col b-lunch-dish__h-col--price">
+																			<span class="b-lunch-dish__price"><span class="b-lunch-dish__price-num">69</span><span class="b-lunch-dish__price-rub c-rub">₽</span></span>
+																		</div>
+																	</div>
+																</div>
+																<div class="b-lunch-dish-ibar">
+																	<div class="b-lunch-dish-ibar__row">
+																		<div class="b-lunch-dish-ibar__col">
+																			<span class="b-lunch-dish__weight">140 гр.</span>
+																		</div>
+																		<div class="b-lunch-dish-ibar__col">
+																			<button type="button" class="b-lunch-dish-brief-toggle">Состав</button>
+																		</div>
+																	</div>
+																</div>
+																<div class="b-lunch-dish-brief b-lunch-dish-brief--hidden">
+																	Копченая курица, морковь, огурец, томаты, салат айсберг, имбирь, чеснок, кунжут, рисовый уксус, масло, зелень (140 гр.).
+																</div>
+															</div>
 														</div>
-														<div class="b-lunch-dish__name-box">
-															<div class="b-lunch-dish__header">
-																<div class="b-lunch-dish__h-row">
-																	<div class="b-lunch-dish__h-col b-lunch-dish__h-col--name">
-																		<div class="b-lunch-dish__name-wrapper">
-																			<label class="b-lunch-dish__name-label" for="radio-hot-0">
-																				<span class="b-lunch-dish__name">Нет</span>
-																			</label>
+														<div class="b-lunch-dish">
+															<div class="b-lunch-dish__control-box">
+																<span class="pretty-control pretty-control--default pretty-control--radio">
+																	<input type="radio" class="pretty-control__input b-lunch-garnishes-select__switch" name="radio-hot" id="radio-hot-2">
+																	<span class="pretty-control__item"></span>
+																</span>
+															</div>
+															<div class="b-lunch-dish__name-box">
+																<div class="b-lunch-dish__header">
+																	<div class="b-lunch-dish__h-row">
+																		<div class="b-lunch-dish__h-col b-lunch-dish__h-col--name">
+																			<div class="b-lunch-dish__name-wrapper">
+																				<label class="b-lunch-dish__name-label" for="radio-hot-2">
+																					<span class="b-lunch-dish__name">Будапешт</span>
+																				</label>
+																			</div>
+																		</div>
+																		<div class="b-lunch-dish__h-col b-lunch-dish__h-col--price">
+																			<span class="b-lunch-dish__price"><span class="b-lunch-dish__price-num">79</span><span class="b-lunch-dish__price-rub c-rub">₽</span></span>
+																		</div>
+																	</div>
+																</div>
+																<div class="b-lunch-has-garnish-container">
+																	<span class="b-lunch-has-garnish">Гарнир на выбор</span>
+																</div>
+																<div class="b-lunch-dish-ibar">
+																	<div class="b-lunch-dish-ibar__row">
+																		<div class="b-lunch-dish-ibar__col">
+																			<span class="b-lunch-dish__weight">140 гр.</span>
+																		</div>
+																		<div class="b-lunch-dish-ibar__col">
+																			<button type="button" class="b-lunch-dish-brief-toggle">Состав</button>
+																		</div>
+																	</div>
+																</div>
+																<div class="b-lunch-dish-brief b-lunch-dish-brief--hidden">
+																	Копченая курица, морковь, огурец, томаты, салат айсберг, имбирь, чеснок, кунжут, рисовый уксус, масло, зелень (140 гр.).
+																</div>
+															</div>
+														</div>
+														<div class="b-lunch-dish">
+															<div class="b-lunch-dish__control-box">
+																<span class="pretty-control pretty-control--default pretty-control--radio">
+																	<input type="radio" class="pretty-control__input b-lunch-garnishes-select__switch" name="radio-hot" id="radio-hot-0">
+																	<span class="pretty-control__item"></span>
+																</span>
+															</div>
+															<div class="b-lunch-dish__name-box">
+																<div class="b-lunch-dish__header">
+																	<div class="b-lunch-dish__h-row">
+																		<div class="b-lunch-dish__h-col b-lunch-dish__h-col--name">
+																			<div class="b-lunch-dish__name-wrapper">
+																				<label class="b-lunch-dish__name-label" for="radio-hot-0">
+																					<span class="b-lunch-dish__name">Нет</span>
+																				</label>
+																			</div>
 																		</div>
 																	</div>
 																</div>
 															</div>
 														</div>
 													</div>
-													<div class="b-lunch-dish">
-														<div class="b-lunch-dish__control-box">
-															<span class="pretty-control pretty-control--default pretty-control--radio">
-																<input type="radio" class="pretty-control__input" name="radio-hot" id="radio-hot-1">
-																<span class="pretty-control__item"></span>
-															</span>
+												</div>
+												<div class="b-lunch-garnishes b-lunch-garnishes-select__garnishes">
+													<span class="b-lunch-garnishes-title">Гарнир к горячему</span>
+													<div class="b-lunch-garnish-list">
+														<div class="b-lunch-garnish">
+															<div class="b-lunch-garnish__control-box">
+																<span class="pretty-control pretty-control--default pretty-control--radio">
+																	<input type="radio" class="pretty-control__input b-lunch-garnishes-select__garnishes-switch" name="radio-hot-garnish" id="radio-hot-garnish-0">
+																	<span class="pretty-control__item"></span>
+																</span>
+															</div>
+															<div class="b-lunch-garnish__name-box">
+																<div class="b-lunch-garnish__name-wrapper">
+																	<label class="b-lunch-garnish__name-label" for="radio-hot-garnish-0">
+																		<span class="b-lunch-garnish__name">Картофельное пюре 250 гр.</span>
+																	</label>
+																</div>
+															</div>
 														</div>
-														<div class="b-lunch-dish__name-box">
-															<div class="b-lunch-dish__header">
-																<div class="b-lunch-dish__h-row">
-																	<div class="b-lunch-dish__h-col b-lunch-dish__h-col--name">
-																		<div class="b-lunch-dish__name-wrapper">
-																			<label class="b-lunch-dish__name-label" for="radio-hot-1">
-																				<span class="b-lunch-dish__name">С копченой курицей и имбирной заправкой</span>
-																			</label>
-																		</div>
-																	</div>
-																	<div class="b-lunch-dish__h-col b-lunch-dish__h-col--price">
-																		<span class="b-lunch-dish__price"><span class="b-lunch-dish__price-num">69</span><span class="b-lunch-dish__price-rub c-rub">₽</span></span>
-																	</div>
-																</div>
+														<div class="b-lunch-garnish">
+															<div class="b-lunch-garnish__control-box">
+																<span class="pretty-control pretty-control--default pretty-control--radio">
+																	<input type="radio" class="pretty-control__input b-lunch-garnishes-select__garnishes-switch" name="radio-hot-garnish" id="radio-hot-garnish-1">
+																	<span class="pretty-control__item"></span>
+																</span>
 															</div>
-															<div class="b-lunch-dish-ibar">
-																<div class="b-lunch-dish-ibar__row">
-																	<div class="b-lunch-dish-ibar__col">
-																		<span class="b-lunch-dish__weight">140 гр.</span>
-																	</div>
-																	<div class="b-lunch-dish-ibar__col">
-																		<button type="button" class="b-lunch-dish-brief-toggle">Состав</button>
-																	</div>
+															<div class="b-lunch-garnish__name-box">
+																<div class="b-lunch-garnish__name-wrapper">
+																	<label class="b-lunch-garnish__name-label" for="radio-hot-garnish-1">
+																		<span class="b-lunch-garnish__name">Рис по-тайски 250 гр.</span>
+																	</label>
 																</div>
-															</div>
-															<div class="b-lunch-dish-brief b-lunch-dish-brief--hidden">
-																Копченая курица, морковь, огурец, томаты, салат айсберг, имбирь, чеснок, кунжут, рисовый уксус, масло, зелень (140 гр.).
 															</div>
 														</div>
 													</div>
-													<div class="b-lunch-dish">
-														<div class="b-lunch-dish__control-box">
-															<span class="pretty-control pretty-control--default pretty-control--radio">
-																<input type="radio" class="pretty-control__input" name="radio-hot" id="radio-hot-2">
-																<span class="pretty-control__item"></span>
-															</span>
-														</div>
-														<div class="b-lunch-dish__name-box">
-															<div class="b-lunch-dish__header">
-																<div class="b-lunch-dish__h-row">
-																	<div class="b-lunch-dish__h-col b-lunch-dish__h-col--name">
-																		<div class="b-lunch-dish__name-wrapper">
-																			<label class="b-lunch-dish__name-label" for="radio-hot-2">
-																				<span class="b-lunch-dish__name">Будапешт</span>
-																			</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="b-lunch-col">
+										<div class="b-lunch">
+											<span class="b-lunch__title">Напитки</span>
+											<div class="b-lunch__main">
+												<div class="b-lunch-dishes">
+													<div class="b-lunch-dish-list">
+														<div class="b-lunch-dish">
+															<div class="b-lunch-dish__control-box">
+																<span class="pretty-control pretty-control--default pretty-control--radio">
+																	<input type="radio" class="pretty-control__input" name="radio-drinks" id="radio-drinks-0">
+																	<span class="pretty-control__item"></span>
+																</span>
+															</div>
+															<div class="b-lunch-dish__name-box">
+																<div class="b-lunch-dish__header">
+																	<div class="b-lunch-dish__h-row">
+																		<div class="b-lunch-dish__h-col b-lunch-dish__h-col--name">
+																			<div class="b-lunch-dish__name-wrapper">
+																				<label class="b-lunch-dish__name-label" for="radio-drinks-0">
+																					<span class="b-lunch-dish__name">Нет</span>
+																				</label>
+																			</div>
 																		</div>
 																	</div>
-																	<div class="b-lunch-dish__h-col b-lunch-dish__h-col--price">
-																		<span class="b-lunch-dish__price"><span class="b-lunch-dish__price-num">79</span><span class="b-lunch-dish__price-rub c-rub">₽</span></span>
+																</div>
+															</div>
+														</div>
+														<div class="b-lunch-dish">
+															<div class="b-lunch-dish__control-box">
+																<span class="pretty-control pretty-control--default pretty-control--radio">
+																	<input type="radio" class="pretty-control__input" name="radio-drinks" id="radio-drinks-1">
+																	<span class="pretty-control__item"></span>
+																</span>
+															</div>
+															<div class="b-lunch-dish__name-box">
+																<div class="b-lunch-dish__header">
+																	<div class="b-lunch-dish__h-row">
+																		<div class="b-lunch-dish__h-col b-lunch-dish__h-col--name">
+																			<div class="b-lunch-dish__name-wrapper">
+																				<label class="b-lunch-dish__name-label" for="radio-drinks-1">
+																					<span class="b-lunch-dish__name">Эспрессо</span>
+																				</label>
+																			</div>
+																		</div>
+																		<div class="b-lunch-dish__h-col b-lunch-dish__h-col--price">
+																			<span class="b-lunch-dish__price"><span class="b-lunch-dish__price-num">29</span><span class="b-lunch-dish__price-rub c-rub">₽</span></span>
+																		</div>
 																	</div>
 																</div>
 															</div>
-															<div class="b-lunch-dish-ibar">
-																<div class="b-lunch-dish-ibar__row">
-																	<div class="b-lunch-dish-ibar__col">
-																		<span class="b-lunch-dish__weight">140 гр.</span>
-																	</div>
-																	<div class="b-lunch-dish-ibar__col">
-																		<button type="button" class="b-lunch-dish-brief-toggle">Состав</button>
+														</div>
+														<div class="b-lunch-dish">
+															<div class="b-lunch-dish__control-box">
+																<span class="pretty-control pretty-control--default pretty-control--radio">
+																	<input type="radio" class="pretty-control__input" name="radio-drinks" id="radio-drinks-2">
+																	<span class="pretty-control__item"></span>
+																</span>
+															</div>
+															<div class="b-lunch-dish__name-box">
+																<div class="b-lunch-dish__header">
+																	<div class="b-lunch-dish__h-row">
+																		<div class="b-lunch-dish__h-col b-lunch-dish__h-col--name">
+																			<div class="b-lunch-dish__name-wrapper">
+																				<label class="b-lunch-dish__name-label" for="radio-drinks-2">
+																					<span class="b-lunch-dish__name">Американо с молоком</span>
+																				</label>
+																			</div>
+																		</div>
+																		<div class="b-lunch-dish__h-col b-lunch-dish__h-col--price">
+																			<span class="b-lunch-dish__price"><span class="b-lunch-dish__price-num">29</span><span class="b-lunch-dish__price-rub c-rub">₽</span></span>
+																		</div>
 																	</div>
 																</div>
 															</div>
-															<div class="b-lunch-dish-brief b-lunch-dish-brief--hidden">
-																Копченая курица, морковь, огурец, томаты, салат айсберг, имбирь, чеснок, кунжут, рисовый уксус, масло, зелень (140 гр.).
+														</div>
+						
+														<!-- -->
+														<div class="b-lunch-dish">
+															<div class="b-lunch-dish__control-box">
+																<span class="pretty-control pretty-control--default pretty-control--radio">
+																	<input type="radio" class="pretty-control__input" name="radio-drinks" id="radio-drinks-2">
+																	<span class="pretty-control__item"></span>
+																</span>
+															</div>
+															<div class="b-lunch-dish__name-box">
+																<div class="b-lunch-dish__header">
+																	<div class="b-lunch-dish__h-row">
+																		<div class="b-lunch-dish__h-col b-lunch-dish__h-col--name">
+																			<div class="b-lunch-dish__name-wrapper">
+																				<label class="b-lunch-dish__name-label" for="radio-drinks-2">
+																					<span class="b-lunch-dish__name">Американо с молоком</span>
+																				</label>
+																			</div>
+																		</div>
+																		<div class="b-lunch-dish__h-col b-lunch-dish__h-col--price">
+																			<span class="b-lunch-dish__price"><span class="b-lunch-dish__price-num">29</span><span class="b-lunch-dish__price-rub c-rub">₽</span></span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="b-lunch-dish">
+															<div class="b-lunch-dish__control-box">
+																<span class="pretty-control pretty-control--default pretty-control--radio">
+																	<input type="radio" class="pretty-control__input" name="radio-drinks" id="radio-drinks-2">
+																	<span class="pretty-control__item"></span>
+																</span>
+															</div>
+															<div class="b-lunch-dish__name-box">
+																<div class="b-lunch-dish__header">
+																	<div class="b-lunch-dish__h-row">
+																		<div class="b-lunch-dish__h-col b-lunch-dish__h-col--name">
+																			<div class="b-lunch-dish__name-wrapper">
+																				<label class="b-lunch-dish__name-label" for="radio-drinks-2">
+																					<span class="b-lunch-dish__name">Американо с молоком</span>
+																				</label>
+																			</div>
+																		</div>
+																		<div class="b-lunch-dish__h-col b-lunch-dish__h-col--price">
+																			<span class="b-lunch-dish__price"><span class="b-lunch-dish__price-num">29</span><span class="b-lunch-dish__price-rub c-rub">₽</span></span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="b-lunch-dish">
+															<div class="b-lunch-dish__control-box">
+																<span class="pretty-control pretty-control--default pretty-control--radio">
+																	<input type="radio" class="pretty-control__input" name="radio-drinks" id="radio-drinks-2">
+																	<span class="pretty-control__item"></span>
+																</span>
+															</div>
+															<div class="b-lunch-dish__name-box">
+																<div class="b-lunch-dish__header">
+																	<div class="b-lunch-dish__h-row">
+																		<div class="b-lunch-dish__h-col b-lunch-dish__h-col--name">
+																			<div class="b-lunch-dish__name-wrapper">
+																				<label class="b-lunch-dish__name-label" for="radio-drinks-2">
+																					<span class="b-lunch-dish__name">Американо с молоком</span>
+																				</label>
+																			</div>
+																		</div>
+																		<div class="b-lunch-dish__h-col b-lunch-dish__h-col--price">
+																			<span class="b-lunch-dish__price"><span class="b-lunch-dish__price-num">29</span><span class="b-lunch-dish__price-rub c-rub">₽</span></span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="b-lunch-dish">
+															<div class="b-lunch-dish__control-box">
+																<span class="pretty-control pretty-control--default pretty-control--radio">
+																	<input type="radio" class="pretty-control__input" name="radio-drinks" id="radio-drinks-2">
+																	<span class="pretty-control__item"></span>
+																</span>
+															</div>
+															<div class="b-lunch-dish__name-box">
+																<div class="b-lunch-dish__header">
+																	<div class="b-lunch-dish__h-row">
+																		<div class="b-lunch-dish__h-col b-lunch-dish__h-col--name">
+																			<div class="b-lunch-dish__name-wrapper">
+																				<label class="b-lunch-dish__name-label" for="radio-drinks-2">
+																					<span class="b-lunch-dish__name">Американо с молоком</span>
+																				</label>
+																			</div>
+																		</div>
+																		<div class="b-lunch-dish__h-col b-lunch-dish__h-col--price">
+																			<span class="b-lunch-dish__price"><span class="b-lunch-dish__price-num">29</span><span class="b-lunch-dish__price-rub c-rub">₽</span></span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="b-lunch-dish">
+															<div class="b-lunch-dish__control-box">
+																<span class="pretty-control pretty-control--default pretty-control--radio">
+																	<input type="radio" class="pretty-control__input" name="radio-drinks" id="radio-drinks-2">
+																	<span class="pretty-control__item"></span>
+																</span>
+															</div>
+															<div class="b-lunch-dish__name-box">
+																<div class="b-lunch-dish__header">
+																	<div class="b-lunch-dish__h-row">
+																		<div class="b-lunch-dish__h-col b-lunch-dish__h-col--name">
+																			<div class="b-lunch-dish__name-wrapper">
+																				<label class="b-lunch-dish__name-label" for="radio-drinks-2">
+																					<span class="b-lunch-dish__name">Американо с молоком</span>
+																				</label>
+																			</div>
+																		</div>
+																		<div class="b-lunch-dish__h-col b-lunch-dish__h-col--price">
+																			<span class="b-lunch-dish__price"><span class="b-lunch-dish__price-num">29</span><span class="b-lunch-dish__price-rub c-rub">₽</span></span>
+																		</div>
+																	</div>
+																</div>
 															</div>
 														</div>
 													</div>
