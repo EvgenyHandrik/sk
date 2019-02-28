@@ -336,10 +336,7 @@
 									<button class="sktab-nav__button">При получении</button>
 								</li>
 								<li class="sktab-nav__item sktab-nav__item--active">
-									<button class="sktab-nav__button">Оплата картой</button>
-								</li>
-								<li class="sktab-nav__item">
-									<button class="sktab-nav__button">G Pay</button>
+									<button class="sktab-nav__button">Оплата онлайн</button>
 								</li>
 							</ul>
 						</div>
@@ -419,58 +416,25 @@
 											</label>
 										</div>
 									</li>
-								</ul>
-
-								<div class="bcard-add cht2-bcard-add" style="display: none;">
-									<div class="form form--lite bcard-add-form">
-										<span class="bcard-add__title">Моя карта</span>
-										
-										<div class="bcard-add-num">
-											<label class="form-label form-label--default bcard-add-num__label">Номер карты</label>
-											<div class="form-control-group form-control-group--default bcard-add-num__form-control-group form-control-group--success">
-												<span class="bcard-add-num__control-icon"><img src="images/ico-bcard-mastercard-60x60.png"></span>
-												<input type="text" class="form-control form-control--default form-control--text" placeholder="0000 0000 0000 0000">
-											</div>
-										</div>
-										
-										<div class="bcard-add-vc">
-											<div class="bcard-add-vc__row">
-												<div class="bcard-add-vc__col">
-													<div class="bcard-add-validity">
-														<label class="form-label form-label--default bcard-add-validity__label">Срок действия</label>
-														<div class="form-control-group form-control-group--default">
-															<input type="text" class="form-control form-control--default form-control--text bcard-add-validity__control" placeholder="Месяц / Год">
-														</div>
-													</div>
-												</div>
-												<div class="bcard-add-vc__col bcard-add-vc__col--code">
-													<div class="bcard-add-code">
-														<label class="form-label form-label--default bcard-add-code__label">
-															<span class="bcard-add-code__label-text bcard-add-code__label-text--1">Цифры на обороте</span>
-															<span class="bcard-add-code__label-text bcard-add-code__label-text--2">Три цифры с обортной стороны карты</span>
-														</label>
-														<div class="form-control-group form-control-group--default form-control-group--error bcard-add-code__control-group">
-															<input type="text" class="form-control form-control--default form-control--text bcard-add-code__control" placeholder="CVC2/CVV2">
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<div class="bcard-add-remember">
-											<label class="bcard-add-remember__label">
-												<input type="checkbox">
-												<span class="bcard-add-remember__text">Запомнить карту</span>
+									<li class="bcards-list__item">
+										<div class="bcard bcard--new">
+											<input checked type="radio" class="bcard__hidden-control" name="bcard" id="bcard-3">
+											<label class="bcard__label" for="bcard-3">
+												<div class="bcard__icon"></div>
+												<div class="bcard__name">Новая карта</div>
 											</label>
 										</div>
+									</li>
+								</ul>
 
-									</div>
+								<div class="bcard-remember-container">
+									<span class="bcard-remember">
+										<label class="bcard-remember__label">
+											<input type="checkbox">
+											<span class="bcard-remember__text">Запомнить карту</span>
+										</label>
+									</span>
 								</div>
-							</div>
-						</div>
-						<div class="sktab-content__item">
-							<div class="cht2-googlepay">
-
 							</div>
 						</div>
 					</div>

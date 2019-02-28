@@ -1,0 +1,18 @@
+.bcard-remember-container {
+	margin: 0 0 30px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.bcard-remember {
+	display: inline-block;
+	vertical-align: middle;
+
+	&__label {}
+
+	&__text {
+		margin-left: 5px;
+	}
+}

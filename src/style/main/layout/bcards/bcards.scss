@@ -1,10 +1,20 @@
 @import '../../../helpers/helpers';
 @import './helpers/helpers';
 
+@import './partial/bcard-remember';
+
 .bcards {
 	display: block;
 	padding: 0;
 	margin: 0;
+}
+
+.bcards-list {
+	margin: 0 0 30px 0;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 
 .bcard {
@@ -50,7 +60,7 @@
 		display: block;
 		padding: 10px ($right-space + $check-size + 10px) 10px ($left-space + $icon-size + 15px);
 		margin: 0;
-		border-bottom: 1px solid #f1f1f1;
+		border-bottom: 1px solid $border-color-grey-light;
 		cursor: pointer;
 
 		&:hover {
@@ -116,6 +126,10 @@
 		font-size: 18px;
 		transition-property: color;
 		transition-duration: 200ms;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
 
 	&__num {
@@ -136,7 +150,55 @@
 		}
 	}
 
-	
+	/* -- */
+
+	&--new {
+		
+		.bcard__label {
+			padding-top: 22px;
+			padding-bottom: 22px;
+			padding-left: 10px;
+		}
+
+		.bcard__name {
+			font-weight: bold;
+			font-size: 16px;
+			// text-transform: uppercase;
+			// letter-spacing: 1px;
+		}
+
+		// .bcard__icon {
+		// 	width: $icon-size;
+		// 	height: $icon-size;
+		// 	border: 1px solid $border-color-grey-light;
+		// 	border-radius: 50px;
+
+		// 	&:before {
+		// 		content: '';
+		// 		position: absolute;
+		// 		top: 50%;
+		// 		left: 50%;
+		// 		display: block;
+		// 		width: 7px;
+		// 		height: 1px;
+		// 		margin-top: -1px;
+		// 		margin-left: -3px;
+		// 		background-color: $color-grey-light;
+		// 	}
+
+		// 	&:after {
+		// 		content: '';
+		// 		position: absolute;
+		// 		top: 50%;
+		// 		left: 50%;
+		// 		display: block;
+		// 		width: 1px;
+		// 		height: 7px;
+		// 		margin-top: -4px;
+		// 		background-color: $color-grey-light;
+		// 	}
+		// }
+	}	
 
 	/* -- */
 
