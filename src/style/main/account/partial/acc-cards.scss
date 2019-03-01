@@ -19,15 +19,15 @@
 		}
 	}
 
-	&--add {
-		.acc-cards-add {
-			display: none;
-		}
+	// &--add {
+	// 	.acc-cards-add {
+	// 		display: none;
+	// 	}
 
-		.acc-addcard {
-			display: block;
-		}
-	}
+	// 	.acc-addcard {
+	// 		display: block;
+	// 	}
+	// }
 
 	.form-label {
 		&--default {
@@ -280,11 +280,6 @@
 	}
 }
 
-.acc-addcard {
-	display: none;
-	margin-top: 30px;
-}
-
 .acc-addcard-buttons {
 	& > .acc-addcard-buttons__row {
 		display: table;
@@ -331,10 +326,10 @@
 	}
 }
 
-.bcard-add {
-	&--account {
-		margin-bottom: 30px;
+// .bcard-add {
+// 	&--account {
+// 		margin-bottom: 30px;
 
-		@include bcard-add-mobile();
-	}
-}
+// 		@include bcard-add-mobile();
+// 	}
+// }

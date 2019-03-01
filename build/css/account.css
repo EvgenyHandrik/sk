@@ -474,14 +474,6 @@
   border-top: 1px solid #f6f6f6;
 }
 
-.acc-cards--add .acc-cards-add {
-  display: none;
-}
-
-.acc-cards--add .acc-addcard {
-  display: block;
-}
-
 .acc-cards .form-label--default {
   margin-bottom: 7px;
   font-size: 14px;
@@ -723,11 +715,6 @@
   background-color: #da5848;
 }
 
-.acc-addcard {
-  display: none;
-  margin-top: 30px;
-}
-
 .acc-addcard-buttons > .acc-addcard-buttons__row {
   display: table;
 }
@@ -770,99 +757,25 @@
   background-image: url(../images/ico-shield-lock-black-30x30.svg);
 }
 
-.bcard-add--account {
-  margin-bottom: 30px;
-  position: static;
-  width: auto;
-  height: auto;
+.acc-addcard {
+  max-width: 400px;
+  padding: 15px;
+  border: 1px solid #f0f0f0;
+  border-radius: 15px;
 }
 
-.bcard-add--account:before {
-  display: none;
-}
-
-.bcard-add--account:after {
-  display: none;
-}
-
-.bcard-add--account .bcard-add__title {
-  display: none;
-}
-
-.bcard-add--account .bcard-add-form {
-  position: static;
-  width: auto;
-  max-width: 349px;
-  height: auto;
-}
-
-.bcard-add--account .bcard-add-num {
-  position: static;
-  width: auto;
-  margin: 0 0 20px 0;
-}
-
-.bcard-add--account .bcard-add-num .bcard-add-num__label {
+.acc-addcard-title {
   display: block;
+  margin-bottom: 10px;
+  font-weight: normal;
+  font-size: 19px;
 }
 
-.bcard-add--account .bcard-add-vc {
-  position: static;
-  width: auto;
-  margin: 0 0 25px 0;
-}
-
-.bcard-add--account .bcard-add-vc__row {
-  display: table;
-  width: 100%;
-}
-
-.bcard-add--account .bcard-add-vc__col {
-  display: table-cell;
-  width: 50%;
-  vertical-align: bottom;
-}
-
-.bcard-add--account .bcard-add-vc__col:first-child {
-  padding-right: 5px;
-}
-
-.bcard-add--account .bcard-add-vc__col:last-child {
-  padding-left: 5px;
-}
-
-.bcard-add--account .bcard-add-vc__col--code {
-  position: static;
-  width: auto;
-  margin-left: 0;
-}
-
-.bcard-add--account .bcard-add-validity .bcard-add-validity__label {
-  display: block;
-}
-
-.bcard-add--account .bcard-add-validity__control {
-  text-align: left;
-}
-
-.bcard-add--account .bcard-add-code__control.form-control--default.form-control--text {
-  text-align: left;
-}
-
-.bcard-add--account .bcard-add-code__label {
-  position: static;
-}
-
-.bcard-add--account .bcard-add-code__label-text--1 {
-  display: block;
-}
-
-.bcard-add--account .bcard-add-code__label-text--2 {
-  display: none;
-}
-
-.bcard-add--account .bcard-add-remember {
-  position: static;
+.acc-addcard-info {
+  line-height: 1.4;
+  margin-bottom: 25px;
+  font-size: 13px;
+  color: #a5a5a5;
 }
 
 .acc-bonuses-info {

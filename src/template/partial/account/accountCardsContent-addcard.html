@@ -66,7 +66,7 @@
 
 					<h2 class="ttl ttl--2 ttl--account">Банковские карты</h2>
 
-					<div class="acc-cards acc-cards--add">
+					<div class="acc-cards">
 						<div class="acc-cards__list">
 							<div class="acc-cards__item">
 								<div class="acc-card">
@@ -142,73 +142,18 @@
 							</div>
 						</div>
 
-						<button type="button" class="acc-cards-add">
-							Добавить карту
-						</button>
-
-						<div class="acc-addcard">
-							<h2 class="ttl ttl--2 ttl--account">Новая карта</h2>
-
-							<div class="bcard-add bcard-add--account">
-								<div class="form form--lite bcard-add-form">
-									<span class="bcard-add__title">Моя карта</span>
-									
-									<div class="bcard-add-num">
-										<label class="form-label form-label--default bcard-add-num__label">Номер карты</label>
-										<div class="form-control-group form-control-group--default bcard-add-num__form-control-group form-control-group--success">
-											<span class="bcard-add-num__control-icon"><img src="images/ico-bcard-mastercard-60x60.png"></span>
-											<input type="text" class="form-control form-control--default form-control--text" placeholder="0000 0000 0000 0000">
-										</div>
-									</div>
-									
-									<div class="bcard-add-vc">
-										<div class="bcard-add-vc__row">
-											<div class="bcard-add-vc__col">
-												<div class="bcard-add-validity">
-													<label class="form-label form-label--default bcard-add-validity__label">Срок действия</label>
-													<div class="form-control-group form-control-group--default">
-														<input type="text" class="form-control form-control--default form-control--text bcard-add-validity__control" placeholder="Месяц / Год">
-													</div>
-												</div>
-											</div>
-											<div class="bcard-add-vc__col bcard-add-vc__col--code">
-												<div class="bcard-add-code">
-													<label class="form-label form-label--default bcard-add-code__label">
-														<span class="bcard-add-code__label-text bcard-add-code__label-text--1">Цифры на обороте</span>
-														<span class="bcard-add-code__label-text bcard-add-code__label-text--2">Три цифры с обортной стороны карты</span>
-													</label>
-													<div class="form-control-group form-control-group--default form-control-group--error bcard-add-code__control-group">
-														<input type="text" class="form-control form-control--default form-control--text bcard-add-code__control" placeholder="CVC2/CVV2">
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-	
-									<!-- <div class="bcard-add-remember">
-										<label class="bcard-add-remember__label">
-											<input type="checkbox">
-											<span class="bcard-add-remember__text">Запомнить карту</span>
-										</label>
-									</div> -->
-	
-								</div>
+						<div class="acc-addcard" >
+							<span class="acc-addcard-title">Добавить новую карту</span>
+							<div class="acc-addcard-info">
+								На вашей карте будет заблокирована случайная сумма (до 10 рублей).
+								Размер заблокированной суммы является кодом, который необходимо будет
+								ввести для подтверждения карты.
 							</div>
-						
+							
 							<div class="acc-addcard-buttons">
-								<div class="acc-addcard-buttons__row">
-									<div class="acc-addcard-buttons__col">
-										<button type="button" class="button button--default button--m button--border-radius-m acc-address-save">
-											<span class="button__text">Добавить</span>
-										</button>
-									</div>
-									<div class="acc-addcard-buttons__col acc-addcard-buttons__col--cancel">
-										<button type="button" class="button button--default button--m button--text button--dark-grey acc-address-cancel">
-											<span class="button__icon button__icon--x-bold-dark-grey"></span>
-											<span class="button__text">Отмена</span>
-										</button>
-									</div>
-								</div>
+								<button type="button" class="button button--default button--m">
+									<span class="button__text">Добавить карту</span>
+								</button>
 							</div>
 						</div>
 					</div>
