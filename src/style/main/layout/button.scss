@@ -43,6 +43,24 @@
 				&:before {
 					background-image: url(../images/ico-54x54-cart.png);
 				}
+
+				@at-root .button--default {
+					&.button--l {
+						.button__icon--cart-white {
+							$icon-cart-size: 20px;
+
+							width: $icon-cart-size;
+							height: $icon-cart-size;
+							margin-right: 7px;
+
+							&:before {
+								width: $icon-cart-size;
+								height: $icon-cart-size;
+								background-size: $icon-cart-size $icon-cart-size;
+							}
+						}
+					}
+				}
 			}
 
 			/* -- */

@@ -329,6 +329,7 @@
 
 .pretty-control__item {
   display: block;
+  cursor: pointer;
 }
 
 .pretty-control--default .pretty-control__item {
@@ -366,6 +367,19 @@
 
 .pretty-control--default .pretty-control__input:checked + .pretty-control__item:before {
   opacity: 1;
+}
+
+.pretty-control--default .pretty-control__input:disabled {
+  cursor: not-allowed;
+}
+
+.pretty-control--default .pretty-control__input:disabled + .pretty-control__item {
+  border-color: #b2b2b7;
+  cursor: not-allowed;
+}
+
+.pretty-control--default .pretty-control__input:disabled + .pretty-control__item:before {
+  background-color: #b2b2b7;
 }
 
 .phone-sms {

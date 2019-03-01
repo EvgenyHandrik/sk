@@ -21,6 +21,7 @@
 
 	&__item {
 		display: block;
+		cursor: pointer;
 	}
 
 	/* -- */
@@ -60,6 +61,19 @@
 		#{$b}__input:checked + #{$b}__item {
 			&:before {
 				opacity: 1;
+			}
+		}
+
+		#{$b}__input:disabled {
+			cursor: not-allowed;
+		}
+
+		#{$b}__input:disabled + #{$b}__item {
+			border-color: $color-grey;
+			cursor: not-allowed;
+
+			&:before {
+				background-color: $color-grey;
 			}
 		}
 	}

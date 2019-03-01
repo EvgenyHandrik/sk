@@ -1,8 +1,22 @@
 .b-lunch-summary {
+	// margin-top: 40px;
+	text-align: right;
 
+	@media (max-width: $b-lunch-bp-mobile) {
+		text-align: left;
+	}
+
+	&__content {
+		display: inline-block;
+
+		@media (max-width: $b-lunch-bp-mobile) {
+			display: block;
+		}
+	}
 }
 
 .b-lunch-s-total {
+	margin: 0 0 20px 0;
 	font-weight: bold;
 	font-size: 24px;
 
@@ -13,4 +27,41 @@
 	&__price-num {}
 
 	&__price-rub {}
+}
+
+.b-lunch-s-buy {
+	&__row {
+		display: table;
+	}
+
+	&__col {
+		display: table-cell;
+		vertical-align: top;
+
+		&--count {}
+
+		&--add-to-cart {
+			padding-left: 17px;
+		}
+	}
+
+	/* -- */
+
+	&__count {
+		&.count--default.count--lite.count--joint {
+			width: 98px + 4px;
+
+			.count__minus,
+			.count__plus,
+			.count__field {
+				height: $button-l-height - 2px;
+			}
+
+			.count__field {
+				width: 44px + 4px;
+				font-size: 22px;
+				font-family: $count-field-font-family-default;
+			}
+		}
+	}
 }

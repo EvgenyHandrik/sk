@@ -1,8 +1,9 @@
 .b-lunch-garnishes {
 	flex: 1 1 auto;
-	padding: (10px + 10px) 10px (10px + 10px) 10px;
-	margin: 15px -10px -15px -10px;
+	padding: (20px) 15px (20px) 15px;
+	margin: 20px -15px -20px -15px;
 	border-radius: 0 0 10px 10px;
+	border-top: 1px solid $border-color-grey-light;
 	background-color: #F9F9F9;
 }
 
@@ -10,7 +11,7 @@
 	display: block;
 	margin: 0 0 10px 0;
 	font-weight: bold;
-	font-size: 17px;
+	font-size: 16px;
 }
 
 .b-lunch-garnishes-list {}

@@ -20,7 +20,8 @@
 
 	// bp 5 (mobile)
 	@media (max-width: $b-lunch-bp-mobile) {
-		margin-bottom: 30px + 30px;
+		// margin-bottom: 30px + 30px;
+		margin-bottom: 35px;
 	}
 
 	&:last-child {
@@ -54,6 +55,11 @@
 			// bp 4
 			@media (max-width: 800px) {
 				margin-bottom: -(10px + 20px);
+			}
+
+			// bp Mobile
+			@media (max-width: $b-lunch-bp-mobile) {
+				margin-bottom: 0;
 			}
 		}
 
@@ -112,6 +118,10 @@
 				}
 				&:nth-of-type(even) {
 					padding-left: 0;
+				}
+
+				&:last-child {
+					margin-bottom: 0;
 				}
 			}
 		}

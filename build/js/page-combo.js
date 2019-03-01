@@ -126,27 +126,34 @@
 	var $container = $('.js-b-lunch-garnishes-select-delegate');
 	
 	if ($container.length) {
+		$('.b-lunch-garnishes-select').each(function() {
+			setStyle($(this));
+		});
 
+		$container.on(
+			'change.b-lunch-garnishes-toggle',
+			'.b-lunch-garnishes-select__switch',
+			function() {
+				var $switch = $(this);
+				var $lunch = $switch.closest('.b-lunch-garnishes-select');
+				setStyle($lunch, $switch);
+			});
 	}
 
-	function setStyle($lunch) {
-		var $switch = $select.find('.b-lunch-garnishes-select__switch:checked');
-		var $dish = $switch.closest('.b-lunch-garnishes-select__dish');
-		var $garnishes = $select.find('.b-lunch-garnishes-select__garnishes');
-		var $garnishesSwitch = $garnishes.find('.b-lunch-garnishes-select__garnishes-switch');
+	function setStyle($lunch, $switch) {
+		if ($lunch && $lunch.length) {
+			var $switch = $switch || $lunch.find('.b-lunch-garnishes-select__switch:checked');			
+			var $dish =	$switch.length ? $switch.closest('.b-lunch-garnishes-select__dish') : $();
+			var $garnishes = $lunch.find('.b-lunch-garnishes-select__garnishes');
+			var $garnishesSwitch = $garnishes.find('.b-lunch-garnishes-select__garnishes-switch');
 
-		// b-lunch--garnish-enable
-
-		if ($dish.hasClass('b-lunch-dish--has-garnish')) {
-			$lunch
-				.removeClass('b-lunch--garnish-disable')
-				.addClass('b-lunch--garnish-enable');
-			$garnishesSwitch.prop('disabled', false);
-		} else {
-			$lunch
-				.removeClass('b-lunch--garnish-enable')
-				.addClass('b-lunch--garnish-disable');
-			$garnishesSwitch.prop('disabled', true);
+			if ($dish.length && $dish.hasClass('b-lunch-dish--has-garnish')) {
+				$lunch.removeClass('b-lunch--garnish-disable');
+				$garnishesSwitch.prop('disabled', false);
+			} else {
+				$lunch.addClass('b-lunch--garnish-disable');
+				$garnishesSwitch.prop('disabled', true);
+			}
 		}
 	}
 
