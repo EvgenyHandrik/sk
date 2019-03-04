@@ -1,0 +1,26 @@
+.b-lunch-gselect {	
+	
+	&__dish {}
+
+	&__switch {}
+
+	&__garnishes {
+		display: none;
+
+		&--visible {
+			display: block;
+		}
+	}
+
+	/* -- */
+
+	.b-lunch-garnishes-container {
+		display: none;
+	}
+
+	&--garnishes-visible {
+		.b-lunch-garnishes-container {
+			display: block;
+		}
+	}
+}

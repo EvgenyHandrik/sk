@@ -1015,6 +1015,50 @@ a.combo-dish__name:hover {
   color: #a5a5a5;
 }
 
+.b-lunch-garnish-ibar {
+  font-size: 1px;
+}
+
+.b-lunch-garnish-ibar__item {
+  display: inline-block;
+  margin: 0 10px 0 0;
+}
+
+.b-lunch-garnish-ibar__item:last-child {
+  margin-right: 0;
+}
+
+.b-lunch-garnish-brief-toggle {
+  display: inline;
+  line-height: 1.3;
+  border-bottom: 1px dashed #a5a5a5;
+  font-size: 13px;
+  color: #a5a5a5;
+  background: transparent;
+  -webkit-transition-property: color, border-color;
+  transition-property: color, border-color;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+  cursor: pointer;
+}
+
+.b-lunch-garnish-brief-toggle:hover,
+.b-lunch-garnish-brief-toggle--active {
+  color: #bb1018;
+  border-color: #bb1018;
+}
+
+.b-lunch-garnish-brief {
+  line-height: 1.5;
+  margin: 5px 0 0 0;
+  font-size: 15px;
+  color: #a5a5a5;
+}
+
+.b-lunch-garnish-brief--hidden {
+  display: none;
+}
+
 .b-lunch-has-garnish-container {
   margin: 0 0 5px 0;
 }
@@ -1032,6 +1076,26 @@ a.combo-dish__name:hover {
   border-radius: 5px;
   vertical-align: middle;
   color: #B28F07;
+}
+
+.b-lunch-gselect {
+  /* -- */
+}
+
+.b-lunch-gselect__garnishes {
+  display: none;
+}
+
+.b-lunch-gselect__garnishes--visible {
+  display: block;
+}
+
+.b-lunch-gselect .b-lunch-garnishes-container {
+  display: none;
+}
+
+.b-lunch-gselect--garnishes-visible .b-lunch-garnishes-container {
+  display: block;
 }
 
 .cmb-additions-title {
@@ -1733,6 +1797,16 @@ a.combo-dish__name:hover {
   }
 
   .b-lunch-dish-brief-toggle:hover.b-lunch-dish-brief-toggle--active {
+    color: #bb1018;
+    border-color: #bb1018;
+  }
+
+  .b-lunch-garnish-brief-toggle:hover {
+    color: #a5a5a5;
+    border-color: #a5a5a5;
+  }
+
+  .b-lunch-garnish-brief-toggle:hover.b-lunch-garnish-brief-toggle--active {
     color: #bb1018;
     border-color: #bb1018;
   }

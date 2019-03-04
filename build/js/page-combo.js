@@ -120,41 +120,73 @@
 
 }());
 
-// b-lunch garnishes toggle
+// b-lunch gselect
 ;(function() {
 
-	var $container = $('.js-b-lunch-garnishes-select-delegate');
+	var $container = $('.js-b-lunch-gselect-delegate');
 	
 	if ($container.length) {
-		$('.b-lunch-garnishes-select').each(function() {
+		$('.b-lunch-gselect').each(function() {
 			setStyle($(this));
 		});
 
 		$container.on(
-			'change.b-lunch-garnishes-toggle',
-			'.b-lunch-garnishes-select__switch',
+			'change.b-lunch-gselect',
+			'.b-lunch-gselect__dish-switch',
 			function() {
-				var $switch = $(this);
-				var $lunch = $switch.closest('.b-lunch-garnishes-select');
-				setStyle($lunch, $switch);
+				var $dishSwitch = $(this);
+				var $lunch = $dishSwitch.closest('.b-lunch-gselect');
+				setStyle($lunch, $dishSwitch);
 			});
 	}
 
-	function setStyle($lunch, $switch) {
+	function setStyle($lunch, $dishSwitch) {
 		if ($lunch && $lunch.length) {
-			var $switch = $switch || $lunch.find('.b-lunch-garnishes-select__switch:checked');			
-			var $dish =	$switch.length ? $switch.closest('.b-lunch-garnishes-select__dish') : $();
-			var $garnishes = $lunch.find('.b-lunch-garnishes-select__garnishes');
-			var $garnishesSwitch = $garnishes.find('.b-lunch-garnishes-select__garnishes-switch');
+			var $dishSwitch = $dishSwitch || $lunch.find('.b-lunch-gselect__dish-switch:checked');			
+			var $garnishesAll = $lunch.find('.b-lunch-gselect__garnishes');
+			
+			var dishName;
+			var $garnishes = $();
 
-			if ($dish.length && $dish.hasClass('b-lunch-dish--has-garnish')) {
-				$lunch.removeClass('b-lunch--garnish-disable');
-				$garnishesSwitch.prop('disabled', false);
+			if ($dishSwitch.length) {
+				dishName = $dishSwitch.data('dish-name');
+
+				if (dishName) {
+					$garnishes = $garnishesAll.filter(function() {
+						return $(this).data('dish-name') === dishName;
+					});
+				}
+			}
+
+			if ($dishSwitch.length && $garnishes.length) {
+				hideGarnishes($lunch, $garnishesAll);
+				openGarnishes($lunch, $garnishes);
 			} else {
-				$lunch.addClass('b-lunch--garnish-disable');
-				$garnishesSwitch.prop('disabled', true);
+				hideGarnishes($lunch, $garnishesAll);
 			}
 		}
+	}
+
+	function openGarnishes($lunch, $garnishes) {
+		$lunch
+			.addClass('b-lunch-gselect--garnishes-visible');
+		
+		$garnishes
+			.addClass('b-lunch-gselect__garnishes--visible');
+		
+		$garnishes.find('.b-lunch-gselect__garnish-switch')
+			.prop('disabled', false);
+	}
+
+	function hideGarnishes($lunch, $garnishesAll) {
+		$lunch
+			.removeClass('b-lunch-gselect--garnishes-visible');
+		
+		$garnishesAll
+			.removeClass('b-lunch-gselect__garnishes--visible');
+		
+		$garnishesAll.find('.b-lunch-gselect__garnish-switch').filter(':not(:disabled)')
+			.prop('disabled', true);
 	}
 
 }());

@@ -63,3 +63,58 @@
 		color: $color-grey-light;
 	}
 }
+
+.b-lunch-garnish-ibar {
+	font-size: 1px;
+
+	&__item {
+		display: inline-block;
+		margin: 0 10px 0 0;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.b-lunch-garnish-brief-toggle {
+	$b: &;
+
+	display: inline;
+	line-height: 1.3;
+	border-bottom: 1px dashed $color-grey-light;
+	font-size: 13px;
+	color: $color-grey-light;
+	background: transparent;
+	@include transition((color, border-color));
+	cursor: pointer;
+
+	&:hover,
+	&--active {
+		color: $color-red;
+		border-color: $color-red;
+	}
+
+	@media (hover: none) {
+		&:hover {
+			color: $color-grey-light;
+			border-color: $color-grey-light;
+			
+			&#{$b}--active {
+				color: $color-red;
+				border-color: $color-red;
+			}
+		}
+  }
+}
+
+.b-lunch-garnish-brief {
+	line-height: 1.5;
+	margin: 5px 0 0 0;
+	font-size: 15px;
+	color: $color-grey-light;
+
+	&--hidden {
+		display: none;
+	}
+}

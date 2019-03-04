@@ -1,5 +1,5 @@
 
-<div class="b-lunch-container js-b-lunch-dbrief-toggle-delegate js-b-lunch-garnishes-select-delegate">
+<div class="b-lunch-container js-b-lunch-dbrief-toggle-delegate js-b-lunch-gselect-delegate">
 	<div class="combo-phone combo-phone--b-lunch">
 		<a href="tel:83432980044" class="combo-phone-button">
 			<span class="combo-phone-button__title">Заказать по телефону</span>
@@ -218,15 +218,17 @@
 				</div>
 			</div>
 			<div class="b-lunch-col">
-				<div class="b-lunch b-lunch-garnishes-select">
+				<div class="b-lunch b-lunch-gselect">
 					<span class="b-lunch__title">Горячее</span>
 					<div class="b-lunch__main">
 						<div class="b-lunch-dishes">
 							<div class="b-lunch-dish-list">
-								<div class="b-lunch-dish b-lunch-garnishes-select__dish">
+								
+								<!-- Блюдо 1 -->
+								<div class="b-lunch-dish">
 									<div class="b-lunch-dish__control-box">
 										<span class="pretty-control pretty-control--default pretty-control--radio">
-											<input type="radio" class="pretty-control__input b-lunch-garnishes-select__switch" name="radio-hot" id="radio-hot-1">
+											<input data-dish-name="s-kopchenoy-kuricey" type="radio" class="pretty-control__input b-lunch-gselect__dish-switch" name="radio-hot" id="radio-hot-1">
 											<span class="pretty-control__item"></span>
 										</span>
 									</div>
@@ -245,6 +247,9 @@
 												</div>
 											</div>
 										</div>
+										<div class="b-lunch-has-garnish-container">
+											<span class="b-lunch-has-garnish">Гарнир на выбор</span>
+										</div>
 										<div class="b-lunch-dish-ibar">
 											<div class="b-lunch-dish-ibar__row">
 												<div class="b-lunch-dish-ibar__col">
@@ -260,11 +265,12 @@
 										</div>
 									</div>
 								</div>
-								<!-- Класс "b-lunch-dish--has-garnish" для включения гарниров -->
-								<div class="b-lunch-dish b-lunch-dish--has-garnish b-lunch-garnishes-select__dish">
+								
+								<!-- Блюдо 2 -->
+								<div class="b-lunch-dish">
 									<div class="b-lunch-dish__control-box">
 										<span class="pretty-control pretty-control--default pretty-control--radio">
-											<input type="radio" class="pretty-control__input b-lunch-garnishes-select__switch" name="radio-hot" id="radio-hot-2">
+											<input data-dish-name="budapesht" type="radio" class="pretty-control__input b-lunch-gselect__dish-switch" name="radio-hot" id="radio-hot-2">
 											<span class="pretty-control__item"></span>
 										</span>
 									</div>
@@ -301,10 +307,12 @@
 										</div>
 									</div>
 								</div>
-								<div class="b-lunch-dish b-lunch-garnishes-select__dish">
+								
+								<!-- Блюдо 3 -->
+								<div class="b-lunch-dish b-lunch-gselect__dish">
 									<div class="b-lunch-dish__control-box">
 										<span class="pretty-control pretty-control--default pretty-control--radio">
-											<input type="radio" class="pretty-control__input b-lunch-garnishes-select__switch" name="radio-hot" id="radio-hot-0">
+											<input type="radio" class="pretty-control__input b-lunch-gselect__dish-switch" name="radio-hot" id="radio-hot-0">
 											<span class="pretty-control__item"></span>
 										</span>
 									</div>
@@ -324,41 +332,137 @@
 								</div>
 							</div>
 						</div>
-						<div class="b-lunch-garnishes b-lunch-garnishes-select__garnishes">
-							<span class="b-lunch-garnishes-title">Гарнир на выбор</span>
-							<div class="b-lunch-garnish-list">
-								<div class="b-lunch-garnish">
-									<div class="b-lunch-garnish__control-box">
-										<span class="pretty-control pretty-control--default pretty-control--radio">
-											<input checked type="radio" class="pretty-control__input b-lunch-garnishes-select__garnishes-switch" name="radio-hot-garnish" id="radio-hot-garnish-0">
-											<span class="pretty-control__item"></span>
-										</span>
-									</div>
-									<div class="b-lunch-garnish__name-box">
-										<div class="b-lunch-garnish__name-wrapper">
-											<label class="b-lunch-garnish__name-label" for="radio-hot-garnish-0">
-												<span class="b-lunch-garnish__name">Картофельное пюре 250 гр.</span>
-											</label>
+						<div class="b-lunch-garnishes-container">
+							<div class="b-lunch-garnishes-list">
+								
+								<!-- Блюдо 1 - Гарниры  -->
+								<div data-dish-name="s-kopchenoy-kuricey" class="b-lunch-garnishes b-lunch-gselect__garnishes">
+									<span class="b-lunch-garnishes-title">Гарнир на выбор</span>
+									<div class="b-lunch-garnish-list">
+										
+										<!-- Блюдо 1 - Гарнир 1 -->
+										<div class="b-lunch-garnish">
+											<div class="b-lunch-garnish__control-box">
+												<span class="pretty-control pretty-control--default pretty-control--radio">
+													<input type="radio" class="pretty-control__input b-lunch-gselect__garnish-switch" name="radio-hot-garnish" id="radio-hot-garnish-0">
+													<span class="pretty-control__item"></span>
+												</span>
+											</div>
+											<div class="b-lunch-garnish__name-box">
+												<div class="b-lunch-garnish__name-wrapper">
+													<label class="b-lunch-garnish__name-label" for="radio-hot-garnish-0">
+														<span class="b-lunch-garnish__name">Картофельное пюре</span>
+													</label>
+												</div>
+												<div class="b-lunch-garnish-ibar">
+													<div class="b-lunch-garnish-ibar__item">
+														<span class="b-lunch-garnish__weight">250 гр.</span>
+													</div>
+													<div class="b-lunch-garnish-ibar__item">
+														<button type="button" class="b-lunch-garnish-brief-toggle">Состав</button>
+													</div>
+												</div>
+												<div class="b-lunch-garnish-brief">
+													Копченая курица, морковь, огурец, томаты, салат айсберг, имбирь, чеснок, кунжут, рисовый уксус, масло, зелень.
+												</div>
+											</div>
+										</div>
+										
+										<!-- Блюдо 1 - Гарнир 2 -->
+										<div class="b-lunch-garnish">
+											<div class="b-lunch-garnish__control-box">
+												<span class="pretty-control pretty-control--default pretty-control--radio">
+													<input type="radio" class="pretty-control__input b-lunch-gselect__garnish-switch" name="radio-hot-garnish" id="radio-hot-garnish-1">
+													<span class="pretty-control__item"></span>
+												</span>
+											</div>
+											<div class="b-lunch-garnish__name-box">
+												<div class="b-lunch-garnish__name-wrapper">
+													<label class="b-lunch-garnish__name-label" for="radio-hot-garnish-1">
+														<span class="b-lunch-garnish__name">Рис по-тайски 250 гр.</span>
+													</label>
+												</div>
+												<div class="b-lunch-garnish-ibar">
+													<div class="b-lunch-garnish-ibar__item">
+														<span class="b-lunch-garnish__weight">250 гр.</span>
+													</div>
+													<div class="b-lunch-garnish-ibar__item">
+														<button type="button" class="b-lunch-garnish-brief-toggle">Состав</button>
+													</div>
+												</div>
+												<div class="b-lunch-garnish-brief">
+													Копченая курица, морковь, огурец, томаты, салат айсберг, имбирь, чеснок, кунжут, рисовый уксус, масло, зелень.
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
-								<div class="b-lunch-garnish">
-									<div class="b-lunch-garnish__control-box">
-										<span class="pretty-control pretty-control--default pretty-control--radio">
-											<input type="radio" class="pretty-control__input b-lunch-garnishes-select__garnishes-switch" name="radio-hot-garnish" id="radio-hot-garnish-1">
-											<span class="pretty-control__item"></span>
-										</span>
-									</div>
-									<div class="b-lunch-garnish__name-box">
-										<div class="b-lunch-garnish__name-wrapper">
-											<label class="b-lunch-garnish__name-label" for="radio-hot-garnish-1">
-												<span class="b-lunch-garnish__name">Рис по-тайски 250 гр.</span>
-											</label>
+								
+								<!-- Блюдо 2 - Гарниры  -->
+								<div data-dish-name="budapesht" class="b-lunch-garnishes b-lunch-gselect__garnishes">
+									<span class="b-lunch-garnishes-title">Гарнир на выбор</span>
+									<div class="b-lunch-garnish-list">
+										
+										<!-- Блюдо 2 - Гарнир 1 -->
+										<div class="b-lunch-garnish">
+											<div class="b-lunch-garnish__control-box">
+												<span class="pretty-control pretty-control--default pretty-control--radio">
+													<input type="radio" class="pretty-control__input b-lunch-gselect__garnish-switch" name="radio-hot-garnish" id="radio-hot-garnish-0">
+													<span class="pretty-control__item"></span>
+												</span>
+											</div>
+											<div class="b-lunch-garnish__name-box">
+												<div class="b-lunch-garnish__name-wrapper">
+													<label class="b-lunch-garnish__name-label" for="radio-hot-garnish-0">
+														<span class="b-lunch-garnish__name">Печеный картофель</span>
+													</label>
+												</div>
+												<div class="b-lunch-garnish-ibar">
+													<div class="b-lunch-garnish-ibar__item">
+														<span class="b-lunch-garnish__weight">150 гр.</span>
+													</div>
+													<div class="b-lunch-garnish-ibar__item">
+														<button type="button" class="b-lunch-garnish-brief-toggle">Состав</button>
+													</div>
+												</div>
+												<div class="b-lunch-garnish-brief">
+													Копченая курица, морковь, огурец, томаты, салат айсберг, имбирь.
+												</div>
+											</div>
+										</div>
+										
+										<!-- Блюдо 2 - Гарнир 2 -->
+										<div class="b-lunch-garnish">
+											<div class="b-lunch-garnish__control-box">
+												<span class="pretty-control pretty-control--default pretty-control--radio">
+													<input type="radio" class="pretty-control__input b-lunch-gselect__garnish-switch" name="radio-hot-garnish" id="radio-hot-garnish-1">
+													<span class="pretty-control__item"></span>
+												</span>
+											</div>
+											<div class="b-lunch-garnish__name-box">
+												<div class="b-lunch-garnish__name-wrapper">
+													<label class="b-lunch-garnish__name-label" for="radio-hot-garnish-1">
+														<span class="b-lunch-garnish__name">Отварной рис</span>
+													</label>
+												</div>
+												<div class="b-lunch-garnish-ibar">
+													<div class="b-lunch-garnish-ibar__item">
+														<span class="b-lunch-garnish__weight">200 гр.</span>
+													</div>
+													<div class="b-lunch-garnish-ibar__item">
+														<button type="button" class="b-lunch-garnish-brief-toggle">Состав</button>
+													</div>
+												</div>
+												<div class="b-lunch-garnish-brief">
+													Копченая курица, морковь, огурец, томаты, салат айсберг.
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
+						
 					</div>
 				</div>
 			</div>
