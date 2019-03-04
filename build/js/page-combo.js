@@ -104,7 +104,7 @@
 ;(function() {
 
 	$('.js-b-lunch-dbrief-toggle-delegate')
-		.on('click.brief-toggle-delegate', '.b-lunch-dish-brief-toggle', function() {
+		.on('click.b-lunch-dbrief-toggle-delegate', '.b-lunch-dish-brief-toggle', function() {
 			$button = $(this);
 			$dish = $button.closest('.b-lunch-dish');
 			$brief = $dish.find('.b-lunch-dish-brief');
@@ -159,7 +159,7 @@
 			}
 
 			if ($dishSwitch.length && $garnishes.length) {
-				hideGarnishes($lunch, $garnishesAll);
+				hideGarnishes(null, $garnishesAll);
 				openGarnishes($lunch, $garnishes);
 			} else {
 				hideGarnishes($lunch, $garnishesAll);
@@ -179,8 +179,10 @@
 	}
 
 	function hideGarnishes($lunch, $garnishesAll) {
-		$lunch
-			.removeClass('b-lunch-gselect--garnishes-visible');
+		if ($lunch) {
+			$lunch
+				.removeClass('b-lunch-gselect--garnishes-visible');
+		}
 		
 		$garnishesAll
 			.removeClass('b-lunch-gselect__garnishes--visible');
@@ -188,6 +190,26 @@
 		$garnishesAll.find('.b-lunch-gselect__garnish-switch').filter(':not(:disabled)')
 			.prop('disabled', true);
 	}
+
+}());
+
+// b-lunch-garnish brief toggle
+;(function() {
+
+	$('.js-b-lunch-gbrief-toggle-delegate')
+		.on('click.b-lunch-gbrief-toggle-delegate', '.b-lunch-garnish-brief-toggle', function() {
+			$button = $(this);
+			$garnish = $button.closest('.b-lunch-garnish');
+			$brief = $garnish.find('.b-lunch-garnish-brief');
+
+			if ($brief.hasClass('b-lunch-garnish-brief--hidden')) {
+				$brief.removeClass('b-lunch-garnish-brief--hidden');
+				$button.addClass('b-lunch-garnish-brief-toggle--active');
+			} else {
+				$brief.addClass('b-lunch-garnish-brief--hidden');
+				$button.removeClass('b-lunch-garnish-brief-toggle--active');
+			}
+		});
 
 }());
 

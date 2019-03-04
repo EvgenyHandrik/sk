@@ -1071,11 +1071,11 @@ a.combo-dish__name:hover {
   display: inline-block;
   line-height: 1;
   padding: 3px 10px;
-  font-size: 13px;
-  border: 1px solid #E5B709;
-  border-radius: 5px;
+  font-size: 12px;
+  border: 1px solid #1bba13;
+  border-radius: 3px;
   vertical-align: middle;
-  color: #B28F07;
+  color: #1bba13;
 }
 
 .b-lunch-gselect {
