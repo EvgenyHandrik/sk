@@ -239,12 +239,6 @@
 
 		&__phone {
 			display: none;
-
-			&-title {
-				display: block;
-			}
-		
-			&-num {}
 		}
 
 		&__bonus {
@@ -809,21 +803,53 @@
 
 			.h-nav {
 				&__phone {
+					position: relative;
 					display: block;
-					padding: 7px 15px;
+					padding: 15px;
 					border-bottom: 1px solid #f0f0f0;
+
+					// &:before {
+					// 	content: '';
+					// 	position: absolute;
+					// 	top: 0;
+					// 	left: 0;
+					// 	bottom: 0;
+					// 	display: block;
+					// 	width: 3px;
+					// 	background-color: #8c7e7e;
+					// }
+
+					@media (max-width: 520px) {
+						border-bottom: 0;
+					}
 				}
-	
-				&__phone-title {
+				
+				&-phone {
 					display: block;
-					margin: 0 0 5px 0;
-					font-size: 15px;
-					color: #b2b2b7;
-				}
-	
-				&__phone-num {
-					font-size: 17px;
-					border-color: #bb1018;
+					border: 0;
+					
+					&:hover {
+						.h-nav__phone-num {
+							color: $color-red-active;
+							border-bottom-color: $color-red-active;
+						}
+					}
+
+					/* -- */
+				
+					&__title {
+						display: block;
+						line-height: 1.2;
+						margin: 0 0 2px 0;
+						font-size: 13px;
+						color: #a5a5a5;
+					}
+		
+					&__num {
+						font-size: 15px;
+						color: $color-red;
+						border-bottom: 1px solid $color-red;
+					}
 				}
 			}
 		}
@@ -871,21 +897,36 @@
 	.header-v2--mobile {
 		.h-nav {
 			&__bonus {
+				position: relative;
 				display: block;
+				padding: 0 15px 15px 15px;
+				border-bottom: 1px solid #f0f0f0;
+
+				&:first-child {
+					padding-top: 15px;
+				}
+				
+				// &:before {
+				// 	content: '';
+				// 	position: absolute;
+				// 	top: 0;
+				// 	left: 0;
+				// 	bottom: 0;
+				// 	display: block;
+				// 	width: 3px;
+				// 	background-color: #8c7e7e;
+				// }
 			}
 	
 			&-bonus {
-				&__button {
-					display: block;
-					width: 100%;
-					padding: 7px 15px;
-					text-align: left;
-					border-bottom: 1px solid #f0f0f0;
-					background-color: transparent;
-				}
+				display: block;
+				width: 100%;
+				padding: 0;
+				text-align: left;
+				background-color: transparent;
 	
 				&__total {
-					margin: 0 0 1px 0;
+					margin: 0;
 	
 					&-badge {
 						display: inline-block;
