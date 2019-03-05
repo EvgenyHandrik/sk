@@ -165,7 +165,7 @@
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: $icon-size $icon-size;
-				background-image: url(../images/ico-fire-red-active-30x30.svg);
+				background-image: url(../images/ico-plus-circle-flat-red-orange-24x24.svg);
 			}
 		}
 	}
@@ -217,9 +217,11 @@
 	}
 
 	&__price {
+		display: inline-block;
 		font-weight: bold;
 		font-size: 19px;
 		white-space: nowrap;
+		vertical-align: middle;
 
 		&-rub {
 			font-weight: normal;
@@ -227,6 +229,7 @@
 		}
 
 		@media (max-width: 640px) {
+			display: inline;
 			font-weight: bold;
 			font-size: 16px;
 		}
