@@ -271,6 +271,10 @@
   display: block;
 }
 
+.h-nav__bonus {
+  display: none;
+}
+
 /* v2.2 end */
 
 .h-nav-l1__list {

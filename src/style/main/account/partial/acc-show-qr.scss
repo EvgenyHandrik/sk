@@ -1,0 +1,31 @@
+.acc-show-qr-container {
+	margin: 0 0 40px 0;
+}
+
+.acc-show-qr {
+	$b: &;
+
+	display: inline-block;
+	height: $button-m-height;
+	line-height: $button-m-height - 2px;
+	padding: 0 $button-m-padding-h;
+	font-size: 15px;
+	border: 1px solid $border-color-grey-light;
+	border-radius: $button-m-border-radius;
+	background-color: transparent;
+	cursor: pointer;
+
+	&:hover {
+		#{$b}__text {
+			color: $color-red;
+			border-color: $color-red;
+		}
+	}
+
+	&__text {
+		line-height: 1;
+		border-bottom: 1px dashed #000;
+		color: #000;
+		@include transition((border-color, color));
+	}
+}

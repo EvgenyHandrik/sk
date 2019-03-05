@@ -1,3 +1,7 @@
+.header-v2--fixed {
+  /* -- */
+}
+
 .header-v2--fixed .h-cart {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -29,6 +33,40 @@
 
 .header-v2--fixed .h-logo {
   margin-left: 5px;
+}
+
+.header-v2--fixed .h-nav-bonus__button {
+  display: block;
+  width: 100%;
+  padding: 7px 15px;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+  background-color: transparent;
+}
+
+.header-v2--fixed .h-nav-bonus__total {
+  margin: 0 0 1px 0;
+}
+
+.header-v2--fixed .h-nav-bonus__total-badge {
+  display: inline-block;
+  line-height: 1;
+  padding: 3px 5px;
+  margin: 0 5px 0 0;
+  font-size: 12px;
+  border-radius: 50px;
+  color: #fff;
+  background-color: #da5848;
+}
+
+.header-v2--fixed .h-nav-bonus__total-text {
+  font-size: 13px;
+  color: #a5a5a5;
+}
+
+.header-v2--fixed .h-nav-bonus__qr {
+  font-size: 15px;
+  border-bottom: 1px dashed #000;
 }
 
 .h-cart {
@@ -139,6 +177,7 @@
 }
 
 .h-nav {
+  /* -- */
   /* -- */
 }
 

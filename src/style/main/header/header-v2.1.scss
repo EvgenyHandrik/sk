@@ -234,17 +234,21 @@
 	.h-nav {
 		position: relative;
 		z-index: 1;
-	}
 
-	.h-nav__phone {
-		display: none;
-	}
+		&__phone {
+			display: none;
 
-	.h-nav__phone-title {
-		display: block;
-	}
+			&-title {
+				display: block;
+			}
+		
+			&-num {}
+		}
 
-	.h-nav__phone-num {}
+		&__bonus {
+			display: none;
+		}
+	}
 
 /* v2.2 end */
 
@@ -796,26 +800,30 @@
 	
 	/* v2.2 start */
 
-		.header-v2--mobile .h-phone {
-			display: none;
-		}
+		.header-v2--mobile {
+			.h-phone {
+				display: none;
+			}
 
-		.header-v2--mobile .h-nav__phone {
-			display: block;
-			padding: 7px 15px;
-			border-bottom: 1px solid #f0f0f0;
-		}
-
-		.header-v2--mobile .h-nav__phone-title {
-			display: block;
-			margin: 0 0 5px 0;
-			font-size: 15px;
-			color: #b2b2b7;
-		}
-
-		.header-v2--mobile .h-nav__phone-num {
-			font-size: 17px;
-			border-color: #bb1018;
+			.h-nav {
+				&__phone {
+					display: block;
+					padding: 7px 15px;
+					border-bottom: 1px solid #f0f0f0;
+				}
+	
+				&__phone-title {
+					display: block;
+					margin: 0 0 5px 0;
+					font-size: 15px;
+					color: #b2b2b7;
+				}
+	
+				&__phone-num {
+					font-size: 17px;
+					border-color: #bb1018;
+				}
+			}
 		}
 
 	/* v2.2 end */

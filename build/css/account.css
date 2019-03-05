@@ -801,6 +801,37 @@
   font-size: 15px;
 }
 
+.acc-show-qr-container {
+  margin: 0 0 40px 0;
+}
+
+.acc-show-qr {
+  display: inline-block;
+  height: 42px;
+  line-height: 40px;
+  padding: 0 15px;
+  font-size: 15px;
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.acc-show-qr:hover .acc-show-qr__text {
+  color: #bb1018;
+  border-color: #bb1018;
+}
+
+.acc-show-qr__text {
+  line-height: 1;
+  border-bottom: 1px dashed #000;
+  color: #000;
+  -webkit-transition-property: border-color, color;
+  transition-property: border-color, color;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+}
+
 .acc-history-list {
   margin: 0 0 20px 0;
 }
