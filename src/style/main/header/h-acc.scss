@@ -1,3 +1,5 @@
+@import "../../helpers/helpers";
+
 .h-acc {
 	$b: &;
 	$transition-duration: 200ms;
@@ -166,29 +168,16 @@
 			/* -- */
 
 			&--user {
+				padding: $btn-space-v $btn-space-h;
+				background-color: #f0f0f0;
+			}
+
+			&--bonus {
+				padding: 0 $btn-space-h ($btn-space-v + 5px) $btn-space-h;
 				background-color: #f0f0f0;
 
-				#{$b}__btn {
-					padding-left: $btn-space-h;
-					color: #ba131a;
-
-					&:hover {
-						color: #000;
-
-						#{$b}__text {
-							border-bottom-color: rgba(0,0,0,0.2);
-						}
-					}
-
-					& > #{$b}__text {
-						border-bottom: 1px solid rgba(187,16,24,0.2);
-					}
-				}
-
-				& > #{$b}__text {
-					display: block;
-					padding: $btn-space-v $btn-space-h;
-					color: #000;
+				&:first-child {
+					padding-top: $btn-space-v;
 				}
 			}
 
@@ -398,6 +387,99 @@
 		}
 
 		/* -- */
+
+		&-user {
+			&__login {
+				display: inline;
+				font-size: 15px;
+				border-bottom: 1px solid $link-orig-border-color;
+				color: $link-orig-color;
+
+				&:hover {
+					border-color: $link-orig-border-color-active;
+					color: $link-orig-color-active;
+				}
+			}
+
+			&__name {
+				display: inline;
+				font-weight: bold;
+				font-size: 15px;
+			}
+		}
+
+		&-bonus {
+			&__button {
+				display: inline;
+				padding: 0;
+				text-align: left;
+				background-color: transparent;
+				cursor: pointer;
+
+				&:hover {
+					.h-acc-dd-bonus__qr {
+						border-color: $color-red;
+						color: $color-red;
+					}
+				}
+			}
+
+			&__total {
+				margin: 0;
+
+				&-badge {
+					display: inline-block;
+					line-height: 1;
+					padding: 3px 5px;
+					margin: 0 5px 0 0;
+					font-size: 12px;
+					border-radius: 50px;
+					color: #fff;
+					background-color: #da5848;
+				}
+
+				&-text {
+					font-size: 13px;
+					color: $color-grey-light;
+				}
+
+				&-spinner {
+					$icon-size: 12px;
+
+					display: inline-block;
+					width: $icon-size;
+					height: $icon-size;
+					margin: 0 5px 0 0;
+					vertical-align: middle;
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: $icon-size $icon-size;
+					background-image: url(../images/ico-spinner-grey-30x30.svg);
+					animation: hAccDDSpinnerRotation 1s linear infinite;
+				}
+			}
+
+			&__qr {
+				font-size: 12px;
+				border-bottom: 1px dashed #000;
+				@include transition((border-color, color));
+			}
+
+			/* -- */
+
+			&--unauthorized {
+				.h-acc-dd-bonus {
+					&__total {
+						display: none;
+					}
+
+					&__qr {
+						border-color: #a5a5a5;
+						color: #a5a5a5;
+					}
+				}
+			}
+		}
 
 		&-bonuses {
 			&__total {}

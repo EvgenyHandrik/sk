@@ -133,30 +133,17 @@
 }
 
 .h-acc-dd__item--user {
+  padding: 10px 20px;
   background-color: #f0f0f0;
 }
 
-.h-acc-dd__item--user .h-acc-dd__btn {
-  padding-left: 20px;
-  color: #ba131a;
+.h-acc-dd__item--bonus {
+  padding: 0 20px 15px 20px;
+  background-color: #f0f0f0;
 }
 
-.h-acc-dd__item--user .h-acc-dd__btn:hover {
-  color: #000;
-}
-
-.h-acc-dd__item--user .h-acc-dd__btn:hover .h-acc-dd__text {
-  border-bottom-color: rgba(0, 0, 0, 0.2);
-}
-
-.h-acc-dd__item--user .h-acc-dd__btn > .h-acc-dd__text {
-  border-bottom: 1px solid rgba(187, 16, 24, 0.2);
-}
-
-.h-acc-dd__item--user > .h-acc-dd__text {
-  display: block;
-  padding: 10px 20px;
-  color: #000;
+.h-acc-dd__item--bonus:first-child {
+  padding-top: 10px;
 }
 
 .h-acc-dd__item--profile .h-acc-dd__icon:before,
@@ -350,6 +337,93 @@
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+}
+
+.h-acc-dd-user__login {
+  display: inline;
+  font-size: 15px;
+  border-bottom: 1px solid rgba(187, 16, 24, 0.2);
+  color: #bb1018;
+}
+
+.h-acc-dd-user__login:hover {
+  border-color: rgba(0, 0, 0, 0.2);
+  color: #000;
+}
+
+.h-acc-dd-user__name {
+  display: inline;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.h-acc-dd-bonus {
+  /* -- */
+}
+
+.h-acc-dd-bonus__button {
+  display: inline;
+  padding: 0;
+  text-align: left;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.h-acc-dd-bonus__button:hover .h-acc-dd-bonus__qr {
+  border-color: #bb1018;
+  color: #bb1018;
+}
+
+.h-acc-dd-bonus__total {
+  margin: 0;
+}
+
+.h-acc-dd-bonus__total-badge {
+  display: inline-block;
+  line-height: 1;
+  padding: 3px 5px;
+  margin: 0 5px 0 0;
+  font-size: 12px;
+  border-radius: 50px;
+  color: #fff;
+  background-color: #da5848;
+}
+
+.h-acc-dd-bonus__total-text {
+  font-size: 13px;
+  color: #a5a5a5;
+}
+
+.h-acc-dd-bonus__total-spinner {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px 0 0;
+  vertical-align: middle;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+  background-image: url(../images/ico-spinner-grey-30x30.svg);
+  -webkit-animation: hAccDDSpinnerRotation 1s linear infinite;
+  animation: hAccDDSpinnerRotation 1s linear infinite;
+}
+
+.h-acc-dd-bonus__qr {
+  font-size: 12px;
+  border-bottom: 1px dashed #000;
+  -webkit-transition-property: border-color, color;
+  transition-property: border-color, color;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+}
+
+.h-acc-dd-bonus--unauthorized .h-acc-dd-bonus__total {
+  display: none;
+}
+
+.h-acc-dd-bonus--unauthorized .h-acc-dd-bonus__qr {
+  border-color: #a5a5a5;
+  color: #a5a5a5;
 }
 
 .h-acc-dd-bonuses__total-badge {

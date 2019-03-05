@@ -422,15 +422,53 @@ ga('require', 'ecommerce');
 									</button>
 									<div class="h-acc-dd">
 										<ul class="h-acc-dd__list">
+											
+											<!-- Неавторизованный пользователь (start) -->
+											<!--
 											<li class="h-acc-dd__item h-acc-dd__item--user">
-												<!-- Залогиненный пользователь -->
-												<!-- <span class="h-acc-dd__text">Алина</span> -->
-												
-												<!-- Вход -->
-												<a href="" class="h-acc-dd__btn">
-													<span class="h-acc-dd__text">Войти</span>
-												</a>
+												<div class="h-acc-dd-user">
+													<a href="" class="h-acc-dd-user__login">Войти</a>
+												</div>
 											</li>
+											<li class="h-acc-dd__item h-acc-dd__item--bonus">
+												<div class="h-acc-dd-bonus h-acc-dd-bonus--unauthorized">
+													<div class="h-acc-dd-bonus__total">
+														<span class="h-acc-dd-bonus__total-badge">375</span><span class="h-acc-dd-bonus__total-text">Бонусных рублей</span>
+													</div>
+													<button type="button" class="h-acc-dd-bonus__button">
+														<span class="h-acc-dd-bonus__qr">Показать QR-код карты</span>
+													</button>
+												</div>
+											</li>
+											-->
+											<!-- (end) Неавторизованный пользователь -->
+		
+											<!-- Авторизованный пользователь (start) -->
+											<li class="h-acc-dd__item h-acc-dd__item--user">
+												<div class="h-acc-dd-user">
+													<span class="h-acc-dd-user__name">Иван Иванович</span>
+												</div>
+											</li>
+											<li class="h-acc-dd__item h-acc-dd__item--bonus">
+												<div class="h-acc-dd-bonus">
+													<div class="h-acc-dd-bonus__total">
+														
+														<!-- С прелоадером: -->
+														<!--
+														<span class="h-acc-dd-bonus__total-spinner"></span><span class="h-acc-dd-bonus__total-text">бонусных рублей</span>
+														-->
+		
+														<!-- С количеством: -->
+														<span class="h-acc-dd-bonus__total-badge">375</span><span class="h-acc-dd-bonus__total-text">бонусных рублей</span>
+													
+													</div>
+													<button type="button" class="h-acc-dd-bonus__button">
+														<span class="h-acc-dd-bonus__qr">Показать QR-код карты</span>
+													</button>
+												</div>
+											</li>
+											<!-- (end) Авторизованный пользователь -->
+		
 											<li class="h-acc-dd__item h-acc-dd__item--profile">
 												<a href="" class="h-acc-dd__btn">
 													<span class="h-acc-dd__icon"></span>
@@ -440,13 +478,7 @@ ga('require', 'ecommerce');
 											<li class="h-acc-dd__item h-acc-dd__item--bonuses h-acc-dd-bonuses">
 												<a href="" class="h-acc-dd__btn">
 													<span class="h-acc-dd__icon"></span>
-													<span class="h-acc-dd__text">Мои бонусы</span>
-													<!-- Spinner -->
-													<span class="h-acc-dd__spinner"></span>
-													<!-- Content -->
-													<!-- <span class="h-acc-dd-bonuses__total">
-														<span class="h-acc-dd-bonuses__total-badge">357</span>
-													</span> -->
+													<span class="h-acc-dd__text">Бонусная карта</span>
 												</a>
 											</li>
 											<li class="h-acc-dd__item h-acc-dd__item--history">
