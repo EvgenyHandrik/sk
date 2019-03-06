@@ -590,7 +590,7 @@ ga('require', 'ecommerce');
 				<div class="acc-page__row">
 					<div class="acc-page__row acc-page__row--main">
 						<div class="acc-page__col acc-page__col--nav acc-navbar-container">
-							<div class="acc-navbar js-acc-navbar-open js-acc-navbar-mobile">
+							<div class="acc-navbar acc-navbar--mobile-margin-bottom-l js-acc-navbar-open js-acc-navbar-mobile">
 								<div class="acc-navbar-user">
 									<span class="acc-navbar-user__icon"></span>
 									<span class="acc-navbar-user__name">Иван Иванович</span>
@@ -629,36 +629,38 @@ ga('require', 'ecommerce');
 							<div class="acc-page__main-content">
 								<h2 class="ttl ttl--2 ttl--account">Моя бонусная карта</h2>
 								
-								<div class="acc-bonusbar">
-									<div class="acc-bonusbar__row">
-										<div class="acc-bonusbar__col">
-											<div class="acc-bonusbar-item acc-bonusbar-item--card">
-												<div class="acc-bonusbar-item__main">
-													<span class="acc-bonusbar-item__name">Статус карты:</span>
-													<span class="acc-bonusbar-item__value">«7%»</span>
+								<div class="acc-bonus">
+									<div class="acc-bonus__stat">
+										<div class="acc-bonusbar acc-bonusbar--bonus">
+											<div class="acc-bonusbar__row">
+												<div class="acc-bonusbar__col">
+													<div class="acc-bonusbar-item acc-bonusbar-item--card">
+														<div class="acc-bonusbar-item__main">
+															<span class="acc-bonusbar-item__name">Статус карты:</span>
+															<span class="acc-bonusbar-item__value">«7%»</span>
+														</div>
+														<div class="acc-bonusbar-item__info">
+															5000 рублей до «10%»
+														</div>
+													</div>
 												</div>
-												<div class="acc-bonusbar-item__info">
-													5000 рублей до «10%»
+												<div class="acc-bonusbar__col">
+													<div class="acc-bonusbar-item acc-bonusbar-item--total">
+														<div class="acc-bonusbar-item__main">
+															<span class="acc-bonusbar-item__name">Бонусы:</span>
+															<span class="acc-bonusbar-item__value">500</span>
+														</div>
+														<span class="acc-bonusbar-item__info">1 бонус = 1 рубль</span>
+													</div>
 												</div>
-											</div>
-										</div>
-										<div class="acc-bonusbar__col">
-											<div class="acc-bonusbar-item acc-bonusbar-item--total">
-												<div class="acc-bonusbar-item__main">
-													<span class="acc-bonusbar-item__name">Бонусы:</span>
-													<span class="acc-bonusbar-item__value">500</span>
-												</div>
-												<span class="acc-bonusbar-item__info">1 бонус = 1 рубль</span>
 											</div>
 										</div>
 									</div>
-								</div>
-			
-								<div class="acc-show-qr-container">
-									<button type="button" class="acc-show-qr">
-										<span class="acc-show-qr__icon"></span>
-										<span class="acc-show-qr__text">Показать QR-код карты</span>
-									</button>
+									<div class="acc-bonus__qr">
+										<button type="button" class="acc-show-qr acc-show-qr--text acc-show-qr--bonus">
+											<span class="acc-show-qr__icon"></span><span class="acc-show-qr__text">Показать QR-код карты</span>
+										</button>
+									</div>
 								</div>
 			
 								<h2 class="ttl ttl--2 ttl--account">Как работает бонусная программа</h2>

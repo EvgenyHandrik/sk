@@ -45,6 +45,12 @@
 	.acc-navbar-toggle {
 		display: block;
 	}
+
+	/* -- */
+
+	&.acc-navbar--mobile-margin-bottom-l {
+		margin-bottom: 35px;
+	}
 }
 
 .acc-navbar {

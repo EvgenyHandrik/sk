@@ -46,6 +46,7 @@
   display: inline-block;
   padding-right: 48px;
   margin-bottom: 20px;
+  /* -- */
 }
 
 .acc-navbar--mobile.acc-navbar--open .acc-nav {
@@ -81,6 +82,10 @@
 
 .acc-navbar--mobile .acc-navbar-toggle {
   display: block;
+}
+
+.acc-navbar--mobile.acc-navbar--mobile-margin-bottom-l {
+  margin-bottom: 35px;
 }
 
 .acc-navbar-user {
@@ -815,11 +820,57 @@
   border-radius: 5px;
   background-color: transparent;
   cursor: pointer;
+  /* -- */
 }
 
 .acc-show-qr:hover .acc-show-qr__text {
   color: #bb1018;
   border-color: #bb1018;
+}
+
+.acc-show-qr:hover .acc-show-qr__icon:before {
+  opacity: 0;
+}
+
+.acc-show-qr:hover .acc-show-qr__icon:after {
+  opacity: 1;
+}
+
+.acc-show-qr__icon {
+  position: relative;
+  display: inline-block;
+  margin: 0 7px 0 0;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}
+
+.acc-show-qr__icon:before,
+.acc-show-qr__icon:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+}
+
+.acc-show-qr__icon:before {
+  background-image: url("../images/ico-qr-18x18-black.svg");
+  opacity: 1;
+}
+
+.acc-show-qr__icon:after {
+  background-image: url("../images/ico-qr-18x18-red.svg");
+  opacity: 0;
 }
 
 .acc-show-qr__text {
@@ -830,6 +881,51 @@
   transition-property: border-color, color;
   -webkit-transition-duration: 200ms;
   transition-duration: 200ms;
+}
+
+.acc-show-qr--text {
+  display: inline;
+  height: auto;
+  line-height: 1.3;
+  padding: 0;
+  border: 0;
+}
+
+.acc-bonus {
+  padding: 15px 10px;
+  margin: 0 0 35px 0;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+}
+
+.acc-bonus:last-child {
+  margin-bottom: 0;
+}
+
+.acc-bonus__stat {
+  margin: 0 0 15px 0;
+}
+
+.acc-bonus__stat:last-child {
+  margin-bottom: 0;
+}
+
+.acc-bonus__qr {
+  padding-top: 15px;
+  border-top: 1px solid #f0f0f0;
+}
+
+/* -- */
+
+.acc-bonusbar--bonus {
+  max-width: 100%;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+
+.acc-show-qr--bonus {
+  font-size: 15px;
 }
 
 .acc-history-list {
@@ -1515,6 +1611,10 @@
     max-width: 420px;
   }
 
+  .acc-bonusbar--bonus .acc-bonusbar__row {
+    max-width: 100%;
+  }
+
   .acc-history__detail-main {
     padding-right: 15px;
     padding-left: 15px;
@@ -1654,6 +1754,14 @@
 
   .acc-user-form .form-group {
     max-width: 100%;
+  }
+
+  .acc-bonusbar--bonus .acc-bonusbar-item__name {
+    font-weight: bold;
+  }
+
+  .acc-show-qr--bonus {
+    font-size: 14px;
   }
 }
 
