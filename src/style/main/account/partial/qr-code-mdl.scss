@@ -1,0 +1,41 @@
+.popup-page-qr {
+	.popup-page {
+		&__content {
+			width: auto;
+			max-width: 300px;
+			text-align: center;
+
+			@media (max-width: 320px) {
+				margin-right: 10px;
+				margin-left: 10px;
+			}
+		}
+
+		&__close {
+			@media (max-width: (300px + 30px * 2 + 10px * 2)) {
+				right: 0;
+			}
+		}
+	}
+}
+
+.qr-code-mdl {
+	&__image-box {}
+
+	&__image {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+	/* -- */
+
+	&__num-box {
+		text-align: center;
+	}
+
+	&__num {
+		font-size: 15px;
+		color: $color-grey-light;
+	}
+}

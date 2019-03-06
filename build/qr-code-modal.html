@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <!-- saved from url=(0026)http://svoya-kompaniya.ru/ -->
 
-<html>
+<!-- [new_content] -->
+<!-- Добавлены классы "page", "page--no-background" -->
+<html class="page page--no-background">
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -138,9 +140,9 @@
 	<link href="css/footer-v2-add.css" type="text/css" rel="stylesheet">
 	<link href="css/f-nav.css" type="text/css" rel="stylesheet">
 	<link href="css/f-contact.css" type="text/css" rel="stylesheet">
-	
-	<!-- Password recovery Styles [new_content] -->
-	<link href="css/pass-recovery.css" type="text/css" rel="stylesheet">
+
+	<!-- Account Styles [new_content] -->
+	<link href="css/account.css" type="text/css" rel="stylesheet">
 
 	<title>
 		Ресторан «Своя компания» Екатеринбург - уютный семейный ресторан-кафе в центре
@@ -220,7 +222,7 @@ ga('require', 'ecommerce');
 </head>
 
 
-<body class="body" cz-shortcut-listen="true">
+<body class="body body--blured body--modal" cz-shortcut-listen="true">
 
 
 	<!--    -->
@@ -549,7 +551,7 @@ ga('require', 'ecommerce');
 								<a href="#"><span>Закуски</span></a>
 							</li>
 							<li>
-								<a href="#"><span>Дес��рты</span></a>
+								<a href="#"><span>Десерты</span></a>
 							</li>
 							<li>
 								<a href="#"><span>Напитки</span></a>
@@ -574,17 +576,112 @@ ga('require', 'ecommerce');
 			</div>
 		</header>
 
-		<!-- Добавление класса "content--no-mobile-padding" [new_content] -->
-		<section class="content content--no-mobile-padding">
+		<!-- [new_content] -->
+		<!-- Добавлен класс "content--no-style" -->
+		<section class="content content--no-style">
+			<div class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+				<span itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem"><a itemprop="item" href="http://svoya-kompaniya.ru/" title="Своя компания"><span itemprop="name">Своя компания</span><meta itemprop="position" content="1"></a></span>
+				<span itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem"><span itemprop="item"><span itemprop="name">Личный кабинет</span><meta itemprop="position" content="3"></span></span>
+			</div>
 
-			<div class="pass-recovery-success">
-				<div class="pass-recovery-success__content">
-					<span class="pass-recovery-success__title">Пароль восстановлен!</span>
-					<p>Теперь вы можете войти на сайт</p>
-					<div class="pass-recovery-success__button-container">
-						<button type="button" class="button button--default button--m button--border-radius-m button--min-width">
-							<span class="button__text">Далее</span>
-						</button>
+			<div class="acc-page">
+				<h1>Личный кабинет</h1>
+				
+				<div class="acc-page__row">
+					<div class="acc-page__row acc-page__row--main">
+						<div class="acc-page__col acc-page__col--nav acc-navbar-container">
+							<div class="acc-navbar acc-navbar--mobile-margin-bottom-l js-acc-navbar-open js-acc-navbar-mobile">
+								<div class="acc-navbar-user">
+									<span class="acc-navbar-user__icon"></span>
+									<span class="acc-navbar-user__name">Иван Иванович</span>
+									<button class="acc-navbar-toggle">▼</button>
+								</div>
+								<div class="acc-nav">
+									<div class="acc-nav-user">
+										<span class="acc-nav-user__name">Иван Иванович</span>
+										<button class="acc-nav-toggle">▲</button>
+									</div>
+									<ul class="acc-nav__list">
+										<li class="acc-nav__item acc-nav__item--profile">
+											<a href="" class="acc-nav__button">Личные данные</a>
+										</li>
+										<li class="acc-nav__item acc-nav__item--card">
+											<a href="" class="acc-nav__button">Банковские карты</a>
+										</li>
+										<li class="acc-nav__item acc-nav__item--bonuses acc-nav__item--active">
+											<a href="" class="acc-nav__button">Бонусная карта</a>
+										</li>
+										<li class="acc-nav__item acc-nav__item--history">
+											<a href="" class="acc-nav__button">История заказов</a>
+										</li>
+										<li class="acc-nav__item acc-nav__item--addresses">
+											<a href="" class="acc-nav__button">Адреса</a>
+										</li>
+										<li class="acc-nav__item acc-nav__item--notifications">
+											<a href="" class="acc-nav__button">Уведомления</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+			
+						<div class="acc-page__col">
+							<div class="acc-page__main-content">
+								<h2 class="ttl ttl--2 ttl--account">Моя бонусная карта</h2>
+								
+								<div class="acc-bonus">
+									<div class="acc-bonus__stat">
+										<div class="acc-bonusbar acc-bonusbar--bonus">
+											<div class="acc-bonusbar__row">
+												<div class="acc-bonusbar__col">
+													<div class="acc-bonusbar-item acc-bonusbar-item--card">
+														<div class="acc-bonusbar-item__main">
+															<span class="acc-bonusbar-item__name">Статус карты:</span>
+															<span class="acc-bonusbar-item__value">«7%»</span>
+														</div>
+														<div class="acc-bonusbar-item__info">
+															5000 рублей до «10%»
+														</div>
+													</div>
+												</div>
+												<div class="acc-bonusbar__col">
+													<div class="acc-bonusbar-item acc-bonusbar-item--total">
+														<div class="acc-bonusbar-item__main">
+															<span class="acc-bonusbar-item__name">Бонусы:</span>
+															<span class="acc-bonusbar-item__value">500</span>
+														</div>
+														<span class="acc-bonusbar-item__info">1 бонус = 1 рубль</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="acc-bonus__qr">
+										<button type="button" class="acc-show-qr acc-show-qr--text acc-show-qr--bonus">
+											<span class="acc-show-qr__icon"></span><span class="acc-show-qr__text">Показать QR-код карты</span>
+										</button>
+									</div>
+								</div>
+			
+								<h2 class="ttl ttl--2 ttl--account">Как работает бонусная программа</h2>
+			
+								<ul class="acc-bonuses-info">
+									<li class="acc-bonuses-info__item">
+										<span class="acc-bonuses-info__ttl">1. Совершайте покупки</span>
+										<p>Бонусы начисляются на сайте, в приложении и ресторане.</p>
+									</li>
+									<li class="acc-bonuses-info__item">
+										<span class="acc-bonuses-info__ttl">2. Накапливайте бонусы</span>
+										<p>5% от суммы заказа возвращается на бонусный счет.</p>
+									</li>
+									<li class="acc-bonuses-info__item">
+										<span class="acc-bonuses-info__ttl">3. Используйте бонусы</span>
+										<p>Оплачивайте бонусами часть заказа или целиком.</p>
+									</li>
+								</ul>
+			
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -740,7 +837,26 @@ ga('require', 'ecommerce');
 	</div>
 
 
-
+	<!-- QR-код бонусной карты [new_content] -->
+	<div class="popup-page popup-page-qr" style="display: block;">
+		<div class="popup-page__out">
+			 <div class="popup-page__in">
+				  <div class="popup-page__content">
+						<div class="popup-page__close"></div>
+						<h2>QR-код моей бонусной карты</h2>
+	
+						<div class="qr-code-mdl">
+							<div class="qr-code-mdl__image-box">
+								<img src="images/dev-qrcode-sk.svg" class="qr-code-mdl__image">
+							</div>
+							<div class="qr-code-mdl__num-box">
+								<span class="qr-code-mdl__num">7800005893702340</span>
+							</div>
+						</div>
+				  </div>
+			 </div>
+		</div>
+	</div>
 
 	<!-- Карточка товара -->
 	<div class="popup-page" id="card"></div>
@@ -985,6 +1101,9 @@ ga('require', 'ecommerce');
 	<script type="text/javascript" src="js/sktab.js"></script>
 	<script type="text/javascript" src="js/paginator-lt.js"></script>
 
+	<!-- Account Scripts [new_content] -->
+	<script type="text/javascript" src="js/page-account.js"></script>
+
 	<script>
 		! function (f, b, e, v, n, t, s) {
 			if (f.fbq) return;
@@ -1186,7 +1305,6 @@ ga('require', 'ecommerce');
 		}
 	</script>
 	<script src="./html-source/base-page-files/callibri.js.Без названия" type="text/javascript"></script>
-
 
 </body>
 

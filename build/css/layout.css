@@ -62,3 +62,41 @@
   font-family: Roboto;
   color: #d1d1d1;
 }
+
+.popup-page-qr .popup-page__content {
+  width: auto;
+  max-width: 300px;
+  text-align: center;
+}
+
+.qr-code-mdl {
+  /* -- */
+}
+
+.qr-code-mdl__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.qr-code-mdl__num-box {
+  text-align: center;
+}
+
+.qr-code-mdl__num {
+  font-size: 15px;
+  color: #a5a5a5;
+}
+
+@media (max-width: 380px) {
+  .popup-page-qr .popup-page__close {
+    right: 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .popup-page-qr .popup-page__content {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
