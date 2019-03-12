@@ -32,6 +32,12 @@
 			padding-right: 0;
 		}
 	}
+
+	/* -- */
+
+	&__await {
+		margin-top: 15px;
+	}
 }
 
 .acc-bonusbar-item {
@@ -61,6 +67,9 @@
 	}
 	
 	&__name {
+		@media (max-width: 460px) {
+			font-weight: bold;
+		}
 	}
 
 	&__value {
@@ -69,7 +78,7 @@
 	&__info {
 		display: block;
 		margin: 5px 0 0 0;
-		font-size: 14px;
+		font-size: 13px;
 		color: $account-color-grey-light;
 
 		@media (max-width: $account-bp-bonusbar-mobile) {

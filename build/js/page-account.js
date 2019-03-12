@@ -228,6 +228,29 @@
 
 }());
 
+// acc-bonus-await-info-toggle
+(function() {
+	var $box = $('.js-acc-bonus-await-info-toggle-delegate');
+
+	if ($box.length) {
+		$box.on('click.acc-bonus-await-info-toggle', '.b-acc-bonus-await .e-info-toggle', function() {
+			var $button = $(this);
+			var $await = $button.closest('.b-acc-bonus-await');
+
+			if ($await.hasClass('b-acc-bonus-await--info-open')) {
+				$await
+					.removeClass('b-acc-bonus-await--info-open')
+					.addClass('b-acc-bonus-await--info-closed');
+
+			} else {
+				$await
+					.removeClass('b-acc-bonus-await--info-closed')
+					.addClass('b-acc-bonus-await--info-open');
+			}
+		});
+	}
+}());
+
 // account-history
 (function() {
 	

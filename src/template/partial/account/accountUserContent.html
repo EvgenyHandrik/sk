@@ -44,6 +44,15 @@
 					<div class="acc-bonusbar">
 						<div class="acc-bonusbar__row">
 							<div class="acc-bonusbar__col">
+								<div class="acc-bonusbar-item acc-bonusbar-item--total">
+									<div class="acc-bonusbar-item__main">
+										<span class="acc-bonusbar-item__name">Бонусы:</span>
+										<span class="acc-bonusbar-item__value">2500</span>
+									</div>
+									<span class="acc-bonusbar-item__info">1 бонус = 1 рубль</span>
+								</div>
+							</div>
+							<div class="acc-bonusbar__col">
 								<div class="acc-bonusbar-item acc-bonusbar-item--card">
 									<div class="acc-bonusbar-item__main">
 										<span class="acc-bonusbar-item__name">Статус карты:</span>
@@ -54,13 +63,35 @@
 									</div>
 								</div>
 							</div>
-							<div class="acc-bonusbar__col">
-								<div class="acc-bonusbar-item acc-bonusbar-item--total">
-									<div class="acc-bonusbar-item__main">
-										<span class="acc-bonusbar-item__name">Бонусы:</span>
-										<span class="acc-bonusbar-item__value">500</span>
+						</div>
+						<div class="acc-bonusbar__await js-acc-bonus-await-info-toggle-delegate">
+							<div class="b-acc-bonus-await b-acc-bonus-await--info-closed">
+								<div class="e-ibar">
+									<div class="o-grid e-ibar-grid e-ibar-grid--main">
+										<div class="o-row">
+											<div class="o-col o-col--title">
+												<span class="e-ibar-title">Ожидается:</span>
+											</div>
+											<div class="o-col o-col--items">
+												<div class="o-grid e-ibar-grid e-ibar-grid--items">
+													<div class="o-row">
+														<span class="o-col">
+															<span class="e-ibar-minus">- 1300</span>
+														</span>
+														<span class="o-col">
+															<span class="e-ibar-plus">+ 100</span>
+														</span>
+														<span class="o-col">
+															<button type="button" class="e-info-toggle">?</button>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
-									<span class="acc-bonusbar-item__info">1 бонус = 1 рубль</span>
+								</div>
+								<div class="e-info">
+									Зачисление и списание бонусов происходит раз в сутки, в конце дня.
 								</div>
 							</div>
 						</div>
@@ -164,9 +195,8 @@
 								</button>
 							</div>
 							<div class="acc-user-button">
-								<button type="button" class="button button--default button--m button--text button--dark-grey">
-									<span class="button__icon button__icon--x-bold-dark-grey"></span>
-									<span class="button__text">Отмена</span>
+								<button type="button" class="button button--default button--m button--text button--grey">
+									<span class="button__icon button__icon--reload-grey"></span><span class="button__text">Отмена</span>
 								</button>
 							</div>
 						</div>

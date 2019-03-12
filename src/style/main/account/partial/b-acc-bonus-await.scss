@@ -1,0 +1,139 @@
+.b-acc-bonus-await {
+	$ibar-items-margin-bottom: 3px;
+
+	.e-ibar {
+		&-title {
+			font-size: 13px;
+
+			@media (max-width: 460px) {
+				font-size: 14px;
+			}
+		}
+
+		&-minus,
+		&-plus {
+			display: inline-block;
+			line-height: 1;
+			padding: 3px 8px;
+			font-size: 13px;
+			vertical-align: middle;
+			border-radius: 50px;
+			background-color: $bg-color-grey-light;
+		}
+
+		&-plus {
+			color: #fff;
+			background-color: $color-red-active;
+		}
+		
+		&-grid {
+			&--main {
+				margin-bottom: -$ibar-items-margin-bottom;
+
+				&.o-grid {
+					& > .o-row {
+						display: table;
+
+						& > .o-col {
+							display: table-cell;
+							vertical-align: top;
+
+							&--title {
+								line-height: 1.2;
+								padding-bottom: $ibar-items-margin-bottom;
+							}
+
+							&--items {
+								padding-left: 5px;
+							}
+						}
+					}
+				}
+			}
+
+			&--items {
+				&.o-grid {
+					& > .o-row {
+						line-height: 1px;
+						font-size: 1px;
+
+						& > .o-col {
+							display: inline-block;
+							margin: 0 5px $ibar-items-margin-bottom 0;
+							vertical-align: middle;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.e-info {
+		margin-top: 3px + $ibar-items-margin-bottom;
+		line-height: 1.3;
+		font-size: 13px;
+		color: $color-grey-light;
+
+		&-toggle {
+			$info-toggle-width: 18px;
+
+			display: inline-block;
+			width: $info-toggle-width;
+			height: $info-toggle-width;
+			line-height: $info-toggle-width - 2px;
+			font-weight: bold;
+			font-size: 12px;
+			text-align: center;
+			vertical-align: middle;
+			border: 1px solid $border-color-grey-light;
+			border-radius: 50%;
+			color: $color-grey;
+			background-color: transparent;
+			@include transition((border-color, color));
+			cursor: pointer;			
+
+			&:hover {
+				border-color: $color-red;
+				color: $color-red;
+			}
+
+			@media (hover: none) {
+				&:hover {
+					border-color: $color-grey;
+					color: $color-grey;
+				}
+			}
+		}
+	}
+
+	/* -- */
+
+	&--info {
+		&-open {
+			.e-info {
+				display: block;
+
+				&-toggle {
+					border-color: $color-red;
+					color: $color-red;
+
+					@media (hover: none) {
+						border-color: $color-red;
+						color: $color-red;
+
+						&:hover {
+							border-color: $color-red;
+							color: $color-red;
+						}
+					}
+				}
+			}
+		}
+
+		&-closed {
+			.e-info {
+				display: none;
+			}
+		}
+	}
+}
