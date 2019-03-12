@@ -1,0 +1,60 @@
+.h-nav {
+	position: relative;
+	z-index: 1;
+
+	&__phone {
+		display: none;
+	}
+
+	&__bonus {
+		display: none;
+	}
+
+	&__acc {}
+}
+
+.header-v2 {
+	&--mobile {
+		.h-nav {
+			&__phone {
+				@media (max-width: 768px) {
+					position: relative;
+					display: block;
+					padding: 15px 15px 0 15px;
+					border-bottom: 0;
+				}
+			}
+
+			&__bonus {
+				position: relative;
+				display: block;
+				padding: 15px 15px 0 15px;
+			}
+
+			&__acc {
+				@media (max-width: 520px) {
+					margin-top: 15px;
+					border-top: 1px solid #f0f0f0;
+				}
+			}
+		}
+	}
+
+	&--fixed {
+		.h-nav {
+			display: none;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 220px;
+			border-radius: 0 0 5px 5px;
+			box-shadow: 0 2px 7px rgba(0,0,0,0.11);
+			background-color: #fff;
+			overflow: hidden;
+
+			&--open {
+				display: block;
+			}
+		}
+	}
+}

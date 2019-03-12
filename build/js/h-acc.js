@@ -27,12 +27,12 @@
 				if (isOutsideClick(e)) {
 					close();
 				}
-			})
-			.on('resize.h-acc-resize', function() {
-				if (window.innerWidth <= bpMobile) {
-					close();
-				}
 			});
+			// .on('resize.h-acc-resize', function() {
+			// 	if (window.innerWidth <= bpMobile) {
+			// 		close();
+			// 	}
+			// });
 	}
 
 	function close() {

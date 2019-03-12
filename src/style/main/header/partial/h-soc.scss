@@ -1,0 +1,73 @@
+.h-soc {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.h-soc__button {
+	position: relative;
+	width: 24px;
+	height: 24px;
+	border-bottom: 0;
+	border-radius: 3px;
+	overflow: hidden;
+	opacity: 1;
+	transition-property: opacity;
+	transition-duration: 300ms;
+}
+
+.h-soc__button + .h-soc__button {
+	margin-left: 10px;
+}
+
+.h-soc__button:hover {
+	opacity: 0.5;
+}
+
+.h-soc__button:before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background-repeat: no-repeat;
+	background-position: center;
+	transform: translate(-50%, -50%);
+}
+
+.h-soc__button--i {
+	background-color: #3f729b;
+}
+
+.h-soc__button--i:before {
+	width: 16px;
+	height: 16px;
+	background-size: 16px 16px;
+	background-image: url(../images/soc-20x20-i-white.svg);
+}
+
+.h-soc__button--f {
+	background-color: #3c5a99;
+}
+
+.h-soc__button--f:before {
+	width: 24px;
+	height: 24px;
+	background-size: 24px 24px;
+	background-image: url(../images/soc-20x20-f-white.svg);
+}
+
+.h-soc__button--v {
+	background-color: #45668e;
+}
+
+.h-soc__button--v:before {
+	width: 20px;
+	height: 20px;
+	background-size: 20px 20px;
+	background-image: url(../images/soc-20x20-v-white.svg);
+}
+
+@media (max-width: 520px) {
+	.h-soc {
+		display: none;
+	}
+}

@@ -1,0 +1,41 @@
+.h-phone {
+	display: flex;
+
+	&__title {
+		font-size: 15px;
+		color: #a5a5a5;
+
+		&:after {
+			content: '';
+			display: inline-block;
+			width: 14px;
+			height: 14px;
+			margin: 0 10px 0 7px;
+			vertical-align: middle;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 14px 14px;
+			background-image: url(../images/ico-20x20-phone-grey.svg);
+		}
+	}
+
+	&__num {
+		font-size: 20px;
+	}
+
+	&__num-code {
+		&:after {
+			content: ' ';
+		}
+	}
+}
+
+.header-v2 {
+	&--mobile {
+		.h-phone {
+			@media (max-width: 768px) {
+				display: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,54 @@
+.h-cart {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 76px;
+	flex: none;
+	align-self: stretch;
+	border-bottom: 0;
+	color: #fff;
+	background-color: #bb1018;
+}
+
+.h-cart:hover {
+	color: #fff;
+	border-bottom: 0;
+	background-color: #d00711;
+	transition-property: background-color;
+	transition-duration: 300ms;
+}
+
+.h-cart:hover .h-cart__icon {
+	opacity: 0.8;
+	transition-property: opacity;
+	transition-duration: 300ms;
+}
+
+.h-cart:hover .h-cart__num {
+	opacity: 0.8;
+	transition-property: opacity;
+	transition-duration: 300ms;
+}
+
+.h-cart__icon {
+	display: block;
+	width: 27px;
+	height: 27px;
+	margin: 5px 0;
+	flex: none;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url(../images/ico-54x54-cart.png);
+	background-size: contain;
+}
+
+.h-cart__num {}
+
+.header-v2--fixed .h-cart {
+	flex-direction: row;
+}
+
+.header-v2--fixed .h-cart__icon {
+	margin: 0 5px 0 0;
+}

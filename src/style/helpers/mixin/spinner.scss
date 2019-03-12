@@ -1,0 +1,11 @@
+@mixin spinner-grey($icon-size: 12px) {
+	display: inline-block;
+	width: $icon-size;
+	height: $icon-size;
+	vertical-align: middle;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: $icon-size $icon-size;
+	background-image: url(../images/ico-spinner-grey-30x30.svg);
+	animation: kfRotation360 1s linear infinite;
+}

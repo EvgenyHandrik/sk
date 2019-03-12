@@ -1,3 +1,27 @@
+@-webkit-keyframes kfRotation360 {
+  0% {
+    -webkit-transform: rotage(0deg);
+    transform: rotage(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes kfRotation360 {
+  0% {
+    -webkit-transform: rotage(0deg);
+    transform: rotage(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
 .bcard-remember-container {
   margin: 0 0 30px;
 }

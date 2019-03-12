@@ -1,3 +1,27 @@
+@-webkit-keyframes kfRotation360 {
+  0% {
+    -webkit-transform: rotage(0deg);
+    transform: rotage(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes kfRotation360 {
+  0% {
+    -webkit-transform: rotage(0deg);
+    transform: rotage(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
 .h-acc {
   position: relative;
   /* -- */
@@ -133,8 +157,12 @@
 }
 
 .h-acc-dd__item--user {
-  padding: 10px 20px;
+  padding: 10px 20px 15px 20px;
   background-color: #f0f0f0;
+}
+
+.h-acc-dd__item--user:first-child {
+  padding-top: 15px;
 }
 
 .h-acc-dd__item--bonus {
@@ -208,6 +236,38 @@
 
 .h-acc-dd__item--card .h-acc-dd__icon:after {
   background-image: url(../images/ico-hacc-card-red-18x19.svg);
+}
+
+.h-acc-dd__item--addresses .h-acc-dd__icon:before,
+.h-acc-dd__item--addresses .h-acc-dd__icon:after {
+  width: 18px;
+  height: 18px;
+  margin: -9px 0 0 -9px;
+  background-size: 18px 18px;
+}
+
+.h-acc-dd__item--addresses .h-acc-dd__icon:before {
+  background-image: url(../images/ico-hacc-placemark-grey-30x30.svg);
+}
+
+.h-acc-dd__item--addresses .h-acc-dd__icon:after {
+  background-image: url(../images/ico-hacc-placemark-red-30x30.svg);
+}
+
+.h-acc-dd__item--notifications .h-acc-dd__icon:before,
+.h-acc-dd__item--notifications .h-acc-dd__icon:after {
+  width: 18px;
+  height: 18px;
+  margin: -9px 0 0 -9px;
+  background-size: 18px 18px;
+}
+
+.h-acc-dd__item--notifications .h-acc-dd__icon:before {
+  background-image: url(../images/ico-hacc-bell-grey-30x30.svg);
+}
+
+.h-acc-dd__item--notifications .h-acc-dd__icon:after {
+  background-image: url(../images/ico-hacc-bell-red-30x30.svg);
 }
 
 .h-acc-dd__item--review .h-acc-dd__icon:before,
@@ -305,38 +365,18 @@
   display: inline-block;
   width: 12px;
   height: 12px;
-  margin: 0 0 0 3px;
   vertical-align: middle;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 12px 12px;
   background-image: url(../images/ico-spinner-grey-30x30.svg);
-  -webkit-animation: hAccDDSpinnerRotation 1s linear infinite;
-  animation: hAccDDSpinnerRotation 1s linear infinite;
+  -webkit-animation: kfRotation360 1s linear infinite;
+  animation: kfRotation360 1s linear infinite;
+  margin: 0 0 0 3px;
 }
 
-@-webkit-keyframes hAccDDSpinnerRotation {
-  0% {
-    -webkit-transform: rotage(0deg);
-    transform: rotage(0deg);
-  }
-
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes hAccDDSpinnerRotation {
-  0% {
-    -webkit-transform: rotage(0deg);
-    transform: rotage(0deg);
-  }
-
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
+.h-acc-dd-user {
+  line-height: 1.2;
 }
 
 .h-acc-dd-user__login {
@@ -352,9 +392,20 @@
 }
 
 .h-acc-dd-user__name {
-  display: inline;
-  font-weight: bold;
-  font-size: 15px;
+  display: block;
+  font-size: 13px;
+  color: #a5a5a5;
+}
+
+.h-acc-dd-user__logout {
+  font-size: 12px;
+  border-bottom: 1px solid #000;
+  color: #000;
+}
+
+.h-acc-dd-user__logout:hover {
+  border-bottom-color: #bb1018;
+  color: #bb1018;
 }
 
 .h-acc-dd-bonus {
@@ -398,14 +449,14 @@
   display: inline-block;
   width: 12px;
   height: 12px;
-  margin: 0 5px 0 0;
   vertical-align: middle;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 12px 12px;
   background-image: url(../images/ico-spinner-grey-30x30.svg);
-  -webkit-animation: hAccDDSpinnerRotation 1s linear infinite;
-  animation: hAccDDSpinnerRotation 1s linear infinite;
+  -webkit-animation: kfRotation360 1s linear infinite;
+  animation: kfRotation360 1s linear infinite;
+  margin: 0 5px 0 0;
 }
 
 .h-acc-dd-bonus__qr {
@@ -451,11 +502,13 @@
   display: block;
 }
 
-@media (max-width: 520px) {
-  .h-acc-button-mobile {
-    display: block;
+@media (max-width: 1024px) {
+  .h-acc-dd__item--bonus {
+    display: none;
   }
+}
 
+@media (max-width: 520px) {
   .h-acc-toggle {
     width: 50px;
     height: 50px;
@@ -464,5 +517,13 @@
 
   .h-acc-toggle__text {
     display: none;
+  }
+
+  .h-acc-dd {
+    left: -3px;
+  }
+
+  .h-acc-dd:before {
+    left: 140.5px;
   }
 }

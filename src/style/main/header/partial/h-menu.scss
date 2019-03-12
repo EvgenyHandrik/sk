@@ -1,0 +1,126 @@
+.h-menu {
+	box-sizing: border-box;
+	background-color: #f0f0f0;
+	padding: 0 20px;
+}
+
+.h-menu__content {
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+.h-menu-l1 {
+	box-sizing: border-box;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 76px 0 0;
+}
+
+.h-menu-l1 > li {
+	flex: 1 1 auto;
+}
+
+.h-menu-l1 > li {
+	display: flex;
+}
+
+.h-menu-l1 > li > a {
+	height: 50px;
+	line-height: 50px;
+	display: block;
+	flex: none;
+	font-size: 15px;
+	white-space: nowrap;
+	border-bottom: 0;
+	color: #685959;
+}
+
+.h-menu-l1 > li > a:hover {
+	border-bottom: 0;
+	color: #bb1018;
+}
+
+.h-menu-l1 > .h-menu__more {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;
+	flex: none;
+	width: 76px;
+}
+
+.h-menu-l1 > .h-menu__more > a {
+	text-align: center;
+	color: rgba(255,255,255,1);
+	background-color: #8c7e7e;
+	cursor: default;
+}
+
+.h-menu-l1 > .h-menu__more > a:after {
+	content: '';
+	display: inline-block;
+	width: 0; 
+  height: 0;
+  margin: 0 0 0 5px;
+	vertical-align: middle;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid rgba(255,255,255,1);
+  transition-property: border-color;
+  transition-duration: 300ms;
+}
+
+.h-menu-l1 > .h-menu__more:hover > a {
+	color: rgba(255,255,255,0.7);
+	background-color: #959595;
+}
+
+.h-menu-l1 > .h-menu__more:hover a:after {
+	border-top-color: rgba(255,255,255,0.7);
+}
+
+.h-menu-l2 {
+	position: absolute;
+	top: 100%;
+	right: 0;
+	display: none;
+	width: 195px;
+	border-radius: 0 0 5px 5px;
+	box-shadow: 0 2px 7px rgba(0,0,0,0.11);
+	overflow: hidden;
+	background-color: #fff;
+}
+
+.h-menu-l1 > .h-menu__more:hover .h-menu-l2 {
+	display: block;
+}
+
+.h-menu-l2 > li {}
+
+.h-menu-l2 > li > a {
+	display: block;
+	padding: 7px 15px;
+	color: #776868;
+	border-bottom: 0;
+}
+
+.h-menu-l2 > li > a:hover {
+	color: #bb1018;
+	border-bottom: 0;
+}
+
+.header-v2--fixed .h-menu {
+	padding: 0;
+}
+
+.header-v2--fixed .h-menu-l1 {
+	padding-left: 15px;
+}
+
+@media (max-width: 520px) {
+	.h-menu-l1,
+	.header-v2--fixed .h-menu-l1 {
+		padding-left: 10px;
+	}
+}

@@ -1,0 +1,40 @@
+.header-v2 {
+	height: 150px;
+	margin: 0 0 20px 0;
+
+	@media (max-width: 930px) {
+		margin-bottom: 0;
+	}
+
+	&__container {
+		position: relative;
+		z-index: 200;
+	}
+
+	/* -- */
+
+	&--mobile {
+		height: 100px;
+	}
+
+	&--fixed {
+		.header-v2 {
+			&__container {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				box-shadow: 0 2px 3px rgba(0,0,0,0.09);
+				-webkit-transform: translateZ(0);
+			}
+		}
+	}
+}
+
+.swiper-main {
+	margin-bottom: 30px;
+}
+
+.footer {
+	border-top: 3px solid #f0f0f0;
+}

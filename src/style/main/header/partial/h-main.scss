@@ -1,0 +1,23 @@
+.h-main {
+	box-sizing: border-box;
+	background-color: #fff;
+	padding: 0 20px;
+}
+
+.h-main__content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1140px;
+	height: 100px;
+	margin: 0 auto;
+}
+
+.header-v2--fixed .h-main {
+	padding: 0;
+}
+
+.header-v2--fixed .h-main__content {
+	position: relative;
+	height: 50px;
+}

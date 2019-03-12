@@ -26,9 +26,9 @@
 		height: 100%;
 		border-bottom: 0;
 
-		@include bp-mobile {
-			display: block;
-		}
+		// @include bp-mobile {
+		// 	display: block;
+		// }
 	}
 
 	&-toggle {
@@ -118,6 +118,8 @@
 		$dropdown-width: 225px;
 		$corner-height: 17px;
 
+		$dropdown-offset-x: 3px;
+
 		position: absolute;
 		z-index: 2;
 		top: 100%;
@@ -126,7 +128,9 @@
 		width: $dropdown-width;
 		margin: ($corner-height) 0 0 (-$dropdown-width / 2);
 		
-		
+		@include bp-mobile {
+			left: -$dropdown-offset-x;
+		}
 
 		&:before {
 			content: '';
@@ -140,6 +144,10 @@
 			background-repeat: no-repeat;
 			background-image: url(../images/h-acc-dd-corner.png);
 			transform: translateX(-50%);
+
+			@include bp-mobile {
+				left: $dropdown-width / 2 + 25px + $dropdown-offset-x;
+			}
 		}
 
 		/* -- */
@@ -168,13 +176,21 @@
 			/* -- */
 
 			&--user {
-				padding: $btn-space-v $btn-space-h;
+				padding: $btn-space-v $btn-space-h ($btn-space-v + 5px) $btn-space-h;
 				background-color: #f0f0f0;
+
+				&:first-child {
+					padding-top: $btn-space-v + 5px;
+				}
 			}
 
 			&--bonus {
 				padding: 0 $btn-space-h ($btn-space-v + 5px) $btn-space-h;
 				background-color: #f0f0f0;
+
+				@media (max-width: 1024px) {
+					display: none;
+				}
 
 				&:first-child {
 					padding-top: $btn-space-v;
@@ -257,6 +273,46 @@
 
 					&:after {
 						background-image: url(../images/ico-hacc-card-red-18x19.svg);
+					}
+				}
+			}
+
+			&--addresses {
+				#{$b}__icon {
+					&:before,
+					&:after {
+						width: 18px;
+						height: 18px;
+						margin: (-18px / 2) 0 0 (-18px / 2);
+						background-size: 18px 18px;
+					}
+
+					&:before {
+						background-image: url(../images/ico-hacc-placemark-grey-30x30.svg);
+					}
+
+					&:after {
+						background-image: url(../images/ico-hacc-placemark-red-30x30.svg);
+					}
+				}
+			}
+
+			&--notifications {
+				#{$b}__icon {
+					&:before,
+					&:after {
+						width: 18px;
+						height: 18px;
+						margin: (-18px / 2) 0 0 (-18px / 2);
+						background-size: 18px 18px;
+					}
+
+					&:before {
+						background-image: url(../images/ico-hacc-bell-grey-30x30.svg);
+					}
+
+					&:after {
+						background-image: url(../images/ico-hacc-bell-red-30x30.svg);
 					}
 				}
 			}
@@ -362,33 +418,15 @@
 		}
 
 		&__spinner {
-			$icon-size: 12px;
-
-			display: inline-block;
-			width: $icon-size;
-			height: $icon-size;
+			@include spinner-grey();
 			margin: 0 0 0 3px;
-			vertical-align: middle;
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: $icon-size $icon-size;
-			background-image: url(../images/ico-spinner-grey-30x30.svg);
-			animation: hAccDDSpinnerRotation 1s linear infinite;
-		}
-
-		@keyframes hAccDDSpinnerRotation {
-			0% {
-				transform: rotage(0deg);
-			}
-
-			100% {
-				transform: rotate(360deg);
-			}
 		}
 
 		/* -- */
 
 		&-user {
+			line-height: 1.2;
+
 			&__login {
 				display: inline;
 				font-size: 15px;
@@ -402,9 +440,20 @@
 			}
 
 			&__name {
-				display: inline;
-				font-weight: bold;
-				font-size: 15px;
+				display: block;
+				font-size: 13px;
+				color: $color-grey-light;
+			}
+
+			&__logout {
+				font-size: 12px;
+				border-bottom: 1px solid #000;
+				color: #000;
+
+				&:hover {
+					border-bottom-color: $color-red;
+					color: $color-red;
+				}
 			}
 		}
 
@@ -444,18 +493,8 @@
 				}
 
 				&-spinner {
-					$icon-size: 12px;
-
-					display: inline-block;
-					width: $icon-size;
-					height: $icon-size;
+					@include spinner-grey();
 					margin: 0 5px 0 0;
-					vertical-align: middle;
-					background-position: center;
-					background-repeat: no-repeat;
-					background-size: $icon-size $icon-size;
-					background-image: url(../images/ico-spinner-grey-30x30.svg);
-					animation: hAccDDSpinnerRotation 1s linear infinite;
 				}
 			}
 
