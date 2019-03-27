@@ -554,14 +554,40 @@
   resize: none;
 }
 
-.cht2-pickup-address-list {
-  max-width: 344px;
+.cht2-pickup-group--address-list {
+  max-width: 600px;
+  margin-bottom: 25px;
+}
+
+.cht2-pickup-group--date {
+  max-width: 600px;
+  /* -- */
   /* -- */
 }
 
-.cht2-pickup-address-list__select-box {
-  position: relative;
-  z-index: 1;
+.cht2-pickup-group--date > .cht2-pickup-group__row {
+  display: table;
+  width: 100%;
+  /* -- */
+}
+
+.cht2-pickup-group--date > .cht2-pickup-group__row > .cht2-pickup-group__col {
+  display: table-cell;
+  width: 50%;
+  /* -- */
+}
+
+.cht2-pickup-group--date > .cht2-pickup-group__row > .cht2-pickup-group__col--d-date {
+  padding-right: 5px;
+}
+
+.cht2-pickup-group--date > .cht2-pickup-group__row > .cht2-pickup-group__col--d-time {
+  padding-left: 5px;
+}
+
+.cht2-pickup-address-list {
+  max-width: 600px;
+  /* -- */
 }
 
 .cht2-pickup-address-list__select-box .select.jq-selectbox {
@@ -569,6 +595,37 @@
 }
 
 .cht2-pickup-address-list__select-box .select .jq-selectbox__dropdown li {
+  max-width: 100%;
+}
+
+.cht2-pickup-date__control--calendar {
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-image: url(../images/ico-date-calendar-black-30x30.svg);
+}
+
+.cht2-pickup-date__control--calendar.form-control--default.form-control--text {
+  padding-left: 40px;
+}
+
+.cht2-pickup-date__hours-box .jq-selectbox.select {
+  width: 100%;
+}
+
+.cht2-pickup-date__hours-box .jq-selectbox__select {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 42px;
+  line-height: 40px;
+  padding-left: 40px;
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-image: url(../images/ico-date-clock-black-30x30.svg);
+}
+
+.cht2-pickup-date__hours-box .jq-selectbox__dropdown li {
   max-width: 100%;
 }
 
@@ -940,8 +997,34 @@
     font-size: 14px;
   }
 
+  .cht2-pickup-group--address-list {
+    max-width: 349px;
+  }
+
+  .cht2-pickup-group--date {
+    max-width: 349px;
+  }
+
   .cht2-pickup-address-list {
     max-width: 349px;
+  }
+
+  .cht2-pickup-date__control--calendar {
+    background-size: 15px 15px;
+  }
+
+  .cht2-pickup-date__control--calendar.form-control--default.form-control--text {
+    font-size: 14px;
+    padding-left: 35px;
+  }
+
+  .cht2-pickup-date__hours-box .jq-selectbox__select {
+    padding-left: 35px;
+    background-size: 15px 15px;
+  }
+
+  .cht2-pickup-date__hours-box .jq-selectbox__select-text {
+    font-size: 14px;
   }
 
   .cht2-bonus-total__name {

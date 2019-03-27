@@ -1,13 +1,59 @@
-.cht2-pickup {
+.cht2-pickup {}
 
+.cht2-pickup-form {}
+
+.cht2-pickup-group {
+	$group-margin-bottom: 25px;
+
+
+	&--address-list {
+		max-width: 600px;
+		margin-bottom: $group-margin-bottom;
+
+		@media (max-width: 700px) {
+			max-width: 300px + 49px;
+		}
+	}
+
+	&--date {
+		max-width: 600px;
+
+		/* -- */
+
+		@media (max-width: 700px) {
+			max-width: 300px + 49px;
+		}
+
+		/* -- */
+
+		& > .cht2-pickup-group__row {
+			display: table;
+			width: 100%;
+
+			/* -- */
+
+			& > .cht2-pickup-group__col {
+				display: table-cell;
+				width: 50%;
+
+				/* -- */
+	
+				&--d-date {
+					padding-right: 5px;
+				}
+	
+				&--d-time {
+					padding-left: 5px;
+				}
+			}
+		}
+	}
 }
 
-.cht2-pickup-form {
 
-}
 
 .cht2-pickup-address-list {
-	max-width: 344px;
+	max-width: 600px;
 
 	@media (max-width: 700px) {
 		max-width: 300px + 49px;
@@ -16,8 +62,6 @@
 	/* -- */
 
 	&__select-box {
-		position: relative;
-		z-index: 1;
 
 		.select {
 			&.jq-selectbox {
@@ -29,6 +73,79 @@
 					li {
 						max-width: 100%;
 					}
+				}
+			}
+		}
+	}
+}
+
+.cht2-pickup-date {
+
+	&__control {
+		&--calendar {
+			$icon-size: 20px;
+			$icon-size-mobile: 15px;
+			$icon-space-left: 10px;
+
+			background-position: $icon-space-left center;
+			background-repeat: no-repeat;
+			background-size: $icon-size $icon-size;
+			background-image: url(../images/ico-date-calendar-black-30x30.svg);
+
+			@media (max-width: 700px) {
+				background-size: $icon-size-mobile $icon-size-mobile;
+			}
+
+			&.form-control--default.form-control--text {
+				padding-left: $icon-size + $icon-space-left + 10px;
+
+				@media (max-width: 700px) {
+					font-size: 14px;
+					padding-left: $icon-size-mobile + $icon-space-left + 10px;
+				}
+			}
+		}
+	}
+
+	&__hours-box {
+		.jq-selectbox {
+		
+			&.select {
+				width: 100%;
+			}
+
+			&__select {
+				$icon-size: 20px;
+				$icon-space-left: 10px;
+
+				padding-top: 0;
+				padding-bottom: 0;
+				height: 42px;
+				line-height: 40px;
+
+				padding-left: $icon-size + $icon-space-left + 10px;
+				background-position: $icon-space-left center;
+				background-repeat: no-repeat;
+				background-size: $icon-size $icon-size;
+				background-image: url(../images/ico-date-clock-black-30x30.svg);
+
+				@media (max-width: 700px) {
+					$icon-size: 15px;
+
+					padding-left: $icon-size + $icon-space-left + 10px;
+					background-size: $icon-size $icon-size;
+				}
+			}
+
+			&__select-text {
+				@media (max-width: 700px) {
+					font-size: 14px;
+				}
+			}
+
+			&__dropdown {
+				li {
+					max-width: 100%;
 				}
 			}
 		}
