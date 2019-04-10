@@ -29,6 +29,7 @@
 
 		& > .cht2-delivery-group__row {
 			display: table;
+			margin-bottom: $group-margin-bottom;
 	
 			/* -- */
 
@@ -78,8 +79,7 @@
 		&.cht2-delivery-group--edit {
 
 			& > .cht2-delivery-group__row {
-				margin-bottom: $group-margin-bottom;
-
+				
 				&--address-name {
 					display: table;
 					width: 100%;

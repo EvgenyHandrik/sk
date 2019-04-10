@@ -243,6 +243,7 @@
 
 .cht2-delivery-group--address > .cht2-delivery-group__row {
   display: table;
+  margin-bottom: 25px;
   /* -- */
   /* -- */
   /* -- */
@@ -262,10 +263,6 @@
 
 .cht2-delivery-group--address > .cht2-delivery-group__row--address-name {
   display: none;
-}
-
-.cht2-delivery-group--address.cht2-delivery-group--edit > .cht2-delivery-group__row {
-  margin-bottom: 25px;
 }
 
 .cht2-delivery-group--address.cht2-delivery-group--edit > .cht2-delivery-group__row--address-name {
