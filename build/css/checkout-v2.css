@@ -251,6 +251,7 @@
 .cht2-delivery-group--address > .cht2-delivery-group__row > .cht2-delivery-group__col {
   display: table-cell;
   padding-left: 10px;
+  vertical-align: bottom;
   /* -- */
   /* -- */
 }
@@ -284,6 +285,7 @@
 .cht2-delivery-group--address-g1 > .cht2-delivery-group__row > .cht2-delivery-group__col {
   display: table-cell;
   padding-left: 10px;
+  vertical-align: bottom;
 }
 
 .cht2-delivery-group--address-g1 > .cht2-delivery-group__row > .cht2-delivery-group__col:first-child {
@@ -297,6 +299,7 @@
 .cht2-delivery-group--address-g2 > .cht2-delivery-group__row > .cht2-delivery-group__col {
   display: table-cell;
   padding-left: 10px;
+  vertical-align: bottom;
 }
 
 .cht2-delivery-group--address-g2 > .cht2-delivery-group__row > .cht2-delivery-group__col:first-child {
@@ -451,6 +454,7 @@
 
 .cht2-delivery-address {
   /* -- */
+  /* -- */
 }
 
 .cht2-delivery-address__control-group--small.form-control-group--default {
@@ -472,6 +476,16 @@
 
 .cht2-delivery-address__control-group--small.form-control-group--default.form-control-group--success:before {
   background-size: 12px 10.4px;
+}
+
+.cht2-delivery-address__house {
+  display: inline-block;
+  line-height: 1;
+  font-size: 13px;
+}
+
+.cht2-delivery-address__house-building {
+  display: block;
 }
 
 .cht2-delivery-address--street {
@@ -973,6 +987,16 @@
   .cht2-delivery-address-list__opt-addr {
     display: block;
     margin-top: 3px;
+  }
+
+  .cht2-delivery-address__house {
+    display: inline;
+    line-height: inherit;
+    font-size: inherit;
+  }
+
+  .cht2-delivery-address__house-building {
+    display: inline;
   }
 
   .cht2-delivery-address--street {
