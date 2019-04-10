@@ -362,27 +362,6 @@
 	}
 
 	/* -- */
-
-	&__house {
-		display: inline-block;
-		line-height: 1;
-		font-size: 13px;
-
-		@media (max-width: 700px) {
-			display: inline;
-			line-height: inherit;
-			font-size: inherit;
-		}
-
-		&-building {
-			display: block;
-			@media (max-width: 700px) {
-				display: inline;
-			}
-		}
-	}
-
-	/* -- */
 	
 	&--street {
 		width: 250px;
@@ -391,6 +370,25 @@
 
 		@media (max-width: 700px) {
 			width: auto;
+		}
+	}
+}
+
+.cht2-delivery-address-house-label {
+	display: inline-block;
+	line-height: 1;
+	font-size: 13px;
+
+	@media (max-width: 700px) {
+		display: inline;
+		line-height: inherit;
+		font-size: inherit;
+	}
+
+	&__building {
+		display: block;
+		@media (max-width: 700px) {
+			display: inline;
 		}
 	}
 }

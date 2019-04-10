@@ -454,7 +454,6 @@
 
 .cht2-delivery-address {
   /* -- */
-  /* -- */
 }
 
 .cht2-delivery-address__control-group--small.form-control-group--default {
@@ -478,19 +477,19 @@
   background-size: 12px 10.4px;
 }
 
-.cht2-delivery-address__house {
+.cht2-delivery-address--street {
+  width: 250px;
+  /* -- */
+}
+
+.cht2-delivery-address-house-label {
   display: inline-block;
   line-height: 1;
   font-size: 13px;
 }
 
-.cht2-delivery-address__house-building {
+.cht2-delivery-address-house-label__building {
   display: block;
-}
-
-.cht2-delivery-address--street {
-  width: 250px;
-  /* -- */
 }
 
 .cht2-delivery-address-name {
@@ -989,18 +988,18 @@
     margin-top: 3px;
   }
 
-  .cht2-delivery-address__house {
+  .cht2-delivery-address--street {
+    width: auto;
+  }
+
+  .cht2-delivery-address-house-label {
     display: inline;
     line-height: inherit;
     font-size: inherit;
   }
 
-  .cht2-delivery-address__house-building {
+  .cht2-delivery-address-house-label__building {
     display: inline;
-  }
-
-  .cht2-delivery-address--street {
-    width: auto;
   }
 
   .cht2-delivery-date__control--calendar {
