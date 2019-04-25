@@ -1,0 +1,28 @@
+.account-bonuses {
+	.c-bonuses-info {
+		margin: 0 0 20px 0;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		/* -- */
+		
+		&__item {
+			line-height: 1.3;
+			margin: 0 0 10px 0;
+			font-size: 13px;
+			color: $color-grey-light;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		/* -- */
+
+		&--margin-top-minus-10 {
+			margin-top: -10px;
+		}
+	}
+}

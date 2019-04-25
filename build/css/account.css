@@ -22,6 +22,15 @@
   }
 }
 
+.account-bonuses .plastic-activate__input.form-control::-moz-placeholder,
+.account-bonuses .plastic-activate__input.form-control::-webkit-input-placeholder,
+.account-bonuses .plastic-activate__input.form-control:-ms-input-placeholder,
+.account-bonuses .plastic-activate__input.form-control::-ms-input-placeholder,
+.account-bonuses .plastic-activate__input.form-control::placeholder {
+  color: #000;
+  opacity: 0.3;
+}
+
 .ttl--account.ttl--2 {
   display: block;
   margin: 0 0 20px 0;
@@ -920,43 +929,6 @@
   border: 0;
 }
 
-.acc-bonus {
-  padding: 15px 10px;
-  margin: 0 0 35px 0;
-  border: 1px solid #f0f0f0;
-  border-radius: 10px;
-}
-
-.acc-bonus:last-child {
-  margin-bottom: 0;
-}
-
-.acc-bonus__stat {
-  margin: 0 0 15px 0;
-}
-
-.acc-bonus__stat:last-child {
-  margin-bottom: 0;
-}
-
-.acc-bonus__qr {
-  padding-top: 15px;
-  border-top: 1px solid #f0f0f0;
-}
-
-/* -- */
-
-.acc-bonusbar--bonus {
-  max-width: 100%;
-  padding-bottom: 0;
-  margin-bottom: 0;
-  border-bottom: 0;
-}
-
-.acc-show-qr--bonus {
-  font-size: 15px;
-}
-
 .b-acc-bonus-await {
   /* -- */
 }
@@ -1057,6 +1029,695 @@
 
 .b-acc-bonus-await--info-closed .e-info {
   display: none;
+}
+
+.account-bonuses .c-bonuses-title {
+  position: relative;
+  display: block;
+  min-height: 30px;
+  padding: 0 0 0 40px;
+  margin: 0 0 20px 0;
+  font-weight: bold;
+  font-size: 15px;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 30px 30px;
+}
+
+.account-bonuses .c-bonuses-info {
+  margin: 0 0 20px 0;
+  /* -- */
+  /* -- */
+}
+
+.account-bonuses .c-bonuses-info:last-child {
+  margin-bottom: 0;
+}
+
+.account-bonuses .c-bonuses-info__item {
+  line-height: 1.3;
+  margin: 0 0 10px 0;
+  font-size: 13px;
+  color: #a5a5a5;
+}
+
+.account-bonuses .c-bonuses-info__item:last-child {
+  margin-bottom: 0;
+}
+
+.account-bonuses .c-bonuses-info--margin-top-minus-10 {
+  margin-top: -10px;
+}
+
+.account-bonuses .bonuses {
+  margin: 0 0 30px 0;
+  /* -- */
+}
+
+.account-bonuses .bonuses-title {
+  padding-top: 3px;
+  background-image: url("../images/ico-coin-stack-flat-dark-grey-30x30.svg");
+}
+
+.account-bonuses .bonuses-title__number {
+  font-weight: normal;
+}
+
+.account-bonuses .cards {
+  margin: 0 0 35px 0;
+  /* -- */
+  /* -- */
+}
+
+.account-bonuses .cards-title {
+  padding-top: 4px;
+  background-image: url("../images/ico-bonus-card-flat-dark-grey-30x30.svg");
+}
+
+.account-bonuses .cards--margin-bottom-25 {
+  margin-bottom: 25px;
+}
+
+.account-bonuses .cards-list {
+  margin: 0 0 15px 0;
+}
+
+.account-bonuses .cards-list__scroll {
+  padding-bottom: 15px;
+  overflow-x: auto;
+}
+
+.account-bonuses .cards-list__row {
+  display: table;
+  width: 1%;
+}
+
+.account-bonuses .cards-list__col {
+  display: table-cell;
+  width: 263px;
+  min-width: 263px;
+  max-width: 263px;
+  padding-left: 15px;
+  vertical-align: top;
+}
+
+.account-bonuses .cards-list__col:first-child {
+  width: 248px;
+  min-width: 248px;
+  max-width: 248px;
+  padding-left: 0;
+}
+
+.account-bonuses .card {
+  position: relative;
+  width: 248px;
+  height: 144px;
+  padding: 15px 15px;
+  margin: 0 0 10px 0;
+  border-radius: 10px;
+  background-color: #eee;
+  /* -- */
+  /* -- */
+  /* -- */
+  /* -- */
+  /* -- */
+}
+
+.account-bonuses .card:last-child {
+  margin-bottom: 0;
+}
+
+.account-bonuses .card__title {
+  line-height: 1;
+  font-family: Roboto, Arimo, sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.account-bonuses .card__status {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -32.5px;
+}
+
+.account-bonuses .card-status {
+  width: 65px;
+  height: 65px;
+  line-height: 65px;
+  font-family: Roboto, Arimo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+.account-bonuses .card-status__number {
+  font-weight: bold;
+  font-size: 38px;
+  letter-spacing: -4px;
+}
+
+.account-bonuses .card-status__percent-sign {
+  font-weight: normal;
+  font-size: 18px;
+  margin-left: 4px;
+}
+
+.account-bonuses .card--virtual.card--level-1 {
+  background: linear-gradient(135deg, #ffe976 0%, #fdd56e 100%);
+}
+
+.account-bonuses .card--virtual.card--level-2 {
+  background: linear-gradient(135deg, #ff8d3b 0%, #ee6438 100%);
+}
+
+.account-bonuses .card--virtual.card--level-2 .card__title {
+  color: #fff;
+}
+
+.account-bonuses .card--virtual.card--level-2 .card-status {
+  color: #fff;
+}
+
+.account-bonuses .card--virtual.card--level-3 {
+  background: linear-gradient(135deg, #fd7658 0%, #fb4539 100%);
+}
+
+.account-bonuses .card--virtual.card--level-3 .card__title {
+  color: #fff;
+}
+
+.account-bonuses .card--virtual.card--level-3 .card-status {
+  color: #fff;
+}
+
+.account-bonuses .card--virtual.card--level-4 {
+  background: linear-gradient(135deg, #c951e7 0%, #fc5da9 100%);
+}
+
+.account-bonuses .card--virtual.card--level-4 .card__title {
+  color: #fff;
+}
+
+.account-bonuses .card--virtual.card--level-4 .card-status {
+  color: #fff;
+}
+
+.account-bonuses .card--plastic {
+  border: 1px solid #f0f0f0;
+  background-color: #fff;
+  /* -- */
+  /* -- */
+}
+
+.account-bonuses .card--plastic .card__status {
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.account-bonuses .card--plastic.card--level-1 .card-status {
+  background: linear-gradient(135deg, #ffe976 0%, #fdd56e 100%);
+}
+
+.account-bonuses .card--plastic.card--level-2 .card-status {
+  color: #fff;
+  background: linear-gradient(135deg, #ff8d3b 0%, #ee6438 100%);
+}
+
+.account-bonuses .card--plastic.card--level-3 .card-status {
+  color: #fff;
+  background: linear-gradient(135deg, #fd7658 0%, #fb4539 100%);
+}
+
+.account-bonuses .card--plastic.card--level-4 .card-status {
+  color: #fff;
+  background: linear-gradient(135deg, #c951e7 0%, #fc5da9 100%);
+}
+
+.account-bonuses .card__plastic-number {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+}
+
+.account-bonuses .card__plastic-activate {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+}
+
+.account-bonuses .plastic-number {
+  line-height: 1;
+  font-size: 14px;
+  font-family: Roboto, Arimo, sans-serif;
+  color: #a5a5a5;
+}
+
+.account-bonuses .plastic-activate__input-group.form-control-group {
+  position: relative;
+  /* -- */
+}
+
+.account-bonuses .plastic-activate__input-group.form-control-group:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  display: none;
+  width: 12px;
+  height: 12px;
+  margin-top: -6px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 12px;
+}
+
+.account-bonuses .plastic-activate__input-group.form-control-group--error:before {
+  display: block;
+  background-image: url("../images/ico-x-red-dark-13x13.svg");
+}
+
+.account-bonuses .plastic-activate__input.form-control {
+  display: block;
+  width: 100%;
+  height: 28px;
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, Arimo, sans-serif;
+  font-size: 14px;
+  border: 0;
+  border-bottom: 1px solid #f0f0f0;
+  background-color: #fff;
+}
+
+.account-bonuses .plastic-activate__activate-button {
+  display: inline-block;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 10px;
+  margin: 10px 0 0 0;
+  font-weight: normal;
+  font-family: Roboto, Arimo, sans-serif;
+  font-size: 13px;
+  border-radius: 5px;
+  border: 1px solid #f0f0f0;
+  color: #000;
+  background-color: #fff;
+  -webkit-transition-property: color, border;
+  transition-property: color, border;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+  cursor: pointer;
+}
+
+.account-bonuses .plastic-activate__activate-button:hover {
+  color: #bb1018;
+}
+
+.account-bonuses .plastic-activate__activate-button:disabled {
+  color: #b2b2b7;
+  cursor: not-allowed;
+}
+
+.account-bonuses .plastic-deactivate-button {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+  border: 0;
+  color: #b2b2b7;
+  background-color: transparent;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+  cursor: pointer;
+  /* -- */
+}
+
+.account-bonuses .plastic-deactivate-button:hover {
+  color: #bb1018;
+}
+
+.account-bonuses .plastic-deactivate-button:hover .plastic-deactivate-button__icon:before {
+  opacity: 0;
+}
+
+.account-bonuses .plastic-deactivate-button:hover .plastic-deactivate-button__icon:after {
+  opacity: 1;
+}
+
+.account-bonuses .plastic-deactivate-button__icon {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: -1px 5px 0 0;
+  vertical-align: middle;
+}
+
+.account-bonuses .plastic-deactivate-button__icon:before,
+.account-bonuses .plastic-deactivate-button__icon:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+}
+
+.account-bonuses .plastic-deactivate-button__icon:before {
+  opacity: 1;
+  background-image: url("../images/ico-trash-flat-grey-30x30.svg");
+}
+
+.account-bonuses .plastic-deactivate-button__icon:after {
+  opacity: 0;
+  background-image: url("../images/ico-trash-flat-red-30x30.svg");
+}
+
+.account-bonuses .card-show-qr {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+  border: 0;
+  color: #000;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+}
+
+.account-bonuses .card-show-qr:hover {
+  color: #bb1018;
+}
+
+.account-bonuses .card-show-qr:hover .card-show-qr__icon:before {
+  opacity: 0;
+}
+
+.account-bonuses .card-show-qr:hover .card-show-qr__icon:after {
+  opacity: 1;
+}
+
+.account-bonuses .card-show-qr:hover .card-show-qr__text {
+  border-bottom-color: #bb1018;
+}
+
+.account-bonuses .card-show-qr__icon {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: 0 5px 0 0;
+  vertical-align: middle;
+}
+
+.account-bonuses .card-show-qr__icon:before,
+.account-bonuses .card-show-qr__icon:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+}
+
+.account-bonuses .card-show-qr__icon:before {
+  background-image: url("../images/ico-qr-18x18-black.svg");
+  opacity: 1;
+}
+
+.account-bonuses .card-show-qr__icon:after {
+  background-image: url("../images/ico-qr-18x18-red.svg");
+  opacity: 0;
+}
+
+.account-bonuses .card-show-qr__text {
+  border-bottom: 1px dashed #000;
+  -webkit-transition-property: border-color;
+  transition-property: border-color;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+}
+
+.account-bonuses .card-tag-list {
+  display: block;
+  padding: 0;
+  margin: -5px 0 15px 0;
+  font-size: 1px;
+  /* -- */
+}
+
+.account-bonuses .card-tag-list:last-child {
+  margin-bottom: 0;
+}
+
+.account-bonuses .card-tag-list__item {
+  margin: 5px 5px 0 0;
+}
+
+.account-bonuses .card-tag {
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: middle;
+  /* -- */
+}
+
+.account-bonuses .card-tag--activation {
+  line-height: 1;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #4c4c4c;
+}
+
+.account-bonuses .status-progress {
+  width: 300px;
+  margin: 40px 0 40px 0;
+  font-family: Roboto, Arimo, sans-serif;
+  /* -- */
+}
+
+.account-bonuses .status-progress:after {
+  content: '';
+  display: block;
+  font-size: 1px;
+  clear: both;
+}
+
+.account-bonuses .status-progress__item {
+  float: left;
+  width: 75px;
+  /* -- */
+}
+
+.account-bonuses .status-progress__item:last-child .status-progress-bar__line {
+  display: none;
+}
+
+.account-bonuses .status-progress__item--level-1 .status-progress-name__content {
+  bottom: -2px;
+}
+
+.account-bonuses .status-progress__item--level-1 .status-progress-name__number {
+  font-size: 13px;
+}
+
+.account-bonuses .status-progress__item--level-1 .status-progress-name__percent-sign {
+  font-size: 11px;
+}
+
+.account-bonuses .status-progress__item--level-2 {
+  /* -- */
+}
+
+.account-bonuses .status-progress__item--level-2 .status-progress-name__content {
+  left: -2px;
+  bottom: -3px;
+}
+
+.account-bonuses .status-progress__item--level-2 .status-progress-name__number {
+  font-size: 20px;
+}
+
+.account-bonuses .status-progress__item--level-2 .status-progress-name__percent-sign {
+  font-size: 15px;
+}
+
+.account-bonuses .status-progress__item--level-2 .status-progress__money {
+  left: -15px;
+}
+
+.account-bonuses .status-progress__item--level-3 {
+  /* -- */
+}
+
+.account-bonuses .status-progress__item--level-3 .status-progress-name__content {
+  left: -3px;
+  bottom: -5px;
+}
+
+.account-bonuses .status-progress__item--level-3 .status-progress-name__number {
+  font-size: 30px;
+}
+
+.account-bonuses .status-progress__item--level-3 .status-progress-name__percent-sign {
+  font-size: 20px;
+}
+
+.account-bonuses .status-progress__item--level-3 .status-progress__money {
+  left: -15px;
+}
+
+.account-bonuses .status-progress__item--level-4 {
+  /* -- */
+}
+
+.account-bonuses .status-progress__item--level-4 .status-progress-name__content {
+  left: -20px;
+  bottom: -7px;
+}
+
+.account-bonuses .status-progress__item--level-4 .status-progress-name__number {
+  font-size: 48px;
+}
+
+.account-bonuses .status-progress__item--level-4 .status-progress-name__percent-sign {
+  font-size: 30px;
+}
+
+.account-bonuses .status-progress__item--level-4 .status-progress__money {
+  left: -15px;
+}
+
+.account-bonuses .status-progress__name {
+  margin: 0 0 10px 0;
+}
+
+.account-bonuses .status-progress__bar {
+  margin: 0 0 5px 0;
+}
+
+.account-bonuses .status-progress__money {
+  position: relative;
+  line-height: 1;
+  font-size: 13px;
+}
+
+.account-bonuses .status-progress-bar {
+  position: relative;
+  height: 8px;
+}
+
+.account-bonuses .status-progress-bar__circle {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin-top: -4px;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+}
+
+.account-bonuses .status-progress-bar__line {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 8px;
+  right: 0;
+  display: block;
+  height: 2px;
+  margin-top: -1px;
+  background-color: #d9d9d9;
+}
+
+.account-bonuses .status-progress-bar__line:before,
+.account-bonuses .status-progress-bar__line:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 2.66667px;
+  height: 2px;
+  background-color: #d9d9d9;
+}
+
+.account-bonuses .status-progress-bar__line:before {
+  right: 100%;
+}
+
+.account-bonuses .status-progress-bar__line:after {
+  left: 100%;
+}
+
+.account-bonuses .status-progress-name {
+  position: relative;
+  display: block;
+  height: 35px;
+  line-height: 1;
+  color: #cccccc;
+}
+
+.account-bonuses .status-progress-name__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.account-bonuses .status-progress-name__number {
+  letter-spacing: -0.1em;
+}
+
+.account-bonuses .status-progress-name__percent-sign {
+  margin: 0 0 0 0.2em;
+}
+
+.account-bonuses .notify-menu {
+  padding-top: 15px;
+  padding-left: 60px;
+  padding-bottom: 15px;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: 15px 15px;
+  background-image: url("../images/ico-coin-stack-flat-red-30x30.svg");
+}
+
+.account-bonuses .notify-menu__gotomenu {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.b-acc-bonuses-await--account-bonuses .e-ibar-title {
+  font-size: 15px;
+}
+
+.b-acc-bonuses-await--account-bonuses .e-info {
+  margin-top: 8px;
 }
 
 .acc-history-list {
@@ -1742,10 +2403,6 @@
     max-width: 420px;
   }
 
-  .acc-bonusbar--bonus .acc-bonusbar__row {
-    max-width: 100%;
-  }
-
   .acc-history__detail-main {
     padding-right: 15px;
     padding-left: 15px;
@@ -1889,10 +2546,6 @@
 
   .acc-user-form .form-group {
     max-width: 100%;
-  }
-
-  .acc-show-qr--bonus {
-    font-size: 14px;
   }
 
   .b-acc-bonus-await .e-ibar-title {

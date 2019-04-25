@@ -1,0 +1,179 @@
+.account-bonuses {
+	.card {
+		position: relative;
+		width: $account-bonuses-card-width;
+		height: $account-bonuses-card-height;
+		padding: $account-bonuses-card-padding-v $account-bonuses-card-padding-h;
+		margin: 0 0 10px 0;
+		border-radius: 10px;
+		background-color: #eee;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		/* -- */
+
+		&__title {
+			line-height: 1;
+			font-family: $roboto;
+			font-size: 13px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+
+		/* -- */
+
+		&__status {
+			// $status-size: 52px;
+			$status-size: 65px;
+			
+			position: absolute;
+			top: 50%;
+			right: $account-bonuses-card-padding-h;
+			margin-top: -($status-size / 2);
+		}
+
+		&-status {
+			// $status-size: 52px;
+			$status-size: 65px;
+
+			width: $status-size;
+			height: $status-size;
+			line-height: $status-size;
+			font-family: Roboto, Arimo, sans-serif;
+			font-weight: bold;
+			text-align: center;
+
+			&__number {
+				font-weight: bold;
+				font-size: 38px;
+				letter-spacing: -4px;
+			}
+
+			&__percent-sign {
+				font-weight: normal;
+				font-size: 18px;
+				margin-left: 4px;
+			}
+		}
+
+		/* -- */
+
+		// &--level-4 {
+		// 	.card__status {
+		// 		$status-size: 62px;
+				
+		// 		margin-top: -($status-size / 2);
+		// 	}
+
+		// 	.card-status {
+		// 		$status-size: 62px;
+				
+		// 		width: $status-size;
+		// 		height: $status-size;
+		// 		line-height: $status-size;
+		// 	}
+		// }
+
+		/* -- */
+
+		&--virtual {
+			&.card--level-1 {
+				background: $account-bonuses-card-status-gradient-level-1;
+			}
+
+			&.card--level-2 {
+				background: $account-bonuses-card-status-gradient-level-2;
+
+				.card__title {
+					color: #fff;
+				}
+
+				.card-status {
+					color: #fff;
+				}
+			}
+
+			&.card--level-3 {
+				background: $account-bonuses-card-status-gradient-level-3;
+
+				.card__title {
+					color: #fff;
+				}
+
+				.card-status {
+					color: #fff;
+				}
+			}
+
+			&.card--level-4 {
+				background: $account-bonuses-card-status-gradient-level-4;
+
+				.card__title {
+					color: #fff;
+				}
+
+				.card-status {
+					color: #fff;
+				}
+			}
+		}
+
+		/* -- */
+
+		&--plastic {
+			border: 1px solid $border-color-grey-light;
+			background-color: #fff;
+
+			/* -- */
+
+			.card__status {
+				border-radius: 50%;
+				background-color: #fff;
+			}
+
+			/* -- */
+
+			&.card--level-1 {
+				.card-status {
+					background: $account-bonuses-card-status-gradient-level-1;
+				}
+			}
+
+			&.card--level-2 {
+				.card-status {
+					color: #fff;
+					background: $account-bonuses-card-status-gradient-level-2;
+				}
+			}
+
+			&.card--level-3 {
+				.card-status {
+					color: #fff;
+					background: $account-bonuses-card-status-gradient-level-3;
+				}
+			}
+
+			&.card--level-4 {
+				.card-status {
+					color: #fff;
+					background: $account-bonuses-card-status-gradient-level-4;
+				}
+			}
+		}
+
+		&__plastic-number {
+			position: absolute;
+			bottom: $account-bonuses-card-padding-v;
+			left: $account-bonuses-card-padding-h;
+		}
+
+		&__plastic-activate {
+			position: absolute;
+			right: $account-bonuses-card-padding-h;
+			bottom: $account-bonuses-card-padding-v;
+			left: $account-bonuses-card-padding-h;
+		}
+	}
+}

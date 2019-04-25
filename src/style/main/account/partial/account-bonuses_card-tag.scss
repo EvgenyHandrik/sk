@@ -1,0 +1,18 @@
+.account-bonuses {
+	.card-tag {
+		display: inline-block;
+		white-space: nowrap;
+		vertical-align: middle;
+
+		/* -- */
+
+		&--activation {
+			line-height: 1;
+			padding: 4px 10px;
+			font-size: 12px;
+			border-radius: 3px;
+			color: #fff;
+			background-color: #4c4c4c;
+		}
+	}
+}

@@ -1,0 +1,201 @@
+.account-bonuses {
+	$status-progress-item-width: 75px;
+	
+	$status-progress-bar-circle-size: 8px;
+	$status-progress-bar-line-height: 2px;
+	
+	$status-progress-bar-active-circle-size: 10px;
+	$status-progress-bar-active-line-height: 4px;
+
+	$status-progress-bar-background-color: hsb(0, 0, 85);
+
+	.status-progress {
+		width: $status-progress-item-width * 4;
+		margin: 40px 0 40px 0;
+		font-family: $roboto;
+
+		&:after {
+			content: '';
+			display: block;
+			font-size: 1px;
+			clear: both;
+		}
+
+		&__item {
+			float: left;
+			width: $status-progress-item-width;
+
+			&:last-child {
+				.status-progress-bar__line {
+					display: none;
+				}
+			}
+
+			/* -- */
+
+			&--level-1 {
+				.status-progress-name__content {
+					bottom: -2px;
+				}
+
+				.status-progress-name__number {
+					font-size: 13px;
+				}
+
+				.status-progress-name__percent-sign {
+					font-size: 11px;
+				}
+			}
+
+			&--level-2 {
+				.status-progress-name__content {
+					left: -2px;
+					bottom: -3px;
+				}
+
+				.status-progress-name__number {
+					font-size: 20px;
+				}
+
+				.status-progress-name__percent-sign {
+					font-size: 15px;
+				}
+
+				/* -- */
+
+				.status-progress__money {
+					left: -15px;
+				}
+			}
+
+			&--level-3 {
+				.status-progress-name__content {
+					left: -3px;
+					bottom: -5px;
+				}
+
+				.status-progress-name__number {
+					font-size: 30px;
+				}
+
+				.status-progress-name__percent-sign {
+					font-size: 20px;
+				}
+
+				/* -- */
+
+				.status-progress__money {
+					left: -15px;
+				}
+			}
+
+			&--level-4 {
+				.status-progress-name__content {
+					left: -20px;
+					bottom: -7px;
+				}
+
+				.status-progress-name__number {
+					font-size: 48px;
+				}
+
+				.status-progress-name__percent-sign {
+					font-size: 30px;
+				}
+
+				/* -- */
+
+				.status-progress__money {
+					left: -15px;
+				}
+			}
+		}
+
+		/* -- */
+
+		&__name {
+			margin: 0 0 10px 0;
+		}
+
+		&__bar {
+			margin: 0 0 5px 0;
+		}
+
+		&__money {
+			position: relative;
+			line-height: 1;
+			font-size: 13px;
+		}
+	}
+
+	.status-progress-bar {
+		position: relative;
+		height: $status-progress-bar-circle-size;
+
+		&__circle {
+			position: absolute;
+			z-index: 2;
+			top: 50%;
+			left: 0;
+			display: block;
+			width: $status-progress-bar-circle-size;
+			height: $status-progress-bar-circle-size;
+			margin-top: -($status-progress-bar-circle-size / 2);
+			border-radius: 50%;
+			background-color: $status-progress-bar-background-color;
+		}
+
+		&__line {
+			position: absolute;
+			z-index: 1;
+			top: 50%;
+			left: $status-progress-bar-circle-size;
+			right: 0;
+			display: block;
+			height: $status-progress-bar-line-height;
+			margin-top: -($status-progress-bar-line-height / 2);
+			background-color: $status-progress-bar-background-color;
+
+			&:before,
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				display: block;
+				width: $status-progress-bar-circle-size / 3;
+				height: $status-progress-bar-line-height;
+				background-color: $status-progress-bar-background-color;
+			}
+
+			&:before {
+				right: 100%;
+			}
+
+			&:after {
+				left: 100%;
+			}
+		}
+	}
+
+	.status-progress-name {
+		position: relative;
+		display: block;
+		height: 35px;
+		line-height: 1;
+		color: hsb(0, 0, 80);
+
+		&__content {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+
+		&__number {
+			letter-spacing: -0.1em;
+		}
+
+		&__percent-sign {
+			margin: 0 0 0 0.2em;
+		}
+	}
+}

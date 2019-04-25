@@ -1,0 +1,16 @@
+.account-bonuses {
+	.c-bonuses-title {
+		$icon-size: 30px;
+
+		position: relative;
+		display: block;
+		min-height: $icon-size;
+		padding: 0 0 0 ($icon-size + 10px);
+		margin: 0 0 20px 0;
+		font-weight: bold;
+		font-size: 15px;
+		background-repeat: no-repeat;
+		background-position: top left;
+		background-size: $icon-size $icon-size;
+	}
+}

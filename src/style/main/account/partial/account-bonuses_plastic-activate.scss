@@ -1,0 +1,80 @@
+.account-bonuses {
+	.plastic-activate {
+		$input-height: 28px;
+		$input-state-icon-size: 12px;
+
+		&__input-group {
+			&.form-control-group {
+				position: relative;
+
+				&:before {
+					content: '';
+					position: absolute;
+					top: 50%;
+					right: 0;
+					display: none;
+					width: $input-state-icon-size;
+					height: $input-state-icon-size;
+					margin-top: -($input-state-icon-size / 2);
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: $input-state-icon-size;
+				}
+
+				/* -- */
+
+				&--error {
+					&:before {
+						display: block;
+						background-image: img('ico-x-red-dark-13x13.svg');
+					}
+				}
+			}
+		}
+
+		&__input {
+			&.form-control {
+				display: block;
+				width: 100%;
+				height: $input-height;
+				padding: 0;
+				margin: 0;
+				font-family: $roboto;
+				font-size: 14px;
+				border: 0;
+				border-bottom: 1px solid $border-color-grey-light;
+				background-color: #fff;
+
+				@include placeholder() {
+					@extend %placeholder-default;
+				}
+			}			
+		}
+
+		&__activate-button {
+			display: inline-block;
+			height: 28px;
+			line-height: 28px;
+			padding: 0 10px;
+			margin: 10px 0 0 0;
+			font-weight: normal;
+			font-family: $roboto;
+			font-size: 13px;
+			border-radius: 5px;
+			border: 1px solid $border-color-grey-light;
+			color: #000;
+			background-color: #fff;
+			@include transition((color, border));
+			cursor: pointer;
+
+			&:hover {
+				color: $color-red;
+			}
+
+			&:disabled {
+				color: $color-grey;
+				cursor: not-allowed;
+			}
+		}
+	}
+}

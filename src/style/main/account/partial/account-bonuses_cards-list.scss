@@ -1,0 +1,35 @@
+.account-bonuses {
+	.cards-list {
+		margin: 0 0 15px 0;
+
+		&__wrapper {}
+
+		&__scroll {
+			padding-bottom: 15px;
+			overflow-x: auto;
+		}
+
+		&__grid {
+
+		}
+
+		&__row {
+			display: table;
+			width: 1%;
+		}
+
+		&__col {
+			$space-between: 15px;
+
+			display: table-cell;
+			@include table-cell-width($account-bonuses-card-width + $space-between);
+			padding-left: $space-between;
+			vertical-align: top;
+
+			&:first-child {
+				@include table-cell-width($account-bonuses-card-width);
+				padding-left: 0;
+			}
+		}
+	}
+}

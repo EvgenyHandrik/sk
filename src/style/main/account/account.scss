@@ -16,10 +16,29 @@
 @import './partial/acc-cards';
 @import './partial/acc-addcard';
 
+
 @import './partial/acc-bonuses';
 @import './partial/acc-show-qr';
-@import './partial/acc-bonus';
+// @import './partial/acc-bonus';
 @import './partial/b-acc-bonus-await';
+
+@import './partial/account-bonuses_main-section';
+@import './partial/account-bonuses_c-bonuses-title';
+@import './partial/account-bonuses_c-bonuses-info';
+@import './partial/account-bonuses_bonuses';
+@import './partial/account-bonuses_cards';
+@import './partial/account-bonuses_cards-list';
+@import './partial/account-bonuses_card';
+@import './partial/account-bonuses_plastic-number';
+@import './partial/account-bonuses_plastic-activate';
+@import './partial/account-bonuses_plastic-deactivate-button';
+@import './partial/account-bonuses_card-show-qr';
+@import './partial/account-bonuses_card-tag-list';
+@import './partial/account-bonuses_card-tag';
+@import './partial/account-bonuses_status-progress';
+@import './partial/account-bonuses_notify-menu';
+@import './partial/account-bonuses_b-acc-bonuses-await';
+
 
 @import './partial/acc-history';
 @import './partial/acc-history-filter';

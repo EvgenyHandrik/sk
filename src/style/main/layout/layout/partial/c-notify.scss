@@ -9,7 +9,7 @@
 .c-notify {
 	position: relative;
 	max-width: 600px;
-	padding: 10px;
+	padding: $c-notify-padding-v $c-notify-padding-h;
 	margin: 0 0 10px 0;
 	border-radius: 10px;
 	color: #000;

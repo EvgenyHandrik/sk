@@ -1,0 +1,16 @@
+.account-bonuses {
+	.bonuses {
+		margin: 0 0 30px 0;
+
+		/* -- */
+
+		&-title {
+			padding-top: 3px;
+			background-image: img('ico-coin-stack-flat-dark-grey-30x30.svg');
+
+			&__number {
+				font-weight: normal;
+			}
+		}
+	}
+}

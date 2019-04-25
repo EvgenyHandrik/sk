@@ -1,0 +1,73 @@
+.account-bonuses {
+	.card-show-qr {
+		display: inline;
+		padding: 0;
+		margin: 0;
+		font-size: 13px;
+		border: 0;
+		color: #000;
+		background-color: transparent;
+		cursor: pointer;
+		@include transition((color));
+
+		&:hover {
+			color: $color-red;
+
+			.card-show-qr__icon {
+
+				&:before {
+					opacity: 0;
+				}
+
+				&:after {
+					opacity: 1;
+				}
+			}
+
+			.card-show-qr__text {
+				border-bottom-color: $color-red;
+			}
+		}
+
+		&__icon {
+			$icon-size: 18px;
+			
+			position: relative;
+			display: inline-block;
+			width: $icon-size;
+			height: $icon-size;
+			margin: 0 5px 0 0;
+			vertical-align: middle;
+
+			&:before,
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: block;
+				width: $icon-size;
+				height: $icon-size;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: $icon-size $icon-size;
+				@include transition((opacity));
+			}
+
+			&:before {
+				background-image: img('ico-qr-18x18-black.svg');
+				opacity: 1;
+			}
+
+			&:after {
+				background-image: img('ico-qr-18x18-red.svg');
+				opacity: 0;
+			}
+		}
+
+		&__text {
+			border-bottom: 1px dashed #000;
+			@include transition((border-color));
+		}
+	}
+}
