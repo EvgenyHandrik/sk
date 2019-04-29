@@ -181,6 +181,10 @@
 				&#{$b}-message--error {
 					color: #ba131a;
 				}
+
+				&#{$b}-message--success {
+					color: #8cc25c;
+				}
 			}
 
 			&#{$b}-message--form {

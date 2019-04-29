@@ -184,6 +184,10 @@
   color: #ba131a;
 }
 
+.form-message--default.form-message--control.form-message--success {
+  color: #8cc25c;
+}
+
 .form-message--default.form-message--form {
   margin: 0 0 15px 0;
   font-size: 14px;
