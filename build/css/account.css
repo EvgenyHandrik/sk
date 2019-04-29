@@ -1298,6 +1298,15 @@
   background-image: url("../images/ico-x-red-dark-13x13.svg");
 }
 
+.account-bonuses .plastic-activate__input-group.form-control-group--success:before {
+  display: block;
+  width: 14px;
+  height: 12.13333px;
+  margin-top: -6.06667px;
+  background-size: 14px 12.13333px;
+  background-image: url("../images/ico-check-green-15x13.svg");
+}
+
 .account-bonuses .plastic-activate__input.form-control {
   display: block;
   width: 100%;

@@ -29,6 +29,20 @@
 						background-image: img('ico-x-red-dark-13x13.svg');
 					}
 				}
+
+				&--success {
+					$success-icon-width: $input-state-icon-size + 2px;
+					$success-icon-height: $success-icon-width * (13 / 15);
+
+					&:before {
+						display: block;
+						width: $success-icon-width;
+						height: $success-icon-height;
+						margin-top: -($success-icon-height / 2);
+						background-size: $success-icon-width $success-icon-height;
+						background-image: img('ico-check-green-15x13.svg');
+					}
+				}
 			}
 		}
 
