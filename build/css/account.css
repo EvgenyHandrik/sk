@@ -1527,6 +1527,7 @@
   margin: 40px 0 40px 0;
   font-family: Roboto, Arimo, sans-serif;
   /* -- */
+  /* -- */
 }
 
 .account-bonuses .status-progress:after {
@@ -1540,10 +1541,16 @@
   float: left;
   width: 75px;
   /* -- */
+  /* -- */
+  /* -- */
 }
 
 .account-bonuses .status-progress__item:last-child .status-progress-bar__line {
   display: none;
+}
+
+.account-bonuses .status-progress__item--level-1 {
+  /* -- */
 }
 
 .account-bonuses .status-progress__item--level-1 .status-progress-name__content {
@@ -1559,6 +1566,7 @@
 }
 
 .account-bonuses .status-progress__item--level-2 {
+  /* -- */
   /* -- */
 }
 
@@ -1581,6 +1589,7 @@
 
 .account-bonuses .status-progress__item--level-3 {
   /* -- */
+  /* -- */
 }
 
 .account-bonuses .status-progress__item--level-3 .status-progress-name__content {
@@ -1602,6 +1611,7 @@
 
 .account-bonuses .status-progress__item--level-4 {
   /* -- */
+  /* -- */
 }
 
 .account-bonuses .status-progress__item--level-4 .status-progress-name__content {
@@ -1619,6 +1629,51 @@
 
 .account-bonuses .status-progress__item--level-4 .status-progress__money {
   left: -15px;
+}
+
+.account-bonuses .status-progress__item--progress .status-progress-bar__circle {
+  background-color: #8fcb8e;
+}
+
+.account-bonuses .status-progress__item--progress .status-progress-bar__line-progress {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #8fcb8e;
+}
+
+.account-bonuses .status-progress__item--progress .status-progress-bar__line-progress:before,
+.account-bonuses .status-progress__item--progress .status-progress-bar__line-progress:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  display: none;
+  width: 4px;
+  height: 100%;
+  background-color: #8fcb8e;
+}
+
+.account-bonuses .status-progress__item--progress .status-progress-bar__line-progress:before {
+  right: 100%;
+  display: block;
+}
+
+.account-bonuses .status-progress__item--progress .status-progress-bar__line-progress:after {
+  left: 100%;
+}
+
+.account-bonuses .status-progress__item--start .status-progress-bar__line-progress {
+  display: none;
+}
+
+.account-bonuses .status-progress__item--end .status-progress-bar__line-progress:after {
+  display: block;
+}
+
+.account-bonuses .status-progress__item--active .status-progress-name {
+  color: #000;
 }
 
 .account-bonuses .status-progress__name {
@@ -1669,9 +1724,10 @@
 .account-bonuses .status-progress-bar__line:after {
   content: '';
   position: absolute;
+  z-index: 1;
   top: 0;
   display: block;
-  width: 2.66667px;
+  width: 4px;
   height: 2px;
   background-color: #d9d9d9;
 }

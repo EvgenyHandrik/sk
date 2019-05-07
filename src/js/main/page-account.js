@@ -251,6 +251,53 @@
 	}
 }());
 
+// account bonuses. status progress
+(function() {
+	var $progress = $('.js-acc-bonuses-status-progress');
+	var $items;
+	var total;
+
+	if ($progress.length) {
+		total = $progress.data('progress-total') || 5;
+		$items = $progress.find('.status-progress__item');
+
+		$progress.addClass('status-progress--progress');
+
+		$items.each(function(i, item) {
+			var $item = $(item);
+			var $lineContainer;
+			var $progressLine
+
+			var start = $item.data('progress-start') || 0;
+			var end = $item.data('progress-end') || 10;
+			var progressWidth;
+
+			if (total < start) return false;
+			
+			$item.addClass('status-progress__item--progress');
+
+			$lineContainer = $item.find('.status-progress-bar__line');
+			$progressLine = $('<div></div>')
+				.addClass('status-progress-bar__line-progress');
+
+			if (total == start) {
+				$item.addClass('status-progress__item--start status-progress__item--active');
+				progressWidth = 0;
+			} else if (total >= end) {
+				$item.addClass('status-progress__item--end');
+				progressWidth = 100;
+			} else {
+				$item.addClass('status-progress__item--active');
+				progressWidth = (total - start) * 100 / (end - start);
+			}
+
+			$lineContainer.append(
+				$progressLine.css('width', progressWidth + '%')
+			);
+		});
+	}
+}());
+
 // account-history
 (function() {
 	
