@@ -1,6 +1,5 @@
+// week tab
 ;(function() {
-	// week tab
-
 	var $container = $('.js-corp-catering-menu-week-tab');
 	var $tabButtons;
 	var $tabItems;
@@ -29,9 +28,8 @@
 	}
 }());
 
+// menu accordion
 (function() {
-	// menu accordion
-
 	var $accordion = $('.js-corp-catering-menu-accordion');
 	var $prev;
 
@@ -55,9 +53,8 @@
 	}
 }());
 
+// type tab
 (function() {
-	// type tab
-
 	var $containers = $('.js-corp-catering-menu-type-tab');
 
 	if ($containers.length) {
@@ -109,3 +106,19 @@
 	}
 
 }());
+
+// order comment toggle
+(function() {
+	var $container = $('.js-cc-order-form-comment-toggle');
+
+	if ($container.length) {
+		$container.on('click.comment-toggle', '.cc-order-form-comment__toggle', function() {
+			if ($container.hasClass('cc-order-form-comment--open')) {
+				$container.removeClass('cc-order-form-comment--open');
+			} else {
+				$container.addClass('cc-order-form-comment--open');
+			}
+		});
+	}
+
+}())
