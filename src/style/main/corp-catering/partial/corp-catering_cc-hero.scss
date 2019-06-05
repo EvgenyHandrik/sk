@@ -137,9 +137,13 @@
 
 			&-number {
 				font-weight: bold;
-				border-bottom: 0;
+				border-bottom: 1px solid rgba(#fff, 0.4);
 				color: #fff;
-				cursor: default;
+
+				&:hover {
+					color: #fff;
+					border-color: #fff;
+				}
 			}
 
 			&-name {

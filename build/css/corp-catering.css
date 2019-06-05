@@ -218,9 +218,13 @@
 
 .corp-catering .cc-hero__phone-number {
   font-weight: bold;
-  border-bottom: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
   color: #fff;
-  cursor: default;
+}
+
+.corp-catering .cc-hero__phone-number:hover {
+  color: #fff;
+  border-color: #fff;
 }
 
 .corp-catering .cc-hero__phone-name {
@@ -692,6 +696,7 @@
 }
 
 .corp-catering .cc-order {
+  margin: 0 0 50px 0;
   /* -- */
 }
 
@@ -870,6 +875,58 @@
 
 .corp-catering .cc-order-form__row--form-group > .cc-order-form__col:first-child {
   margin-left: 0;
+}
+
+.corp-catering .cc-contacts {
+  padding: 50px 0;
+  background-color: #fafafa;
+  /* -- */
+}
+
+.corp-catering .cc-contacts-list__row {
+  line-height: 1;
+  font-size: 1px;
+  text-align: center;
+}
+
+.corp-catering .cc-contacts-list__col {
+  display: inline-block;
+  margin-left: 50px;
+  font-size: 22px;
+}
+
+.corp-catering .cc-contacts-list__col:first-child {
+  margin-left: 0;
+}
+
+.corp-catering .cc-contacts-item__icon {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+  vertical-align: middle;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+}
+
+.corp-catering .cc-contacts-item__icon--phone {
+  background-image: url("../images/ico-phone-special-red-30x30.svg");
+}
+
+.corp-catering .cc-contacts-item__icon--email {
+  background-image: url("../images/ico-email-special-red-30x30.svg");
+}
+
+.corp-catering .cc-contacts-item__link {
+  text-decoration: none;
+  border-bottom: 1px solid #e8e8e8;
+  color: #000;
+}
+
+.corp-catering .cc-contacts-item__link:hover {
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  color: #da5848;
 }
 
 @media (max-width: 1024px) {
