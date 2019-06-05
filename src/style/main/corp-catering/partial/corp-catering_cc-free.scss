@@ -1,0 +1,44 @@
+.corp-catering {
+	.cc-free {
+		margin: 0 0 50px 0;
+
+		/* -- */
+
+		&__content {
+			@include content-all-padding-h();
+		}
+
+		/* -- */
+
+		&-image-list {
+			max-width: 1215px;
+			margin: 0 auto;
+
+			&__row {
+				display: flex;
+				justify-content: space-between;
+			}
+
+			&__col {
+				flex: 1 1 auto;
+				margin-left: 30px;
+
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+		}
+
+		/* -- */
+
+		&-image {
+			padding-top: 50%;
+			border-radius: 10px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			
+			background-color: #eee;
+		}
+	}
+}
