@@ -1,0 +1,201 @@
+.corp-catering {
+	.cc-menu-accordion {
+		$type-icon-width: 32px;
+		$name-left-space: 15px;
+
+		$corner-size: 15px;
+		$corner-left-space: 15px;
+		
+		&__item {
+			border-bottom: 1px solid hsb(0, 0, 88%);
+
+			/* -- */
+
+			&--active {
+				.cc-menu-accordion {
+					&-button {
+						&__name {
+							color: $color-red;
+						}
+
+						&__corner {
+							transform: rotate(-90deg);
+						}
+					}
+
+					/* -- */
+
+					&__content {
+						display: block;
+					}
+				}
+			}
+		}
+		
+		/* -- */
+
+		&__button {}
+
+		&-button {
+			display: block;
+			width: 100%;
+			padding: 0;
+			margin: 0;
+			border: 0;
+			background-color: transparent;
+			cursor: pointer;
+
+			&__content {
+				display: table;
+				width: 100%;
+			}
+
+			&__icon-box,
+			&__name-box,
+			&__weight-box,
+			&__corner-box {
+				display: table-cell;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				vertical-align: middle;
+			}
+
+			/* -- */
+
+			&__icon-box {}
+
+			&__icon {
+				$icon-width: $type-icon-width;
+
+				display: block;
+				background-position: center;
+				background-repeat: no-repeat;
+
+				/* -- */
+
+				&--hot {
+					$icon-hot-orig-width: 50px;
+					$icon-hot-orig-height: 56px;
+					$icon-hot-width: $icon-width;
+					$icon-hot-height: $icon-hot-width / ($icon-hot-orig-width / $icon-hot-orig-height);
+
+					width: $icon-hot-width;
+					height: $icon-hot-height;
+					background-size: $icon-hot-width $icon-hot-height;
+					background-image: img('ico-dish-type-hot-50x56.svg');
+				}
+
+				&--soup {
+					$icon-soup-orig-width: 50px;
+					$icon-soup-orig-height: 52px;
+					$icon-soup-width: $icon-width;
+					$icon-soup-height: $icon-soup-width / ($icon-soup-orig-width / $icon-soup-orig-height);
+
+					width: $icon-soup-width;
+					height: $icon-soup-height;
+					background-size: $icon-soup-width $icon-soup-height;
+					background-image: img('ico-dish-type-soup-50x52.svg');
+				}
+
+				&--salad {
+					$icon-salad-orig-width: 50px;
+					$icon-salad-orig-height: 45px;
+					$icon-salad-width: $icon-width;
+					$icon-salad-height: $icon-salad-width / ($icon-salad-orig-width / $icon-salad-orig-height);
+
+					width: $icon-salad-width;
+					height: $icon-salad-height;
+					background-size: $icon-salad-width $icon-salad-height;
+					background-image: img('ico-dish-type-salad-50x45.svg');
+				}
+			}
+
+			/* -- */
+
+			&__name-box {
+				width: 100%;
+				padding-top: 20px;
+				padding-bottom: 20px;
+				padding-left: $name-left-space;
+				text-align: left;
+			}
+
+			&__name {
+				line-height: 1.2;
+				font-size: 22px;
+				@include transition((color));
+			}
+
+			/* -- */
+
+			&__weight-box {
+				padding-left: 15px;
+			}
+
+			&__weight {
+				white-space: nowrap;
+				// font-size: 18px;
+				font-size: 16px;
+				color: hsb(0, 0, 78%);
+			}
+
+			/* -- */
+
+			&__corner-box {
+				padding-left: $corner-left-space;
+				padding-right: 10px;
+			}
+
+			&__corner {
+				$icon-size: $corner-size;
+
+				display: block;
+				width: $icon-size;
+				height: $icon-size;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: $icon-size $icon-size;
+				background-image: img('ico-arr-r-md-black-30x30.svg');
+				transform: rotate(90deg);
+			}
+
+			/* -- */
+
+			&:hover {
+				.cc-menu-accordion-button__name {
+					color: $color-red;
+				}
+			}
+		}
+
+		/* -- */
+
+		&__content {
+			display: none;
+			padding-right: $corner-size + $corner-left-space;
+			padding-bottom: 20px;
+			padding-left: $type-icon-width + $name-left-space;
+		}
+
+		/* -- */
+
+		&__nfacts {
+			display: block;
+			line-height: 1;
+			padding: 0;
+			margin: 0;
+			font-size: 1px;
+
+			&-item {
+				display: inline-block;
+				margin: 0 15px 10px 0;
+				font-size: 16px;
+			}
+		}
+
+		&__brief {
+			line-height: 1.4;
+			font-size: 16px;
+		}
+	}
+}

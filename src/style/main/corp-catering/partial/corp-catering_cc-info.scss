@@ -1,0 +1,38 @@
+.corp-catering {
+	.cc-info-container {
+		font-size: 1px;
+
+		&--center {
+			text-align: center;
+		}
+	}
+	
+	.cc-info {
+		$icon-size: 25px;
+
+		position: relative;
+		max-width: 400px;
+		padding-left: $icon-size + 10px;
+		font-size: 14px;
+		text-align: left;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			display: block;
+			width: $icon-size;
+			height: $icon-size;
+			margin-top: -($icon-size / 2);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: $icon-size;
+			background-image: img('ico-info-circle-flat-grey-30x30.svg');
+		}
+
+		&--inline-block {
+			display: inline-block;
+		}
+	}
+}

@@ -1,0 +1,12 @@
+.corp-catering {
+	.cc-ttl {
+		&--1 {
+			display: block;
+			margin-bottom: 30px;
+			text-align: center;
+			font-family: $corp-catering-ttl-font-family;
+			font-size: 33px;
+			font-weight: normal;
+		}
+	}
+}

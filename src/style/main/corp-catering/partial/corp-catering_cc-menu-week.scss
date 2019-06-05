@@ -1,0 +1,75 @@
+.corp-catering {
+	.cc-menu-week {
+		margin: 0 0 30px 0;
+
+		&-tab-container {
+			margin: 0 0 30px 0;
+			font-size: 1px;
+			text-align: center;
+
+			&--subttl {
+				margin-top: -10px;
+			}
+		}
+
+		&-tab {
+			display: inline-block;
+			line-height: 1;
+			padding: 1px;
+			border-radius: 50px;
+			// background-color: hsb(0, 0, 20%);
+			background-color: #8c7e7e;
+
+			&__item {
+				display: inline-block;				
+				font-size: 13px;
+				
+				/* -- */
+
+				&--active {
+					.cc-menu-week-tab__button {
+						text-decoration: none;
+						color: #000;
+						background-color: $corp-catering-bg-color-grey-light;
+
+						&:hover {
+							color: #000;
+						}
+					}
+				}
+			}
+
+			&__button {
+				display: block;
+				padding: 7px 15px;
+				margin: 0;
+				border: 0;
+				border-radius: 50px;
+				color: rgba(#fff, 1);
+				background: transparent;
+				@include transition((color, background-color));
+				cursor: pointer;
+
+				&:hover {
+					color: rgba(#fff, 0.7);
+				}
+			}
+		}
+
+		&-content {
+			max-width: 787px;
+			margin-right: auto;
+			margin-left: auto;
+
+			&__item {
+				display: none;				
+
+				/* -- */
+
+				&--active {
+					display: block;
+				}
+			}
+		}
+	}
+}

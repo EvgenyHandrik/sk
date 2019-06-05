@@ -1,0 +1,17 @@
+.corp-catering {
+	.cc-menu {
+		background-color: $corp-catering-bg-color-grey-light;
+	
+		/* -- */
+
+		&__content {
+			@include content-all-padding-h();
+			
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
+
+		/* -- */
+
+	}
+}

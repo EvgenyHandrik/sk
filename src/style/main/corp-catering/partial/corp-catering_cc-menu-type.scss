@@ -1,0 +1,79 @@
+.corp-catering {
+	.cc-menu-type {
+
+		&-tab-container {
+			line-height: 1;
+			margin: 0 0 10px 0;
+			font-size: 1px;
+			text-align: center;
+		}
+
+		&-tab {
+			display: inline-block;
+
+			&__item {
+				$separator-size: 6px;
+				$space-h: 13px;
+
+				position: relative;
+				display: inline-block;
+				padding-left: $separator-size + $space-h;
+				margin-left: $space-h;
+
+				&:before {
+					content: '';
+					position: absolute;
+					bottom: 40%;
+					left: 0;
+					display: block;
+					width: $separator-size;
+					height: $separator-size;
+					margin-bottom: -($separator-size / 2);
+					border-radius: 50%;
+					background-color: hsb(0, 0, 88%);
+				}
+
+				&:first-child {
+					padding-left: 0;
+					margin-left: 0;
+
+					&:before {
+						display: none;
+					}
+				}
+
+				&--active {
+					.cc-menu-type-tab__button {
+						color: $color-red;
+					}
+				}
+			}
+
+			&__button {
+				display: block;
+				padding: 5px;
+				margin: 0;
+				font-family: Yanone, sans-serif;
+				font-size: 32px;
+				border: 0;
+				background: transparent;
+				@include transition((color));
+				cursor: pointer;
+
+				&:hover {
+					color: $color-red;
+				}
+			}
+		}
+
+		&-content {
+			&__item {
+				display: none;
+
+				&--active {
+					display: block;
+				}
+			}
+		}
+	}
+}

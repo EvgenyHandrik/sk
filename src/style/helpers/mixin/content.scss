@@ -1,0 +1,26 @@
+@mixin content-laptop-bp() {
+	@media (max-width: $content-laptop-bp) {
+		@content;
+	}	
+}
+
+@mixin content-mobile-bp() {
+	@media (max-width: $content-mobile-bp) {
+		@content;
+	}
+}
+
+@mixin content-all-padding-h() {
+	padding-right: $content-desktop-margin-h;
+	padding-left: $content-desktop-margin-h;
+
+	@include content-laptop-bp() {
+		padding-right: $content-laptop-margin-h;
+		padding-left: $content-laptop-margin-h;
+	}
+
+	@include content-mobile-bp() {
+		padding-right: $content-mobile-margin-h;
+		padding-left: $content-mobile-margin-h;
+	}
+}

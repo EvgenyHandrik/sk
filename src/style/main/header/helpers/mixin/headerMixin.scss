@@ -1,0 +1,5 @@
+@mixin header-no-margin-bottom-bp() {
+	@media (max-width: $header-no-margin-bottom-bp) {
+		@content;
+	}
+}
