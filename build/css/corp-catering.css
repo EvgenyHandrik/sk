@@ -103,7 +103,6 @@
 .corp-catering .cc-hero {
   position: relative;
   margin-top: -20px;
-  margin-bottom: 50px;
   /* -- */
   /* -- */
 }
@@ -232,7 +231,6 @@
 }
 
 .corp-catering .cc-price {
-  margin: 0 0 50px 0;
   /* -- */
   /* -- */
 }
@@ -240,6 +238,12 @@
 .corp-catering .cc-price__content {
   padding-right: 20px;
   padding-left: 20px;
+  padding-top: 60px;
+  padding-bottom: 50px;
+}
+
+.corp-catering .cc-price__ttl {
+  margin-bottom: 40px;
 }
 
 .corp-catering .cc-price-list {
@@ -256,25 +260,29 @@
   width: 940px;
 }
 
-.corp-catering .cc-price-list__row:after {
-  content: '';
-  display: block;
-  clear: both;
-  font-size: 1px;
+.corp-catering .cc-price-list__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .corp-catering .cc-price-list__col {
-  float: left;
-  padding-left: 35px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 33.3%;
+  margin-left: 35px;
 }
 
 .corp-catering .cc-price-list__col:first-child {
-  padding-left: 0;
+  margin-left: 0;
 }
 
 .corp-catering .cc-price-item {
-  width: 290px;
-  padding: 35px;
+  padding: 35px 35px 20px 35px;
   border-radius: 10px;
   background-color: #f2f2f2;
   /* -- */
@@ -284,7 +292,7 @@
 .corp-catering .cc-price-item__price {
   position: relative;
   padding: 0 0 20px 0;
-  margin: 0 0 30px 0;
+  margin: 0 0 15px 0;
   font-size: 30px;
   text-align: center;
 }
@@ -340,22 +348,22 @@
 .corp-catering .cc-menu__content {
   padding-right: 20px;
   padding-left: 20px;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 60px;
+  padding-bottom: 50px;
 }
 
 .corp-catering .cc-menu-week {
-  margin: 0 0 30px 0;
+  margin: 0 0 40px 0;
 }
 
 .corp-catering .cc-menu-week-tab-container {
-  margin: 0 0 30px 0;
+  margin: 0 0 40px 0;
   font-size: 1px;
   text-align: center;
 }
 
 .corp-catering .cc-menu-week-tab-container--subttl {
-  margin-top: -10px;
+  margin-top: -5px;
 }
 
 .corp-catering .cc-menu-week-tab {
@@ -363,7 +371,7 @@
   line-height: 1;
   padding: 1px;
   border-radius: 50px;
-  background-color: #8c7e7e;
+  background-color: #333333;
 }
 
 .corp-catering .cc-menu-week-tab__item {
@@ -431,8 +439,18 @@
   /* -- */
 }
 
+.corp-catering .cc-menu-accordion__item--active .cc-menu-accordion-button {
+  /* -- */
+  /* -- */
+  /* -- */
+}
+
 .corp-catering .cc-menu-accordion__item--active .cc-menu-accordion-button__name {
   color: #bb1018;
+}
+
+.corp-catering .cc-menu-accordion__item--active .cc-menu-accordion-button__weight-box {
+  bottom: 10px;
 }
 
 .corp-catering .cc-menu-accordion__item--active .cc-menu-accordion-button__corner {
@@ -463,6 +481,7 @@
 .corp-catering .cc-menu-accordion-button__content {
   display: table;
   width: 100%;
+  /* -- */
 }
 
 .corp-catering .cc-menu-accordion-button__icon-box,
@@ -473,6 +492,11 @@
   padding-top: 10px;
   padding-bottom: 10px;
   vertical-align: middle;
+  /* -- */
+}
+
+.corp-catering .cc-menu-accordion-button__icon-box {
+  /* -- */
 }
 
 .corp-catering .cc-menu-accordion-button__icon {
@@ -509,6 +533,7 @@
   padding-bottom: 20px;
   padding-left: 15px;
   text-align: left;
+  /* -- */
 }
 
 .corp-catering .cc-menu-accordion-button__name {
@@ -518,21 +543,25 @@
   transition-property: color;
   -webkit-transition-duration: 200ms;
   transition-duration: 200ms;
+  /* -- */
 }
 
 .corp-catering .cc-menu-accordion-button__weight-box {
   padding-left: 15px;
+  /* -- */
 }
 
 .corp-catering .cc-menu-accordion-button__weight {
   white-space: nowrap;
   font-size: 16px;
   color: #c7c7c7;
+  /* -- */
 }
 
 .corp-catering .cc-menu-accordion-button__corner-box {
   padding-left: 15px;
   padding-right: 10px;
+  /* -- */
 }
 
 .corp-catering .cc-menu-accordion-button__corner {
@@ -571,16 +600,18 @@
   display: inline-block;
   margin: 0 15px 10px 0;
   font-size: 16px;
+  /* -- */
 }
 
 .corp-catering .cc-menu-accordion__brief {
   line-height: 1.4;
   font-size: 16px;
+  /* -- */
 }
 
 .corp-catering .cc-menu-type-tab-container {
   line-height: 1;
-  margin: 0 0 10px 0;
+  margin: 0 0 15px 0;
   font-size: 1px;
   text-align: center;
 }
@@ -967,11 +998,135 @@
   }
 
   .corp-catering .cc-price-list__col {
-    padding-left: 10px;
+    margin-left: 10px;
   }
 
   .corp-catering .cc-price-item {
-    width: 230px;
+    padding: 25px;
+  }
+
+  .corp-catering .cc-price-item__price {
+    font-size: 25px;
+  }
+
+  .corp-catering .cc-price-item__dish {
+    height: 50px;
+    line-height: 50px;
+    padding-left: 48px;
+    font-size: 16px;
+  }
+
+  .corp-catering .cc-price-item__dish--hot {
+    background-size: 33px 36.96px;
+  }
+
+  .corp-catering .cc-price-item__dish--soup {
+    background-size: 33px 34.32px;
+  }
+
+  .corp-catering .cc-price-item__dish--salad {
+    background-size: 33px 29.7px;
+  }
+
+  .corp-catering .cc-menu-week-content {
+    max-width: 600px;
+  }
+
+  .corp-catering .cc-menu-accordion__item--active .cc-menu-accordion-button__content {
+    padding-bottom: 35px;
+  }
+
+  .corp-catering .cc-menu-accordion-button__content {
+    position: relative;
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 40px;
+  }
+
+  .corp-catering .cc-menu-accordion-button__content:after {
+    content: '';
+    display: block;
+    clear: both;
+    font-size: 1px;
+  }
+
+  .corp-catering .cc-menu-accordion-button__icon-box,
+  .corp-catering .cc-menu-accordion-button__name-box,
+  .corp-catering .cc-menu-accordion-button__weight-box,
+  .corp-catering .cc-menu-accordion-button__corner-box {
+    display: block;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .corp-catering .cc-menu-accordion-button__icon-box {
+    float: left;
+  }
+
+  .corp-catering .cc-menu-accordion-button__icon--hot {
+    width: 23px;
+    height: 25.76px;
+    background-size: 23px 25.76px;
+  }
+
+  .corp-catering .cc-menu-accordion-button__icon--soup {
+    width: 23px;
+    height: 23.92px;
+    background-size: 23px 23.92px;
+  }
+
+  .corp-catering .cc-menu-accordion-button__icon--salad {
+    width: 23px;
+    height: 20.7px;
+    background-size: 23px 20.7px;
+  }
+
+  .corp-catering .cc-menu-accordion-button__name-box {
+    width: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+  }
+
+  .corp-catering .cc-menu-accordion-button__name {
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .corp-catering .cc-menu-accordion-button__weight-box {
+    position: absolute;
+    bottom: 15px;
+    left: 38px;
+    height: 15px;
+    line-height: 15px;
+    padding-left: 0;
+  }
+
+  .corp-catering .cc-menu-accordion-button__weight {
+    font-size: 15px;
+    color: #a1a1a1;
+  }
+
+  .corp-catering .cc-menu-accordion-button__corner-box {
+    position: absolute;
+    top: 15px;
+    right: 0;
+  }
+
+  .corp-catering .cc-menu-accordion__content {
+    padding-right: 0;
+    padding-bottom: 15px;
+    padding-left: 38px;
+  }
+
+  .corp-catering .cc-menu-accordion__nfacts-item {
+    font-size: 15px;
+    color: #a1a1a1;
+  }
+
+  .corp-catering .cc-menu-accordion__brief {
+    font-size: 15px;
+    color: #a1a1a1;
   }
 }
 

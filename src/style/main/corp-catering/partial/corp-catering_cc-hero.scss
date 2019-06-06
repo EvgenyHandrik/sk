@@ -2,7 +2,6 @@
 	.cc-hero {
 		position: relative;
 		margin-top: -$header-desktop-margin-bottom;
-		margin-bottom: 50px;
 
 		@include header-no-margin-bottom-bp() {
 			margin-top: 0;

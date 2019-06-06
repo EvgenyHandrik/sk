@@ -5,6 +5,23 @@
 
 		$corner-size: 15px;
 		$corner-left-space: 15px;
+
+		$type-icon-width-mobile: 23px;
+		$name-left-space-mobile: 15px;
+
+		$weight-box-height-mobile: 15px;
+		$weight-box-space-top-mobile: 10px;
+		$weight-box-space-bottom-active-mobile: 10px;
+
+		$button-padding-top-mobile: 15px;
+		$button-padding-bottom-mobile: $button-padding-top-mobile + $weight-box-height-mobile + $weight-box-space-top-mobile;
+		$button-padding-bottom-active-mobile: $weight-box-height-mobile + $weight-box-space-top-mobile + $weight-box-space-bottom-active-mobile;
+
+		@mixin accordion-bp-mobile() {
+			@media (max-width: $corp-catering-menu-accordion-bp-mobile) {
+				@content;
+			}
+		}
 		
 		&__item {
 			border-bottom: 1px solid hsb(0, 0, 88%);
@@ -14,9 +31,26 @@
 			&--active {
 				.cc-menu-accordion {
 					&-button {
+
+						&__content {
+							@include accordion-bp-mobile {
+								padding-bottom: $button-padding-bottom-active-mobile;
+							}
+						}
+						
+						/* -- */
+
 						&__name {
 							color: $color-red;
 						}
+
+						/* -- */
+
+						&__weight-box {
+							bottom: $weight-box-space-bottom-active-mobile;
+						}
+
+						/* -- */
 
 						&__corner {
 							transform: rotate(-90deg);
@@ -44,10 +78,26 @@
 			border: 0;
 			background-color: transparent;
 			cursor: pointer;
-
+			
 			&__content {
 				display: table;
 				width: 100%;
+
+				/* -- */
+
+				@include accordion-bp-mobile {
+					position: relative;
+					display: block;
+					padding-top: $button-padding-top-mobile;
+					padding-bottom: $button-padding-bottom-mobile;
+
+					&:after {
+						content: '';
+						display: block;
+						clear: both;
+						font-size: 1px;
+					}
+				}
 			}
 
 			&__icon-box,
@@ -58,14 +108,32 @@
 				padding-top: 10px;
 				padding-bottom: 10px;
 				vertical-align: middle;
+
+				/* -- */
+
+				@include accordion-bp-mobile {
+					display: block;
+					padding-top: 0;
+					padding-bottom: 0;
+				}
 			}
 
 			/* -- */
 
-			&__icon-box {}
+			&__icon-box {
+
+				/* -- */
+
+				@include accordion-bp-mobile {
+					float: left;
+				}
+			}
 
 			&__icon {
 				$icon-width: $type-icon-width;
+
+				$icon-width-mobile: $type-icon-width-mobile;
+
 
 				display: block;
 				background-position: center;
@@ -83,6 +151,15 @@
 					height: $icon-hot-height;
 					background-size: $icon-hot-width $icon-hot-height;
 					background-image: img('ico-dish-type-hot-50x56.svg');
+
+					@media(max-width: $corp-catering-menu-accordion-bp-mobile) {
+						$icon-hot-width-mobile: $icon-width-mobile;
+						$icon-hot-height-mobile: $icon-hot-width-mobile / ($icon-hot-orig-width / $icon-hot-orig-height);
+						
+						width: $icon-hot-width-mobile;
+						height: $icon-hot-height-mobile;
+						background-size: $icon-hot-width-mobile $icon-hot-height-mobile;
+					}
 				}
 
 				&--soup {
@@ -95,6 +172,15 @@
 					height: $icon-soup-height;
 					background-size: $icon-soup-width $icon-soup-height;
 					background-image: img('ico-dish-type-soup-50x52.svg');
+
+					@media(max-width: $corp-catering-menu-accordion-bp-mobile) {
+						$icon-soup-width-mobile: $icon-width-mobile;
+						$icon-soup-height-mobile: $icon-soup-width-mobile / ($icon-soup-orig-width / $icon-soup-orig-height);
+						
+						width: $icon-soup-width-mobile;
+						height: $icon-soup-height-mobile;
+						background-size: $icon-soup-width-mobile $icon-soup-height-mobile;
+					}
 				}
 
 				&--salad {
@@ -107,6 +193,15 @@
 					height: $icon-salad-height;
 					background-size: $icon-salad-width $icon-salad-height;
 					background-image: img('ico-dish-type-salad-50x45.svg');
+
+					@media(max-width: $corp-catering-menu-accordion-bp-mobile) {
+						$icon-salad-width-mobile: $icon-width-mobile;
+						$icon-salad-height-mobile: $icon-salad-width-mobile / ($icon-salad-orig-width / $icon-salad-orig-height);
+						
+						width: $icon-salad-width-mobile;
+						height: $icon-salad-height-mobile;
+						background-size: $icon-salad-width-mobile $icon-salad-height-mobile;
+					}
 				}
 			}
 
@@ -118,18 +213,45 @@
 				padding-bottom: 20px;
 				padding-left: $name-left-space;
 				text-align: left;
+
+				/* -- */
+
+				@include accordion-bp-mobile {
+					width: auto;
+					padding-top: 0;
+					padding-bottom: 0;
+					overflow: hidden;
+				}
 			}
 
 			&__name {
 				line-height: 1.2;
 				font-size: 22px;
 				@include transition((color));
+
+				/* -- */
+
+				@include accordion-bp-mobile {
+					font-weight: bold;
+					font-size: 16px;
+				}
 			}
 
 			/* -- */
 
 			&__weight-box {
 				padding-left: 15px;
+
+				/* -- */
+
+				@include accordion-bp-mobile {
+					position: absolute;
+					bottom: $button-padding-top-mobile;
+					left: $type-icon-width-mobile + $name-left-space-mobile;
+					height: $weight-box-height-mobile;
+					line-height: $weight-box-height-mobile;
+					padding-left: 0;
+				}
 			}
 
 			&__weight {
@@ -137,6 +259,13 @@
 				// font-size: 18px;
 				font-size: 16px;
 				color: hsb(0, 0, 78%);
+
+				/* -- */
+
+				@include accordion-bp-mobile {
+					font-size: 15px;
+					color: hsb(0, 0, 63%);
+				}
 			}
 
 			/* -- */
@@ -144,6 +273,14 @@
 			&__corner-box {
 				padding-left: $corner-left-space;
 				padding-right: 10px;
+
+				/* -- */
+
+				@include accordion-bp-mobile {
+					position: absolute;
+					top: $button-padding-top-mobile;
+					right: 0;
+				}
 			}
 
 			&__corner {
@@ -175,6 +312,12 @@
 			padding-right: $corner-size + $corner-left-space;
 			padding-bottom: 20px;
 			padding-left: $type-icon-width + $name-left-space;
+
+			@include accordion-bp-mobile {
+				padding-right: 0;
+				padding-bottom: $button-padding-top-mobile;
+				padding-left: $type-icon-width-mobile + $name-left-space-mobile;
+			}
 		}
 
 		/* -- */
@@ -190,12 +333,26 @@
 				display: inline-block;
 				margin: 0 15px 10px 0;
 				font-size: 16px;
+
+				/* -- */
+
+				@include accordion-bp-mobile {
+					font-size: 15px;
+					color: hsb(0, 0, 63%);
+				}
 			}
 		}
 
 		&__brief {
 			line-height: 1.4;
 			font-size: 16px;
+
+			/* -- */
+
+			@include accordion-bp-mobile {
+				font-size: 15px;
+				color: hsb(0, 0, 63%);
+			}
 		}
 	}
 }

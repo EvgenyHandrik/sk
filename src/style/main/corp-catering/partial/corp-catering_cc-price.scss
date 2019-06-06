@@ -9,13 +9,18 @@
 		$cc-price-list-mobile-width: $cc-price-item-mobile-width * 3 + $cc-price-item-mobile-space-h * 2;
 
 		$cc-price-bp-mobile: $cc-price-list-desktop-width + 20px * 2;
-
-		margin: 0 0 50px 0;
 		
 		/* -- */
 
 		&__content {
+			
 			@include content-all-padding-h();
+			padding-top: 60px;
+			padding-bottom: 50px;
+		}
+
+		&__ttl {
+			margin-bottom: 40px;
 		}
 		
 		/* -- */
@@ -46,36 +51,32 @@
 			/* -- */
 			
 			&__row {
-				&:after {
-					content: '';
-					display: block;
-					clear: both;
-					font-size: 1px;
-				}
+				display: flex;
+				justify-content: space-between;
 			}
 
 			&__col {
-				float: left;
-				padding-left: $cc-price-item-desktop-space-h;
+				flex: 1 1 auto;
+				width: 33.3%;
+				margin-left: $cc-price-item-desktop-space-h;
 
 				@media (max-width: $cc-price-bp-mobile) {
-					padding-left: $cc-price-item-mobile-space-h;
+					margin-left: $cc-price-item-mobile-space-h;
 				}
 
 				&:first-child {
-					padding-left: 0;
+					margin-left: 0;
 				}				
 			}
 		}
 
 		&-item {
-			width: $cc-price-item-desktop-width;
-			padding: 35px;
+			padding: 35px 35px 20px 35px;
 			border-radius: 10px;
 			background-color: $corp-catering-bg-color-grey-dark;
 
 			@media (max-width: $cc-price-bp-mobile) {
-				width: $cc-price-item-mobile-width;
+				padding: 25px;
 			}
 
 			/* -- */
@@ -83,9 +84,13 @@
 			&__price {
 				position: relative;
 				padding: 0 0 20px 0;
-				margin: 0 0 30px 0;
+				margin: 0 0 15px 0;
 				font-size: 30px;
 				text-align: center;
+
+				@media (max-width: $cc-price-bp-mobile) {
+					font-size: 25px;
+				}
 
 				&:before {
 					// $line-width: 110px;
@@ -113,13 +118,21 @@
 
 			&__dish {
 				$icon-width: 42px;
+				$icon-width-mobile: 33px;
 
 				height: 70px;
 				line-height: 70px;
-				padding-left: 62px;
+				padding-left: $icon-width + 20px;
 				font-size: 18px;
 				background-position: left;
 				background-repeat: no-repeat;
+
+				@media (max-width: $cc-price-bp-mobile) {
+					height: 50px;
+					line-height: 50px;
+					padding-left: $icon-width-mobile + 15px;
+					font-size: 16px;
+				}
 
 				/* -- */
 
@@ -131,6 +144,13 @@
 
 					background-size: $icon-hot-width $icon-hot-height;
 					background-image: img('ico-dish-type-hot-50x56.svg');
+
+					@media (max-width: $cc-price-bp-mobile) {
+						$icon-hot-width-mobile: $icon-width-mobile;
+						$icon-hot-height-mobile: $icon-hot-width-mobile / ($icon-hot-orig-width / $icon-hot-orig-height);
+
+						background-size: $icon-hot-width-mobile $icon-hot-height-mobile;
+					}
 				}
 
 				&--soup {
@@ -141,6 +161,13 @@
 
 					background-size: $icon-soup-width $icon-soup-height;
 					background-image: img('ico-dish-type-soup-50x52.svg');
+
+					@media (max-width: $cc-price-bp-mobile) {
+						$icon-soup-width-mobile: $icon-width-mobile;
+						$icon-soup-height-mobile: $icon-soup-width-mobile / ($icon-soup-orig-width / $icon-soup-orig-height);
+
+						background-size: $icon-soup-width-mobile $icon-soup-height-mobile;
+					}
 				}
 
 				&--salad {
@@ -151,6 +178,13 @@
 
 					background-size: $icon-salad-width $icon-salad-height;
 					background-image: img('ico-dish-type-salad-50x45.svg');
+
+					@media (max-width: $cc-price-bp-mobile) {
+						$icon-salad-width-mobile: $icon-width-mobile;
+						$icon-salad-height-mobile: $icon-salad-width-mobile / ($icon-salad-orig-width / $icon-salad-orig-height);
+
+						background-size: $icon-salad-width-mobile $icon-salad-height-mobile;
+					}
 				}
 			}
 		}
