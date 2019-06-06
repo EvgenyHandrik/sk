@@ -5,16 +5,25 @@
 
 .acc-history-fdate {
 	&__row {
-		display: table;
-		width: 100%;
-		max-width: 300px;
+		display: flex;
+		align-items: center;
 	}
 
 	&__col {
-		display: table-cell;
+		flex: none;
+
+		&--title {
+			padding-right: 15px;
+		}
 
 		&--control {
-			padding-left: 15px;
+			flex: 0 1 auto;
+			width: 90px;
+		}
+
+		&--dash {
+			padding-left: 5px;
+			padding-right: 5px;
 		}
 	}
 
@@ -24,30 +33,13 @@
 	}
 
 	&__control-group {
-		$control-icon-size: 20px;
-		$control-icon-right: 10px;
-
-		position: relative;
-
-		&:before {
-			content: '';
-			position: absolute;
-			top: 50%;
-			right: $control-icon-right;
-			display: block;
-			width: $control-icon-size;
-			height: $control-icon-size;
-			background-position: right center;
-			background-repeat: no-repeat;
-			background-size: $control-icon-size $control-icon-size;
-			background-image: url(../images/ico-date-calendar-black-30x30.svg);
-			opacity: 0.3;
-			transform: translateY(-50%);
-		}
-
 		.form-control--text {
+			width: 100%;
+			height: 30px;
+			padding: 5px 5px;
 			font-size: 14px;
-			padding-right: $control-icon-size + $control-icon-right + 10px;
+			text-align: center;
+			border-radius: 3px;
 		}
 	}
 }
