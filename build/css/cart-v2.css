@@ -977,6 +977,10 @@ a.crt2-dish__name:hover {
   .crt2-cutlery__count.count--default.count--lite .count__field {
     font-size: 16px;
   }
+
+  .crt2-recommended-item__count.count--default.count--lite.count--joint .count__field {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 520px) {

@@ -176,7 +176,6 @@
 					margin-right: -$item-mobile-padding-h;
 					margin-left: -$item-mobile-padding-h;
 				}
-				
 
 				.count__minus,
 				.count__plus {
@@ -186,6 +185,10 @@
 				.count__field {
 					width: 20%;
 					font-family: Roboto, Arimo, sans-serif;
+
+					@media (max-width: 640px) {
+						font-size: 16px;
+					}
 				}
 			}			
 		}
