@@ -5,6 +5,7 @@
 
 		$corner-size: 15px;
 		$corner-left-space: 15px;
+		$corner-right-space: 10px;
 
 		$type-icon-width-mobile: 23px;
 		$name-left-space-mobile: 15px;
@@ -220,13 +221,14 @@
 					width: auto;
 					padding-top: 0;
 					padding-bottom: 0;
+					padding-right: $corner-size + $corner-right-space + $corner-left-space;
 					overflow: hidden;
 				}
 			}
 
 			&__name {
 				line-height: 1.2;
-				font-size: 22px;
+				font-size: 21px;
 				@include transition((color));
 
 				/* -- */
@@ -272,7 +274,7 @@
 
 			&__corner-box {
 				padding-left: $corner-left-space;
-				padding-right: 10px;
+				padding-right: $corner-right-space;
 
 				/* -- */
 
@@ -280,6 +282,7 @@
 					position: absolute;
 					top: $button-padding-top-mobile;
 					right: 0;
+					padding-left: 0;
 				}
 			}
 
