@@ -1,6 +1,8 @@
 .corp-catering {
+	$item-space-h: 30px;
+
 	.cc-free {
-		margin: 0 0 50px 0;
+		margin: 0 0 60px 0;
 
 		/* -- */
 
@@ -10,8 +12,8 @@
 
 		/* -- */
 
-		&-image-list {
-			max-width: 1215px;
+		&-list {
+			max-width: $content-desktop-width;
 			margin: 0 auto;
 
 			&__row {
@@ -21,7 +23,8 @@
 
 			&__col {
 				flex: 1 1 auto;
-				margin-left: 30px;
+				width: 33.3%;
+				margin-left: $item-space-h;
 
 				&:first-child {
 					margin-left: 0;
@@ -31,14 +34,70 @@
 
 		/* -- */
 
-		&-image {
-			padding-top: 50%;
-			border-radius: 10px;
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: cover;
-			
-			background-color: #eee;
+		&-item {
+			$circle-size: 38px;
+			$icon-size: $circle-size - 14px;
+
+			&__image {
+				position: relative;
+	
+				padding-top: 66.6%;
+				margin: 0 0 15px 0;
+				border-radius: 15px;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				
+				background-color: #eee;
+
+				&:before {
+					content: '';
+					position: absolute;
+					top: 10px;
+					left: 10px;
+					display: block;
+					width: $circle-size;
+					height: $circle-size;
+					border-radius: $circle-size;
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: $icon-size $icon-size;
+					background-color: $color-red-active;
+				}
+			}
+
+			&__name {
+				font-size: 13px;
+				color: #a5a5a5;
+			}
+
+			/* -- */
+
+			&--hot {
+				.cc-free-item__image {
+					&:before {
+						background-image: img('ico-dish-type-hot-white-30x30.svg');
+					}
+				}
+			}
+
+			&--soup {
+				.cc-free-item__image {
+					&:before {
+						background-image: img('ico-dish-type-soup-white-30x30.svg');
+					}
+				}
+			}
+
+			&--salad {
+				.cc-free-item__image {
+					&:before {
+						background-image: img('ico-dish-type-salad-white-30x30.svg');
+					}
+				}
+			}
 		}
+
+		
 	}
 }
