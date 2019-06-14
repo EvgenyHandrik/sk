@@ -11,11 +11,11 @@
 		$contentItems = $container.find('.dg-map-content__item');
 
 		$container
-			.on('click.week-switch-button', '.dg-map-switch-button', function() {
+			.on('click.map-switch-button', '.dg-map-switch-button', function() {
 				var index = $buttons.index(this);
 				switchTo(index);
 			})
-			.on('click.week-switch-toggle', '.dg-map-switch-toggle', function() {
+			.on('click.map-switch-toggle', '.dg-map-switch-toggle', function() {
 				if ($switch.hasClass('dg-map-switch--0')) {
 					switchTo(1);
 				} else {
