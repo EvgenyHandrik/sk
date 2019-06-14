@@ -924,10 +924,10 @@
 }
 
 .corp-catering .cc-order-form {
-  max-width: 935px;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 50px 120px;
-  border-radius: 10px;
+  padding: 45px 60px;
+  border-radius: 15px;
   background-color: #f2f2f2;
   /* --*/
   /* -- */
@@ -946,16 +946,32 @@
   display: block;
   width: 100%;
   height: 52px;
-  padding-right: 43px;
+  padding-right: 41px;
   padding-left: 15px;
   font-size: 18px;
+  border-bottom: 1px solid #000;
+  border-radius: 0;
   background-color: transparent;
 }
 
+.corp-catering .cc-order-form__input::-webkit-input-placeholder {
+  color: #666666;
+}
+
+.corp-catering .cc-order-form__input:-ms-input-placeholder {
+  color: #666666;
+}
+
+.corp-catering .cc-order-form__input::-ms-input-placeholder {
+  color: #666666;
+}
+
+.corp-catering .cc-order-form__input::placeholder {
+  color: #666666;
+}
+
 .corp-catering .cc-order-form__control-group {
-  border-radius: 5px;
   margin: 0 0 10px 0;
-  background-color: #fff;
 }
 
 .corp-catering .cc-order-form__control-group:last-child {
@@ -974,11 +990,11 @@
   right: 15px;
   top: 0;
   display: block;
-  width: 18px;
+  width: 16px;
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 18px 18px;
+  background-size: 16px 16px;
 }
 
 .corp-catering .cc-order-form__control-group.form-control-group--error:before {
@@ -991,7 +1007,7 @@
 
 .corp-catering .cc-order-form__submit-container {
   line-height: 1;
-  margin: 45px 0 0 0;
+  margin: 35px 0 0 0;
   font-size: 1px;
   text-align: center;
 }
@@ -1030,7 +1046,7 @@
 }
 
 .corp-catering .cc-order-form-comment__toggle-container {
-  margin-bottom: -15px;
+  margin-bottom: -5px;
   text-align: center;
 }
 
@@ -1054,6 +1070,7 @@
 
 .corp-catering .cc-order-form-comment__form-group {
   display: none;
+  margin-top: 40px;
 }
 
 .corp-catering .cc-order-form-comment__textarea {
@@ -1061,12 +1078,13 @@
   width: 100%;
   min-height: 150px;
   padding: 15px;
-  font-size: 18px;
+  font-size: 15px;
+  border-radius: 10px;
   resize: none;
-  background-color: transparent;
+  background-color: #e6e6e6;
 }
 
-.corp-catering .cc-order-form-comment--open .cc-order-form-comment__toggle {
+.corp-catering .cc-order-form-comment--open .cc-order-form-comment__toggle-container {
   display: none;
 }
 
