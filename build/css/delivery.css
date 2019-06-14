@@ -1,0 +1,123 @@
+@-webkit-keyframes kfRotation360 {
+  0% {
+    -webkit-transform: rotage(0deg);
+    transform: rotage(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes kfRotation360 {
+  0% {
+    -webkit-transform: rotage(0deg);
+    transform: rotage(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.delivery-geography .dg-map {
+  /* -- */
+}
+
+.delivery-geography .dg-map-content__item {
+  display: none;
+  /* -- */
+}
+
+.delivery-geography .dg-map-content__item--active {
+  display: block;
+}
+
+.delivery-geography .dg-map-switch {
+  margin: 0 0 20px 0;
+  /* -- */
+  /* -- */
+  /* -- */
+}
+
+.delivery-geography .dg-map-switch__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.delivery-geography .dg-map-switch__col {
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
+  margin: 0 0 0 15px;
+}
+
+.delivery-geography .dg-map-switch__col:first-child {
+  margin-left: 0;
+}
+
+.delivery-geography .dg-map-switch-button {
+  display: block;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+  border: 0;
+  color: #8c7e7e;
+  background-color: transparent;
+}
+
+.delivery-geography .dg-map-switch-toggle {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 30px;
+  background-color: #e6e6e6;
+  cursor: pointer;
+}
+
+.delivery-geography .dg-map-switch-toggle:before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background-color: #8c7e7e;
+  background-color: #bb1018;
+  -webkit-transition-property: left, background-color;
+  transition-property: left, background-color;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+}
+
+.delivery-geography .dg-map-switch-toggle:hover:before {
+  background-color: #da5848;
+}
+
+.delivery-geography .dg-map-switch--0 .dg-map-switch-button--0 {
+  color: #000;
+}
+
+.delivery-geography .dg-map-switch--0 .dg-map-switch-toggle:before {
+  left: 5px;
+}
+
+.delivery-geography .dg-map-switch--1 .dg-map-switch-button--1 {
+  color: #000;
+}
+
+.delivery-geography .dg-map-switch--1 .dg-map-switch-toggle:before {
+  left: 25px;
+}

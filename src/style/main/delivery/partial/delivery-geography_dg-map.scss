@@ -1,0 +1,120 @@
+.delivery-geography {
+	.dg-map {
+
+		&-content {
+			&__item {
+				display: none;				
+
+				/* -- */
+
+				&--active {
+					display: block;
+				}
+			}
+		}
+		
+		/* -- */
+
+		&-switch {
+			$toggle-width: 50px;
+			$toggle-height: 30px;
+			$space: 5px;
+			$toggle-circle-size: $toggle-height - $space * 2;
+
+			margin: 0 0 20px 0;
+
+			/* -- */
+
+			&__row {
+				display: flex;
+				align-items: center;
+			}
+
+			&__col {
+				flex: none;
+				margin: 0 0 0 15px;
+
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+
+			/* -- */
+
+			&-button {
+				display: block;
+				padding: 0;
+				margin: 0;
+				font-size: 13px;
+				border: 0;
+				color: #8c7e7e;
+				background-color: transparent;
+
+				&__text {}
+			}
+
+			&-toggle {	
+				position: relative;
+				display: block;
+				width: $toggle-width;
+				height: $toggle-height;
+				padding: 0;
+				margin: 0;
+				border: 0;
+				border-radius: $toggle-height;
+				background-color: hsb(0, 0, 90%);
+				cursor: pointer;
+	
+				&:before {
+					content: '';
+					position: absolute;
+					top: $space;
+					left: $space;
+					display: block;
+					width: $toggle-circle-size;
+					height: $toggle-circle-size;
+					border-radius: $toggle-circle-size;
+					background-color: #8c7e7e;
+					background-color: $color-red;
+					@include transition((left, background-color));
+				}
+
+				&:hover {
+					&:before {
+						background-color: $color-red-active;
+					}
+				}
+			}
+
+			/* -- */
+
+			&--0 {
+				.dg-map-switch {
+					&-button--0 {
+						color: #000;
+					}
+
+					&-toggle {
+						&:before {
+							left: $space;
+						}
+					}
+				}
+			}
+
+			&--1 {
+				.dg-map-switch {
+					&-button--1 {
+						color: #000
+					}
+
+					&-toggle {
+						&:before {
+							left: $toggle-width - $toggle-circle-size - $space;
+						}
+					}
+				}
+			}
+		}
+	}
+}
