@@ -25,7 +25,6 @@
 		}
 		
 		&__item {
-			// border-bottom: 1px dashed hsb(0, 0, 88%);
 			background-position: bottom left;
 			background-repeat: repeat-x;
 			background-size: 12px 3px;
@@ -47,7 +46,6 @@
 
 						&__name {
 							color: $color-red-active;
-							// font-weight: bold;
 						}
 
 						/* -- */
@@ -263,7 +261,6 @@
 
 			&__weight {
 				white-space: nowrap;
-				// font-size: 18px;
 				font-size: 16px;
 				color: hsb(0, 0, 78%);
 
@@ -309,8 +306,6 @@
 			&:hover {
 				.cc-menu-accordion-button__name {
 					color: $color-red-active;
-					// color: hsb(0,0,70%);
-					// text-decoration: underline;
 				}
 			}
 		}
