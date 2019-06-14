@@ -1,5 +1,14 @@
 .corp-catering {
 	.cc-ttl {
+
+		$cc-ttl-bp-mobile: $corp-catering-menu-accordion-bp-mobile;
+
+		@mixin cc-ttl-bp-mobile() {
+			@media (max-width: $cc-ttl-bp-mobile) {
+				@content;
+			}
+		}
+
 		&--1 {
 			display: block;
 			line-height: 1.1;
@@ -8,6 +17,12 @@
 			font-family: $corp-catering-ttl-font-family;
 			font-size: 38px;
 			font-weight: normal;
+
+			/* -- */
+
+			@include cc-ttl-bp-mobile() {
+				font-size: 30px;
+			}
 		}
 
 		/* -- */

@@ -9,6 +9,7 @@
 	
 	.cc-info {
 		$icon-size: $corp-catering-info-icon-size;
+		$icon-size-mobile: $corp-catering-info-icon-size-mobile;
 
 		position: relative;
 		max-width: 400px;
@@ -17,6 +18,11 @@
 		font-size: 15px;
 		text-align: left;
 		color: #000;
+
+		@include corp-catering-bp-mobile() {
+			font-size: 14px;
+			padding-left: $icon-size-mobile + 13px;
+		}
 
 		&:before {
 			content: '';
@@ -31,6 +37,12 @@
 			background-size: ($icon-size) ($icon-size);
 			background-image: img('ico-info-circle-flat-grey-30x30.svg');
 			transform: translateY(-50%);
+
+			@include corp-catering-bp-mobile() {
+				width: $icon-size-mobile;
+				height: $icon-size-mobile;
+				background-size: $icon-size-mobile $icon-size-mobile;
+			}
 		}
 
 		&--inline-block {

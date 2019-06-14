@@ -1,0 +1,5 @@
+@mixin corp-catering-bp-mobile() {
+	@media (max-width: $corp-catering-bp-mobile) {
+		@content;
+	}
+}

@@ -1,6 +1,12 @@
 .corp-catering {
 	.cc-menu-type {
 
+		@mixin menu-type-bp-mobile() {
+			@media (max-width: $corp-catering-menu-accordion-bp-mobile) {
+				@content;
+			}
+		}
+
 		&-tab-container {
 			line-height: 1;
 			margin: 0 0 20px 0;
@@ -15,10 +21,21 @@
 				$separator-size: 6px;
 				$space-h: 15px;
 
+				$space-h-mobile: 5px;
+
 				position: relative;
 				display: inline-block;
 				padding-left: $separator-size + $space-h;
 				margin-left: $space-h;
+
+				/* -- */
+
+				@include menu-type-bp-mobile() {
+					padding-left: $separator-size + $space-h-mobile;
+					margin-left: $space-h-mobile;
+				}
+
+				/* -- */
 
 				&:first-child {
 					padding-left: 0;
@@ -55,6 +72,14 @@
 				@include transition((color));
 				cursor: pointer;
 
+				/* -- */
+				
+				@include menu-type-bp-mobile() {
+					font-size: 33px;
+				}
+
+				/* -- */
+
 				&:hover {
 					color: #000;
 				}
@@ -63,9 +88,16 @@
 			&__button-text {
 
 				position: relative;
-
 				display: block;
 				padding-bottom: 15px + 3px;
+
+				/* -- */
+
+				@include menu-type-bp-mobile() {
+					padding-bottom: 10px + 3px;
+				}
+
+				/* -- */
 
 				&:before {
 					content: '';

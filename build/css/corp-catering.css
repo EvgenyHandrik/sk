@@ -34,6 +34,7 @@
   font-family: CoreRhinoBlack;
   font-size: 38px;
   font-weight: normal;
+  /* -- */
 }
 
 .corp-catering .cc-ttl--red {
@@ -190,6 +191,8 @@
   padding-bottom: 20px;
   margin: 0 0 50px 0;
   font-size: 25px;
+  /* -- */
+  /* -- */
 }
 
 .corp-catering .cc-hero__subttl:before {
@@ -756,6 +759,8 @@
   display: inline-block;
   padding-left: 21px;
   margin-left: 15px;
+  /* -- */
+  /* -- */
 }
 
 .corp-catering .cc-menu-type-tab__item:first-child {
@@ -790,6 +795,8 @@
   -webkit-transition-duration: 200ms;
   transition-duration: 200ms;
   cursor: pointer;
+  /* -- */
+  /* -- */
 }
 
 .corp-catering .cc-menu-type-tab__button:hover {
@@ -800,6 +807,8 @@
   position: relative;
   display: block;
   padding-bottom: 18px;
+  /* -- */
+  /* -- */
 }
 
 .corp-catering .cc-menu-type-tab__button-text:before {
@@ -829,7 +838,7 @@
 }
 
 .corp-catering .cc-free {
-  margin: 0 0 60px 0;
+  margin: 0 0 50px 0;
   /* -- */
   /* -- */
   /* -- */
@@ -866,51 +875,16 @@
   margin-left: 0;
 }
 
-.corp-catering .cc-free-item {
-  /* -- */
-}
-
-.corp-catering .cc-free-item__image {
+.corp-catering .cc-free-image {
   position: relative;
   padding-top: 66.6%;
+  padding-top: 60%;
   margin: 0 0 15px 0;
   border-radius: 15px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #eee;
-}
-
-.corp-catering .cc-free-item__image:before {
-  content: '';
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  display: block;
-  width: 38px;
-  height: 38px;
-  border-radius: 38px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 24px 24px;
-  background-color: #da5848;
-}
-
-.corp-catering .cc-free-item__name {
-  font-size: 13px;
-  color: #a5a5a5;
-}
-
-.corp-catering .cc-free-item--hot .cc-free-item__image:before {
-  background-image: url("../images/ico-dish-type-hot-white-30x30.svg");
-}
-
-.corp-catering .cc-free-item--soup .cc-free-item__image:before {
-  background-image: url("../images/ico-dish-type-soup-white-30x30.svg");
-}
-
-.corp-catering .cc-free-item--salad .cc-free-item__image:before {
-  background-image: url("../images/ico-dish-type-salad-white-30x30.svg");
 }
 
 .corp-catering .cc-order {
@@ -1193,6 +1167,83 @@
 }
 
 @media (max-width: 980px) {
+  .corp-catering .cc-ttl--1 {
+    font-size: 30px;
+  }
+
+  .corp-catering .cc-subttl--1 {
+    font-size: 15px;
+  }
+
+  .corp-catering .cc-info {
+    font-size: 14px;
+    padding-left: 39px;
+  }
+
+  .corp-catering .cc-info:before {
+    width: 26px;
+    height: 26px;
+    background-size: 26px 26px;
+  }
+
+  .corp-catering .cc-hero__main-content-wrapper {
+    height: 300px;
+  }
+
+  .corp-catering .cc-hero__ttl {
+    margin-bottom: 25px;
+    font-size: 34px;
+  }
+
+  .corp-catering .cc-hero__subttl {
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+
+  .corp-catering .cc-hero__phone {
+    font-size: 14px;
+  }
+
+  .corp-catering .cc-price-list {
+    width: auto;
+    max-width: 600px;
+  }
+
+  .corp-catering .cc-price-list__scroll-content {
+    width: 600px;
+  }
+
+  .corp-catering .cc-price-list__col {
+    margin-left: 10px;
+  }
+
+  .corp-catering .cc-price-item {
+    padding: 20px 20px 15px 20px;
+  }
+
+  .corp-catering .cc-price-item__price {
+    font-size: 25px;
+  }
+
+  .corp-catering .cc-price-item__dish {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 33px;
+    font-size: 16px;
+  }
+
+  .corp-catering .cc-price-item__dish--hot {
+    background-size: 23px 25.76px;
+  }
+
+  .corp-catering .cc-price-item__dish--soup {
+    background-size: 23px 23.92px;
+  }
+
+  .corp-catering .cc-price-item__dish--salad {
+    background-size: 23px 20.7px;
+  }
+
   .corp-catering .cc-menu-week-content {
     max-width: 600px;
   }
@@ -1295,53 +1346,24 @@
     font-size: 15px;
     color: #a1a1a1;
   }
+
+  .corp-catering .cc-menu-type-tab__item {
+    padding-left: 11px;
+    margin-left: 5px;
+  }
+
+  .corp-catering .cc-menu-type-tab__button {
+    font-size: 33px;
+  }
+
+  .corp-catering .cc-menu-type-tab__button-text {
+    padding-bottom: 13px;
+  }
 }
 
 @media (max-width: 930px) {
   .corp-catering .cc-hero {
     margin-top: 0;
-  }
-}
-
-@media (max-width: 900px) {
-  .corp-catering .cc-price-list {
-    width: auto;
-    max-width: 710px;
-  }
-
-  .corp-catering .cc-price-list__scroll-content {
-    width: 710px;
-  }
-
-  .corp-catering .cc-price-list__col {
-    margin-left: 10px;
-  }
-
-  .corp-catering .cc-price-item {
-    padding: 25px;
-  }
-
-  .corp-catering .cc-price-item__price {
-    font-size: 25px;
-  }
-
-  .corp-catering .cc-price-item__dish {
-    height: 50px;
-    line-height: 50px;
-    padding-left: 47px;
-    font-size: 16px;
-  }
-
-  .corp-catering .cc-price-item__dish--hot {
-    background-size: 32px 35.84px;
-  }
-
-  .corp-catering .cc-price-item__dish--soup {
-    background-size: 32px 33.28px;
-  }
-
-  .corp-catering .cc-price-item__dish--salad {
-    background-size: 32px 28.8px;
   }
 }
 
