@@ -3,7 +3,7 @@
 
 		&-tab-container {
 			line-height: 1;
-			margin: 0 0 15px 0;
+			margin: 0 0 20px 0;
 			font-size: 1px;
 			text-align: center;
 		}
@@ -13,25 +13,25 @@
 
 			&__item {
 				$separator-size: 6px;
-				$space-h: 13px;
+				$space-h: 15px;
 
 				position: relative;
 				display: inline-block;
 				padding-left: $separator-size + $space-h;
 				margin-left: $space-h;
 
-				&:before {
-					content: '';
-					position: absolute;
-					bottom: 40%;
-					left: 0;
-					display: block;
-					width: $separator-size;
-					height: $separator-size;
-					margin-bottom: -($separator-size / 2);
-					border-radius: 50%;
-					background-color: hsb(0, 0, 88%);
-				}
+				// &:before {
+				// 	content: '';
+				// 	position: absolute;
+				// 	bottom: 40%;
+				// 	left: 0;
+				// 	display: block;
+				// 	width: $separator-size;
+				// 	height: $separator-size;
+				// 	margin-bottom: -($separator-size / 2) + 5.5px;
+				// 	border-radius: 50%;
+				// 	background-color: hsb(0, 0, 85%);
+				// }
 
 				&:first-child {
 					padding-left: 0;
@@ -44,7 +44,16 @@
 
 				&--active {
 					.cc-menu-type-tab__button {
-						color: $color-red;
+						// color: $color-red;
+						color: #000;
+					}
+
+					.cc-menu-type-tab__button-text {
+						// border-bottom-color: $color-red;
+
+						&:before {
+							width: 100%;
+						}
 					}
 				}
 			}
@@ -54,14 +63,40 @@
 				padding: 5px;
 				margin: 0;
 				font-family: Yanone, sans-serif;
-				font-size: 32px;
+				// font-family: Arimo, sans-serif;
+				font-size: 38px;
+				font-weight: normal;
 				border: 0;
+				color: #8c7e7e;
 				background: transparent;
 				@include transition((color));
 				cursor: pointer;
 
 				&:hover {
-					color: $color-red;
+					// color: $color-red;
+					color: #000;
+				}
+			}
+
+			&__button-text {
+
+				position: relative;
+
+				display: block;
+				padding-bottom: 15px + 3px;
+				// border-bottom: 3px solid transparent;
+
+				&:before {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					display: block;
+					width: 0;
+					height: 3px;
+					background-color: $color-red;
+					transform: translateX(-50%);
+					@include transition((width));
 				}
 			}
 		}

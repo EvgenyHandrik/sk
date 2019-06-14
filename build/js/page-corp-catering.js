@@ -28,6 +28,44 @@
 	}
 }());
 
+// week switch
+(function() {
+	var $container = $('.js-corp-catering-menu-week-switch');
+	var $switch;
+	var $buttons;
+	var $contentItems;
+
+	if ($container.length) {
+		$switch = $container.find('.cc-menu-week-switch');
+		$buttons = $switch.find('.cc-menu-week-switch-button');
+		$contentItems = $container.find('.cc-menu-week-content__item');
+
+		$container
+			.on('click.week-switch-button', '.cc-menu-week-switch-button', function() {
+				var index = $buttons.index(this);
+				switchTo(index);
+			})
+			.on('click.week-switch-toggle', '.cc-menu-week-switch-toggle', function() {
+				if ($switch.hasClass('cc-menu-week-switch--0')) {
+					switchTo(1);
+				} else {
+					switchTo(0);
+				}
+			});
+	}
+
+	function switchTo(index) {
+		$switch
+			.removeClass('cc-menu-week-switch--0 cc-menu-week-switch--1')
+			.addClass('cc-menu-week-switch--' + index);
+		
+		$contentItems
+			.removeClass('cc-menu-week-content__item--active')
+			.eq(index)
+				.addClass('cc-menu-week-content__item--active');
+	}
+}());
+
 // menu accordion
 (function() {
 	var $accordion = $('.js-corp-catering-menu-accordion');

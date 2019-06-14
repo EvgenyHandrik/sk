@@ -8,13 +8,16 @@
 	}
 	
 	.cc-info {
-		$icon-size: 25px;
+		$icon-size: $corp-catering-info-icon-size;
 
 		position: relative;
 		max-width: 400px;
-		padding-left: $icon-size + 10px;
-		font-size: 16px;
+		padding-left: $icon-size + 15px;
+		font-style: normal;
+		font-size: 15px;
 		text-align: left;
+		// color: $color-grey-light;
+		color: #000;
 
 		&:before {
 			content: '';
@@ -24,12 +27,11 @@
 			display: block;
 			width: $icon-size;
 			height: $icon-size;
-			margin-top: -($icon-size / 2);
 			background-position: center;
 			background-repeat: no-repeat;
-			background-size: $icon-size;
+			background-size: ($icon-size) ($icon-size);
 			background-image: img('ico-info-circle-flat-grey-30x30.svg');
-			// opacity: 0.7;
+			transform: translateY(-50%);
 		}
 
 		&--inline-block {

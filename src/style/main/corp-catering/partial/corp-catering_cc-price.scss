@@ -1,8 +1,9 @@
 .corp-catering {
 	.cc-price {
 		$cc-price-item-desktop-width: 290px;
-		$cc-price-item-desktop-space-h: 35px;
-		$cc-price-list-desktop-width: $cc-price-item-desktop-width * 3 + $cc-price-item-desktop-space-h * 2;
+		$cc-price-item-desktop-space-h: 20px;
+		// $cc-price-list-desktop-width: $cc-price-item-desktop-width * 3 + $cc-price-item-desktop-space-h * 2;
+		$cc-price-list-desktop-width: 860px;
 
 		$cc-price-item-mobile-width: 230px;
 		$cc-price-item-mobile-space-h: 10px;
@@ -20,14 +21,14 @@
 		}
 
 		&__ttl {
-			margin-bottom: 40px;
+			margin-bottom: 35px;
 		}
 		
 		/* -- */
 
 		&-list {
 			width: $cc-price-list-desktop-width;
-			margin: 0 auto 25px auto;
+			margin: 0 auto 50px auto;
 
 			@media (max-width: $cc-price-bp-mobile) {
 				width: auto;
@@ -71,8 +72,9 @@
 		}
 
 		&-item {
+			height: 100%;
 			padding: 35px 35px 20px 35px;
-			border-radius: 10px;
+			border-radius: 15px;
 			background-color: $corp-catering-bg-color-grey-dark;
 
 			@media (max-width: $cc-price-bp-mobile) {
@@ -85,7 +87,7 @@
 				position: relative;
 				padding: 0 0 20px 0;
 				margin: 0 0 15px 0;
-				font-size: 30px;
+				font-size: 34px;
 				text-align: center;
 
 				@media (max-width: $cc-price-bp-mobile) {
@@ -102,13 +104,18 @@
 					left: 50%;
 					display: block;
 					width: $line-width;
-					height: 2px;
+					height: 3px;
 					margin-left: -($line-width / 2);
 					background-color: $color-red;
 				}
 
 				&-num {
 					font-weight: bold;
+				}
+
+				&-rub {
+					margin-left: -3px;
+					font-size: 22px;
 				}
 			}
 
@@ -117,13 +124,13 @@
 			&__dish-list {}
 
 			&__dish {
-				$icon-width: 42px;
-				$icon-width-mobile: 33px;
+				$icon-width: 28px;
+				$icon-width-mobile: 32px;
 
-				height: 70px;
-				line-height: 70px;
-				padding-left: $icon-width + 20px;
-				font-size: 18px;
+				height: 50px;
+				line-height: 50px;
+				padding-left: $icon-width + 15px;
+				font-size: 20px;
 				background-position: left;
 				background-repeat: no-repeat;
 
@@ -186,6 +193,14 @@
 						background-size: $icon-salad-width-mobile $icon-salad-height-mobile;
 					}
 				}
+			}
+		}
+
+		/* -- */
+
+		&__info {
+			&:before {
+				background-image: img('ico-car-grey-30x30.svg');
 			}
 		}
 	}

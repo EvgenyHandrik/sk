@@ -12,7 +12,17 @@
 			padding-bottom: 50px;
 		}
 
+		&__ttl {
+			margin-bottom: 15px;
+		}
+
 		/* -- */
+
+		&__info {
+			&:before {
+				background-image: img('ico-date-calendar-flat-grey-30x30.svg');
+			}
+		}
 
 	}
 }

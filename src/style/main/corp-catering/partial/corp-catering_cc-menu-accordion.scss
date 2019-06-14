@@ -25,7 +25,11 @@
 		}
 		
 		&__item {
-			border-bottom: 1px solid hsb(0, 0, 88%);
+			// border-bottom: 1px dashed hsb(0, 0, 88%);
+			background-position: bottom left;
+			background-repeat: repeat-x;
+			background-size: 12px 3px;
+			background-image: img('dot-12x3-grey-80.svg');
 
 			/* -- */
 
@@ -42,7 +46,8 @@
 						/* -- */
 
 						&__name {
-							color: $color-red;
+							color: $color-red-active;
+							// font-weight: bold;
 						}
 
 						/* -- */
@@ -210,8 +215,8 @@
 
 			&__name-box {
 				width: 100%;
-				padding-top: 20px;
-				padding-bottom: 20px;
+				padding-top: 25px;
+				padding-bottom: 25px;
 				padding-left: $name-left-space;
 				text-align: left;
 
@@ -228,7 +233,7 @@
 
 			&__name {
 				line-height: 1.2;
-				font-size: 21px;
+				font-size: 22px;
 				@include transition((color));
 
 				/* -- */
@@ -303,7 +308,9 @@
 
 			&:hover {
 				.cc-menu-accordion-button__name {
-					color: $color-red;
+					color: $color-red-active;
+					// color: hsb(0,0,70%);
+					// text-decoration: underline;
 				}
 			}
 		}
