@@ -24,6 +24,12 @@
 			@include content-all-padding-h();
 			padding-top: 60px;
 			padding-bottom: 50px;
+
+			/* -- */
+
+			@include corp-catering-bp-mobile {
+				padding-top: 50px;
+			}
 		}
 
 		&__ttl {
@@ -45,13 +51,29 @@
 
 			&__scroll {
 				overflow-x: auto;
+
+				/* -- */
+
+				@include corp-catering-bp-mobile() {
+					margin-right: -$content-laptop-margin-h;
+					margin-left: -$content-laptop-margin-h;
+				}
+
+				@media (max-width: $content-mobile-bp) {
+					margin-right: -$content-mobile-margin-h;
+					margin-left: -$content-mobile-margin-h;
+				}
 			}
 
 			&__scroll-content {
 				width: $cc-price-list-desktop-width;
 
 				@include corp-catering-bp-mobile() {
-					width: $cc-price-list-mobile-width;
+					width: $cc-price-list-mobile-width + $content-laptop-margin-h * 2;
+				}
+
+				@media (max-width: $content-mobile-bp) {
+					width: $cc-price-list-mobile-width + $content-mobile-margin-h * 2;
 				}
 			}
 
@@ -60,6 +82,18 @@
 			&__row {
 				display: flex;
 				justify-content: space-between;
+
+				&:before,
+				&:after {
+					content: '';
+					flex: none;
+					display: block;
+					width: $content-laptop-margin-h;
+
+					@media (max-width: $content-mobile-bp) {
+						width: $content-mobile-margin-h;
+					}
+				}
 			}
 
 			&__col {
@@ -85,6 +119,7 @@
 
 			@include corp-catering-bp-mobile() {
 				padding: 20px 20px 15px 20px;
+				border-radius: 10px;
 			}
 
 			/* -- */
@@ -122,6 +157,10 @@
 				&-rub {
 					margin-left: -3px;
 					font-size: 22px;
+
+					@include corp-catering-bp-mobile() {
+						font-size: 17px;
+					}
 				}
 			}
 

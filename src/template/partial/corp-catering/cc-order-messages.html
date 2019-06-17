@@ -9,8 +9,11 @@
 			<div class="cc-order-form__row cc-order-form__row--form-group">
 				<div class="cc-order-form__col">
 					<div class="form-group cc-order-form__form-group">
-						<div class="form-control-group cc-order-form__control-group">
+						<div class="form-control-group form-control-group--error cc-order-form__control-group">
 							<input type="text" placeholder="Имя Фамилия" class="form-control form-control--text cc-order-form__input">
+						</div>
+						<div class="form-message form-message--default form-message--control form-message--error">
+							Ошибка
 						</div>
 					</div>
 				</div>
@@ -56,6 +59,12 @@
 				<button type="button" class="cc-order-form__submit">
 					Отправить заявку
 				</button>
+			</div>
+
+			<div class="cc-order-form-success-container">
+				<div class="cc-order-form-success">
+					Заявка успешно отправлена.
+				</div>
 			</div>
 
 		</div>

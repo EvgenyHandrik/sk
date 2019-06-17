@@ -30,6 +30,17 @@
 			background-size: 12px 3px;
 			background-image: img('dot-12x3-grey-80.svg');
 
+			@include corp-catering-bp-mobile() {
+				// background-size: 8px 2px;
+				// background-image: img('dot-8x2-grey-80.svg');
+				background: none;
+				border-bottom: 1px solid hsb(0, 0, 93%);
+
+				&:first-child {
+					border-top: 1px solid hsb(0, 0, 93%);
+				}
+			}
+
 			/* -- */
 
 			&--active {

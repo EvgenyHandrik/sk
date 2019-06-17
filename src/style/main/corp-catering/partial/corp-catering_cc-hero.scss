@@ -70,11 +70,15 @@
 				color: #fff;
 
 				a {
-					border-bottom-color: #fff;
+					border-bottom: 1px solid rgba(#fff, 0.4);
 					color: #fff;
 
 					&:after {
 						color: #fff;
+					}
+
+					&:hover {
+						border-bottom-color: #fff;
 					}
 				}
 			}

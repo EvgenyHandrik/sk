@@ -16,13 +16,33 @@
 			$input-font-size: 18px;
 			$input-padding-h: 15px;
 
+			$input-font-size-mobile: 15px;
+
 			max-width: 800px;
 			margin: 0 auto;
 			padding: 45px 60px;
 			border-radius: 15px;
 			background-color: $corp-catering-bg-color-grey-dark;
 
-			/* --*/
+			/* -- */
+
+			@include corp-catering-bp-mobile() {
+				max-width: 600px;
+				padding-right: 30px;
+				padding-left: 30px;
+				border-radius: 10px;
+			}
+
+			@media (max-width: $content-mobile-bp) {
+				padding-right: 15px;
+				padding-left: 15px;
+			}
+
+			@media (max-width: 780px) {
+				max-width: 100%;
+			}
+
+			/* -- */
 
 			&__label {
 				display: block;
@@ -46,10 +66,32 @@
 				@include placeholder {
 					color: hsb(0, 0, 40%);
 				}
+
+				/* -- */
+
+				@include corp-catering-bp-mobile() {
+					// height: 42px;
+					// font-size: $input-font-size-mobile;
+					border-bottom: 0;
+				}
+
+				@media (max-width: $content-mobile-bp) {
+					height: 42px;
+					font-size: $input-font-size-mobile;
+				}
 			}
 
 			&__control-group {
 				margin: 0 0 10px 0;
+
+				/* -- */
+
+				@include corp-catering-bp-mobile() {
+					border-radius: 5px;
+					background-color: #fff;
+				}
+
+				/* -- */
 
 				&:last-child {
 					margin-bottom: 0;
@@ -128,6 +170,10 @@
 				&__toggle-container {
 					margin-bottom: -5px;
 					text-align: center;
+
+					@include corp-catering-bp-mobile() {
+						margin-top: 25px;
+					}
 				}
 
 				&__toggle {
@@ -148,6 +194,12 @@
 				&__form-group {
 					display: none;
 					margin-top: 40px;
+
+					/* -- */
+
+					@media (max-width: $content-mobile-bp) {
+						margin-top: 30px;
+					}
 				}
 
 				&__textarea {
@@ -159,6 +211,11 @@
 					border-radius: 10px;
 					resize: none;
 					background-color: hsb(0, 0, 90%);
+
+					@include corp-catering-bp-mobile() {
+						border-radius: 0;
+						background-color: transparent;
+					}
 				}
 
 				/* -- */
@@ -182,9 +239,35 @@
 					margin-bottom: 40px;
 					justify-content: space-between;
 
+					/* -- */
+
+					@include corp-catering-bp-mobile() {
+						display: block;
+						margin-bottom: 20px;
+					}
+
+					@media (max-width: $content-mobile-bp) {
+						margin-bottom: 15px;
+					}
+
+					/* -- */
+
 					& > .cc-order-form__col {
 						flex: 1 1 auto;						
 						margin-left: 25px;
+
+						/* -- */
+
+						@include corp-catering-bp-mobile {
+							margin-bottom: 20px;
+							margin-left: 0;
+						}
+
+						@media (max-width: $content-mobile-bp) {
+							margin-bottom: 15px;
+						}
+
+						/* -- */
 
 						&:first-child {
 							margin-left: 0;
@@ -194,6 +277,64 @@
 			}
 
 			&__col {}
+
+			/* -- */
+
+			&-success-container {
+				margin: 40px 0 0 0;
+				text-align: center;
+
+				@media (max-width: $content-mobile-bp) {
+					margin-top: 35px;
+				}
+			}
+
+			&-success {
+				$icon-circle-size: 32px;
+				$icon-size: $icon-circle-size - 10px;
+
+				$icon-circle-mobile-size: 28px;
+				$icon-mobile-size: $icon-circle-mobile-size - 10px;
+
+				position: relative;
+				display: inline-block;
+				padding-top: 20px;
+				padding-left: $icon-circle-size + 15px;
+				padding-bottom: 20px;
+				font-weight: bold;
+				font-size: 20px;
+				text-align: left;
+
+				@media (max-width: $content-mobile-bp) {
+					font-size: 17px;
+					padding-top: 15px;
+					padding-left: $icon-circle-mobile-size + 10px;
+					padding-bottom: 15px;
+				}
+
+				&:before {
+					content: '';
+					position: absolute;
+					top: 50%;
+					left: 0;
+					display: block;
+					width: $icon-circle-size;
+					height: $icon-circle-size;
+					border-radius: $icon-circle-size;
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: $icon-size $icon-size;
+					background-image: img('ico-check-white-15x15.svg');
+					background-color: #8cc25c;
+					transform: translateY(-50%);
+
+					@media (max-width: $content-mobile-bp) {
+						width: $icon-circle-mobile-size;
+						height: $icon-circle-mobile-size;
+						background-size: $icon-mobile-size $icon-mobile-size;
+					}
+				}
+			}
 		}
 
 		

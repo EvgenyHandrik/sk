@@ -4,7 +4,7 @@
 
 		&-tab-container {
 			margin: 0 0 40px 0;
-			text-align: center;			
+			text-align: center;
 
 			&--subttl {
 				// margin-top: -5px;
@@ -100,6 +100,12 @@
 			$toggle-circle-size: $toggle-height - $space * 2;
 
 			margin: 20px 0 40px 0;
+
+			/* -- */
+
+			@include corp-catering-bp-mobile() {
+				margin-bottom: 30px;
+			}
 
 			/* -- */
 

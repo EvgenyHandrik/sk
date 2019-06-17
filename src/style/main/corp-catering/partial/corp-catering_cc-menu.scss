@@ -10,6 +10,12 @@
 			
 			padding-top: 60px;
 			padding-bottom: 50px;
+
+			/* -- */
+
+			@include corp-catering-bp-mobile {
+				padding-top: 50px;
+			}
 		}
 
 		&__ttl {

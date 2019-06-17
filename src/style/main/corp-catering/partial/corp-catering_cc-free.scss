@@ -1,8 +1,19 @@
 .corp-catering {
 	$item-space-h: 30px;
+	$item-space-h-mobile: 15px;
 
 	.cc-free {
 		margin: 0 0 50px 0;
+
+		/* -- */
+
+		// @include corp-catering-bp-mobile() {
+		// 	margin-bottom: 40px;
+		// }
+
+		// @media (max-width: 600px + $content-laptop-margin-h * 2) {
+		// 	margin-bottom: 50px;
+		// }
 
 		/* -- */
 
@@ -26,6 +37,26 @@
 				width: 33.3%;
 				margin-left: $item-space-h;
 
+				/* -- */
+
+				@media (max-width: $content-desktop-width + $content-desktop-margin-h * 2) {
+					margin-left: $content-desktop-margin-h;
+				}
+
+				@include corp-catering-bp-mobile() {
+					
+				}
+
+				@media (max-width: $content-laptop-bp) {
+					margin-left: $content-laptop-margin-h;
+				}
+
+				@media (max-width: $content-mobile-bp) {
+					margin-left: $content-mobile-margin-h;
+				}
+
+				/* -- */
+
 				&:first-child {
 					margin-left: 0;
 				}
@@ -39,13 +70,24 @@
 
 			padding-top: 66.6%;
 			padding-top: 60%;
-			margin: 0 0 15px 0;
+			// margin: 0 0 15px 0;
 			border-radius: 15px;
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: cover;
 			
 			background-color: #eee;
+
+			/* -- */
+
+			@include corp-catering-bp-mobile() {
+				// padding-top: 70%;
+				border-radius: 10px;
+			}
+
+			@media (max-width: 600px + $content-laptop-margin-h * 2) {
+				padding-top: 70%;
+			}
 		}
 
 		
