@@ -1,20 +1,25 @@
 .corp-catering {
 	.cc-menu {
-		margin: 0 0 50px 0;
+		margin: 0 0 70px 0;
 		background-color: $corp-catering-bg-color-grey-light;
+
+		@include corp-catering-bp-mobile() {
+			margin-bottom: 50px;
+		}
 	
 		/* -- */
 
 		&__content {
 			@include content-all-padding-h();
 			
-			padding-top: 60px;
-			padding-bottom: 50px;
+			padding-top: 80px;
+			padding-bottom: 80px;
 
 			/* -- */
 
 			@include corp-catering-bp-mobile {
 				padding-top: 50px;
+				padding-bottom: 50px;
 			}
 		}
 

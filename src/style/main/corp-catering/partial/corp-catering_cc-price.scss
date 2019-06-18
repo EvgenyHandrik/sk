@@ -22,29 +22,36 @@
 		&__content {
 			
 			@include content-all-padding-h();
-			padding-top: 60px;
-			padding-bottom: 50px;
+			padding-top: 70px;
+			padding-bottom: 70px;
 
 			/* -- */
 
 			@include corp-catering-bp-mobile {
 				padding-top: 50px;
+				padding-bottom: 50px;
 			}
 		}
 
 		&__ttl {
-			margin-bottom: 35px;
+			// margin-bottom: 35px;
+			margin-bottom: 50px;
+
+			@include corp-catering-bp-mobile() {
+				margin-bottom: 35px;
+			}
 		}
 		
 		/* -- */
 
 		&-list {
 			width: $cc-price-list-desktop-width;
-			margin: 0 auto 50px auto;
+			margin: 0 auto 70px auto;
 
 			@include corp-catering-bp-mobile() {
 				width: auto;
 				max-width: $cc-price-list-mobile-width;
+				margin-bottom: 50px;
 			}
 
 			&__wrapper {}

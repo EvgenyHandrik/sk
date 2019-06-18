@@ -49,7 +49,7 @@
 .corp-catering .cc-subttl--1 {
   position: relative;
   padding: 0 0 20px 0;
-  margin: 0 0 30px 0;
+  margin: 0 0 40px 0;
   font-size: 18px;
 }
 
@@ -251,18 +251,18 @@
 .corp-catering .cc-price__content {
   padding-right: 20px;
   padding-left: 20px;
-  padding-top: 60px;
-  padding-bottom: 50px;
+  padding-top: 70px;
+  padding-bottom: 70px;
   /* -- */
 }
 
 .corp-catering .cc-price__ttl {
-  margin-bottom: 35px;
+  margin-bottom: 50px;
 }
 
 .corp-catering .cc-price-list {
   width: 860px;
-  margin: 0 auto 50px auto;
+  margin: 0 auto 70px auto;
   /* -- */
 }
 
@@ -374,7 +374,7 @@
 }
 
 .corp-catering .cc-menu {
-  margin: 0 0 50px 0;
+  margin: 0 0 70px 0;
   background-color: #fafafa;
   /* -- */
   /* -- */
@@ -383,8 +383,8 @@
 .corp-catering .cc-menu__content {
   padding-right: 20px;
   padding-left: 20px;
-  padding-top: 60px;
-  padding-bottom: 50px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   /* -- */
 }
 
@@ -397,7 +397,7 @@
 }
 
 .corp-catering .cc-menu-week {
-  margin: 0 0 45px 0;
+  margin: 0 0 60px 0;
   /* -- */
 }
 
@@ -856,7 +856,7 @@
 }
 
 .corp-catering .cc-free {
-  margin: 0 0 60px 0;
+  margin: 0 0 80px 0;
   /* -- */
   /* -- */
   /* -- */
@@ -1271,6 +1271,7 @@
 
   .corp-catering .cc-subttl--1 {
     font-size: 15px;
+    margin-bottom: 30px;
   }
 
   .corp-catering .cc-info {
@@ -1304,11 +1305,17 @@
 
   .corp-catering .cc-price__content {
     padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .corp-catering .cc-price__ttl {
+    margin-bottom: 35px;
   }
 
   .corp-catering .cc-price-list {
     width: auto;
     max-width: 600px;
+    margin-bottom: 50px;
   }
 
   .corp-catering .cc-price-list__scroll {
@@ -1356,8 +1363,13 @@
     background-size: 23px 20.7px;
   }
 
+  .corp-catering .cc-menu {
+    margin-bottom: 50px;
+  }
+
   .corp-catering .cc-menu__content {
     padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   .corp-catering .cc-menu-week-content {
