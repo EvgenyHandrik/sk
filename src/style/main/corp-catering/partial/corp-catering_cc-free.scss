@@ -3,13 +3,13 @@
 	$item-space-h-mobile: 15px;
 
 	.cc-free {
-		margin: 0 0 50px 0;
+		margin: 0 0 60px 0;
 
 		/* -- */
 
-		// @include corp-catering-bp-mobile() {
-		// 	margin-bottom: 40px;
-		// }
+		@include corp-catering-bp-mobile() {
+			margin-bottom: 50px;
+		}
 
 		// @media (max-width: 600px + $content-laptop-margin-h * 2) {
 		// 	margin-bottom: 50px;
@@ -67,10 +67,7 @@
 
 		&-image {
 			position: relative;
-
-			padding-top: 66.6%;
 			padding-top: 60%;
-			// margin: 0 0 15px 0;
 			border-radius: 15px;
 			background-position: center;
 			background-repeat: no-repeat;
