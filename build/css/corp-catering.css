@@ -169,7 +169,7 @@
 .corp-catering .cc-hero__main-content-wrapper {
   display: table;
   width: 100%;
-  height: 400px;
+  height: 500px;
 }
 
 .corp-catering .cc-hero__main-content {
@@ -257,12 +257,12 @@
 }
 
 .corp-catering .cc-price__ttl {
-  margin-bottom: 50px;
+  margin-bottom: 45px;
 }
 
 .corp-catering .cc-price-list {
   width: 860px;
-  margin: 0 auto 70px auto;
+  margin: 0 auto 60px auto;
   /* -- */
 }
 
@@ -383,8 +383,8 @@
 .corp-catering .cc-menu__content {
   padding-right: 20px;
   padding-left: 20px;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 70px;
+  padding-bottom: 70px;
   /* -- */
 }
 
@@ -398,6 +398,8 @@
 
 .corp-catering .cc-menu-week {
   margin: 0 0 60px 0;
+  /* -- */
+  /* -- */
   /* -- */
 }
 
@@ -856,7 +858,7 @@
 }
 
 .corp-catering .cc-free {
-  margin: 0 0 80px 0;
+  margin: 0 0 70px 0;
   /* -- */
   /* -- */
   /* -- */
@@ -908,7 +910,7 @@
 }
 
 .corp-catering .cc-order {
-  margin: 0 0 50px 0;
+  margin: 0 0 70px 0;
   /* -- */
 }
 
@@ -920,7 +922,7 @@
 .corp-catering .cc-order-form {
   max-width: 860px;
   margin: 0 auto;
-  padding: 50px 60px 50px 60px;
+  padding: 70px 70px;
   border-radius: 15px;
   background-color: #f2f2f2;
   /* -- */
@@ -942,9 +944,9 @@
   display: block;
   width: 100%;
   height: 52px;
-  padding-right: 41px;
+  padding-right: 15px;
   padding-left: 15px;
-  font-size: 18px;
+  font-size: 20px;
   border-bottom: 1px solid #000;
   border-radius: 0;
   background-color: transparent;
@@ -980,6 +982,7 @@
 .corp-catering .cc-order-form__control-group.form-control-group--error,
 .corp-catering .cc-order-form__control-group.form-control-group--success {
   position: relative;
+  /* -- */
 }
 
 .corp-catering .cc-order-form__control-group.form-control-group--error:before,
@@ -994,6 +997,11 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 16px 16px;
+}
+
+.corp-catering .cc-order-form__control-group.form-control-group--error .cc-order-form__input,
+.corp-catering .cc-order-form__control-group.form-control-group--success .cc-order-form__input {
+  padding-right: 41px;
 }
 
 .corp-catering .cc-order-form__control-group.form-control-group--error:before {
@@ -1108,6 +1116,7 @@
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  width: 50%;
   margin-left: 20px;
   /* -- */
   /* -- */
@@ -1118,16 +1127,14 @@
 }
 
 .corp-catering .cc-order-form-success-container {
-  margin: 40px 0 0 0;
+  margin: 60px 0 0 0;
   text-align: center;
 }
 
 .corp-catering .cc-order-form-success {
   position: relative;
   display: inline-block;
-  padding-top: 20px;
   padding-left: 47px;
-  padding-bottom: 20px;
   font-weight: bold;
   font-size: 20px;
   text-align: left;
@@ -1153,7 +1160,7 @@
 }
 
 .corp-catering .cc-contacts {
-  padding: 50px 0;
+  padding: 70px 0;
   background-color: #fafafa;
   /* -- */
 }
@@ -1372,6 +1379,10 @@
     padding-bottom: 50px;
   }
 
+  .corp-catering .cc-menu-week {
+    margin-bottom: 45px;
+  }
+
   .corp-catering .cc-menu-week-content {
     max-width: 600px;
   }
@@ -1509,10 +1520,13 @@
     border-radius: 10px;
   }
 
+  .corp-catering .cc-order {
+    margin-bottom: 50px;
+  }
+
   .corp-catering .cc-order-form {
     max-width: 600px;
-    padding-right: 30px;
-    padding-left: 30px;
+    padding: 50px 30px;
     border-radius: 10px;
   }
 
@@ -1540,8 +1554,14 @@
   }
 
   .corp-catering .cc-order-form__row--form-group > .cc-order-form__col {
+    width: auto;
     margin-bottom: 20px;
     margin-left: 0;
+  }
+
+  .corp-catering .cc-contacts {
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   .corp-catering .cc-contacts-list {
@@ -1649,14 +1669,12 @@
   }
 
   .corp-catering .cc-order-form-success-container {
-    margin-top: 35px;
+    margin-top: 50px;
   }
 
   .corp-catering .cc-order-form-success {
     font-size: 17px;
-    padding-top: 15px;
     padding-left: 38px;
-    padding-bottom: 15px;
   }
 
   .corp-catering .cc-order-form-success:before {

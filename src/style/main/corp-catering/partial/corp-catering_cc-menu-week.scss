@@ -3,6 +3,14 @@
 		// margin: 0 0 45px 0;
 		margin: 0 0 60px 0;
 
+		/* -- */
+
+		@include corp-catering-bp-mobile() {
+			margin-bottom: 45px;
+		}
+
+		/* -- */
+
 		&-tab-container {
 			margin: 0 0 40px 0;
 			text-align: center;

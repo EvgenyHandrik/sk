@@ -1,6 +1,10 @@
 .corp-catering {
 	.cc-order {
-		margin: 0 0 50px 0;
+		margin: 0 0 70px 0;
+
+		@include corp-catering-bp-mobile() {
+			margin-bottom: 50px;
+		}
 
 		&__content {
 			@include content-all-padding-h();
@@ -13,7 +17,7 @@
 			$input-icon-space-right: 15px;
 			$input-icon-space-left: 10px;
 
-			$input-font-size: 18px;
+			$input-font-size: 20px;
 			$input-padding-h: 15px;
 
 			$input-font-size-mobile: 15px;
@@ -22,7 +26,7 @@
 			max-width: 860px;
 			margin: 0 auto;
 			// padding: 45px 60px;
-			padding: 50px 60px 50px 60px;
+			padding: 70px 70px;
 			border-radius: 15px;
 			background-color: $corp-catering-bg-color-grey-dark;
 
@@ -30,8 +34,7 @@
 
 			@include corp-catering-bp-mobile() {
 				max-width: 600px;
-				padding-right: 30px;
-				padding-left: 30px;
+				padding: 50px 30px;
 				border-radius: 10px;
 			}
 
@@ -58,7 +61,7 @@
 				display: block;
 				width: 100%;
 				height: 52px;
-				padding-right: $input-icon-size + $input-icon-space-right + $input-icon-space-left;
+				padding-right: $input-padding-h;
 				padding-left: $input-padding-h;
 				font-size: $input-font-size;
 				border-bottom: 1px solid #000;
@@ -119,6 +122,12 @@
 							background-position: center;
 							background-repeat: no-repeat;
 							background-size: $icon-size $icon-size;
+						}
+
+						/* -- */
+
+						.cc-order-form__input {
+							padding-right: $input-icon-size + $input-icon-space-right + $input-icon-space-left;
 						}
 					}
 
@@ -255,12 +264,14 @@
 					/* -- */
 
 					& > .cc-order-form__col {
-						flex: 1 1 auto;						
+						flex: 1 1 auto;
+						width: 50%;
 						margin-left: 20px;
 
 						/* -- */
 
 						@include corp-catering-bp-mobile {
+							width: auto;
 							margin-bottom: 20px;
 							margin-left: 0;
 						}
@@ -283,11 +294,11 @@
 			/* -- */
 
 			&-success-container {
-				margin: 40px 0 0 0;
+				margin: 60px 0 0 0;
 				text-align: center;
 
 				@media (max-width: $content-mobile-bp) {
-					margin-top: 35px;
+					margin-top: 50px;
 				}
 			}
 
@@ -300,18 +311,18 @@
 
 				position: relative;
 				display: inline-block;
-				padding-top: 20px;
+				// padding-top: 20px;
 				padding-left: $icon-circle-size + 15px;
-				padding-bottom: 20px;
+				// padding-bottom: 20px;
 				font-weight: bold;
 				font-size: 20px;
 				text-align: left;
 
 				@media (max-width: $content-mobile-bp) {
 					font-size: 17px;
-					padding-top: 15px;
+					// padding-top: 15px;
 					padding-left: $icon-circle-mobile-size + 10px;
-					padding-bottom: 15px;
+					// padding-bottom: 15px;
 				}
 
 				&:before {

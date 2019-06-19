@@ -35,7 +35,7 @@
 
 		&__ttl {
 			// margin-bottom: 35px;
-			margin-bottom: 50px;
+			margin-bottom: 45px;
 
 			@include corp-catering-bp-mobile() {
 				margin-bottom: 35px;
@@ -46,7 +46,7 @@
 
 		&-list {
 			width: $cc-price-list-desktop-width;
-			margin: 0 auto 70px auto;
+			margin: 0 auto 60px auto;
 
 			@include corp-catering-bp-mobile() {
 				width: auto;

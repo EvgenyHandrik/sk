@@ -1,7 +1,12 @@
 .corp-catering {
 	.cc-contacts {
-		padding: 50px 0;
+		padding: 70px 0;
 		background-color: $corp-catering-bg-color-grey-light;
+
+		@include corp-catering-bp-mobile() {
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
 
 		&__content {
 			@include content-all-padding-h();
