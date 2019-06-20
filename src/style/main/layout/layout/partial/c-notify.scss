@@ -59,7 +59,7 @@
 
 /* -- */
 
-.bonuses-notify-menu {
+.bonuses-notify {
 	$icon-size: 30px;
 	$padding-v: 15px;
 	$padding-left: 15px;
@@ -71,7 +71,9 @@
 	background-size: $icon-size $icon-size;
 	background-position: $padding-left $padding-v;
 	background-image: img('ico-coin-stack-flat-red-30x30.svg');
+}
 
+.bonuses-notify-menu {
 	&__gotomenu {
 		display: inline-block;
 		margin-top: 10px;

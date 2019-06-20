@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <!-- saved from url=(0026)http://svoya-kompaniya.ru/ -->
 
-<html>
+<!-- [new_content] -->
+<!-- Добавлены классы "page", "page--no-background" -->
+<html class="page page--no-background">
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -92,56 +94,9 @@
 	<link href="./html-source/base-page-files/fonts.css" type="text/css" data-template-style="true" rel="stylesheet">
 	<link href="./html-source/base-page-files/app.min.css" type="text/css" data-template-style="true" rel="stylesheet">
 
-	<style>
-		.breadcrumbs a:after {
-			top: 0;
-		}
-	</style>
-	
-	<!-- Шрифты -->
-	<!-- <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&amp;subset=cyrillic,latin-ext" rel="stylesheet"> -->
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:400,400i,700,700i&display=swap&subset=cyrillic,latin-ext" rel="stylesheet">
-	
-	<!-- Plugins Original Styles -->
-	<link href="css/vendor/photoswipe.css" type="text/css" rel="stylesheet">
-	<link href="css/vendor/photoswipe-default-skin/default-skin.css" type="text/css" rel="stylesheet">
-	
-	<!-- Plugins Additional Styles -->
-	<link href="css/plugins.css" type="text/css" rel="stylesheet">
-	
-	<!-- Layout Styles -->
-	<link href="css/layout.css" type="text/css" rel="stylesheet">
-	<link href="css/content.css" type="text/css" rel="stylesheet">
-	<link href="css/base.css" type="text/css" rel="stylesheet">
-	<link href="css/button.css" type="text/css" rel="stylesheet">
-	<link href="css/sktab.css" type="text/css" rel="stylesheet">
-	<link href="css/paginator-lt.css" type="text/css" rel="stylesheet">
-	<link href="css/bcards.css" type="text/css" rel="stylesheet">
-	<link href="css/count.css" type="text/css" rel="stylesheet">
-	
-	<!-- Typography Styles -->
-	<link href="css/fonts.css" type="text/css" rel="stylesheet">
-	<link href="css/typography.css" type="text/css" rel="stylesheet">
-	
-	<!-- Form Styles -->
-	<link href="css/form.css" type="text/css" rel="stylesheet">
-	
-	<!-- Header Styles -->
-	<link href="css/header-v2.1.css" type="text/css" rel="stylesheet">
-	
-	<link href="css/h-acc.css" type="text/css" rel="stylesheet">
-	<link href="css/header-v2.2-add.css" type="text/css" rel="stylesheet">
-	
-	<!-- Footer Styles -->
-	<link href="css/f-soc.css" type="text/css" rel="stylesheet">
-	<link href="css/footer-contact.css" type="text/css" rel="stylesheet">
-	
-	<link href="css/footer-v2-add.css" type="text/css" rel="stylesheet">
-	<link href="css/f-nav.css" type="text/css" rel="stylesheet">
-	<link href="css/f-contact.css" type="text/css" rel="stylesheet">
-	
-	<!-- Password recovery Styles [new_content] -->
-	<link href="css/pass-recovery.css" type="text/css" rel="stylesheet">
+	//= ../partial/common/styles/mainStyles.html
+
+	//= ../partial/checkout/checkoutStyles.html
 
 	<title>
 		Ресторан «Своя компания» Екатеринбург - уютный семейный ресторан-кафе в центре
@@ -292,322 +247,17 @@ ga('require', 'ecommerce');
 	<div class="body__container">
 
 		<!-- Стандартная шапка -->
-		<header class="header-v2 header-v2--mobile header-v2--fixed">
-			<div class="header-v2__container">
-				<div class="h-main">
-					<div class="h-main__content">
-						<button class="h-menu-toggle">
-								<span></span>
-								<span></span>
-								<span></span>
-						</button>
-						<a href="#" class="h-logo">
-							<img class="h-logo__img" src="images/logo-sk-100x100.svg" width="100" height="100" alt="Своя Компания" >
-						</a>
-						<div class="h-main-c">
-							<div class="h-main-c__top">
-								<div class="h-city">
-									<div class="h-city__toggle">Екатеринбург</div>
-									<ul class="h-city__list">
-										<li class="h-city__item">
-											<span class="h-city__text">Екатеринбург</span>
-										</li>
-										<li class="h-city__item">
-											<a href="#" class="h-city__button">Верхняя Пышма</a>
-										</li>
-										<li class="h-city__item">
-											<a href="#" class="h-city__button">Уфа</a>
-										</li>
-										<li class="h-city__item">
-											<a href="#" class="h-city__button">Нижний Тагил</a>
-										</li>
-										<li class="h-city__item">
-											<a href="#" class="h-city__button">Челябинск</a>
-										</li>
-										<li class="h-city__item">
-											<a href="#" class="h-city__button">Тюмень</a>
-										</li>
-										<li class="h-city__item">
-											<a href="#" class="h-city__button">Новосибирск</a>
-										</li>
-										<li class="h-city__item">
-											<a href="#" class="h-city__button">Москва</a>
-										</li>
-									</ul>
-								</div>
-								<div class="h-phone">
-									<span class="h-phone__title">доставка</span>
-									<span class="h-phone__num"><span class="h-phone__num-code">+7 (343)</span>298-00-44</span>
-								</div>
-							</div>
-							<div class="h-main-c__bottom">
-								<div class="h-nav">
-									<div class="h-nav__phone">
-										<a href="tel:8-343-298-00-44" class="h-nav-phone">
-											<span class="h-nav-phone__title">Телефон доставки</span>
-											<span class="h-nav-phone__num">+7 (343)298-00-44</span>
-										</a>
-									</div>
-		
-									<div class="h-nav__bonus">
-										<button type="button" class="h-nav-bonus">
-											
-											<!-- Неавторизованный -->
-											<!--
-											<span class="h-nav-bonus__qr">Показать QR-код карты</span>
-											-->
-											<!-- end Неавторизованный -->
-		
-											<!-- Авторизованный -->
-											<div class="h-nav-bonus__total">
-												
-												<!-- С прелоадером -->
-												<!--
-												<span class="h-nav-bonus__total-spinner"></span><span class="h-nav-bonus__total-text">бонусных рублей</span>
-												-->
-												
-												<!-- С количеством -->
-												<span class="h-nav-bonus__total-badge">375</span><span class="h-nav-bonus__total-text">бонусных рублей</span>
-		
-											</div>
-											<span class="h-nav-bonus__qr">Показать QR-код карты</span>
-											<!-- end Авторизованный -->
-											
-										</button>
-									</div>
-									
-									<div class="h-nav__acc">
-										<div class="h-nav-acc">
-											<a href="" class="h-nav-acc__button">Кабинет</a>
-										</div>
-									</div>
-		
-									<nav class="h-nav-l1__list">
-										<li class="h-nav-l1__item">
-											<a href="#" class="h-nav-l1__button">Меню</a>
-										</li>
-										<li class="h-nav-l1__item">
-											<a href="#" class="h-nav-l1__button">Доставка</a>
-										</li>
-										<li class="h-nav-l1__item">
-											<a href="#" class="h-nav-l1__button">Рестораны</a>
-										</li>
-										<li class="h-nav-l1__item">
-											<a href="#" class="h-nav-l1__button">Банкеты</a>
-										</li>
-										<li class="h-nav-l1__item">
-											<a href="#" class="h-nav-l1__button">Бронирование</a>
-										</li>
-										<li class="h-nav-l1__item">
-											<a href="#" class="h-nav-l1__button">Контак��ы</a>
-										</li>
-										<li class="h-nav-l1__item">
-											<a href="#" class="h-nav-l1__button">Франшиза</a>
-										</li>
-										<li class="h-nav-l1__item h-nav-l1__item--has-subnav">
-											<a href="#" class="h-nav-l1__button">Информация</a>
-											<div class="h-nav-l2">
-												<span class="h-nav-l2__title">Информация</span>
-												<ul class="h-nav-l2__list">
-													<li class="h-nav-l2__item">
-														<a href="#" class="h-nav-l2__button">Вакансии</a>
-													</li>
-													<li class="h-nav-l2__item">
-														<a href="#" class="h-nav-l2__button">Отзывы</a>
-													</li>
-													<li class="h-nav-l2__item">
-														<a href="#" class="h-nav-l2__button">Бонусный клуб</a>
-													</li>
-												</ul>
-											</div>
-										</li>
-									</nav>
-								</div>
-								
-								<!-- Пустая корзина: .h-acc.h-acc--empty -->
-								<div class="h-acc js-h-acc-toggle">
-									<a href="" class="h-acc-button-mobile"></a>
-									<button class="h-acc-toggle">
-										<span class="h-acc-toggle__icon"></span>
-										<span class="h-acc-toggle__text">Кабинет</span>
-									</button>
-									<div class="h-acc-dd">
-										<ul class="h-acc-dd__list">
-											
-											<!-- Неавторизованный пользователь (start) -->
-											<!--
-											<li class="h-acc-dd__item h-acc-dd__item--user">
-												<div class="h-acc-dd-user">
-													<a href="" class="h-acc-dd-user__login">Войти</a>
-												</div>
-											</li>
-											<li class="h-acc-dd__item h-acc-dd__item--bonus">
-												<div class="h-acc-dd-bonus h-acc-dd-bonus--unauthorized">
-													<div class="h-acc-dd-bonus__total">
-														<span class="h-acc-dd-bonus__total-badge">375</span><span class="h-acc-dd-bonus__total-text">Бонусных рублей</span>
-													</div>
-													<button type="button" class="h-acc-dd-bonus__button">
-														<span class="h-acc-dd-bonus__qr">Показать QR-код карты</span>
-													</button>
-												</div>
-											</li>
-											-->
-											<!-- (end) Неавторизованный пользователь -->
-		
-											<!-- Авторизованный пользователь (start) -->
-											<li class="h-acc-dd__item h-acc-dd__item--user">
-												<div class="h-acc-dd-user">
-													<span class="h-acc-dd-user__name">Иван Иванович</span>
-													<a href="" class="h-acc-dd-user__logout">Выход</a>
-												</div>
-											</li>
-											<li class="h-acc-dd__item h-acc-dd__item--bonus">
-												<div class="h-acc-dd-bonus">
-													<div class="h-acc-dd-bonus__total">
-														
-														<!-- С прелоадером: -->
-														<!--
-														<span class="h-acc-dd-bonus__total-spinner"></span><span class="h-acc-dd-bonus__total-text">бонусных рублей</span>
-														-->
-		
-														<!-- С количеством: -->
-														<span class="h-acc-dd-bonus__total-badge">375</span><span class="h-acc-dd-bonus__total-text">бонусных рублей</span>
-													
-													</div>
-													<button type="button" class="h-acc-dd-bonus__button">
-														<span class="h-acc-dd-bonus__qr">Показать QR-код карты</span>
-													</button>
-												</div>
-											</li>									
-											<!-- (end) Авторизованный пользователь -->
-		
-											<li class="h-acc-dd__item h-acc-dd__item--profile">
-												<a href="" class="h-acc-dd__btn">
-													<span class="h-acc-dd__icon"></span>
-													<span class="h-acc-dd__text">Личные данные</span>
-												</a>
-											</li>
-											<li class="h-acc-dd__item h-acc-dd__item--card">
-												<a href="" class="h-acc-dd__btn">
-													<span class="h-acc-dd__icon"></span>
-													<span class="h-acc-dd__text">Банковские карты</span>
-												</a>
-											</li>
-											<li class="h-acc-dd__item h-acc-dd__item--bonuses">
-												<a href="" class="h-acc-dd__btn">
-													<span class="h-acc-dd__icon"></span>
-													<span class="h-acc-dd__text">Бонусная карта</span>
-												</a>
-											</li>
-											<li class="h-acc-dd__item h-acc-dd__item--history">
-												<a href="" class="h-acc-dd__btn">
-													<span class="h-acc-dd__icon"></span>
-													<span class="h-acc-dd__text">История заказов</span>
-												</a>
-											</li>
-											<li class="h-acc-dd__item h-acc-dd__item--addresses">
-												<a href="" class="h-acc-dd__btn">
-													<span class="h-acc-dd__icon"></span>
-													<span class="h-acc-dd__text">Адреса</span>
-												</a>
-											</li>
-											<li class="h-acc-dd__item h-acc-dd__item--notifications">
-												<a href="" class="h-acc-dd__btn">
-													<span class="h-acc-dd__icon"></span>
-													<span class="h-acc-dd__text">Уведомления</span>
-												</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-		
-								<!-- end Account -->
-							
-							</div>
-						</div>
-						<a href="#" class="h-cart">
-							<!-- h-cart -->
-		
-							<span class="h-cart__icon">
-								<span class="h-cart__icon-value">42</span>
-							</span>
-							
-							<span class="h-cart__price">251 560 ₽</span>
-		
-							<!-- end h-cart -->
-						</a>
-					</div>
-				</div>
-				<div class="h-menu">
-					<div class="h-menu__content">
-						<ul class="h-menu-l1">
-							<li>
-								<a href="#"><span>Итальянское меню</span></a>
-							</li>
-							<li>
-								<a href="#"><span>Роллы</span></a>
-							</li>
-							<li>
-								<a href="#"><span>Сеты</span></a>
-							</li>
-							<li>
-								<a href="#"><span>Бизнес-ланчи</span></a>
-							</li>
-							<li>
-								<a href="#"><span>Супы</span></a>
-							</li>
-							<li>
-								<a href="#"><span>Салаты</span></a>
-							</li>
-							<li>
-								<a href="#"><span>Горячее</span></a>
-							</li>
-							<li>
-								<a href="#"><span>Пицца</span></a>
-							</li>
-							<li>
-								<a href="#"><span>Закуски</span></a>
-							</li>
-							<li>
-								<a href="#"><span>Десерты</span></a>
-							</li>
-							<li>
-								<a href="#"><span>Напитки</span></a>
-							</li>
-							<li>
-								<a href="#"><span>Хлеб</span></a>
-							</li>
-							<li class="h-menu__more">
-								<a><span>Еще</span></a>
-								<ul class="h-menu-l2">
-									<li>
-										<a href="#"><span>Банкетное меню</span></a>
-									</li>
-									<li>
-										<a href="#"><span>Вегетарианское меню</span></a>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</header>
+		//= ../partial/layout/header.html
 
-		<!-- Добавление класса "content--no-mobile-padding" [new_content] -->
-		<section class="content content--no-mobile-padding">
-
-			<div class="pass-recovery-success">
-				<div class="pass-recovery-success__content">
-					<span class="pass-recovery-success__title">Пароль восстановлен!</span>
-					<p>Теперь вы можете войти на сайт</p>
-					<div class="pass-recovery-success__button-container">
-						<button type="button" class="button button--default button--m button--border-radius-m button--min-width">
-							<span class="button__text">Далее</span>
-						</button>
-					</div>
-				</div>
+		<!-- [new_content] -->
+		<!-- Добавлен класс "content--no-style" -->
+		<section class="content content--no-style">
+			<div class="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+				<span itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem"><a itemprop="item" href="http://svoya-kompaniya.ru/" title="Своя компания"><span itemprop="name">Своя компания</span><meta itemprop="position" content="1"></a></span>
+				<span itemscope="" itemprop="itemListElement" itemtype="http://schema.org/ListItem"><span itemprop="item"><span itemprop="name">Корзина</span><meta itemprop="position" content="3"></span></span>
 			</div>
+
+			//= ../partial/checkout/checkoutContent-bonuses-created.html
 					
 		</section>
 
@@ -673,89 +323,7 @@ ga('require', 'ecommerce');
 		</div> -->
 
 
-		<footer class="footer footer--light-shadow">
-			<div class="footer__container">
-				<div class="footer__middle footer__middle--block">
-					<div class="footer__row footer__row--col2-nc">
-						<div class="footer__col footer__col--nav">
-							<div class="f-nav f-nav--box-m1-1-2">
-								<div class="f-nav__box f-nav__box--m1">
-									<ul class="f-nav__list">
-										<li class="f-nav__item">
-											<a href="" class="f-nav__button">Рестораны</a>
-										</li>
-										<li class="f-nav__item">
-											<a href="" class="f-nav__button">Условия бронирования</a>
-										</li>
-										<li class="f-nav__item">
-											<a href="" class="f-nav__button">Вакансии</a>
-										</li>
-										<li class="f-nav__item">
-											<a href="" class="f-nav__button">Банкетный зал</a>
-										</li>
-									</ul>
-								</div>
-								<div class="f-nav__box f-nav__box--m1">
-									<ul class="f-nav__list">
-										<li class="f-nav__item">
-											<a href="" class="f-nav__button">Условия доставки</a>
-										</li>
-										<li class="f-nav__item">
-											<a href="" class="f-nav__button">Бонусный клуб</a>
-										</li>
-										<li class="f-nav__item">
-											<a href="" class="f-nav__button">Отзывы</a>
-										</li>
-										<li class="f-nav__item">
-											<a href="" class="f-nav__button">Контакты</a>
-										</li>
-									</ul>
-								</div>
-								<div class="f-nav__box f-nav__box--m2">
-									<ul class="f-nav__list f-nav__list--m2">
-										<li class="f-nav__item">
-											<a href="" class="f-nav__button">Франшиза</a>
-										</li>
-										<li class="f-nav__item">
-											<a href="" class="f-nav__button">CloudPayments</a>
-										</li>
-										<li class="f-nav__item">
-											<a href="" class="f-nav__button">Процессинговый центр</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="footer__col footer__col--contact">
-							<div class="f-contact">
-								<div class="f-contact-phone" x-ms-format-detection="none">
-									<span class="f-contact-phone__title">Доставка</span>
-									<span class="f-contact-phone__num">+7 (343) 298 00 44</span>
-								</div>
-								<ul class="f-contact-time">
-									<li class="f-contact-time__item">вс-чт с 10:00 до 23:00</li>
-									<li class="f-contact-time__item">пт-сб с 10:00 до 24:00</li>
-								</ul>
-								<div class="f-contact-soc">
-									<div class="f-soc">
-										<a href="https://www.instagram.com/svoya_kompaniya_official/" class="f-soc__button f-soc__button--i"></a>
-										<a href="https://www.facebook.com/SvoyaKompaniyaOfficial/" class="f-soc__button f-soc__button--f"></a>
-										<a href="https://vk.com/sk_withlove" class="f-soc__button f-soc__button--v"></a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="footer__bottom footer__bottom--full">
-					<div class="footer__info">
-						<div class="footer__copy">
-							© Своя компания, 2006−2017
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
+		//= ../partial/layout/footer.html
 
 	</div>
 
@@ -992,18 +560,9 @@ ga('require', 'ecommerce');
 		})();
 	</script>
 
-	<!-- Plugins -->
-	<script type="text/javascript" src="js/vendor/photoswipe.min.js"></script>
-	<script type="text/javascript" src="js/vendor/photoswipe-ui-default.min.js"></script>
-	
-	<!-- Header Scripts -->
-	<script type="text/javascript" src="js/header-v2.1.js"></script>
-	<script type="text/javascript" src="js/h-city-toggle.js"></script>
-	<script type="text/javascript" src="js/h-acc.js"></script>
-	
-	<!-- Layout Scripts -->
-	<script type="text/javascript" src="js/sktab.js"></script>
-	<script type="text/javascript" src="js/paginator-lt.js"></script>
+	//= ../partial/common/scripts/mainScripts.html
+
+	//= ../partial/checkout/checkoutScripts.html
 
 	<script>
 		! function (f, b, e, v, n, t, s) {
@@ -1206,7 +765,6 @@ ga('require', 'ecommerce');
 		}
 	</script>
 	<script src="./html-source/base-page-files/callibri.js.Без названия" type="text/javascript"></script>
-
 
 </body>
 
