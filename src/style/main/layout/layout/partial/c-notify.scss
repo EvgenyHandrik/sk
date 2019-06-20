@@ -56,3 +56,24 @@
 		margin-bottom: 0;
 	}
 }
+
+/* -- */
+
+.bonuses-notify-menu {
+	$icon-size: 30px;
+	$padding-v: 15px;
+	$padding-left: 15px;
+
+	padding-top: $padding-v;
+	padding-left: $padding-left + $icon-size + $padding-left;
+	padding-bottom: $padding-v;
+	background-repeat: no-repeat;
+	background-size: $icon-size $icon-size;
+	background-position: $padding-left $padding-v;
+	background-image: img('ico-coin-stack-flat-red-30x30.svg');
+
+	&__gotomenu {
+		display: inline-block;
+		margin-top: 10px;
+	}
+}

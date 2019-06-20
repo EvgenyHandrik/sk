@@ -235,6 +235,10 @@
   color: #a5a5a5;
 }
 
+.form--lite .form-label--default .form-label__small-text {
+  font-size: 12px;
+}
+
 .form--lite .form-control--default.form-control--text::-webkit-input-placeholder {
   color: #000;
   opacity: 0.3;

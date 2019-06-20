@@ -630,7 +630,7 @@ ga('require', 'ecommerce');
 										<div class="cht2-auth-group__col">
 											<div class="cht2-auth-acc">
 												<label class="form-label form-label--default">Ваш телефон</label>
-												<div class="form-control-group form-control-group--default phone-sms phone-sms--button">
+												<div class="form-control-group form-control-group--default phone-sms phone-sms--counter">
 													<button type="button" class="phone-sms-button" disabled>
 														<span class="phone-sms-button__text">Получить код</span>
 													</button>
@@ -659,16 +659,22 @@ ga('require', 'ecommerce');
 										<div class="cht2-auth-group__col">
 											<div class="cht2-auth-acc">
 												<label class="form-label form-label--default">Как вас зовут</label>
-												<div class="form-control-group form-control-group--default">
+												<div class="form-control-group form-control-group--default form-control-group--error">
 													<input type="text" class="form-control form-control--default form-control--text">
+												</div>
+												<div class="form-message form-message--default form-message--control form-message--error">
+													Ошибка
 												</div>
 											</div>
 										</div>
 										<div class="cht2-auth-group__col">
 											<div class="cht2-auth-acc">
 												<label class="form-label form-label--default">Email</label>
-												<div class="form-control-group form-control-group--default">
+												<div class="form-control-group form-control-group--default form-control-group--error">
 													<input type="text" class="form-control form-control--default form-control--text">
+												</div>
+												<div class="form-message form-message--default form-message--control form-message--error">
+													Ошибка
 												</div>
 											</div>
 										</div>
@@ -755,7 +761,7 @@ ga('require', 'ecommerce');
 													<div class="cht2-delivery-group__col">
 														<div class="cht2-delivery-address cht2-delivery-address--street">
 															<label class="form-label form-label--default cht2-delivery-address__form-label">Улица</label>
-															<div class="form-control-group form-control-group--default">
+															<div class="form-control-group form-control-group--default form-control-group--success">
 																<input type="text" class="form-control form-control--default form-control--text">
 															</div>
 														</div>
@@ -770,7 +776,7 @@ ga('require', 'ecommerce');
 																		<label class="form-label form-label--default cht2-delivery-address__form-label cht2-delivery-address__form-label--small">
 																			<span class="cht2-delivery-address-house-label">Дом, <span class="cht2-delivery-address-house-label__building">корпус</span></span>
 																		</label>
-																		<div class="form-control-group form-control-group--default cht2-delivery-address__control-group cht2-delivery-address__control-group--small">
+																		<div class="form-control-group form-control-group--default form-control-group--error cht2-delivery-address__control-group cht2-delivery-address__control-group--small">
 																			<input type="text" class="form-control form-control--default form-control--text">
 																		</div>
 																	</div>
@@ -794,7 +800,7 @@ ga('require', 'ecommerce');
 																<div class="cht2-delivery-group__col">
 																	<div class="cht2-delivery-address">
 																		<label class="form-label form-label--default cht2-delivery-address__form-label cht2-delivery-address__form-label--small">Квартира</label>
-																		<div class="form-control-group form-control-group--default cht2-delivery-address__control-group cht2-delivery-address__control-group--small">
+																		<div class="form-control-group form-control-group--default form-control-group--error cht2-delivery-address__control-group cht2-delivery-address__control-group--small">
 																			<input type="text" class="form-control form-control--default form-control--text">
 																		</div>
 																	</div>
@@ -808,6 +814,17 @@ ga('require', 'ecommerce');
 																	</div>
 																</div>
 															</div>
+														</div>
+													</div>
+												</div>
+			
+												<div class="cht2-delivery-group__row">
+													<div class="cht2-delivery-group__col">
+														<div class="form-message form-message--default form-message--control form-message--error">
+															Ошибка 1
+														</div>
+														<div class="form-message form-message--default form-message--control form-message--error">
+															Ошибка 2
 														</div>
 													</div>
 												</div>
@@ -921,34 +938,10 @@ ga('require', 'ecommerce');
 						</div>
 						<div class="cht2-section__content">
 							<div class="cht2-bonus">
-								<div class="cht2-bonus-info" style="display: none;">
-									<div class="cht2-bonus-info__title">
-										Для вас будет создан виртуальный бонусный счет с начислениями 3% от заказа.
-									</div>
-									<p>Бонусы будут доступны на следующем заказе.</p>
-								</div>
-								<div class="cht2-bonus-stat">
-									<div class="cht2-bonus-total">
-										<div class="cht2-bonus-total__row">
-											<div class="cht2-bonus-total__col">
-												<span class="cht2-bonus-total__name">Сумма заказа:</span>
-												<span class="cht2-bonus-total__value">3400 <span class="cht2-rub">₽</span></span>
-											</div>
-											<div class="cht2-bonus-total__col">
-												<span class="cht2-bonus-total__name">Мои бонусы:</span>
-												<span class="cht2-bonus-total__value">540</span>
-												<span class="cht2-bonus-total__info-rate">(1 бонус = 1 рубль)</span>
-											</div>
-										</div>
-									</div>
-									
-									<div class="form form--lite cht2-bonus-form">
-										<div class="cht2-bonus-use">
-											<label class="form-label form-label--default">Использовать бонусы:</label>
-											<div class="form-control-group form-control-group--default cht2-bonus-use__control">
-												<input type="text" class="form-control form-control--text form-control--default">
-											</div>
-										</div>
+								<div class="c-notify-group">
+									<div class="c-notify bonuses-notify-menu">
+										<p>При заказе от 1500 рублей будет создан бонусный счет (1 бонус = 1 <span class="ch2-rub">₽</span>). Бонусами можно оплатить до 50% заказа.</p>
+										<a href="/menu/" class="bonuses-notify-menu__gotomenu">Перейти в меню</a>
 									</div>
 								</div>
 							</div>
@@ -970,10 +963,7 @@ ga('require', 'ecommerce');
 												<button class="sktab-nav__button">При получении</button>
 											</li>
 											<li class="sktab-nav__item sktab-nav__item--active">
-												<button class="sktab-nav__button">Оплата картой</button>
-											</li>
-											<li class="sktab-nav__item">
-												<button class="sktab-nav__button">G Pay</button>
+												<button class="sktab-nav__button">Оплата онлайн</button>
 											</li>
 										</ul>
 									</div>
@@ -1016,89 +1006,14 @@ ga('require', 'ecommerce');
 										</div>
 										
 										<div class="bcards">
-											<ul class="bcards-list" style="display: none;">
-												<li class="bcards-list__item">
-													<div class="bcard bcard--mastercard">
-														<input type="radio" class="bcard__hidden-control" name="bcard" id="bcard-0">
-														<label class="bcard__label" for="bcard-0">
-															<div class="bcard__icon"></div>
-															<div class="bcard__name">MasterCard</div>
-															<div class="bcard__num">4378</div>
-														</label>
-													</div>
-												</li>
-												<li class="bcards-list__item">
-													<div class="bcard bcard--mastercard">
-														<input type="radio" class="bcard__hidden-control" name="bcard" id="bcard-1">
-														<label class="bcard__label" for="bcard-1">
-															<div class="bcard__icon"></div>
-															<div class="bcard__name">MasterCard</div>
-															<div class="bcard__num">4378</div>
-														</label>
-													</div>
-												</li>
-												<li class="bcards-list__item">
-													<div class="bcard bcard--visa">
-														<input type="radio" class="bcard__hidden-control" name="bcard" id="bcard-2">
-														<label class="bcard__label" for="bcard-2">
-															<div class="bcard__icon"></div>
-															<div class="bcard__name">MasterCard</div>
-															<div class="bcard__num">4378</div>
-														</label>
-													</div>
-												</li>
-											</ul>
-			
-											<div class="bcard-add cht2-bcard-add">
-												<div class="form form--lite bcard-add-form">
-													<span class="bcard-add__title">Моя карта</span>
-													
-													<div class="bcard-add-num">
-														<label class="form-label form-label--default bcard-add-num__label">Номер карты</label>
-														<div class="form-control-group form-control-group--default bcard-add-num__form-control-group form-control-group--success">
-															<span class="bcard-add-num__control-icon"><img src="images/ico-bcard-mastercard-60x60.png"></span>
-															<input type="text" class="form-control form-control--default form-control--text" placeholder="0000 0000 0000 0000">
-														</div>
-													</div>
-													
-													<div class="bcard-add-vc">
-														<div class="bcard-add-vc__row">
-															<div class="bcard-add-vc__col">
-																<div class="bcard-add-validity">
-																	<label class="form-label form-label--default bcard-add-validity__label">Срок действия</label>
-																	<div class="form-control-group form-control-group--default">
-																		<input type="text" class="form-control form-control--default form-control--text bcard-add-validity__control" placeholder="Месяц / Год">
-																	</div>
-																</div>
-															</div>
-															<div class="bcard-add-vc__col bcard-add-vc__col--code">
-																<div class="bcard-add-code">
-																	<label class="form-label form-label--default bcard-add-code__label">
-																		<span class="bcard-add-code__label-text bcard-add-code__label-text--1">Цифры на обороте</span>
-																		<span class="bcard-add-code__label-text bcard-add-code__label-text--2">Три цифры с обортной стороны карты</span>
-																	</label>
-																	<div class="form-control-group form-control-group--default form-control-group--error bcard-add-code__control-group">
-																		<input type="text" class="form-control form-control--default form-control--text bcard-add-code__control" placeholder="CVC2/CVV2">
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-			
-													<div class="bcard-add-remember">
-														<label class="bcard-add-remember__label">
-															<input type="checkbox">
-															<span class="bcard-add-remember__text">Запомнить карту</span>
-														</label>
-													</div>
-			
-												</div>
+											<div class="bcard-remember-container">
+												<span class="bcard-remember">
+													<label class="bcard-remember__label">
+														<input type="checkbox">
+														<span class="bcard-remember__text">Запомнить карту</span>
+													</label>
+												</span>
 											</div>
-										</div>
-									</div>
-									<div class="sktab-content__item">
-										<div class="cht2-googlepay">
-			
 										</div>
 									</div>
 								</div>

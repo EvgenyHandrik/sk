@@ -245,6 +245,10 @@
 			margin-bottom: 7px;
 			font-size: 14px;
 			color: $color-grey-light;
+
+			.form-label__small-text {
+				font-size: 12px;
+			}
 		}
 
 		.form-control--default {

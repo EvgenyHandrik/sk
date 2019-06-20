@@ -81,6 +81,23 @@
   margin-bottom: 0;
 }
 
+/* -- */
+
+.bonuses-notify-menu {
+  padding-top: 15px;
+  padding-left: 60px;
+  padding-bottom: 15px;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: 15px 15px;
+  background-image: url("../images/ico-coin-stack-flat-red-30x30.svg");
+}
+
+.bonuses-notify-menu__gotomenu {
+  display: inline-block;
+  margin-top: 10px;
+}
+
 .c-rub {
   font-weight: normal;
   font-family: Roboto;
