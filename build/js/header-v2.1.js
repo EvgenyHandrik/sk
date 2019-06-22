@@ -101,19 +101,28 @@
 	var $container = $('.js-h-menu-v2-more');
 	var $main;
 	var $mainItems;
+	var $more;
+	var $moreItems;
 	var resizeTimer = 0;
 
 	if ($container.length) {
 		$main = $container.find('.h-menu-v2-main');
 		$mainItems = $main.find('.h-menu-v2-item');
+		$more = $container.find('.h-menu-v2-more');
+		$moreItems = $more.find('.h-menu-v2-item');
 
+		checkMain();
 		addHandlers();
 	}
 
+	// Main
+
 	function checkMain() {
-		var mainWidth = $main.innerWidth();
+		var mainWidth = $main.width();
 		var itemsWidth = getMainItemsWidth();
-		
+
+		console.log('-- mainWidth: ' + mainWidth);
+
 		var $hiddenItems = $mainItems.filter('.h-menu-v2-item--hidden');
 
 		if (itemsWidth > mainWidth) {
@@ -125,7 +134,7 @@
 
 	function showMainItems($hiddenItems, mainWidth) {
 		$hiddenItems = $hiddenItems || $items.filter('.h-menu-v2-item--hidden');		
-		mainWidth = mainWidth || $main.innerWidth();
+		mainWidth = mainWidth || $main.width();
 		
 		$hiddenItems.each(function() {
 			var $hiddenItem = $(this);
@@ -141,16 +150,19 @@
 		});
 	}
 
-	function showMainItem($mainItem) {
-		$mainItem = $mainItem || $items.filter('.h-menu-v2-item--hidden').first();
-		$mainItem
+	function showMainItem($hiddenItem) {
+		$hiddenItem = $hiddenItem || $mainItems.filter('.h-menu-v2-item--hidden').first();
+		$hiddenItem
 			.removeClass('h-menu-v2-item--hidden');
+		
+		hideMoreItem();
+		hideMore();
 		
 		console.log('-- main item was shown');
 	}
 
 	function hideMainItems(mainWidth, itemsWidth) {
-		mainWidth = mainWidth || $main.innerWidth();
+		mainWidth = mainWidth || $main.width();
 		itemsWidth = itemsWidth || getMainItemsWidth();
 
 		if (itemsWidth > mainWidth) {
@@ -162,6 +174,9 @@
 	function hideMainItem() {
 		$mainItems.not('.h-menu-v2-item--hidden').last()
 			.addClass('h-menu-v2-item--hidden');
+		
+		showMoreItem();
+		showMore();
 		
 		console.log('-- main item was hidden');
 	}
@@ -184,6 +199,34 @@
 					checkMain();
 				}, 300);
 			});
+	}
+
+	// More
+
+	function showMore() {
+		if (!$container.hasClass('h-menu-v2--more')) {
+			$container
+				.addClass('h-menu-v2--more');
+		}
+	}
+
+	function hideMore() {
+		if ($container.hasClass('h-menu-v2--more')) {
+			if ($moreItems.not('.h-menu-v2-item--hidden').length < 1) {
+				$container
+					.removeClass('h-menu-v2--more');
+			}			
+		}
+	}
+
+	function showMoreItem() {
+		$moreItems.filter('.h-menu-v2-item--hidden').last()
+			.removeClass('h-menu-v2-item--hidden');
+	}
+
+	function hideMoreItem() {
+		$moreItems.not('.h-menu-v2-item--hidden').first()
+			.addClass('h-menu-v2-item--hidden');
 	}
 
 }());
