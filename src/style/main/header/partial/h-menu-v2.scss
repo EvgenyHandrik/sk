@@ -2,8 +2,8 @@ $h-menu-v2-content-width: 1140px;
 $h-menu-v2-height: 50px;
 $h-menu-v2-main-item-space-h: 25px;
 $h-menu-v2-main-item-space-h-mobile: 20px;
-$h-menu-v2-more-caption-width: 76px;
-$h-menu-v2-more-caption-width-mobile: 70px;
+$h-menu-v2-more-toggle-width: 76px;
+$h-menu-v2-more-toggle-width-mobile: 70px;
 $h-menu-v2-more-left-space: 20px;
 $h-menu-v2-more-left-space-mobile: 15px;
 
@@ -19,21 +19,18 @@ $h-menu-v2-more-left-space-mobile: 15px;
 			padding-left: 0;
 
 			&--more {
-				.h-menu-v2-box {
-					padding-right: $h-menu-v2-more-caption-width + $h-menu-v2-more-left-space;
+				.h-menu-v2-main {
+					padding-right: $h-menu-v2-more-toggle-width + $h-menu-v2-more-left-space;
 
 					@media (max-width: 520px) {
-						padding-right: $h-menu-v2-more-caption-width-mobile + $h-menu-v2-more-left-space-mobile;
+						padding-right: $h-menu-v2-more-toggle-width-mobile + $h-menu-v2-more-left-space-mobile;
 					}
 				}				
 			}
 		}
 
-		.h-menu-v2-box {
-			padding-right: 15px;
-			padding-left: 15px;
-
-			@media (max-width: 520px) {
+		.h-menu-v2-main {
+			@media (max-width: 1140px + 10px * 2) {
 				padding-right: 10px;
 				padding-left: 10px;
 			}
@@ -50,8 +47,8 @@ $h-menu-v2-more-left-space-mobile: 15px;
 	/* -- */
 
 	&--more {
-		.h-menu-v2-box {
-			padding-right: $h-menu-v2-more-caption-width + $h-menu-v2-more-left-space;
+		.h-menu-v2-main {
+			padding-right: $h-menu-v2-more-toggle-width + $h-menu-v2-more-left-space;
 		}
 
 		.h-menu-v2-more {
@@ -115,9 +112,15 @@ $h-menu-v2-more-left-space-mobile: 15px;
 				line-height: $h-menu-v2-height;
 				padding: 0;
 				margin: 0;
+				font-size: 15px;
 				white-space: nowrap;
 				text-decoration: none;
 				border: 0;
+				color: #685959;
+
+				&:hover {
+					color: $color-red;
+				}
 			}
 
 			&__button-text {}
@@ -139,27 +142,58 @@ $h-menu-v2-more-left-space-mobile: 15px;
 	right: 0;
 	display: none;
 
-	&__caption {
+	&__toggle {
 		display: block;
 		padding: 0;
 		margin: 0;
 		border: 0;
-		width: $h-menu-v2-more-caption-width;
+		width: $h-menu-v2-more-toggle-width;
 		height: $h-menu-v2-height;
 		line-height: $h-menu-v2-height;
 		text-align: center;
-		color: #fff;
+		color: rgba(255, 255, 255, 1);
 		background-color: #8c7e7e;
+		@include transition((color, background-color));
+		cursor: pointer;
 
 		/* -- */
 
 		@media (max-width: 520px) {
-			width: $h-menu-v2-more-caption-width-mobile;
+			width: $h-menu-v2-more-toggle-width-mobile;
 		}
 
 		/* -- */
 
-		&-text {}
+		&-text {
+			white-space: nowrap;
+
+			&:after {
+				content: '';
+				display: inline-block;
+				width: 0; 
+				height: 0;
+				margin: 0 0 0 5px;
+				vertical-align: middle;
+				border-left: 4px solid transparent;
+				border-right: 4px solid transparent;
+				border-top: 4px solid rgba(255, 255, 255, 1);
+				transition-property: border-color;
+				@include transition((border-color));
+			}
+		}
+
+		/* -- */
+
+		&:hover {
+			color: rgba(255, 255, 255, 0.7);
+			background-color: #959595;
+
+			.h-menu-v2-more__toggle-text {
+				&:after {
+					border-top-color: rgba(255,255,255,0.7);
+				}					
+			}
+		}		
 	}
 
 	&__dropdown {
@@ -167,14 +201,38 @@ $h-menu-v2-more-left-space-mobile: 15px;
 		top: 100%;
 		right: 0;
 		display: none;
-		width: 200px;
+		width: 195px;
 		border-radius: 0 0 5px 5px;
 		box-shadow: 0 2px 7px rgba(0, 0, 0, 0.11);
 		background-color: #fff;
+		overflow: hidden;
 	}
 
 	&__list {
+		display: block;
+		padding: 9px 0;
+		margin: 0;
+
 		.h-menu-v2-item {
+			display: block;
+			padding: 0;
+			margin: 0;
+
+			&__button {
+				display: block;
+				line-height: 1.2;
+				padding: 9px 15px;
+				font-size: 15px;
+				border-bottom: 0;
+				color: #776868;
+
+				&:hover {
+					border-bottom: 0;
+					color: $color-red;
+				}
+			}
+
+			&__button-text {}
 			
 			/* -- */
 
@@ -186,11 +244,21 @@ $h-menu-v2-more-left-space-mobile: 15px;
 
 	/* -- */
 
-	&:hover {
+	&--open {
 		.h-menu-v2-more {
+			&__toggle {
+				&-text {
+					&:after {
+						transform: rotate(180deg);
+					}					
+				}
+			}
+
 			&__dropdown {
 				display: block;
 			}
 		}
 	}
+
+	
 }

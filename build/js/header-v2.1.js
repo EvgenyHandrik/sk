@@ -103,6 +103,7 @@
 	var $mainItems;
 	var $more;
 	var $moreItems;
+	var $moreToggle;
 	var resizeTimer = 0;
 
 	if ($container.length) {
@@ -110,6 +111,7 @@
 		$mainItems = $main.find('.h-menu-v2-item');
 		$more = $container.find('.h-menu-v2-more');
 		$moreItems = $more.find('.h-menu-v2-item');
+		$moreToggle = $more.find('.h-menu-v2-more__toggle');
 
 		checkMain();
 		addHandlers();
@@ -120,9 +122,6 @@
 	function checkMain() {
 		var mainWidth = $main.width();
 		var itemsWidth = getMainItemsWidth();
-
-		console.log('-- mainWidth: ' + mainWidth);
-
 		var $hiddenItems = $mainItems.filter('.h-menu-v2-item--hidden');
 
 		if (itemsWidth > mainWidth) {
@@ -136,10 +135,15 @@
 		$hiddenItems = $hiddenItems || $items.filter('.h-menu-v2-item--hidden');		
 		mainWidth = mainWidth || $main.width();
 		
-		$hiddenItems.each(function() {
+		$hiddenItems.each(function(i) {
 			var $hiddenItem = $(this);
 			var hiddenItemWidth = $hiddenItem.innerWidth();
 			var itemsWidth = getMainItemsWidth();
+			
+			if (i === ($hiddenItems.length - 1)) {
+				mainWidth = $container.width() + (parseFloat($main.css('padding-left')) * 2);
+			}
+		
 			var freeSpace = mainWidth - itemsWidth;
 
 			if (freeSpace >= hiddenItemWidth) {
@@ -157,8 +161,6 @@
 		
 		hideMoreItem();
 		hideMore();
-		
-		console.log('-- main item was shown');
 	}
 
 	function hideMainItems(mainWidth, itemsWidth) {
@@ -167,7 +169,7 @@
 
 		if (itemsWidth > mainWidth) {
 			hideMainItem();
-			hideMainItems(mainWidth);
+			hideMainItems();
 		}
 	}
 
@@ -177,8 +179,6 @@
 		
 		showMoreItem();
 		showMore();
-		
-		console.log('-- main item was hidden');
 	}
 
 	function getMainItemsWidth() {
@@ -199,6 +199,11 @@
 					checkMain();
 				}, 300);
 			});
+		
+		$moreToggle
+			.on('click.h-menu-v2-dropdown-toggle', function() {
+				toggleMoreDropdown();
+			});
 	}
 
 	// More
@@ -215,6 +220,10 @@
 			if ($moreItems.not('.h-menu-v2-item--hidden').length < 1) {
 				$container
 					.removeClass('h-menu-v2--more');
+				
+				if ($more.hasClass('h-menu-v2-more--open')) {
+					closeMoreDropdown();
+				}
 			}			
 		}
 	}
@@ -227,6 +236,44 @@
 	function hideMoreItem() {
 		$moreItems.not('.h-menu-v2-item--hidden').first()
 			.addClass('h-menu-v2-item--hidden');
+	}
+
+	// More Dropdown
+
+	function toggleMoreDropdown() {
+		if ($more.hasClass('h-menu-v2-more--open')) {
+			closeMoreDropdown();
+		} else {
+			openMoreDropdown();
+		}
+	}
+
+	function openMoreDropdown() {
+		$more.addClass('h-menu-v2-more--open');
+
+		$(window)
+			.on('click.h-menu-v2-more-outside-click', function(e) {
+				if (isOutsideMoreClick(e)) {
+					closeMoreDropdown();
+				}
+			});
+	}
+
+	function closeMoreDropdown() {
+		$more.removeClass('h-menu-v2-more--open');
+		
+		$(window)
+			.off('click.h-menu-v2-more-outside-click');
+	}
+
+	function isOutsideMoreClick(e) {
+		var isOutsideClick = $(e.target).closest('.h-menu-v2-more').length < 1;
+		var isButtonClick = $(e.target).closest($moreToggle).length > 0;
+		if (isOutsideClick && !isButtonClick) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 }());
