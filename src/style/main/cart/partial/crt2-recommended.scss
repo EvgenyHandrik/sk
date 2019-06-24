@@ -12,6 +12,12 @@
 
 	$scroll-content-padding-bottom: 10px;
 	$scroll-max-width: $item-width * 5 + $item-space-h * 4 + $item-width / 3;
+	$scroll-max-width-more: $item-width * 5 + $item-space-h * 4;
+
+	$add-size: 28px;
+	$add-width: ($item-width - $item-padding-h * 2) / 2;
+
+	$more-mobile-bp: 768px + $content-laptop-margin-h * 2;
 
 	margin: 0 0 35px 0;
 
@@ -70,28 +76,6 @@
 
 		/* -- */
 
-		&__price-box {
-			position: absolute;
-			top: -1px;
-			right: -1px;
-		}
-
-		&__price {
-			display: block;
-			line-height: 1;
-			padding: 5px 10px;
-			font-size: 13px;
-			border: 1px solid $border-color-grey-light;
-			border-radius: 0 $item-border-radius 0 $item-border-radius;
-			background-color: #fff;
-
-			&-rub {
-				color: $color-grey-light;
-			}
-		}
-		
-		/* -- */
-
 		&__image-box,
 		&__name-box,
 		&__add-box,
@@ -138,16 +122,50 @@
 		/* -- */
 
 		&__add-box {
+			width: auto;
 			line-height: 1;
-			margin: 0 0 10px 0;
+			padding-top: 5px;
+			padding-right: $item-padding-h;
+			// padding-bottom: 10px;
+			padding-bottom: 5px;
+			padding-left: $item-padding-h;
+			margin-right: -$item-padding-h;
+			margin-left: -$item-padding-h;
 			font-size: 1px;
 			text-align: center;
+			border: 0;
+			border-top: 1px solid $border-color-grey-light;
+			border-radius: 0;
+
+			@media (max-width: $item-mobile-bp) {
+				padding-right: $item-mobile-padding-h;
+				padding-left: $item-mobile-padding-h;
+
+				margin-right: -$item-mobile-padding-h;
+				margin-left: -$item-mobile-padding-h;
+			}
+
+			&:after {
+				content: '';
+				display: block;
+				font-size: 1px;
+				clear: both;
+			}
 		}
 
 		&__add {
-			display: inline-block;
-			padding: 5px 10px;
+			$button-size: $add-size;
+			$icon-size: $button-size - 12px;
+
+			position: relative;
+			float: right;
+			display: block;
+			width: $button-size;
+			height: $button-size;
+			padding: 0;
+			margin: 0 0 0 13px;
 			font-size: 12px;
+			border: 0;
 			border-radius: 4px;
 			color: #fff;
 			background-color: $color-red;
@@ -156,6 +174,35 @@
 
 			&:hover {
 				background-color: $color-red-active;
+			}
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				display: block;
+				width: $icon-size;
+				height: $icon-size;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: $icon-size $icon-size;
+				background-image: img('ico-54x54-cart.png');
+				transform: translate(-50%, -50%);
+			}
+		}
+
+		&__price {
+			float: right;
+			display: block;
+			line-height: $add-size;
+			font-weight: bold;
+			font-size: 14px;
+			transform: transitionY(-50%);
+
+			&-rub {
+				font-weight: normal;
+				color: $color-grey-light;
 			}
 		}
 		
@@ -201,6 +248,8 @@
 		max-width: $scroll-max-width;
 		overflow-x: auto;
 
+		// scroll-behavior: smooth;
+
 		@media (max-width: 768px) {
 			margin-right: -$content-laptop-margin-h;
 			margin-left: -$content-laptop-margin-h;
@@ -214,5 +263,71 @@
 		&__content {
 			padding-bottom: $scroll-content-padding-bottom;
 		}		
+	}
+
+	/* -- */
+
+	&-more {
+		position: relative;
+
+		&-toggle {
+			position: absolute;
+			bottom: 100%;
+			right: 0;
+			display: none;
+			line-height: 1.2;
+			padding: 0;
+			margin: 0 0 20px 0;
+			font-weight: bold;
+			font-size: 12px;
+			text-transform: uppercase;
+			text-align: left;
+			border-bottom: 0;
+			color: $color-grey-light;
+			background-color: transparent;
+			@include transition((color, border-color));
+			cursor: pointer;
+
+			&:hover {
+				color: $color-red;
+			}
+		}
+
+		&__text {}
+	}
+
+	/* -- */
+
+	&--more {
+		.crt2-recommended {
+			&-more {
+
+				max-width: $scroll-max-width-more;
+
+				@media(max-width: $more-mobile-bp) {
+					max-width: 100%;
+				}
+
+				/* -- */
+
+				&-toggle {
+					display: block;
+
+					@media (max-width: $more-mobile-bp) {
+						display: none;
+					}
+				}
+			}
+
+			&-scroll {
+				max-width: 100%;
+				overflow-x: hidden;
+
+				@media (max-width: $more-mobile-bp) {
+					max-width: $scroll-max-width;
+					overflow-x: auto;
+				}
+			}
+		}
 	}
 }

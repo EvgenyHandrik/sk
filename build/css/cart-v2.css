@@ -683,6 +683,8 @@ a.crt2-dish__name:hover {
   margin: 0 0 35px 0;
   /* -- */
   /* -- */
+  /* -- */
+  /* -- */
 }
 
 .crt2-recommended-row {
@@ -734,27 +736,6 @@ a.crt2-dish__name:hover {
   /* -- */
   /* -- */
   /* -- */
-  /* -- */
-}
-
-.crt2-recommended-item__price-box {
-  position: absolute;
-  top: -1px;
-  right: -1px;
-}
-
-.crt2-recommended-item__price {
-  display: block;
-  line-height: 1;
-  padding: 5px 10px;
-  font-size: 13px;
-  border: 1px solid #f0f0f0;
-  border-radius: 0 10px 0 10px;
-  background-color: #fff;
-}
-
-.crt2-recommended-item__price-rub {
-  color: #a5a5a5;
 }
 
 .crt2-recommended-item__image-box,
@@ -801,16 +782,38 @@ a.crt2-dish__name:hover {
 }
 
 .crt2-recommended-item__add-box {
+  width: auto;
   line-height: 1;
-  margin: 0 0 10px 0;
+  padding-top: 5px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  margin-right: -10px;
+  margin-left: -10px;
   font-size: 1px;
   text-align: center;
+  border: 0;
+  border-top: 1px solid #f0f0f0;
+  border-radius: 0;
+}
+
+.crt2-recommended-item__add-box:after {
+  content: '';
+  display: block;
+  font-size: 1px;
+  clear: both;
 }
 
 .crt2-recommended-item__add {
-  display: inline-block;
-  padding: 5px 10px;
+  position: relative;
+  float: right;
+  display: block;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  margin: 0 0 0 13px;
   font-size: 12px;
+  border: 0;
   border-radius: 4px;
   color: #fff;
   background-color: #bb1018;
@@ -823,6 +826,39 @@ a.crt2-dish__name:hover {
 
 .crt2-recommended-item__add:hover {
   background-color: #da5848;
+}
+
+.crt2-recommended-item__add:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-image: url("../images/ico-54x54-cart.png");
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.crt2-recommended-item__price {
+  float: right;
+  display: block;
+  line-height: 28px;
+  font-weight: bold;
+  font-size: 14px;
+  -webkit-transform: transitionY(-50%);
+  -ms-transform: transitionY(-50%);
+  transform: transitionY(-50%);
+}
+
+.crt2-recommended-item__price-rub {
+  font-weight: normal;
+  color: #a5a5a5;
 }
 
 .crt2-recommended-item__count.count--default.count--lite.count--joint {
@@ -853,6 +889,50 @@ a.crt2-dish__name:hover {
   padding-bottom: 10px;
 }
 
+.crt2-recommended-more {
+  position: relative;
+}
+
+.crt2-recommended-more-toggle {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  display: none;
+  line-height: 1.2;
+  padding: 0;
+  margin: 0 0 20px 0;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: left;
+  border-bottom: 0;
+  color: #a5a5a5;
+  background-color: transparent;
+  -webkit-transition-property: color, border-color;
+  transition-property: color, border-color;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+  cursor: pointer;
+}
+
+.crt2-recommended-more-toggle:hover {
+  color: #bb1018;
+}
+
+.crt2-recommended--more .crt2-recommended-more {
+  max-width: 740px;
+  /* -- */
+}
+
+.crt2-recommended--more .crt2-recommended-more-toggle {
+  display: block;
+}
+
+.crt2-recommended--more .crt2-recommended-scroll {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .crt2-empty {
   margin: 40px 0 0 0;
   text-align: center;
@@ -875,6 +955,21 @@ a.crt2-dish__name:hover {
   display: block;
   margin: 0 0 20px 0;
   font-size: 20px;
+}
+
+@media (max-width: 798px) {
+  .crt2-recommended--more .crt2-recommended-more {
+    max-width: 100%;
+  }
+
+  .crt2-recommended--more .crt2-recommended-more-toggle {
+    display: none;
+  }
+
+  .crt2-recommended--more .crt2-recommended-scroll {
+    max-width: 786.66667px;
+    overflow-x: auto;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1011,6 +1106,13 @@ a.crt2-dish__name:hover {
     width: 125px;
     padding-right: 5px;
     padding-left: 5px;
+  }
+
+  .crt2-recommended-item__add-box {
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-right: -5px;
+    margin-left: -5px;
   }
 
   .crt2-recommended-item__count.count--default.count--lite.count--joint {
