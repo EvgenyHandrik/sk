@@ -2,7 +2,7 @@
 
 	var $container = $('.js-crt2-recommended-more');
 	var $scroll;
-	var scrollLeftSize = (140 + 10) * 4;
+	var scrollLeftSize = (140 + 10) * 5;
 
 	if ($container.length) {
 		$scroll = $container.find('.crt2-recommended-scroll');
@@ -12,9 +12,9 @@
 
 			$scroll
 				.off('scroll.more-scroll')
-				.delay(500).animate({
+				.delay(200).animate({
 					scrollLeft: scrollLeftSize
-				}, 400, 'linear');
+				}, 300, 'linear');
 		});
 
 		$scroll

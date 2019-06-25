@@ -902,10 +902,10 @@ a.crt2-dish__name:hover {
   padding: 0;
   margin: 0 0 20px 0;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 11px;
   text-transform: uppercase;
   text-align: left;
-  border-bottom: 0;
+  border-bottom: 1px dashed #a5a5a5;
   color: #a5a5a5;
   background-color: transparent;
   -webkit-transition-property: color, border-color;
@@ -916,6 +916,7 @@ a.crt2-dish__name:hover {
 }
 
 .crt2-recommended-more-toggle:hover {
+  border-color: #bb1018;
   color: #bb1018;
 }
 

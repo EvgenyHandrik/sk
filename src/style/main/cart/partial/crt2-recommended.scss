@@ -279,16 +279,17 @@
 			padding: 0;
 			margin: 0 0 20px 0;
 			font-weight: bold;
-			font-size: 12px;
+			font-size: 11px;
 			text-transform: uppercase;
 			text-align: left;
-			border-bottom: 0;
+			border-bottom: 1px dashed $color-grey-light;
 			color: $color-grey-light;
 			background-color: transparent;
 			@include transition((color, border-color));
 			cursor: pointer;
 
 			&:hover {
+				border-color: $color-red;
 				color: $color-red;
 			}
 		}
