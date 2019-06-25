@@ -683,8 +683,6 @@ a.crt2-dish__name:hover {
   margin: 0 0 35px 0;
   /* -- */
   /* -- */
-  /* -- */
-  /* -- */
 }
 
 .crt2-recommended-row {
@@ -730,7 +728,7 @@ a.crt2-dish__name:hover {
   height: 100%;
   padding: 10px 10px 0 10px;
   border: 1px solid #f0f0f0;
-  border-radius: 10px;
+  border-radius: 5px;
   /* -- */
   /* -- */
   /* -- */
@@ -889,51 +887,6 @@ a.crt2-dish__name:hover {
   padding-bottom: 10px;
 }
 
-.crt2-recommended-more {
-  position: relative;
-}
-
-.crt2-recommended-more-toggle {
-  position: absolute;
-  bottom: 100%;
-  right: 0;
-  display: none;
-  line-height: 1.2;
-  padding: 0;
-  margin: 0 0 20px 0;
-  font-weight: bold;
-  font-size: 11px;
-  text-transform: uppercase;
-  text-align: left;
-  border-bottom: 1px dashed #a5a5a5;
-  color: #a5a5a5;
-  background-color: transparent;
-  -webkit-transition-property: color, border-color;
-  transition-property: color, border-color;
-  -webkit-transition-duration: 200ms;
-  transition-duration: 200ms;
-  cursor: pointer;
-}
-
-.crt2-recommended-more-toggle:hover {
-  border-color: #bb1018;
-  color: #bb1018;
-}
-
-.crt2-recommended--more .crt2-recommended-more {
-  max-width: 740px;
-  /* -- */
-}
-
-.crt2-recommended--more .crt2-recommended-more-toggle {
-  display: block;
-}
-
-.crt2-recommended--more .crt2-recommended-scroll {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
 .crt2-empty {
   margin: 40px 0 0 0;
   text-align: center;
@@ -956,21 +909,6 @@ a.crt2-dish__name:hover {
   display: block;
   margin: 0 0 20px 0;
   font-size: 20px;
-}
-
-@media (max-width: 798px) {
-  .crt2-recommended--more .crt2-recommended-more {
-    max-width: 100%;
-  }
-
-  .crt2-recommended--more .crt2-recommended-more-toggle {
-    display: none;
-  }
-
-  .crt2-recommended--more .crt2-recommended-scroll {
-    max-width: 786.66667px;
-    overflow-x: auto;
-  }
 }
 
 @media (max-width: 768px) {
@@ -1110,8 +1048,8 @@ a.crt2-dish__name:hover {
   }
 
   .crt2-recommended-item__add-box {
-    padding-right: 5px;
-    padding-left: 5px;
+    padding-right: 7px;
+    padding-left: 7px;
     margin-right: -5px;
     margin-left: -5px;
   }
