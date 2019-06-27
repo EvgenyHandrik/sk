@@ -99,6 +99,7 @@
 // h-menu-v2 more
 (function() {
 	var $container = $('.js-h-menu-v2-more');
+	var $box;
 	var $main;
 	var $mainItems;
 	var $more;
@@ -107,6 +108,7 @@
 	var resizeTimer = 0;
 
 	if ($container.length) {
+		$box = $container.find('.h-menu-v2-box');
 		$main = $container.find('.h-menu-v2-main');
 		$mainItems = $main.find('.h-menu-v2-item');
 		$more = $container.find('.h-menu-v2-more');
@@ -141,7 +143,7 @@
 			var itemsWidth = getMainItemsWidth();
 			
 			if (i === ($hiddenItems.length - 1)) {
-				mainWidth = $container.width() + (parseFloat($main.css('padding-left')) * 2);
+				mainWidth = $box.width() + (parseFloat($main.css('padding-left')) * 2);
 			}
 		
 			var freeSpace = mainWidth - itemsWidth;
