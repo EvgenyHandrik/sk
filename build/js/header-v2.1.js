@@ -143,7 +143,7 @@
 			var itemsWidth = getMainItemsWidth();
 			
 			if (i === ($hiddenItems.length - 1)) {
-				mainWidth = $box.width() + (parseFloat($main.css('padding-left')) * 2);
+				mainWidth = $box.width() - (parseFloat($main.css('padding-left')) * 2);
 			}
 		
 			var freeSpace = mainWidth - itemsWidth;
