@@ -1,0 +1,461 @@
+<!-- Корзина [new_content] -->
+<h1>Оформление заказа</h1>
+<div class="cht2-arrows">
+	<button type="button" class="cht2-arrow-button cht2-arrow-button--cart">
+		<span class="cht2-arrow-button__text">Назад в корзину</span>
+	</button>
+</div>
+
+<div class="crt2-content-wrapper crt2-content-wrapper--main">
+	<div class="cht2-sections">
+		<div class="cht2-section cht2-auth">
+			<div class="cht2-section__header">
+				<h2 class="ttl ttl--2 cht2-ttl cht2-section__ttl">1. Контактная информация</h2>
+			</div>
+			<div class="cht2-section__content">
+				<div class="cht2-auth-subttl">
+					Если вы не зарегистрированы на сайте,<br>
+					учетная запись будет создана автоматически
+				</div>
+
+				<div class="form form--lite cht2-auth-form">
+					<div class="cht2-auth-group">
+						<div class="cht2-auth-group__row">
+							<div class="cht2-auth-group__col">
+								<div class="cht2-auth-acc">
+									<label class="form-label form-label--default">Ваш телефон</label>
+									<div class="form-control-group form-control-group--default phone-sms phone-sms--counter">
+										<button type="button" class="phone-sms-button" disabled>
+											<span class="phone-sms-button__text">Получить код</span>
+										</button>
+										<div class="phone-sms-counter">
+											<span class="phone-sms-counter__icon"></span>
+											<span class="phone-sms-counter__number">0:53</span>
+										</div>
+										<input type="text" class="form-control form-control--default form-control--text phone-sms-input">
+									</div>
+								</div>
+							</div>
+							<div class="cht2-auth-group__col">
+								<div class="cht2-auth-acc">
+									<div class="form-group form-group--default">
+										<label class="form-label form-label--default">Код из СМС</label>
+										<div class="form-control-group form-control-group--default">
+											<input type="text" class="form-control form-control--default form-control--text">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cht2-auth-group">
+						<div class="cht2-auth-group__row">
+							<div class="cht2-auth-group__col">
+								<div class="cht2-auth-acc">
+									<label class="form-label form-label--default">Как вас зовут</label>
+									<div class="form-control-group form-control-group--default form-control-group--error">
+										<input type="text" class="form-control form-control--default form-control--text">
+									</div>
+									<div class="form-message form-message--default form-message--control form-message--error">
+										Ошибка
+									</div>
+								</div>
+							</div>
+							<div class="cht2-auth-group__col">
+								<div class="cht2-auth-acc">
+									<label class="form-label form-label--default">Email</label>
+									<div class="form-control-group form-control-group--default form-control-group--error">
+										<input type="text" class="form-control form-control--default form-control--text">
+									</div>
+									<div class="form-message form-message--default form-message--control form-message--error">
+										Ошибка
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cht2-section cht2-shipping">
+			<div class="cht2-section__header">
+				<h2 class="ttl ttl--2 cht2-ttl cht2-section__ttl">2. Способ получения</h2>
+			</div>
+			<div class="cht2-section__content">
+				
+				<label class="cht2-chk-operator">
+					<input type="checkbox">
+					<span class="cht2-chk-operator__text">Подтвердить заказ с оператором</span>
+				</label>
+				
+				<div class="sktab cht2-shipping-tab cht2-checkout-sktab js-sktab">
+					<div class="sktab-nav-wrapper">
+						<div class="sktab-nav-scroll">
+							<ul class="sktab-nav">
+								<li class="sktab-nav__item sktab-nav__item--active">
+									<button class="sktab-nav__button">Доставка</button>
+								</li>
+								<li class="sktab-nav__item">
+									<button class="sktab-nav__button">Самовывоз</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="sktab-content">
+						<div class="sktab-content__item sktab-content__item--active">
+							
+							<div class="c-notify-group">
+								<div class="c-notify c-notify--warning">
+									<p>Минимальная сумма заказа на доставку - 500 руб.</p>
+									<p>Предлагаем вам <a href="">дополнить</a> заказ на сумму 500 руб.</p>
+								</div>
+							</div>
+							
+							<div class="form form--lite cht2-delivery-form">
+
+								<div class="cht2-delivery-group cht2-delivery-group--address-list">
+									<div class="cht2-delivery-address-list js-delivery-address-list">
+										<label class="form-label form-label--default">Мои адреса</label>
+										<div class="cht2-delivery-address-list__row">
+											<div class="cht2-delivery-address-list__col cht2-delivery-address-list__col--list">
+												<div class="cht2-delivery-address-list__select-box">
+													<select class="select">
+														<option>Новый адрес</option>
+														<option data-opt-content="{
+																&quot;html&quot;:	&quot;&lt;div class=\&quot;cht2-delivery-address-list__opt\&quot;&gt;&lt;span class=\&quot;cht2-delivery-address-list__opt-name\&quot;&gt;Дом&lt;/span&gt;&lt;span class=\&quot;cht2-delivery-address-list__opt-addr\&quot;&gt;ул. Ленина, д. 100, кв. 500&lt;/span&gt;&lt;/div&gt;&quot;
+															}">
+															Дом
+														</option>
+														<option data-opt-content="{
+															&quot;html&quot;:	&quot;&lt;div class=\&quot;cht2-delivery-address-list__opt\&quot;&gt;&lt;span class=\&quot;cht2-delivery-address-list__opt-name\&quot;&gt;Работа&lt;/span&gt;&lt;span class=\&quot;cht2-delivery-address-list__opt-addr\&quot;&gt;ул. Двадцати Шести Бакинских Комиссаров, д. 15, кв. 30&lt;/span&gt;&lt;/div&gt;&quot;
+															}">
+															Работа
+														</option>
+														<option data-opt-content="{
+															&quot;html&quot;:	&quot;&lt;div class=\&quot;cht2-delivery-address-list__opt\&quot;&gt;&lt;span class=\&quot;cht2-delivery-address-list__opt-name\&quot;&gt;Друзья&lt;/span&gt;&lt;span class=\&quot;cht2-delivery-address-list__opt-addr\&quot;&gt;ул. Московкая, д. 10, кв. 300&lt;/span&gt;&lt;/div&gt;&quot;
+															}">
+															Друзья
+														</option>
+													</select>
+												</div>
+											</div>
+											<div class="cht2-delivery-address-list__col cht2-delivery-address-list__col--add">
+												<button
+													type="button"
+													class="cht2-delivery-address-list__add"
+													title="Новый адрес">+</button>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="cht2-delivery-group cht2-delivery-group--address cht2-delivery-group--edit">
+									<div class="cht2-delivery-group__row">
+										<div class="cht2-delivery-group__col">
+											<div class="cht2-delivery-address cht2-delivery-address--street">
+												<label class="form-label form-label--default cht2-delivery-address__form-label">Улица</label>
+												<div class="form-control-group form-control-group--default form-control-group--success">
+													<input type="text" class="form-control form-control--default form-control--text">
+												</div>
+											</div>
+										</div>
+
+										<div class="cht2-delivery-group__col">
+											
+											<div class="cht2-delivery-group cht2-delivery-group--address-g1">
+												<div class="cht2-delivery-group__row">
+													<div class="cht2-delivery-group__col">
+														<div class="cht2-delivery-address">
+															<label class="form-label form-label--default cht2-delivery-address__form-label cht2-delivery-address__form-label--small">
+																<span class="cht2-delivery-address-house-label">Дом, <span class="cht2-delivery-address-house-label__building">корпус</span></span>
+															</label>
+															<div class="form-control-group form-control-group--default form-control-group--error cht2-delivery-address__control-group cht2-delivery-address__control-group--small">
+																<input type="text" class="form-control form-control--default form-control--text">
+															</div>
+														</div>
+													</div>
+													<div class="cht2-delivery-group__col">
+														<div class="cht2-delivery-address">
+															<label class="form-label form-label--default cht2-delivery-address__form-label cht2-delivery-address__form-label--small">Подъезд</label>
+															<div class="form-control-group form-control-group--default cht2-delivery-address__control-group cht2-delivery-address__control-group--small">
+																<input type="text" class="form-control form-control--default form-control--text">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										<div class="cht2-delivery-group__col">
+
+											<div class="cht2-delivery-group cht2-delivery-group--address-g2">
+												<div class="cht2-delivery-group__row">
+													<div class="cht2-delivery-group__col">
+														<div class="cht2-delivery-address">
+															<label class="form-label form-label--default cht2-delivery-address__form-label cht2-delivery-address__form-label--small">Квартира</label>
+															<div class="form-control-group form-control-group--default form-control-group--error cht2-delivery-address__control-group cht2-delivery-address__control-group--small">
+																<input type="text" class="form-control form-control--default form-control--text">
+															</div>
+														</div>
+													</div>
+													<div class="cht2-delivery-group__col">
+														<div class="cht2-delivery-address">
+															<label class="form-label form-label--default cht2-delivery-address__form-label cht2-delivery-address__form-label--small">Этаж</label>
+															<div class="form-control-group form-control-group--default cht2-delivery-address__control-group cht2-delivery-address__control-group--small">
+																<input type="text" class="form-control form-control--default form-control--text">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="cht2-delivery-group__row">
+										<div class="cht2-delivery-group__col">
+											<div class="form-message form-message--default form-message--control form-message--error">
+												Ошибка 1
+											</div>
+											<div class="form-message form-message--default form-message--control form-message--error">
+												Ошибка 2
+											</div>
+										</div>
+									</div>
+
+									<div class="cht2-delivery-group__row cht2-delivery-group__row--address-name">
+										<div class="cht2-delivery-group__col">
+											<div class="cht2-delivery-address-name">
+												<label class="form-label form-label--default">Название адреса</label>
+												<div class="form-control-group form-control-group--default">
+													<input type="text" class="form-control form-control--default form-control--text" placeholder="Например, Дом">
+												</div>
+											</div>
+											<button type="button" class="button cht2-delivery-address-save">
+												<span class="button__text">Сохранить в список моих адресов</span>
+											</button>
+										</div>
+									</div>
+								</div>
+
+								<div class="cht2-delivery-group cht2-delivery-group--date">
+									<div class="cht2-delivery-group__row">
+										<div class="cht2-delivery-group__col cht2-delivery-group__col--d-date">
+											<div class="cht2-delivery-date">
+												<span class="form-label form-label--default">Дата доставки</span>
+												<div class="form-control-group form-control-group--default">
+													<input type="text" class="form-control form-control--text form-control--default cht2-delivery-date__control cht2-delivery-date__control--calendar">
+												</div>
+											</div>
+										</div>
+										<div class="cht2-delivery-group__col cht2-delivery-group__col--d-time">
+											<div class="cht2-delivery-date">
+												<span class="form-label form-label--default">Время доставки</span>
+												<div class="form-control-group form-control-group--default">
+													<div class="cht2-delivery-date__hours-box">
+														<select class="select">
+															<option>Ближайшее</option>
+															<option>13:30</option>
+															<option>13:45</option>
+															<option>14:00</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="cht2-delivery-group cht2-delivery-group--comment">
+									<div class="cht2-delivery-comment">
+										<label class="form-label form-label--default">Комментарий</label>
+										<div class="form-control-group form-control-group--default">
+											<textarea
+												placeholder="Не работает домофон"
+												class="form-control form-control--default form-control--text form-control--textarea cht2-delivery-comment__textarea"></textarea>
+										</div>
+									</div>
+								</div>
+							</div>							
+						</div>
+						<div class="sktab-content__item">
+							<div class="form form--lite cht2-pickup-form">
+								<div class="cht2-pickup-group cht2-pickup-group--address-list">
+									<div class="cht2-pickup-address-list">
+										<label class="form-label form-label--default">Адрес</label>
+										<div class="cht2-pickup-address-list__select-box">
+											<select class="select">
+												<option>пр. Ленина, 49</option>
+												<option>ул. Заводская, 11</option>
+												<option>ул. Шейнкмана, 90</option>
+												<option>ул. 8 Марта, 46</option>
+											</select>
+										</div>
+									</div>
+								</div>
+
+								<div class="cht2-pickup-group cht2-pickup-group--date">
+									<div class="cht2-pickup-group__row">
+										<div class="cht2-pickup-group__col cht2-pickup-group__col--d-date">
+											<div class="cht2-pickup-date">
+												<span class="form-label form-label--default">Дата</span>
+												<div class="form-control-group form-control-group--default">
+													<input type="text" class="form-control form-control--text form-control--default cht2-pickup-date__control cht2-pickup-date__control--calendar">
+												</div>
+											</div>
+										</div>
+										<div class="cht2-pickup-group__col cht2-pickup-group__col--d-time">
+											<div class="cht2-pickup-date">
+												<span class="form-label form-label--default">Время</span>
+												<div class="form-control-group form-control-group--default">
+													<div class="cht2-pickup-date__hours-box">
+														<select class="select">
+															<option>13:30</option>
+															<option>13:45</option>
+															<option>14:00</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cht2-section cht2-payment">
+			<div class="cht2-section__header">
+				<h2 class="ttl ttl--2 cht2-ttl cht2-section__ttl">3. Оплата и бонусы</h2>
+			</div>
+			<div class="cht2-section__content">
+				<div class="cht2-bonus">
+					<div class="c-notify-group">
+						<div class="c-notify bonuses-notify">
+							<p>Ваш бонусный счет ожидает активация. Оплата бонусами будет доступна на следующий день.</p>
+						</div>
+					</div>
+					<div class="cht2-bonus-stat">
+						<div class="cht2-bonus-total">
+							<div class="cht2-bonus-total__row">
+								<div class="cht2-bonus-total__col">
+									<span class="cht2-bonus-total__name">Сумма заказа:</span>
+									<span class="cht2-bonus-total__value">3400 <span class="cht2-rub">₽</span></span>
+								</div>
+								<div class="cht2-bonus-total__col">
+									<span class="cht2-bonus-total__name">Мои бонусы:</span>
+									<span class="cht2-bonus-total__value">540</span>
+									<span class="cht2-bonus-total__info-rate">(1 бонус = 1 рубль)</span>
+								</div>
+							</div>
+						</div>
+						
+						<div class="form form--lite cht2-bonus-form">
+							<div class="cht2-bonus-use">
+								<label class="form-label form-label--default">Использовать бонусы<br><span class="form-label__small-text">(не более 50% от суммы заказа)</span>:</label>
+								<div class="form-control-group form-control-group--default cht2-bonus-use__control">
+									<input type="text" class="form-control form-control--text form-control--default">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="cht2-summary">
+					<div class="cht2-summary-total">
+						К оплате: 2860 <span class="cht2-rub">₽</span>
+					</div>
+					<div class="cht2-summary-bonus">
+						Бонусы: <span class="cht2-summary-bonus__number">+50</span>
+					</div>
+				</div>
+
+				<div class="sktab js-sktab cht2-payment-tab cht2-checkout-sktab">
+					<div class="sktab-nav-wrapper">
+						<div class="sktab-nav-scroll">
+							<ul class="sktab-nav">
+								<li class="sktab-nav__item">
+									<button class="sktab-nav__button">При получении</button>
+								</li>
+								<li class="sktab-nav__item sktab-nav__item--active">
+									<button class="sktab-nav__button">Оплата онлайн</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="sktab-content">
+						<div class="sktab-content__item">
+							<div class="form form--lite cht2-cod-form">
+								
+								<div class="cht2-cod-types">
+									<label class="form-label form-label--default">Картой или наличными</label>
+									<div class="cht2-cod-types__select-box">
+										<select class="select">
+											<option>Картой</option>
+											<option selected>Наличными</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="cht2-cod-cash">
+									<div class="cht2-cod-cash__row">
+										<div class="cht2-cod-cash__col cht2-cod-cash__col--label">
+											<label class="form-label form-label--default">Сдача с</label>
+										</div>
+										<div class="cht2-cod-cash__col cht2-cod-cash__col--control">
+											<div class="form-control-group form-control-group--default input-currency">
+												<span class="input-currency__text">₽</span>
+												<input type="text" class="form-control form-control--default form-control--text input-currency__control">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sktab-content__item sktab-content__item--active">
+							
+							<div class="c-notify-group">
+								<div class="c-notify c-notify--warning">
+									Ошибка
+								</div>
+							</div>
+							
+							<div class="bcards">
+								<div class="bcard-remember-container">
+									<span class="bcard-remember">
+										<label class="bcard-remember__label">
+											<input type="checkbox">
+											<span class="bcard-remember__text">Запомнить карту</span>
+										</label>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="cht2-checkout">
+					<button type="submit" class="button button--default button--order button--border-radius-m cht2-checkout__submit">
+						<span class="button__text">Оплатить</span>
+					</button>
+					<div class="cht2-rules">
+						<div class="cht2-rules-group">
+							<p>
+								Нажимая эту кнопку, я соглашаюсь с <a href="/регион/delivery/" class="cht2-rules-link">правилами доставки</a> и <a href="/регион/license/" class="cht2-rules-link">политикой обработки моих персональных данных</a>.
+							</p>
+						</div>
+
+						<div class="cht2-rules-group">
+							<label class="cht2-rules-label-check">
+								<input type="checkbox">
+								<span class="cht2-rules-label-check__text">Я соглашаюсь получать рассылку новостей и акций</span>
+							</label>						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
