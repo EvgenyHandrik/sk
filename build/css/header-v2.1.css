@@ -345,7 +345,8 @@
 .header-v2--mobile .h-nav__bonus {
   position: relative;
   display: block;
-  padding: 15px 15px 0 15px;
+  padding: 15px;
+  border-bottom: 1px solid #f0f0f0;
 }
 
 .header-v2--fixed .h-nav {
@@ -463,11 +464,6 @@
 
 .h-nav-l1__button:hover:after {
   border-top-color: #bb1018;
-}
-
-.header-v2--mobile .h-nav-l1__list {
-  margin-top: 15px;
-  border-top: 1px solid #f0f0f0;
 }
 
 .header-v2--fixed .h-nav-l1__list {
@@ -1146,7 +1142,12 @@
   .header-v2--mobile .h-nav__phone {
     position: relative;
     display: block;
-    padding: 15px 15px 0 15px;
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .header-v2--mobile .h-nav__bonus {
+    padding-bottom: 0;
     border-bottom: 0;
   }
 
