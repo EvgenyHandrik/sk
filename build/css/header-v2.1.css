@@ -1200,16 +1200,6 @@
     font-size: 12px;
   }
 
-  .header-v2--mobile .h-nav__acc {
-    margin-top: 15px;
-    border-top: 1px solid #f0f0f0;
-  }
-
-  .header-v2--mobile .h-nav-l1__list {
-    margin-top: 0;
-    border-top: 0;
-  }
-
   .h-soc {
     display: none;
   }
