@@ -51,24 +51,33 @@
 	/* -- */
 	
 	&__name {
+		white-space: nowrap;
 
-		@media (max-width: 700px) {
-			display: block;
+		&:before {
+			$icon-size: 22px;
+
+			content: '';
+			display: inline-block;
+			width: $icon-size;
+			height: $icon-size;
+			margin-right: 10px;
+			vertical-align: middle;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: $icon-size $icon-size;
+			background-image: img('ico-coin-stack-flat-red-30x30.svg');
 		}
 	}
 	
 	&__value {
+		margin-right: 10px;
 		font-weight: bold;
 	}
 
 	&__info-rate {
-		margin: 0 0 0 10px;
 		font-size: 12px;
+		white-space: nowrap;
 		color: #a5a5a5;
-
-		@media (max-width: 700px) {
-			margin-left: 5px;
-		}
 	}
 }
 

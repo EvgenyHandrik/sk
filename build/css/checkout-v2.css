@@ -729,13 +729,31 @@
   padding-left: 0;
 }
 
+.cht2-bonus-total__name {
+  white-space: nowrap;
+}
+
+.cht2-bonus-total__name:before {
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+  vertical-align: middle;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 22px 22px;
+  background-image: url("../images/ico-coin-stack-flat-red-30x30.svg");
+}
+
 .cht2-bonus-total__value {
+  margin-right: 10px;
   font-weight: bold;
 }
 
 .cht2-bonus-total__info-rate {
-  margin: 0 0 0 10px;
   font-size: 12px;
+  white-space: nowrap;
   color: #a5a5a5;
 }
 
@@ -749,11 +767,11 @@
 }
 
 .cht2-summary {
-  margin: 50px 0 30px 0;
+  margin: 50px 0 35px 0;
 }
 
 .cht2-summary-total {
-  margin: 0 0 15px 0;
+  margin: 0 0 25px 0;
   font-weight: bold;
   font-size: 24px;
 }
@@ -772,6 +790,20 @@
   border-radius: 50px;
   color: #fff;
   background-color: #da5848;
+}
+
+.cht2-summary-stat {
+  margin: -5px 0 30px 0;
+}
+
+.cht2-summary-stat__item {
+  line-height: 1.4;
+  font-size: 13px;
+  margin: 0 0 10px 0;
+}
+
+.cht2-summary-stat__item:last-child {
+  margin-bottom: 0;
 }
 
 .cht2-cod-types {
@@ -1146,14 +1178,6 @@
 
   .cht2-pickup-date__hours-box .jq-selectbox__select-text {
     font-size: 14px;
-  }
-
-  .cht2-bonus-total__name {
-    display: block;
-  }
-
-  .cht2-bonus-total__info-rate {
-    margin-left: 5px;
   }
 
   .cht2-bcard-add {
