@@ -1,39 +1,63 @@
 .h-nav-phone {
-	
+	@include header-bp-tablet() {
+		display: block;
+		border: 0;
+
+		&:hover {
+			.h-nav__phone-num {
+				color: $color-red-active;
+				border-bottom-color: $color-red-active;
+			}
+		}
+
+		&__title {
+			display: block;
+			line-height: 1.2;
+			margin: 0 0 2px 0;
+			font-size: 13px;
+			color: #a5a5a5;
+		}
+
+		&__num {
+			font-size: 15px;
+			color: $color-red;
+			border-bottom: 1px solid $color-red;
+		}
+	}
 }
 
 .header-v2 {
 	&--mobile {
 		.h-nav-phone {
-			@media (max-width: 768px) {
-				display: block;
-				border: 0;
+			// @media (max-width: 768px) {
+			// 	display: block;
+			// 	border: 0;
 
-				&:hover {
-					.h-nav__phone-num {
-						color: $color-red-active;
-						border-bottom-color: $color-red-active;
-					}
-				}
-			}
+			// 	&:hover {
+			// 		.h-nav__phone-num {
+			// 			color: $color-red-active;
+			// 			border-bottom-color: $color-red-active;
+			// 		}
+			// 	}
+			// }
 
-			&__title {
-				@media (max-width: 768px) {
-					display: block;
-					line-height: 1.2;
-					margin: 0 0 2px 0;
-					font-size: 13px;
-					color: #a5a5a5;
-				}
-			}
+			// &__title {
+			// 	@media (max-width: 768px) {
+			// 		display: block;
+			// 		line-height: 1.2;
+			// 		margin: 0 0 2px 0;
+			// 		font-size: 13px;
+			// 		color: #a5a5a5;
+			// 	}
+			// }
 
-			&__num {
-				@media (max-width: 768px) {
-					font-size: 15px;
-					color: $color-red;
-					border-bottom: 1px solid $color-red;
-				}
-			}
+			// &__num {
+			// 	@media (max-width: 768px) {
+			// 		font-size: 15px;
+			// 		color: $color-red;
+			// 		border-bottom: 1px solid $color-red;
+			// 	}
+			// }
 		}
 	}
 }

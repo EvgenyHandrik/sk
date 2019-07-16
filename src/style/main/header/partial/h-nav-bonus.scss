@@ -1,44 +1,78 @@
 .h-nav-bonus {
+	display: block;
+	width: 100%;
+	padding: 0;
+	text-align: left;
+	background-color: transparent;
 
+	&__total {
+		margin: 0;
+
+		&-spinner {
+			@include spinner-grey();
+			margin: 0 5px 0 0;
+		}
+
+		&-badge {
+			display: inline-block;
+			line-height: 1;
+			padding: 3px 5px;
+			margin: 0 5px 0 0;
+			font-size: 12px;
+			border-radius: 50px;
+			color: #fff;
+			background-color: #da5848;
+		}
+
+		&-text {
+			font-size: 13px;
+			color: $color-grey-light;
+		}
+	}
+
+	&__qr {
+		font-size: 15px;
+		border-bottom: 1px dashed #000;
+	}
 }
 
 .header-v2 {
 	&--mobile {
 		.h-nav-bonus {
-			display: block;
-			width: 100%;
-			padding: 0;
-			text-align: left;
-			background-color: transparent;
+			// display: block;
+			// width: 100%;
+			// padding: 0;
+			// text-align: left;
+			// background-color: transparent;
 
 			&__total {
-				margin: 0;
+				// margin: 0;
 			}
 
 			&__total-spinner {
-				@include spinner-grey();
-				margin: 0 5px 0 0;
+				// @include spinner-grey();
+				// margin: 0 5px 0 0;
 			}
 
 			&__total-badge {
-				display: inline-block;
-				line-height: 1;
-				padding: 3px 5px;
-				margin: 0 5px 0 0;
-				font-size: 12px;
-				border-radius: 50px;
-				color: #fff;
-				background-color: #da5848;
+				// display: inline-block;
+				// line-height: 1;
+				// padding: 3px 5px;
+				// margin: 0 5px 0 0;
+				// font-size: 12px;
+				// border-radius: 50px;
+				// color: #fff;
+				// background-color: #da5848;
 			}
 
 			&__total-text {
-				font-size: 13px;
-				color: $color-grey-light;
+				// font-size: 13px;
+				// color: $color-grey-light;
 			}
 
 			&__qr {
-				font-size: 15px;
-				border-bottom: 1px dashed #000;
+				// font-size: 15px;
+				// border-bottom: 1px dashed #000;
 			}
 		}
 	}

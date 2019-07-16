@@ -28,14 +28,20 @@
 			content: ' ';
 		}
 	}
-}
 
-.header-v2 {
-	&--mobile {
-		.h-phone {
-			@media (max-width: 768px) {
-				display: none;
-			}
-		}
+	/* -- */
+
+	@include header-bp-tablet() {
+		display: none;
 	}
 }
+
+// .header-v2 {
+// 	&--mobile {
+// 		.h-phone {
+// 			@media (max-width: 768px) {
+// 				display: none;
+// 			}
+// 		}
+// 	}
+// }

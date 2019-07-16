@@ -21,11 +21,7 @@ $h-menu-v2-more-left-space-mobile: 15px;
 			&--more {
 				.h-menu-v2-main {
 					padding-right: $h-menu-v2-more-toggle-width + $h-menu-v2-more-left-space;
-
-					@media (max-width: 520px) {
-						padding-right: $h-menu-v2-more-toggle-width-mobile + $h-menu-v2-more-left-space-mobile;
-					}
-				}				
+				}
 			}
 		}
 
@@ -35,6 +31,13 @@ $h-menu-v2-more-left-space-mobile: 15px;
 				padding-left: 10px;
 			}
 		}
+	}
+
+	/* -- */
+
+	@include header-bp-laptop() {
+		padding-right: 0;
+		padding-left: 0;
 	}
 
 	/* -- */
@@ -49,6 +52,10 @@ $h-menu-v2-more-left-space-mobile: 15px;
 	&--more {
 		.h-menu-v2-main {
 			padding-right: $h-menu-v2-more-toggle-width + $h-menu-v2-more-left-space;
+
+			@include header-bp-mobile() {
+				padding-right: $h-menu-v2-more-toggle-width-mobile + $h-menu-v2-more-left-space-mobile;
+			}
 		}
 
 		.h-menu-v2-more {
@@ -64,6 +71,15 @@ $h-menu-v2-more-left-space-mobile: 15px;
 }
 
 .h-menu-v2-main {
+
+	/* -- */
+
+	@include header-bp-laptop() {
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+
+	/* -- */
 
 	&__scroll-wrapper {
 		height: $h-menu-v2-height;
@@ -84,7 +100,7 @@ $h-menu-v2-more-left-space-mobile: 15px;
 		display: flex;
 		justify-content: space-between;
 
-		@media (max-width: 520px) {
+		@include header-bp-mobile() {
 			justify-content: space-around;
 		}
 
@@ -96,7 +112,7 @@ $h-menu-v2-more-left-space-mobile: 15px;
 
 			/* -- */
 
-			@media (max-width: 520px) {
+			@include header-bp-mobile() {
 				padding-left: $h-menu-v2-main-item-space-h-mobile;
 			}
 
@@ -158,7 +174,7 @@ $h-menu-v2-more-left-space-mobile: 15px;
 
 		/* -- */
 
-		@media (max-width: 520px) {
+		@include header-bp-mobile() {
 			width: $h-menu-v2-more-toggle-width-mobile;
 		}
 

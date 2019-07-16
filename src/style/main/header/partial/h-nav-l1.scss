@@ -11,7 +11,7 @@
 
 	&__item {
 		position: relative;
-		margin: 0 0 0 20px;
+		margin: 0 0 0 15px;
 
 		&:first-child {
 			margin-left: 0;
@@ -43,6 +43,7 @@
 		font-size: 20px;
 		border-bottom: 0;
 		color: #000;
+		@include transition((color));
 
 		&:hover {
 			border-bottom: 0;
@@ -51,6 +52,86 @@
 			&:after {
 				border-top-color: #bb1018;
 			}
+		}
+	}
+
+	/* -- */
+
+	@at-root .header-v2--fixed .h-nav-l1 {
+		&__list {
+			display: block;
+		}
+
+		&__item {
+			margin: 0;
+
+			&--has-subnav {
+				.h-nav-l1 {
+					&__button {
+						display: none;
+					}
+				}
+
+				.h-nav-l2 {
+					display: block;
+					position: static;
+					width: auto;
+					box-shadow: none;
+					border-radius: 0;
+					background-color: transparent;
+
+					&__title {
+						display: none;
+					}
+				}
+			}
+		}
+
+		&__button {
+			display: block;
+			padding: 7px 15px;
+			margin: 0;
+			border-bottom: 1px solid #f0f0f0;
+		}
+	}
+
+	/* -- */
+
+	@include header-bp-laptop() {
+		&__list {
+			display: block;
+		}
+
+		&__item {
+			margin: 0;
+
+			&--has-subnav {
+				.h-nav-l1 {
+					&__button {
+						display: none;
+					}
+				}
+
+				.h-nav-l2 {
+					display: block;
+					position: static;
+					width: auto;
+					box-shadow: none;
+					border-radius: 0;
+					background-color: transparent;
+
+					&__title {
+						display: none;
+					}
+				}
+			}
+		}
+
+		&__button {
+			display: block;
+			padding: 7px 15px;
+			margin: 0;
+			border-bottom: 1px solid #f0f0f0;
 		}
 	}
 }
@@ -65,43 +146,43 @@
 		}
 	}
 
-	&--fixed {
-		.h-nav-l1 {
-			&__list {
-				display: block;
-			}
-		}
-	}
+	// &--fixed {
+	// 	.h-nav-l1 {
+	// 		&__list {
+	// 			display: block;
+	// 		}
+	// 	}
+	// }
 }
 
 .header-v2--fixed .h-nav-l1__item {
-	margin: 0;
+	// margin: 0;
 }
 
 .header-v2--fixed .h-nav-l1__button {
-	display: block;
-	padding: 7px 15px;
-	margin: 0;
-	border-bottom: 1px solid #f0f0f0;
+	// display: block;
+	// padding: 7px 15px;
+	// margin: 0;
+	// border-bottom: 1px solid #f0f0f0;
 }
 
 .header-v2--fixed .h-nav-l1__item--has-subnav .h-nav-l1__button {
-	display: none;
+	// display: none;
 }
 
 .header-v2--fixed .h-nav-l1__item--has-subnav .h-nav-l2__title {
-	display: none;
+	// display: none;
 }
 
 /* v2.2 start */
 
 	.header-v2--fixed .h-nav-l1__item--has-subnav .h-nav-l2 {
-		display: block;
-		position: static;
-		width: auto;
-		box-shadow: none;
-		border-radius: 0;
-		background-color: transparent;
+		// display: block;
+		// position: static;
+		// width: auto;
+		// box-shadow: none;
+		// border-radius: 0;
+		// background-color: transparent;
 	}
 
 /* v2.2 end */

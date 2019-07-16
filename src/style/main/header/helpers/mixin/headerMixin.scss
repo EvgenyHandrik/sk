@@ -3,3 +3,21 @@
 		@content;
 	}
 }
+
+@mixin header-bp-laptop() {
+	@media (max-width: $header-bp-laptop) {
+		@content;
+	}
+}
+
+@mixin header-bp-tablet() {
+	@media (max-width: $header-bp-tablet) {
+		@content;
+	}
+}
+
+@mixin header-bp-mobile() {
+	@media (max-width: $header-bp-mobile) {
+		@content;
+	}
+}

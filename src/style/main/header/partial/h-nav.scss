@@ -11,6 +11,65 @@
 	}
 
 	&__acc {}
+
+	/* -- */
+
+	@at-root .header-v2--fixed .h-nav {
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 220px;
+		border-radius: 0 0 5px 5px;
+		box-shadow: 0 2px 7px rgba(0,0,0,0.11);
+		background-color: #fff;
+		overflow: hidden;
+
+		&--open {
+			display: block;
+		}
+	}
+
+	/* -- */
+
+	@include header-bp-laptop() {
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 220px;
+		border-radius: 0 0 5px 5px;
+		box-shadow: 0 2px 7px rgba(0,0,0,0.11);
+		background-color: #fff;
+		overflow: hidden;
+
+		&--open {
+			display: block;
+		}
+
+		/* -- */
+
+		&__bonus {
+			position: relative;
+			display: block;
+			padding: 15px;
+			border-bottom: 1px solid #f0f0f0;
+		}
+	}
+
+	@include header-bp-tablet() {
+		&__phone {
+			position: relative;
+			display: block;
+			padding: 15px;
+			border-bottom: 1px solid #f0f0f0;
+		}
+
+		&__bonus {
+			padding-bottom: 0;
+			border-bottom: 0;
+		}
+	}
 }
 
 .header-v2 {
@@ -18,22 +77,22 @@
 		.h-nav {
 			&__phone {
 				@media (max-width: 768px) {
-					position: relative;
-					display: block;
-					padding: 15px;
-					border-bottom: 1px solid #f0f0f0;
+					// position: relative;
+					// display: block;
+					// padding: 15px;
+					// border-bottom: 1px solid #f0f0f0;
 				}
 			}
 
 			&__bonus {
-				position: relative;
-				display: block;
-				padding: 15px;
-				border-bottom: 1px solid #f0f0f0;
+				// position: relative;
+				// display: block;
+				// padding: 15px;
+				// border-bottom: 1px solid #f0f0f0;
 
 				@media (max-width: 768px) {
-					padding-bottom: 0;
-					border-bottom: 0;
+					// padding-bottom: 0;
+					// border-bottom: 0;
 				}
 			}
 		}
@@ -41,19 +100,19 @@
 
 	&--fixed {
 		.h-nav {
-			display: none;
-			position: absolute;
-			top: 100%;
-			left: 0;
-			width: 220px;
-			border-radius: 0 0 5px 5px;
-			box-shadow: 0 2px 7px rgba(0,0,0,0.11);
-			background-color: #fff;
-			overflow: hidden;
+			// display: none;
+			// position: absolute;
+			// top: 100%;
+			// left: 0;
+			// width: 220px;
+			// border-radius: 0 0 5px 5px;
+			// box-shadow: 0 2px 7px rgba(0,0,0,0.11);
+			// background-color: #fff;
+			// overflow: hidden;
 
-			&--open {
-				display: block;
-			}
+			// &--open {
+			// 	display: block;
+			// }
 		}
 	}
 }
