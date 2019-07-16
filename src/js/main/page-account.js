@@ -305,12 +305,22 @@
 	var $current = $();
 	
 	$container
+		.on('click.history-detail-open', '.acc-history--short', function(e) {
+			if ($(e.target).closest('.acc-history__detail-toggle', e.currentTarget).length < 1) {
+				toggleHandler(this);
+			}
+		})
 		.on('click.history-detail-toggle', '.acc-history__detail-toggle', function() {
-			var $target = $(this);
-			var $history = $target.closest('.acc-history');
-			toggleDetail($history);
-			$(window).trigger('resize');
+			toggleHandler(this);
 		});
+	
+	function toggleHandler(target) {
+		var $target = $(target);
+		var $history = $target.closest('.acc-history');
+
+		toggleDetail($history);
+		$(window).trigger('resize');
+	}
 
 	function toggleDetail($history) {
 		if ($history.hasClass('acc-history--detail')) {
@@ -322,13 +332,17 @@
 
 	function openDetail($history) {
 		closeDetail();
-		$history.addClass('acc-history--detail');
+		$history
+			.removeClass('acc-history--short')
+			.addClass('acc-history--detail');
 		$current = $history;
 	}
 
 	function closeDetail() {
 		if ($current.length) {
-			$current.removeClass('acc-history--detail');
+			$current
+				.removeClass('acc-history--detail')
+				.addClass('acc-history--short');
 		}
 	}
 

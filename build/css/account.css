@@ -1824,15 +1824,6 @@
 
 .acc-history__box--order-number .acc-history__value {
   color: #a5a5a5;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 200ms;
-  transition-duration: 200ms;
-  cursor: pointer;
-}
-
-.acc-history__box--order-number .acc-history__value:hover {
-  color: #bb1018;
 }
 
 .acc-history__box--date {
@@ -1857,6 +1848,10 @@
 }
 
 .acc-history__box--bonuses {
+  display: none;
+}
+
+.acc-history__box--stat {
   display: none;
 }
 
@@ -1900,9 +1895,9 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 13px 13px;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%) rotate(90deg);
+  -ms-transform: translate(-50%, -50%) rotate(90deg);
+  transform: translate(-50%, -50%) rotate(90deg);
   -webkit-transition-property: opacity;
   transition-property: opacity;
   -webkit-transition-duration: 200ms;
@@ -1911,12 +1906,12 @@
 
 .acc-history__detail-open:before {
   opacity: 0.2;
-  background-image: url(../images/ico-search-black-30x30.svg);
+  background-image: url(../images/ico-arr-r-md-black-30x30.svg);
 }
 
 .acc-history__detail-open:after {
   opacity: 0;
-  background-image: url(../images/ico-search-red-30x30.svg);
+  background-image: url(../images/ico-arr-r-md-red-30x30.svg);
 }
 
 .acc-history__detail-main {
@@ -1930,11 +1925,15 @@
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
 }
 
+.acc-history__detail-main:last-child {
+  margin-bottom: 0;
+}
+
 .acc-history__detail-close {
   position: absolute;
   top: 5px;
   right: 18px;
-  display: block;
+  display: none;
   width: 25px;
   height: 25px;
   color: transparent;
@@ -1987,13 +1986,37 @@
   opacity: 0;
 }
 
+.acc-history--short {
+  cursor: pointer;
+}
+
+.acc-history--short .acc-history__box--order-number .acc-history__value {
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+}
+
+.acc-history--short:hover .acc-history__box--order-number .acc-history__value {
+  color: #000;
+}
+
 .acc-history--detail {
+  position: relative;
   display: block;
   width: auto;
 }
 
 .acc-history--detail .acc-history__name {
   display: inline;
+  font-weight: bold;
+}
+
+.acc-history--detail .acc-history__detail-open:before,
+.acc-history--detail .acc-history__detail-open:after {
+  -webkit-transform: translate(-50%, -50%) rotate(-90deg);
+  -ms-transform: translate(-50%, -50%) rotate(-90deg);
+  transform: translate(-50%, -50%) rotate(-90deg);
 }
 
 .acc-history--detail .acc-history__box {
@@ -2002,28 +2025,26 @@
 }
 
 .acc-history--detail .acc-history__box--order-number {
-  margin-top: 15px;
+  padding-top: 15px;
+  padding-right: 30px;
   margin-bottom: 10px;
+  font-size: 15px;
+  cursor: pointer;
 }
 
 .acc-history--detail .acc-history__box--order-number .acc-history__name {
-  display: none;
+  font-weight: bold;
 }
 
 .acc-history--detail .acc-history__box--order-number .acc-history__value {
-  font-weight: bold;
   color: #000;
-}
-
-.acc-history--detail .acc-history__box--order-number .acc-history__value:hover {
-  color: #bb1018;
 }
 
 .acc-history--detail .acc-history__box--date {
   width: auto;
   line-height: 1.3;
-  margin-bottom: 6px;
-  font-size: 13px;
+  margin-bottom: 10px;
+  font-size: 15px;
   text-align: left;
 }
 
@@ -2031,23 +2052,47 @@
   line-height: 1.3;
   min-width: 0px;
   max-width: 100%;
-  margin-bottom: 15px;
-  font-size: 13px;
+  margin-bottom: 10px;
+  font-size: 15px;
   text-align: left;
 }
 
+.acc-history--detail .acc-history__box--total .acc-rub {
+  color: #000;
+}
+
 .acc-history--detail .acc-history__box--detail-open {
-  display: none;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  min-width: 25px;
 }
 
 .acc-history--detail .acc-history__box--detail {
   display: block;
+  margin-top: 20px;
   margin-bottom: 15px;
 }
 
 .acc-history--detail .acc-history__box--bonuses {
   display: block;
   margin-bottom: 15px;
+}
+
+.acc-history--detail .acc-history__box--stat {
+  display: block;
+  margin-top: 15px;
+}
+
+.acc-history-stat__item {
+  line-height: 1.4;
+  font-size: 12px;
+  margin-bottom: 5px;
+  color: #a5a5a5;
+}
+
+.acc-history-stat__item:last-child {
+  margin-bottom: 0;
 }
 
 .acc-history-detail {
@@ -2113,13 +2158,12 @@
 }
 
 .acc-history-bonus {
-  margin: 0 0 17px 0;
   font-size: 1px;
 }
 
 .acc-history-bonus__title {
   display: inline-block;
-  font-size: 13px;
+  font-size: 12px;
   vertical-align: middle;
 }
 
@@ -2129,9 +2173,10 @@
   line-height: 1;
   padding: 3px 8px;
   margin: 0 0 0 5px;
-  font-size: 13px;
+  font-size: 12px;
   vertical-align: middle;
   border-radius: 50px;
+  color: #000;
   background-color: #f0f0f0;
 }
 
@@ -2191,7 +2236,7 @@
   padding: 5px 5px;
   font-size: 14px;
   text-align: center;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 .acc-address-form .form-label--default {
