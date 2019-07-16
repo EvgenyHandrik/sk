@@ -776,20 +776,25 @@
   font-size: 24px;
 }
 
-.cht2-summary-bonus {
-  font-size: 13px;
-}
-
-.cht2-summary-bonus__number {
+.cht2-summary-bonus__number,
+.cht2-summary-bonus__plus,
+.cht2-summary-bonus__minus {
   display: inline-block;
   line-height: 1;
   padding: 5px 10px;
   margin: 0 0 0 5px;
-  font-weight: bold;
   vertical-align: middle;
   border-radius: 50px;
+}
+
+.cht2-summary-bonus__number,
+.cht2-summary-bonus__plus {
   color: #fff;
   background-color: #da5848;
+}
+
+.cht2-summary-bonus__minus {
+  background-color: #f0f0f0;
 }
 
 .cht2-summary-stat {
