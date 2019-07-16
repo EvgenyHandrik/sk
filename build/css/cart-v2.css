@@ -679,6 +679,20 @@ a.crt2-dish__name:hover {
   font-weight: normal;
 }
 
+.crt2-summary-stat {
+  margin: -10px 0 30px 0;
+}
+
+.crt2-summary-stat__item {
+  line-height: 1.4;
+  font-size: 13px;
+  margin: 0 0 10px 0;
+}
+
+.crt2-summary-stat__item:last-child {
+  margin-bottom: 0;
+}
+
 .crt2-recommended {
   margin: 0 0 35px 0;
   /* -- */
