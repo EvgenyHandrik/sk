@@ -439,6 +439,11 @@ a.crt2-dish__name:hover {
   background-image: url(../images/ico-plus-circle-flat-grey-24x24.svg);
 }
 
+.crt2-dish__ingredients:hover {
+  border: 0;
+  color: #000;
+}
+
 .crt2-dish__ingredients--has-ingredients:before {
   background-image: url(../images/ico-plus-circle-flat-red-orange-24x24.svg);
 }

@@ -191,6 +191,11 @@
 			background-image: url(../images/ico-plus-circle-flat-grey-24x24.svg);
 		}
 
+		&:hover {
+			border: 0;
+			color: #000;
+		}
+
 		&--has-ingredients {
 			&:before {
 				background-image: url(../images/ico-plus-circle-flat-red-orange-24x24.svg);
