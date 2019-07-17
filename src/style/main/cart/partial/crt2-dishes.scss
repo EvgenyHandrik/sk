@@ -170,6 +170,34 @@
 		}
 	}
 
+	&__ingredients {
+		display: inline-block;
+		font-size: 13px;
+		border: 0;
+		color: $color-grey-light;
+
+		&:before {
+			$icon-size: 15px;
+	
+			content: '';
+			display: inline-block;
+			width: $icon-size;
+			height: $icon-size;
+			margin: 0 5px 0 0;
+			vertical-align: middle;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: $icon-size $icon-size;
+			background-image: url(../images/ico-plus-circle-flat-grey-24x24.svg);
+		}
+
+		&--has-ingredients {
+			&:before {
+				background-image: url(../images/ico-plus-circle-flat-red-orange-24x24.svg);
+			}
+		}
+	}
+
 	/* -- */
 
 	&__count-box {

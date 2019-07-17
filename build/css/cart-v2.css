@@ -419,6 +419,30 @@ a.crt2-dish__name:hover {
   background-image: url(../images/ico-plus-circle-flat-red-orange-24x24.svg);
 }
 
+.crt2-dish__ingredients {
+  display: inline-block;
+  font-size: 13px;
+  border: 0;
+  color: #a5a5a5;
+}
+
+.crt2-dish__ingredients:before {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0 5px 0 0;
+  vertical-align: middle;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-image: url(../images/ico-plus-circle-flat-grey-24x24.svg);
+}
+
+.crt2-dish__ingredients--has-ingredients:before {
+  background-image: url(../images/ico-plus-circle-flat-red-orange-24x24.svg);
+}
+
 .crt2-dish__count-box {
   min-width: 130px;
   padding-left: 15px;
