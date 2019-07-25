@@ -1,6 +1,10 @@
 .crt2-summary {
-	margin-top: 30px;
+	margin-top: 55px;
 	margin-bottom: 30px;
+
+	@media (max-width: 640px) {
+		margin-top: 45px;
+	}
 
 	&:last-child {
 		margin-bottom: 0;

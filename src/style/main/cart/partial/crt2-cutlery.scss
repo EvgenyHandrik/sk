@@ -1,41 +1,83 @@
+
 .crt2-cutlery {
-	margin: 0 0 30px 0;
-
-	&__count {
-		@media (max-width: 640px) {
-			&.count--default.count--lite {
-				.count__field {
-					font-size: 16px;
-				}
-			}			
-		}
+	
+	&.crt2-dishes {
+		margin-bottom: 45px;
 	}
-}
 
-.crt2-cutlery-form {
-	font-family: Roboto, Arimo, sans-serif;
-
-	&--default {
-		display: table;
-		max-width: 300px;
-
-		.crt2-cutlery-form__row {
-			display: table-row;
-		}
-
-		.crt2-cutlery-form__col {
-			display: table-cell;
-			padding-bottom: 15px;
-			vertical-align: top;
-
-			&--label {
-				width: 100%;
-				padding-top: 5px;
-			}
-
-			&--count {
-				padding-left: 15px;
+	.crt2-dish:last-child {
+		.crt2-dish {
+			&__image-box,
+			&__name-box,
+			&__count-box,
+			&__price-box {
+				padding-bottom: 0;
 			}
 		}
 	}
 }
+
+.crt2-cutlery-person {
+	margin-bottom: 30px;
+
+	&__label {
+		margin-right: 10px;
+		font-size: 18px;
+	}
+
+	&__count {}
+}
+
+.crt2-cutlery-toggle {
+	margin-bottom: 25px;
+
+	&__label {}
+
+	&__text {
+		margin-left: 5px;
+		font-size: 18px;
+	}
+}
+
+
+// .crt2-cutlery {
+// 	margin: 0 0 30px 0;
+
+// 	&__count {
+// 		@media (max-width: 640px) {
+// 			&.count--default.count--lite {
+// 				.count__field {
+// 					font-size: 16px;
+// 				}
+// 			}			
+// 		}
+// 	}
+// }
+
+// .crt2-cutlery-form {
+// 	font-family: Roboto, Arimo, sans-serif;
+
+// 	&--default {
+// 		display: table;
+// 		max-width: 300px;
+
+// 		.crt2-cutlery-form__row {
+// 			display: table-row;
+// 		}
+
+// 		.crt2-cutlery-form__col {
+// 			display: table-cell;
+// 			padding-bottom: 15px;
+// 			vertical-align: top;
+
+// 			&--label {
+// 				width: 100%;
+// 				padding-top: 5px;
+// 			}
+
+// 			&--count {
+// 				padding-left: 15px;
+// 			}
+// 		}
+// 	}
+// }
