@@ -242,6 +242,104 @@
   margin-left: 5px;
 }
 
+.corp-catering .cc-advantages {
+  padding: 70px 0;
+  background-color: #fafafa;
+  /* -- */
+  /* -- */
+  /* -- */
+}
+
+.corp-catering .cc-advantages__content {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.corp-catering .cc-advantages__ttl {
+  line-height: 1.2;
+  margin-bottom: 45px;
+}
+
+.corp-catering .cc-advantages__ttl-br-mobile {
+  display: none;
+}
+
+.corp-catering .cc-advantages-list {
+  max-width: 1140px;
+  margin: 60px auto 0 auto;
+  /* -- */
+  /* -- */
+}
+
+.corp-catering .cc-advantages-list__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.corp-catering .cc-advantages-list__col {
+  width: 25%;
+  margin: 0 0 0 20px;
+}
+
+.corp-catering .cc-advantages-list__col:first-child {
+  margin-left: 0;
+}
+
+.corp-catering .cc-advantage {
+  /* -- */
+}
+
+.corp-catering .cc-advantage__image {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 20px auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90px 90px;
+  /* -- */
+}
+
+.corp-catering .cc-advantage__image--sk {
+  background-image: url("../images/corp-catering-advantage-sk-red-100x100.svg");
+}
+
+.corp-catering .cc-advantage__image--dish {
+  background-image: url("../images/corp-catering-advantage-dish-red-100x100.svg");
+}
+
+.corp-catering .cc-advantage__image--chef {
+  background-image: url("../images/corp-catering-advantage-chef-red-100x100.svg");
+}
+
+.corp-catering .cc-advantage__image--gift {
+  background-image: url("../images/corp-catering-advantage-gift-red-100x100.svg");
+}
+
+.corp-catering .cc-advantage__title {
+  text-align: center;
+  /* -- */
+}
+
+.corp-catering .cc-advantage__title-start {
+  display: block;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.corp-catering .cc-advantage__title-end {
+  display: block;
+  font-size: 16px;
+}
+
+.corp-catering .cc-advantage__title-end-style {
+  font-weight: normal;
+  font-size: 16px;
+}
+
 .corp-catering .cc-price {
   /* -- */
   /* -- */
@@ -1247,6 +1345,11 @@
     padding-left: 15px;
   }
 
+  .corp-catering .cc-advantages__content {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
   .corp-catering .cc-price__content {
     padding-right: 15px;
     padding-left: 15px;
@@ -1313,6 +1416,34 @@
   }
 
   .corp-catering .cc-hero__phone {
+    font-size: 14px;
+  }
+
+  .corp-catering .cc-advantages {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .corp-catering .cc-advantages__ttl {
+    margin-bottom: 35px;
+  }
+
+  .corp-catering .cc-advantages-list {
+    margin-top: 50px;
+  }
+
+  .corp-catering .cc-advantage__image {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+    background-size: 60px 60px;
+  }
+
+  .corp-catering .cc-advantage__title-start {
+    font-size: 16px;
+  }
+
+  .corp-catering .cc-advantage__title-end {
     font-size: 14px;
   }
 
@@ -1596,6 +1727,33 @@
   }
 }
 
+@media (max-width: 800px) {
+  .corp-catering .cc-advantages {
+    padding-bottom: 55px;
+  }
+
+  .corp-catering .cc-advantages-list {
+    max-width: 550px;
+  }
+
+  .corp-catering .cc-advantages-list__row {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: -45px;
+  }
+
+  .corp-catering .cc-advantages-list__col {
+    width: 50%;
+    padding: 0 10px;
+    margin-left: 0;
+    margin-bottom: 45px;
+  }
+
+  .corp-catering .cc-advantage__image {
+    margin-bottom: 15px;
+  }
+}
+
 @media (max-width: 780px) {
   .corp-catering .cc-order-form {
     max-width: 100%;
@@ -1610,6 +1768,11 @@
 
 @media (max-width: 520px) {
   .corp-catering .cc-hero__content {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .corp-catering .cc-advantages__content {
     padding-right: 10px;
     padding-left: 10px;
   }
@@ -1692,5 +1855,77 @@
   .corp-catering .cc-contacts__content {
     padding-right: 10px;
     padding-left: 10px;
+  }
+}
+
+@media (max-width: 460px) {
+  .corp-catering .cc-advantages__ttl-br-desktop {
+    display: none;
+  }
+
+  .corp-catering .cc-advantages__ttl-br-mobile {
+    display: inline;
+  }
+
+  .corp-catering .cc-advantages-list {
+    margin-top: 45px;
+  }
+
+  .corp-catering .cc-advantages-list__row {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .corp-catering .cc-advantages-list__col {
+    width: auto;
+    padding: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+
+  .corp-catering .cc-advantage {
+    position: relative;
+    padding-left: 77px;
+    border-bottom: 1px solid #ededed;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .corp-catering .cc-advantage__image {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    width: 47px;
+    height: 47px;
+    margin-top: -23.5px;
+    background-size: 47px 47px;
+    /* -- */
+  }
+
+  .corp-catering .cc-advantage__title {
+    text-align: left;
+  }
+
+  .corp-catering .cc-advantage__title-end {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 460px) and (max-width: 460px) {
+  .corp-catering .cc-advantages-list__col:first-child .cc-advantage {
+    padding-top: 0;
+  }
+
+  .corp-catering .cc-advantages-list__col:last-child .cc-advantage {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .corp-catering .cc-advantages-list__col:first-child .cc-advantage__image {
+    margin-top: -33.5px;
+  }
+
+  .corp-catering .cc-advantages-list__col:last-child .cc-advantage__image {
+    margin-top: -13.5px;
   }
 }

@@ -1,0 +1,258 @@
+.corp-catering {
+	.cc-advantages {
+		padding: 70px 0;
+		background-color: $corp-catering-bg-color-grey-light;
+
+		/* -- */
+
+		@include corp-catering-bp-mobile() {
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+
+		@media (max-width: 800px) {
+			padding-bottom: 55px;
+		}
+
+		/* -- */
+
+		&__content {
+			@include content-all-padding-h();
+		}
+
+		&__ttl {
+			line-height: 1.2;
+			margin-bottom: 45px;
+
+			@include corp-catering-bp-mobile() {
+				margin-bottom: 35px;
+			}
+		}
+
+		&__ttl-br-desktop {
+			@media (max-width: 460px) {
+				display: none;
+			}
+		}
+
+		&__ttl-br-mobile {
+			display: none;
+
+			@media (max-width: 460px) {
+				display: inline;
+			}
+		}
+		
+		/* -- */
+
+		&-list {
+			$col-tablet-margin-bottom: 45px;
+
+			max-width: $content-desktop-width;
+			margin: 60px auto 0 auto;
+
+			/* -- */
+
+			@include corp-catering-bp-mobile {
+				margin-top: 50px;
+			}
+
+			@media (max-width: 800px) {
+				max-width: 550px;
+			}
+
+			@media (max-width: 460px) {
+				margin-top: 45px;
+			}
+
+			/* -- */
+
+			&__row {
+				display: flex;
+				justify-content: space-between;
+
+				@media (max-width: 800px) {
+					flex-wrap: wrap;
+					margin-bottom: -$col-tablet-margin-bottom;
+				}
+
+				@media (max-width: 460px) {
+					display: block;
+					margin-bottom: 0;
+				}
+			}
+
+			&__col {
+				width: 25%;
+				margin: 0 0 0 20px;
+
+				&:first-child {
+					margin-left: 0;
+				}
+
+				@media (max-width: 800px) {
+					width: 50%;
+					padding: 0 10px;
+					margin-left: 0;
+					margin-bottom: $col-tablet-margin-bottom;					
+				}
+
+				@media (max-width: 460px) {
+					width: auto;
+					padding: 0;
+					margin-bottom: 0;
+					margin-left: 0;
+				}
+			}
+		}
+	}
+
+	.cc-advantage {
+		$item-mobile-space-v: 20px;
+
+		$image-desktop-size: 90px;
+		$image-tablet-size: 60px;
+		$image-mobile-size: 47px;
+		$image-mobile-space-right: 20px;
+		$image-mobile-space-left: 10px;
+
+		
+		@media (max-width: 460px) {
+			position: relative;
+			padding-left: $image-mobile-size + $image-mobile-space-right + $image-mobile-space-left;
+
+			border-bottom: 1px solid hsb(0, 0, 93%);
+			padding-top: $item-mobile-space-v;
+			padding-bottom: $item-mobile-space-v;
+
+			@at-root .corp-catering .cc-advantages-list__col {
+				&:first-child {
+					.cc-advantage {
+						@media (max-width: 460px) {
+							padding-top: 0;
+						}						
+					}
+				}
+
+				&:last-child {
+					.cc-advantage {
+						@media (max-width: 460px) {
+							padding-bottom: 0;
+							border-bottom: 0;
+						}						
+					}
+				}
+			}
+		}
+
+		/* -- */
+
+		&__image {
+			width: $image-desktop-size;
+			height: $image-desktop-size;
+			margin: 0 auto 20px auto;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: $image-desktop-size $image-desktop-size;
+
+			@include corp-catering-bp-mobile {
+				width: $image-tablet-size;
+				height: $image-tablet-size;
+				margin-bottom: 15px;
+				background-size: $image-tablet-size $image-tablet-size;
+			}
+
+			@media(max-width: 800px) {
+				margin-bottom: 15px;
+			}
+
+			@media (max-width: 460px) {
+				$image-mobile-margin-top: -($image-mobile-size / 2);
+
+				position: absolute;
+				top: 50%;
+				left: $image-mobile-space-left;
+				width: $image-mobile-size;
+				height: $image-mobile-size;
+				margin-top: $image-mobile-margin-top;
+				background-size: $image-mobile-size $image-mobile-size;
+
+				/* -- */
+
+				@at-root .corp-catering .cc-advantages-list__col {
+					&:first-child {
+						.cc-advantage__image {
+							@media (max-width: 460px) {
+								margin-top: $image-mobile-margin-top - ($item-mobile-space-v / 2);
+							}
+						}
+					}
+	
+					&:last-child {
+						.cc-advantage__image {
+							@media (max-width: 460px) {
+								margin-top: $image-mobile-margin-top + ($item-mobile-space-v / 2);
+							}
+						}
+					}
+				}
+			}
+
+			/* -- */
+
+			&--sk {
+				background-image: img('corp-catering-advantage-sk-red-100x100.svg');
+			}
+
+			&--dish {
+				background-image: img('corp-catering-advantage-dish-red-100x100.svg');
+			}
+
+			&--chef {
+				background-image: img('corp-catering-advantage-chef-red-100x100.svg');
+			}
+
+			&--gift {
+				background-image: img('corp-catering-advantage-gift-red-100x100.svg');
+			}
+		}
+
+		&__title {
+			text-align: center;
+
+			@media (max-width: 460px) {
+				text-align: left;
+			}
+
+			/* -- */
+
+			&-start {
+				display: block;
+				font-weight: bold;
+				font-size: 20px;
+
+				@include corp-catering-bp-mobile {
+					font-size: 16px;
+				}
+			}
+
+			&-end {
+				display: block;
+				font-size: 16px;
+
+				@include corp-catering-bp-mobile {
+					font-size: 14px;
+				}
+
+				@media (max-width: 460px) {
+					font-size: 16px;
+				}
+			}
+
+			&-end-style {
+				font-weight: normal;
+				font-size: 16px;
+			}
+		}
+	}
+}
