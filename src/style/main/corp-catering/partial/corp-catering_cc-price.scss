@@ -45,7 +45,7 @@
 		/* -- */
 
 		&-list {
-			width: $cc-price-list-desktop-width;
+			width: $cc-price-list-desktop-width + $content-laptop-margin-h * 2;
 			margin: 0 auto 60px auto;
 
 			@include corp-catering-bp-mobile() {
@@ -73,7 +73,7 @@
 			}
 
 			&__scroll-content {
-				width: $cc-price-list-desktop-width;
+				width: $cc-price-list-desktop-width + $content-laptop-margin-h * 2;
 
 				@include corp-catering-bp-mobile() {
 					width: $cc-price-list-mobile-width + $content-laptop-margin-h * 2;
