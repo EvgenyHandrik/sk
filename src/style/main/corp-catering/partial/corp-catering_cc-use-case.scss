@@ -146,6 +146,21 @@
 					}
 				}
 			}
+
+			/* -- */
+
+			&__phone {
+				text-decoration: none;
+				white-space: nowrap;
+				border: 0;
+				color: #8c7e7e;
+
+				&:hover {
+					text-decoration: none;
+					border: 0;
+					color: #8c7e7e;
+				}
+			}
 		}
 	}
 }
