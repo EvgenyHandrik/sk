@@ -10,6 +10,38 @@
 			@include content-all-padding-h();
 		}
 
+		&__ttl {
+
+			/* -- */
+
+			&-br-mobile {
+				display: none;
+
+				@media (max-width: 640px) {
+					display: inline;
+				}
+			}
+		}
+
+		&__subttl {
+
+			/* -- */
+
+			&-br-desktop {
+				@media (max-width: 640px) {
+					display: none;
+				}
+			}
+
+			&-br-mobile {
+				display: none;
+
+				@media (max-width: 640px) {
+					display: inline;
+				}
+			}
+		}
+
 		/* -- */
 
 		&-form {

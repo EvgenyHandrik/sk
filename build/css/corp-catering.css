@@ -28,7 +28,7 @@
 
 .corp-catering .cc-ttl--1 {
   display: block;
-  line-height: 1.1;
+  line-height: 1.2;
   margin-bottom: 20px;
   text-align: center;
   font-family: CoreRhinoBlack;
@@ -182,11 +182,17 @@
 
 .corp-catering .cc-hero__ttl {
   display: block;
+  line-height: 1.3;
   padding: 0;
   margin: 0 0 40px 0;
   font-family: CoreRhinoBlack;
   font-weight: normal;
   font-size: 45px;
+  /* -- */
+}
+
+.corp-catering .cc-hero__ttl-br-mobile {
+  display: none;
 }
 
 .corp-catering .cc-hero__subttl {
@@ -195,6 +201,7 @@
   padding-bottom: 20px;
   margin: 0 0 50px 0;
   font-size: 25px;
+  /* -- */
   /* -- */
   /* -- */
 }
@@ -209,6 +216,10 @@
   height: 3px;
   margin-left: -25px;
   background-color: #fff;
+}
+
+.corp-catering .cc-hero__subttl-br-mobile {
+  display: none;
 }
 
 .corp-catering .cc-hero__phone {
@@ -256,7 +267,6 @@
 }
 
 .corp-catering .cc-advantages__ttl {
-  line-height: 1.2;
   margin-bottom: 45px;
 }
 
@@ -266,7 +276,7 @@
 
 .corp-catering .cc-advantages-list {
   max-width: 1140px;
-  margin: 60px auto 0 auto;
+  margin: 65px auto 0 auto;
   /* -- */
   /* -- */
 }
@@ -451,7 +461,11 @@
 }
 
 .corp-catering .cc-price__ttl {
-  margin-bottom: 45px;
+  margin-bottom: 50px;
+}
+
+.corp-catering .cc-price__ttl-br-mobile {
+  display: none;
 }
 
 .corp-catering .cc-price-list {
@@ -589,6 +603,7 @@
 }
 
 .corp-catering .cc-menu__ttl {
+  line-height: 1.1;
   margin-bottom: 15px;
 }
 
@@ -1070,6 +1085,14 @@
   padding-left: 20px;
 }
 
+.corp-catering .cc-free__ttl {
+  /* -- */
+}
+
+.corp-catering .cc-free__ttl-br-mobile {
+  display: none;
+}
+
 .corp-catering .cc-free-list {
   max-width: 1140px;
   margin: 0 auto;
@@ -1117,6 +1140,22 @@
 .corp-catering .cc-order__content {
   padding-right: 20px;
   padding-left: 20px;
+}
+
+.corp-catering .cc-order__ttl {
+  /* -- */
+}
+
+.corp-catering .cc-order__ttl-br-mobile {
+  display: none;
+}
+
+.corp-catering .cc-order__subttl {
+  /* -- */
+}
+
+.corp-catering .cc-order__subttl-br-mobile {
+  display: none;
 }
 
 .corp-catering .cc-order-form {
@@ -1435,6 +1474,12 @@
   }
 }
 
+@media (max-width: 1140px) {
+  .corp-catering .cc-hero__ttl-br-mobile {
+    display: inline;
+  }
+}
+
 @media (max-width: 1024px) {
   .corp-catering .cc-hero__content {
     padding-right: 15px;
@@ -1572,13 +1617,12 @@
   }
 
   .corp-catering .cc-use-case-steps__item:after {
-    top: 22px;
+    top: 24px;
     bottom: 2px;
     left: 12px;
-    width: 1px;
-    margin-left: 0;
-    background-image: none;
-    background-color: #bb1018;
+    width: 2px;
+    margin-left: -1px;
+    background-image: url("../images/dot-2x6-red-active.svg");
   }
 
   .corp-catering .cc-price__content {
@@ -1899,6 +1943,26 @@
     padding-bottom: 25px;
     font-weight: normal;
   }
+
+  .corp-catering .cc-price__ttl-br-mobile {
+    display: inline;
+  }
+
+  .corp-catering .cc-free__ttl-br-mobile {
+    display: inline;
+  }
+
+  .corp-catering .cc-order__ttl-br-mobile {
+    display: inline;
+  }
+
+  .corp-catering .cc-order__subttl-br-desktop {
+    display: none;
+  }
+
+  .corp-catering .cc-order__subttl-br-mobile {
+    display: inline;
+  }
 }
 
 @media (max-width: 630px) {
@@ -2004,26 +2068,11 @@
   }
 }
 
-@media (max-width: 460px) and (max-width: 460px) {
-  .corp-catering .cc-advantages-list__col:first-child .cc-advantage {
-    padding-top: 0;
-  }
-
-  .corp-catering .cc-advantages-list__col:last-child .cc-advantage {
-    padding-bottom: 0;
-    border-bottom: 0;
-  }
-
-  .corp-catering .cc-advantages-list__col:first-child .cc-advantage__image {
-    margin-top: -33.5px;
-  }
-
-  .corp-catering .cc-advantages-list__col:last-child .cc-advantage__image {
-    margin-top: -13.5px;
-  }
-}
-
 @media (max-width: 460px) {
+  .corp-catering .cc-hero__subttl-br-mobile {
+    display: inline;
+  }
+
   .corp-catering .cc-advantages__ttl-br-desktop {
     display: none;
   }
@@ -2073,5 +2122,24 @@
 
   .corp-catering .cc-advantage__title-end {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 460px) and (max-width: 460px) {
+  .corp-catering .cc-advantages-list__col:first-child .cc-advantage {
+    padding-top: 0;
+  }
+
+  .corp-catering .cc-advantages-list__col:last-child .cc-advantage {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .corp-catering .cc-advantages-list__col:first-child .cc-advantage__image {
+    margin-top: -33.5px;
+  }
+
+  .corp-catering .cc-advantages-list__col:last-child .cc-advantage__image {
+    margin-top: -13.5px;
   }
 }

@@ -127,13 +127,12 @@
 					/* -- */
 
 					@media (max-width: $use-case-bp-mobile) {
-						top: $step-circle-mobile-size - $step-circle-mobile-offset;
-						bottom: $step-circle-mobile-offset;
+						top: $step-circle-mobile-size - $step-circle-mobile-offset + 2px;
+						bottom: $step-circle-mobile-offset + 0px;
 						left: $step-circle-mobile-size / 2;
-						width: 1px;
-						margin-left: 0;
-						background-image: none;
-						background-color: $color-red;
+						width: 2px;
+						margin-left: -1px;
+						background-image: img('dot-2x6-red-active.svg');
 					}
 
 					/* -- */

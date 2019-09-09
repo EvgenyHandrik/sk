@@ -21,7 +21,6 @@
 		}
 
 		&__ttl {
-			line-height: 1.2;
 			margin-bottom: 45px;
 
 			@include corp-catering-bp-mobile() {
@@ -49,7 +48,7 @@
 			$col-tablet-margin-bottom: 45px;
 
 			max-width: $content-desktop-width;
-			margin: 60px auto 0 auto;
+			margin: 65px auto 0 auto;
 
 			/* -- */
 

@@ -35,10 +35,22 @@
 
 		&__ttl {
 			// margin-bottom: 35px;
-			margin-bottom: 45px;
+			margin-bottom: 50px;
 
 			@include corp-catering-bp-mobile() {
 				margin-bottom: 35px;
+			}
+		}
+
+		&__ttl-br-desktop {
+
+		}
+
+		&__ttl-br-mobile {
+			display: none;
+
+			@media (max-width: 640px) {
+				display: inline;
 			}
 		}
 		

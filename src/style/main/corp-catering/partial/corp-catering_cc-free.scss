@@ -21,6 +21,19 @@
 			@include content-all-padding-h();
 		}
 
+		&__ttl {
+
+			/* -- */
+
+			&-br-mobile {
+				display: none;
+
+				@media (max-width: 640px) {
+					display: inline;
+				}
+			}
+		}
+
 		/* -- */
 
 		&-list {
