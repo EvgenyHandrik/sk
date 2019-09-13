@@ -35,7 +35,7 @@
 	
 			&__col {
 				display: inline-block;
-				max-width: 250px;
+				// max-width: 250px;
 				margin-left: 50px;
 				font-size: 22px;
 				vertical-align: top;
@@ -52,6 +52,10 @@
 					}
 				}
 
+				@media (max-width: 460px) {
+					font-size: 18px;
+				}
+
 				/* -- */
 
 				&:first-child {
@@ -62,11 +66,20 @@
 
 		&-item {
 			$icon-size: 25px;
+			$icon-mobile-size: 20px;
 
 			position: relative;
 			line-height: 1.4;
 			padding-left: $icon-size + 10px;
 			text-align: left;
+
+			/* -- */
+
+			@media (max-width: 460px) {
+				padding-left: $icon-mobile-size + 10px;
+			}
+
+			/* -- */
 
 			&__icon {
 				position: absolute;
@@ -78,6 +91,16 @@
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: $icon-size $icon-size;
+
+				/* -- */
+
+				@media (max-width: 460px) {
+					width: $icon-mobile-size;
+					height: $icon-mobile-size;
+					background-size: $icon-mobile-size $icon-mobile-size;
+				}
+
+				/* -- */
 
 				&--phone {
 					background-image: img('ico-phone-special-red-30x30.svg');
