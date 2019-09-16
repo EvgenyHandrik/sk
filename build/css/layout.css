@@ -83,6 +83,26 @@
 
 /* -- */
 
+.notify-special {
+  padding-top: 15px;
+  padding-left: 60px;
+  padding-bottom: 15px;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: 15px 15px;
+  /* -- */
+}
+
+.notify-special--clock-flat-red {
+  background-image: url("../images/ico-date-clock-flat-red-30x30.svg");
+}
+
+.notify-special--clock-flat-grey {
+  background-image: url("../images/ico-date-clock-flat-grey-30x30.svg");
+}
+
+/* -- */
+
 .bonuses-notify {
   padding-top: 15px;
   padding-left: 60px;

@@ -59,6 +59,31 @@
 
 /* -- */
 
+.notify-special {
+	$icon-size: 30px;
+	$padding-v: 15px;
+	$padding-left: 15px;
+
+	padding-top: $c-notify-special-padding-v;
+	padding-left: $c-notify-special-padding-left + $c-notify-special-icon-size + $c-notify-special-padding-left;
+	padding-bottom: $c-notify-special-padding-v;
+	background-repeat: no-repeat;
+	background-size: $c-notify-special-icon-size $c-notify-special-icon-size;
+	background-position: $c-notify-special-padding-left $c-notify-special-padding-v;
+
+	/* -- */
+
+	&--clock-flat-red {
+		background-image: img('ico-date-clock-flat-red-30x30.svg');
+	}
+
+	&--clock-flat-grey {
+		background-image: img('ico-date-clock-flat-grey-30x30.svg');
+	}
+}
+
+/* -- */
+
 .bonuses-notify {
 	$icon-size: 30px;
 	$padding-v: 15px;
